@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sylvan Gardens — Case Study | THE STOOP</title>
+<meta name="description" content="How The Stoop provides full-service social media management, digital advertising, and content production for Sylvan Gardens, a Pittsburgh-area landscaping company.">
+<meta property="og:title" content="Sylvan Gardens — Case Study | THE STOOP">
+<meta property="og:description" content="Ongoing social media management, Google & Meta ads, and content production for a premier Pittsburgh landscaping company.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'><rect x='0' y='28' width='8' height='12' fill='%23F5C518'/><rect x='10' y='18' width='8' height='22' fill='%23F5C518'/><rect x='20' y='8' width='8' height='32' fill='%23F5C518'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --yellow: #F5C518;
+    --yellow-bright: #FFD700;
+    --grey: #1a1a1a;
+    --mid: #888;
+    --dark-grey: #111111;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--yellow); color: var(--black); }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .logo svg { height: 28px; width: auto; }
+
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    color: var(--white); text-decoration: none; font-size: 11px;
+    letter-spacing: 3px; text-transform: uppercase;
+    position: relative; padding-bottom: 4px;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--yellow); transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .menu-toggle {
+    display: none; background: none; border: none;
+    cursor: pointer; padding: 8px; z-index: 101;
+  }
+  .menu-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); margin: 5px 0; transition: all 0.3s ease;
+  }
+  .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  .case-hero {
+    padding: 160px 40px 80px; position: relative; overflow: hidden;
+  }
+  .case-hero-bg {
+    position: absolute; font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(100px, 14vw, 240px); color: transparent;
+    -webkit-text-stroke: 1px rgba(245,197,24,0.05);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    white-space: nowrap; pointer-events: none; user-select: none;
+  }
+  .case-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--mid); text-decoration: none; margin-bottom: 40px;
+    transition: color 0.3s ease;
+  }
+  .case-back:hover { color: var(--yellow); }
+  .case-industry-label {
+    font-size: 10px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--yellow); margin-bottom: 16px;
+  }
+  .case-hero h1 {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(48px, 9vw, 120px); line-height: 0.95;
+    letter-spacing: -2px; margin-bottom: 20px;
+  }
+  .case-tagline {
+    font-family: 'Outfit', sans-serif; font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 600; color: var(--white); margin-bottom: 24px;
+  }
+  .case-hero-desc {
+    font-size: 15px; line-height: 1.9; color: var(--mid); max-width: 640px;
+  }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .case-tag {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 8px 18px; border: 1px solid rgba(255,255,255,0.12); color: var(--white);
+  }
+
+  .metrics-section { padding: 80px 40px; background: var(--yellow); }
+  .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+  .metric { text-align: center; padding: 40px 20px; }
+  .metric-val {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(36px, 5vw, 64px); color: var(--black); line-height: 1;
+  }
+  .metric-label {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--black); margin-top: 8px; opacity: 0.7;
+  }
+
+  .case-content { padding: 100px 40px; max-width: 900px; margin: 0 auto; }
+  .case-content h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 24px;
+  }
+  .case-content h2 .accent { color: var(--yellow); }
+  .case-content p { font-size: 15px; line-height: 2; color: var(--mid); margin-bottom: 24px; }
+  .case-content ul { list-style: none; margin-bottom: 32px; }
+  .case-content ul li {
+    font-size: 14px; padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; gap: 12px; color: var(--white);
+  }
+  .case-content ul li::before { content: '→'; color: var(--yellow); font-weight: bold; }
+
+  .gallery { padding: 80px 40px; background: var(--dark-grey); }
+  .gallery h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 4px; max-width: 1000px; margin: 0 auto;
+  }
+  .gallery-grid img {
+    width: 100%; height: 300px; object-fit: cover;
+    border-radius: 2px; transition: transform 0.4s ease;
+  }
+  .gallery-grid img:hover { transform: scale(1.02); }
+
+  .video-section { padding: 80px 40px; background: var(--grey); }
+  .video-section h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .video-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; max-width: 1000px; margin: 0 auto;
+  }
+  .video-card { background: rgba(255,255,255,0.02); border-radius: 4px; overflow: hidden; }
+  .video-card iframe { display: block; }
+  .video-label {
+    padding: 16px; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--mid); text-align: center;
+  }
+
+  .case-cta { text-align: center; padding: 120px 40px; }
+  .case-cta h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800; margin-bottom: 16px;
+  }
+  .case-cta p { font-size: 14px; color: var(--mid); margin-bottom: 40px; }
+
+  .btn {
+    display: inline-block; padding: 16px 36px;
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease;
+  }
+  .btn-primary { background: var(--yellow); color: var(--black); }
+  .btn-primary:hover {
+    background: var(--yellow-bright); transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(245, 197, 24, 0.3);
+  }
+
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px; font-size: 12px; color: var(--mid);
+  }
+  footer a { color: var(--mid); text-decoration: none; transition: color 0.3s; }
+  footer a:hover { color: var(--yellow); }
+  .footer-brand .logo svg { height: 24px; }
+  .footer-brand p { margin-top: 12px; line-height: 1.8; max-width: 280px; }
+  .footer-links h4, .footer-contact h4 {
+    font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 20px;
+  }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-contact p { line-height: 2; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 40px;
+    font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 2px;
+    text-transform: uppercase; display: flex; justify-content: space-between;
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 1024px) {
+    .metrics-grid { grid-template-columns: 1fr 1fr; }
+    .video-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .menu-toggle { display: block; }
+    .nav-links {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.95); flex-direction: column;
+      align-items: center; justify-content: center; gap: 40px; z-index: 100;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 18px; letter-spacing: 5px; }
+    .case-hero { padding: 120px 20px 60px; }
+    .case-content { padding: 60px 20px; }
+    .gallery { padding: 60px 20px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .video-section { padding: 60px 20px; }
+    .metrics-section { padding: 60px 20px; }
+    .metrics-grid { grid-template-columns: 1fr; }
+    .case-cta { padding: 80px 20px; }
+    footer { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="logo">
+    <svg viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+      <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+      <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+      <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="34" letter-spacing="5">THE STOOP</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#tracks">What We Do</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#work">Work</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="case-hero-bg">SYLVAN GARDENS</div>
+  <a href="/#work" class="case-back">← Back to Work</a>
+  <div class="case-industry-label reveal">Landscaping & Design</div>
+  <h1 class="reveal">SYLVAN GARDENS</h1>
+  <div class="case-tagline reveal">Full-Service Social Media & Digital Advertising</div>
+  <p class="case-hero-desc reveal">Sylvan Gardens is a premier landscaping company based in Ingomar, PA, specializing in landscape design, installation, and maintenance for residential and commercial clients across the Pittsburgh area. The Stoop serves as their ongoing digital partner — managing social media, running paid campaigns, producing content, and building landing pages under a long-term retainer.</p>
+  <div class="case-tags reveal">
+    <span class="case-tag">Social Media</span>
+    <span class="case-tag">Digital Ads</span>
+    <span class="case-tag">Content Production</span>
+    <span class="case-tag">Web Development</span>
+  </div>
+</section>
+
+<!-- METRICS -->
+<div class="metrics-section">
+  <div class="metrics-grid">
+    <div class="metric reveal">
+      <div class="metric-val">12+</div>
+      <div class="metric-label">Months Retainer</div>
+    </div>
+    <div class="metric reveal">
+      <div class="metric-val">FB + IG</div>
+      <div class="metric-label">Platforms Managed</div>
+    </div>
+    <div class="metric reveal">
+      <div class="metric-val">Google</div>
+      <div class="metric-label">+ Meta Ads</div>
+    </div>
+    <div class="metric reveal">
+      <div class="metric-val">Photo</div>
+      <div class="metric-label">+ Video Production</div>
+    </div>
+  </div>
+</div>
+
+<!-- THE CHALLENGE -->
+<div class="case-content">
+  <h2 class="reveal">The <span class="accent">Challenge</span></h2>
+  <p class="reveal">Sylvan Gardens had built a strong reputation through word-of-mouth and quality craftsmanship — but their digital presence didn't reflect the caliber of their work. Their social media accounts were underperforming, with declining reach on Facebook and minimal engagement across platforms.</p>
+  <p class="reveal">They needed a partner who could manage the full scope of their digital marketing — from daily social posts to paid advertising campaigns — while producing the visual content needed to showcase their landscape design and installation work to a broader audience.</p>
+</div>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2 class="reveal">From the Field</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1984c4cjMo0Ib7U3TfZUABK-F2G6Yy1EH&sz=w800" alt="Sylvan Gardens landscape installation project" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1XYlRxOeWjpWehq6lwPP22fQLwitb17We&sz=w800" alt="Sylvan Gardens residential landscaping" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1JAL2HZgvRjs6ETyJnADaH9xrJ5hor--B&sz=w800" alt="Sylvan Gardens garden design" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1P3x2b--LT9OKlcJjf5NLCQO_impbvm0x&sz=w800" alt="Sylvan Gardens branded truck on location" loading="lazy">
+  </div>
+</section>
+
+<!-- THE APPROACH -->
+<div class="case-content">
+  <h2 class="reveal">Our <span class="accent">Approach</span></h2>
+  <p class="reveal">The Stoop operates as Sylvan Gardens' full-stack digital marketing department — handling everything from content calendars and daily posts to multi-platform paid campaigns and on-site content production.</p>
+  <ul class="reveal">
+    <li>Social media management across Facebook and Instagram with monthly content calendars</li>
+    <li>Google Ads campaigns — display, search, YouTube, and remarketing</li>
+    <li>Meta Ads campaigns — awareness, consideration, and lead generation</li>
+    <li>On-site photography and videography of landscape projects and team operations</li>
+    <li>Social media analysis and strategy with full-year analytical reporting</li>
+    <li>Web development — landing pages and testimonial widgets</li>
+    <li>HR and hiring campaigns to support team growth</li>
+    <li>Hashtag strategy and engagement playbooks</li>
+  </ul>
+</div>
+
+<!-- VIDEOS -->
+<section class="video-section">
+  <h2 class="reveal">Content We Produced</h2>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1XL3EppdUFL4fONWQhQsCfue-mnsLntkG/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Sylvan Team B-Roll</div>
+    </div>
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1NfxA9Oy6Jmmwb9lBH0MgELHJOnOCnrSv/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Spring Cleanup Operations</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE RESULTS -->
+<div class="case-content">
+  <h2 class="reveal">The <span class="accent">Results</span></h2>
+  <p class="reveal">Under The Stoop's management, Sylvan Gardens' Instagram reach more than doubled year-over-year — growing from 374 to 837 accounts reached — while profile visits surged from 168 to 1,300. The diversified content strategy covering installations, maintenance, employee spotlights, and seasonal campaigns gave Sylvan a consistent, professional presence across platforms.</p>
+  <p class="reveal">The long-term retainer model has allowed The Stoop to build deep institutional knowledge of Sylvan's business, refine campaigns over time, and scale from social media management into paid advertising and web development — proving that sustained partnerships deliver compounding results.</p>
+</div>
+
+<!-- CTA -->
+<section class="case-cta">
+  <h2 class="reveal">Need a digital partner for your business?</h2>
+  <p class="reveal">Let's build something that grows.</p>
+  <div class="reveal">
+    <a href="mailto:mike@thestooppgh.com?subject=Brand%20Partnership%20Inquiry" class="btn btn-primary">Get a Proposal</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+        <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+        <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+        <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="30" letter-spacing="4">THE STOOP</text>
+      </svg>
+    </a>
+    <p>A digital agency built at the intersection of culture, content, and commerce. Pittsburgh, PA.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Navigate</h4>
+    <ul>
+      <li><a href="/#tracks">What We Do</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#work">Work</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Connect</h4>
+    <p>
+      <a href="mailto:mike@thestooppgh.com">mike@thestooppgh.com</a><br>
+      Instagram: @thestoop<br>
+      TikTok: @thestoop<br>
+      LinkedIn: The Stoop Agency
+    </p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>&copy; 2026 The Stoop. All Rights Reserved.</span>
+  <span>Pittsburgh, PA</span>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, i * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('active');
+      });
+    });
+  }
+</script>
+</body>
+</html>
