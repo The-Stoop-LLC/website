@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE STOOP — Digital Advertising & Influencer Marketing</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&family=Helvetica+Neue&display=swap" rel="stylesheet">
+<meta name="description" content="The Stoop is a Pittsburgh-based digital agency specializing in influencer marketing, digital advertising, and creator coaching. We help brands scale and creators build careers.">
+<meta property="og:title" content="THE STOOP — Digital Advertising & Influencer Marketing">
+<meta property="og:description" content="A digital agency built at the intersection of culture, content, and commerce. Influencer marketing, digital advertising, and creator coaching.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="THE STOOP — Digital Advertising & Influencer Marketing">
+<meta name="twitter:description" content="A digital agency built at the intersection of culture, content, and commerce. Pittsburgh, PA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'><rect x='0' y='28' width='8' height='12' fill='%23F5C518'/><rect x='10' y='18' width='8' height='22' fill='%23F5C518'/><rect x='20' y='8' width='8' height='32' fill='%23F5C518'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
 <style>
   /* Akira Expanded approximation via Anton + wide letter-spacing for headlines */
   /* Lemon Milk approximation via Outfit (geometric sans-serif) */
@@ -247,7 +255,7 @@
   }
 
   .marquee span {
-    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
     font-size: 18px;
     letter-spacing: 8px;
     text-transform: uppercase;
@@ -816,6 +824,37 @@
     transform: translateY(0);
   }
 
+  /* HAMBURGER MENU */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 101;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .tracks { grid-template-columns: 1fr; }
@@ -827,7 +866,25 @@
 
   @media (max-width: 768px) {
     nav { padding: 16px 20px; }
-    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.95);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      z-index: 100;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links a {
+      font-size: 18px;
+      letter-spacing: 5px;
+    }
     section { padding: 80px 20px; }
     .hero { padding: 0 20px; }
     .hero-scroll, .hero-tag { display: none; }
@@ -860,6 +917,9 @@
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -995,7 +1055,7 @@
 </section>
 
 <!-- INDUSTRIES -->
-<section class="industries" id="about">
+<section class="industries" id="industries">
   <div class="section-label reveal">Industries</div>
   <div class="section-title reveal">We go deep in the verticals that define modern lifestyle.</div>
   <div class="industry-tags reveal">
@@ -1096,7 +1156,7 @@
 </section>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
   <div class="about-content">
     <div class="about-text reveal">
       <div class="section-label">About The Stoop</div>
@@ -1120,8 +1180,8 @@
   <div class="section-title reveal">Ready to make<br>some noise?</div>
   <p class="cta-sub reveal">Whether you're a brand looking for your next campaign or a creator ready to go pro — we want to hear from you.</p>
   <div class="cta-buttons reveal">
-    <a href="/cdn-cgi/l/email-protection#bad2dfd6d6d5faced2dfc9ced5d5ca94dbdddfd4d9c3" class="btn btn-primary">Brands → Get a Proposal</a>
-    <a href="/cdn-cgi/l/email-protection#a3cbc6cfcfcce3d7cbc6d0d7ccccd38dc2c4c6cdc0da" class="btn btn-outline">Creators → Book Coaching</a>
+    <a href="mailto:mike@thestooppgh.com?subject=Brand%20Partnership%20Inquiry" class="btn btn-primary">Brands → Get a Proposal</a>
+    <a href="mailto:mike@thestooppgh.com?subject=Creator%20Coaching%20Inquiry" class="btn btn-outline">Creators → Book Coaching</a>
   </div>
 </section>
 
@@ -1143,6 +1203,7 @@
     <ul>
       <li><a href="#tracks">What We Do</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1150,7 +1211,7 @@
   <div class="footer-contact">
     <h4>Connect</h4>
     <p>
-      <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7afa2ababa887b3afa2b4b3a8a8b7e9a6a0a2a9a4be">[email&#160;protected]</a><br>
+      <a href="mailto:mike@thestooppgh.com">mike@thestooppgh.com</a><br>
       Instagram: @thestoop<br>
       TikTok: @thestoop<br>
       LinkedIn: The Stoop Agency
@@ -1162,7 +1223,7 @@
   <span>Pittsburgh, PA</span>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -1190,4 +1251,34 @@
         const timer = setInterval(() => {
           current += step;
           if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          num.textContent = current + suffix;
+        }, 30);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('active');
+      });
+    });
+  }
+</script>
+</body>
+</html>
        
