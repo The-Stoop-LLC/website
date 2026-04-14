@@ -441,6 +441,31 @@
     justify-content: space-between;
   }
 
+  .section-type-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .video-section { padding: 80px 40px; background: var(--grey); }
+  .video-section h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .video-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; max-width: 1000px; margin: 0 auto;
+  }
+  .video-card { background: rgba(255,255,255,0.02); border-radius: 4px; overflow: hidden; }
+  .video-card iframe { display: block; }
+  .video-label {
+    padding: 16px; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--mid); text-align: center;
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -478,6 +503,8 @@
     .results-grid { grid-template-columns: 1fr; }
     .metrics-section { padding: 60px 20px; }
     .metrics-grid { grid-template-columns: 1fr; }
+    .video-section { padding: 60px 20px; }
+    .video-grid { grid-template-columns: 1fr; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
@@ -600,6 +627,22 @@
   <p class="reveal">The capital campaign raised $47,139 from 446 individual donors — proving that targeted digital marketing can drive real fundraising results for local nonprofits. The campaign's cost-per-click came in 87% below nonprofit industry benchmarks, maximizing every dollar of the media budget.</p>
   <p class="reveal">Beyond donations, the campaign drove 3,678 new users to MFPAA's website — building long-term awareness and establishing a digital foundation for future fundraising efforts. The full-year strategy gave MFPAA a repeatable playbook for ongoing community engagement.</p>
 </div>
+
+<!-- VIDEO PRODUCTION -->
+<section class="video-section">
+  <div class="section-type-label reveal">Video Production</div>
+  <h2 class="reveal">Campaign Videos</h2>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1bZbL_TtFYxXzCV6qX7k1MHF-ZgeRl_mP/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Capital Campaign — 30 Second</div>
+    </div>
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Capital Campaign — 60 Second</div>
+    </div>
+  </div>
+</section>
 
 <!-- CTA -->
 <section class="case-cta">

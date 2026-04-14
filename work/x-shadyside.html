@@ -466,6 +466,15 @@
     background: var(--dark-grey);
   }
 
+  .section-type-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
   .gallery h2 {
     font-family: 'Outfit', sans-serif;
     font-size: clamp(28px, 4vw, 40px);
@@ -492,6 +501,22 @@
 
   .gallery-grid img:hover {
     transform: scale(1.02);
+  }
+
+  .video-section { padding: 80px 40px; background: var(--grey); }
+  .video-section h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .video-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; max-width: 1000px; margin: 0 auto;
+  }
+  .video-card { background: rgba(255,255,255,0.02); border-radius: 4px; overflow: hidden; }
+  .video-card iframe { display: block; }
+  .video-label {
+    padding: 16px; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--mid); text-align: center;
   }
 
   /* REVEAL */
@@ -535,6 +560,8 @@
     .metrics-grid { grid-template-columns: 1fr; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
+    .video-section { padding: 60px 20px; }
+    .video-grid { grid-template-columns: 1fr; }
     .gallery { padding: 60px 20px; }
     .gallery-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
@@ -629,10 +656,32 @@
 
 <!-- GALLERY -->
 <section class="gallery">
-  <h2 class="reveal">From the Shoot</h2>
+  <div class="section-type-label reveal">Campaign Creative</div>
+  <h2 class="reveal">Reel Covers</h2>
   <div class="gallery-grid reveal">
     <img src="https://drive.google.com/thumbnail?id=1jyjqxEAiqweYmmQcqJSKrv9Y_5z_uz5w&sz=w800" alt="X Shadyside social media reel cover featuring fitness content" loading="lazy">
     <img src="https://drive.google.com/thumbnail?id=1NMuP8s_u0i-1QNxpcoROb5xra5RSRoBd&sz=w800" alt="X Shadyside social media reel cover for influencer campaign" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1FJU1lFk4r-HblutiTfXqPkvfBLEiT1St&sz=w800" alt="X Shadyside logo and motto" loading="lazy">
+  </div>
+</section>
+
+<!-- INFLUENCER REELS -->
+<section class="video-section">
+  <div class="section-type-label reveal">Influencer Content</div>
+  <h2 class="reveal">Creator Reels</h2>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1jBluHypGIJgxJj-eZvPLlbvOHIQHGBS7/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Cam — Fall into Fitness Reel</div>
+    </div>
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1O9eHrvJarWaUWURWycndbOTEIEfmet7w/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Ashley — Fall into Fitness Reel</div>
+    </div>
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1f4CovzMwUGTM1HOxs4yxaCwHS7fqg6qI/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Ana — Fall into Fitness Reel</div>
+    </div>
   </div>
 </section>
 
