@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE STOOP — Digital Advertising & Influencer Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&family=Helvetica+Neue&display=swap" rel="stylesheet">
+<style>
+  /* Akira Expanded approximation via Anton + wide letter-spacing for headlines */
+  /* Lemon Milk approximation via Outfit (geometric sans-serif) */
+  /* Helvetica as secondary per brand guide */
+
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --yellow: #F5C518;
+    --yellow-bright: #FFD700;
+    --grey: #1a1a1a;
+    --mid: #888;
+    --dark-grey: #111111;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  ::selection {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  /* GRAIN OVERLAY */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    mix-blend-mode: difference;
+  }
+
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo svg {
+    height: 28px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--yellow);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after { width: 100%; }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(180px, 25vw, 400px);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(245,197,24,0.06);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards 0.3s;
+  }
+
+  .hero h1 {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(60px, 10vw, 160px);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    max-width: 900px;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards 0.5s;
+  }
+
+  .hero h1 .outline {
+    -webkit-text-stroke: 2px var(--yellow);
+    color: transparent;
+  }
+
+  .hero h1 .accent {
+    color: var(--yellow);
+  }
+
+  .hero-sub {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 480px;
+    color: var(--mid);
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards 0.7s;
+  }
+
+  .hero-cta {
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards 0.9s;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 16px 36px;
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+  }
+
+  .btn-primary:hover {
+    background: var(--yellow-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(245, 197, 24, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--yellow-bright);
+    color: var(--yellow-bright);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--mid);
+    writing-mode: vertical-rl;
+    animation: pulse 2s ease infinite;
+  }
+
+  .hero-tag {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    text-align: right;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  /* MARQUEE */
+  .marquee-wrap {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+  }
+
+  .marquee {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+  }
+
+  .marquee span {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.15);
+    padding: 0 40px;
+  }
+
+  .marquee span.dot {
+    color: var(--yellow);
+    letter-spacing: 0;
+  }
+
+  /* SECTION GENERAL */
+  section {
+    padding: 120px 40px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    max-width: 700px;
+  }
+
+  /* TWO TRACKS */
+  .tracks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    min-height: 80vh;
+  }
+
+  .track {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .track::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .track-brands {
+    background: var(--grey);
+  }
+
+  .track-brands::before {
+    background: linear-gradient(135deg, rgba(245,197,24,0.12), transparent);
+  }
+
+  .track-influencers {
+    background: linear-gradient(180deg, #1a1a1a, #111);
+  }
+
+  .track-influencers::before {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08), transparent);
+  }
+
+  .track:hover::before { opacity: 1; }
+
+  .track-number {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: 120px;
+    color: rgba(255,255,255,0.04);
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    line-height: 1;
+  }
+
+  .track-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 20px;
+  }
+
+  .track-influencers .track-label {
+    color: var(--yellow-bright);
+  }
+
+  .track h2 {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 0.95;
+    margin-bottom: 24px;
+  }
+
+  .track p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--mid);
+    max-width: 400px;
+    margin-bottom: 32px;
+  }
+
+  .track-list {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  .track-list li {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--white);
+  }
+
+  .track-list li::before {
+    content: '→';
+    color: var(--yellow);
+    font-weight: bold;
+  }
+
+  .track-influencers .track-list li::before {
+    color: var(--yellow-bright);
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .service-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 48px 36px;
+    transition: all 0.4s ease;
+    position: relative;
+  }
+
+  .service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--yellow);
+    transition: width 0.4s ease;
+  }
+
+  .service-card:hover {
+    background: rgba(255,255,255,0.04);
+    transform: translateY(-4px);
+  }
+
+  .service-card:hover::after { width: 100%; }
+
+  .service-num {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: 48px;
+    color: rgba(255,255,255,0.06);
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* STATS */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 0;
+    background: var(--yellow);
+  }
+
+  .stat {
+    padding: 60px 40px;
+    background: var(--yellow);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .stat:hover {
+    background: var(--yellow-bright);
+  }
+
+  .stat-num {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(48px, 6vw, 80px);
+    color: var(--black);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-top: 8px;
+    opacity: 0.7;
+  }
+
+  /* ABOUT */
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--mid);
+    margin-bottom: 20px;
+  }
+
+  .about-text p:first-of-type {
+    font-size: 18px;
+    color: var(--white);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .about-visual {
+    position: relative;
+    height: 500px;
+  }
+
+  .about-box {
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .about-box-1 {
+    width: 300px; height: 300px;
+    top: 0; right: 0;
+    background: linear-gradient(135deg, var(--yellow), transparent);
+    opacity: 0.2;
+  }
+
+  .about-box-2 {
+    width: 200px; height: 200px;
+    bottom: 40px; left: 40px;
+    background: linear-gradient(135deg, var(--yellow-bright), transparent);
+    opacity: 0.15;
+  }
+
+  .about-box-3 {
+    width: 250px; height: 350px;
+    top: 60px; left: 60px;
+    background: rgba(255,255,255,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-box-3 span {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: 100px;
+    color: rgba(255,255,255,0.06);
+    writing-mode: vertical-rl;
+  }
+
+  /* INDUSTRIES */
+  .industries {
+    background: var(--dark-grey);
+  }
+
+  .industry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .industry-tag {
+    padding: 14px 28px;
+    border: 1px solid rgba(255,255,255,0.12);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .industry-tag:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+    transform: scale(1.05);
+  }
+
+  /* CASE STUDIES */
+  .case-studies {
+    background: #0d0d0d;
+  }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .case-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .case-card:hover {
+    background: rgba(255,255,255,0.04);
+  }
+
+  .case-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 0;
+    transition: height 0.4s ease;
+  }
+
+  .case-card:nth-child(1)::before { background: var(--yellow); }
+  .case-card:nth-child(2)::before { background: var(--yellow-bright); }
+  .case-card:nth-child(3)::before { background: var(--white); }
+  .case-card:nth-child(4)::before { background: var(--yellow-bright); }
+
+  .case-card:hover::before { height: 100%; }
+
+  .case-industry {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 16px;
+  }
+
+  .case-card:nth-child(1) .case-industry { color: var(--yellow); }
+  .case-card:nth-child(2) .case-industry { color: var(--yellow-bright); }
+  .case-card:nth-child(3) .case-industry { color: var(--white); }
+  .case-card:nth-child(4) .case-industry { color: var(--yellow-bright); }
+
+  .case-card h3 {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .case-tagline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .case-desc {
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--mid);
+    margin-bottom: 28px;
+    max-width: 440px;
+  }
+
+  .case-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .case-service-tag {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+  }
+
+  .case-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .case-metric-val {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .case-card:nth-child(1) .case-metric-val { color: var(--yellow); }
+  .case-card:nth-child(2) .case-metric-val { color: var(--yellow-bright); }
+  .case-card:nth-child(3) .case-metric-val { color: var(--white); }
+  .case-card:nth-child(4) .case-metric-val { color: var(--yellow-bright); }
+
+  .case-metric-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .cases-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    padding: 160px 40px;
+    position: relative;
+  }
+
+  .cta-section .section-title {
+    margin: 0 auto 20px;
+    max-width: 800px;
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: var(--mid);
+    margin-bottom: 48px;
+    line-height: 1.8;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .cta-bg {
+    position: absolute;
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(100px, 15vw, 250px);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(245,197,24,0.04);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    font-size: 12px;
+    color: var(--mid);
+  }
+
+  footer a {
+    color: var(--mid);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  footer a:hover { color: var(--yellow); }
+
+  .footer-brand .logo svg { height: 24px; }
+
+  .footer-brand p {
+    margin-top: 12px;
+    line-height: 1.8;
+    max-width: 280px;
+  }
+
+  .footer-links h4, .footer-contact h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-contact p {
+    line-height: 2;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 24px 40px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ANIMATIONS */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .tracks { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .stats-bar { grid-template-columns: 1fr 1fr; }
+    .about-content { grid-template-columns: 1fr; }
+    .about-visual { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    section { padding: 80px 20px; }
+    .hero { padding: 0 20px; }
+    .hero-scroll, .hero-tag { display: none; }
+    .services-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: 1fr; }
+    .track { padding: 60px 28px; }
+    footer { grid-template-columns: 1fr; }
+    .hero-cta { flex-direction: column; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <svg viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+      <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+      <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+      <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="34" letter-spacing="5">THE STOOP</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#tracks">What We Do</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text">STOOP</div>
+  <div class="hero-label">Digital Advertising × Influencer Marketing</div>
+  <h1>
+    WE BUILD<br>
+    <span class="outline">BRANDS</span> <span class="accent">&</span><br>
+    CREATORS
+  </h1>
+  <p class="hero-sub">
+    The Stoop is a digital agency built at the intersection of culture, content, and commerce. We help brands scale through influencer partnerships and coach creators to build real businesses.
+  </p>
+  <div class="hero-cta">
+    <a href="#tracks" class="btn btn-primary">Explore Services</a>
+    <a href="#contact" class="btn btn-outline">Let's Talk</a>
+  </div>
+  <div class="hero-scroll">Scroll ↓</div>
+  <div class="hero-tag">Pittsburgh, PA<br>Est. 2024</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>Influencer Marketing</span><span class="dot">●</span>
+    <span>Creator Coaching</span><span class="dot">●</span>
+    <span>Digital Advertising</span><span class="dot">●</span>
+    <span>Content Strategy</span><span class="dot">●</span>
+    <span>Organic Social</span><span class="dot">●</span>
+    <span>Automation</span><span class="dot">●</span>
+    <span>Influencer Marketing</span><span class="dot">●</span>
+    <span>Creator Coaching</span><span class="dot">●</span>
+    <span>Digital Advertising</span><span class="dot">●</span>
+    <span>Content Strategy</span><span class="dot">●</span>
+    <span>Organic Social</span><span class="dot">●</span>
+    <span>Automation</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- TWO TRACKS -->
+<section id="tracks" style="padding: 0;">
+  <div class="tracks">
+    <div class="track track-brands reveal">
+      <div class="track-number">01</div>
+      <div class="track-label">For Brands</div>
+      <h2>SCALE<br>YOUR<br>INFLUENCE</h2>
+      <p>We connect brands with the right creators to drive authentic engagement, real conversions, and lasting cultural relevance.</p>
+      <ul class="track-list">
+        <li>Influencer Campaign Strategy</li>
+        <li>Creator Sourcing & Vetting</li>
+        <li>Digital Ad Management</li>
+        <li>Organic Social Growth</li>
+        <li>Content Development</li>
+        <li>Performance Analytics</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Partner With Us</a>
+    </div>
+    <div class="track track-influencers reveal">
+      <div class="track-number">02</div>
+      <div class="track-label">For Creators</div>
+      <h2>OWN<br>YOUR<br>CAREER</h2>
+      <p>Stop leaving money on the table. Our coaching programs teach creators how to pitch, negotiate, build their brand, and turn content into a career.</p>
+      <ul class="track-list">
+        <li>1-on-1 Creator Coaching</li>
+        <li>Brand Deal Negotiation</li>
+        <li>Personal Brand Strategy</li>
+        <li>Media Kit Development</li>
+        <li>Content Monetization</li>
+        <li>Rate & Pricing Strategy</li>
+      </ul>
+      <a href="#contact" class="btn btn-outline" style="border-color: var(--yellow-bright); color: var(--yellow-bright);">Start Coaching</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat reveal">
+    <div class="stat-num" data-target="150">0+</div>
+    <div class="stat-label">Campaigns Launched</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num" data-target="50">0+</div>
+    <div class="stat-label">Brand Partners</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num" data-target="200">0+</div>
+    <div class="stat-label">Creators in Network</div>
+  </div>
+  <div class="stat reveal">
+    <div class="stat-num" data-target="10">0M+</div>
+    <div class="stat-label">Impressions Delivered</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label reveal">Capabilities</div>
+  <div class="section-title reveal">Full-stack digital services built for brands that move culture.</div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <h3>Influencer Marketing</h3>
+      <p>End-to-end influencer campaigns — from strategy and creator matching to execution, content approval, and ROI reporting.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">02</div>
+      <h3>Digital Advertising</h3>
+      <p>Paid social and programmatic campaigns across Meta, TikTok, Google, and emerging platforms. Data-driven, creatively led.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">03</div>
+      <h3>Organic Social</h3>
+      <p>Community-first social strategies that build loyal audiences. Content calendars, engagement playbooks, and growth tactics.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">04</div>
+      <h3>Content Development</h3>
+      <p>Scroll-stopping creative across formats — short-form video, UGC, photography, copywriting, and branded content series.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">05</div>
+      <h3>Automation & Ops</h3>
+      <p>Marketing automation, CRM workflows, and operational systems that let lean teams scale without burning out.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">06</div>
+      <h3>Design & Branding</h3>
+      <p>Visual identity, brand guidelines, campaign creative, and design systems that give brands a distinct point of view.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="about">
+  <div class="section-label reveal">Industries</div>
+  <div class="section-title reveal">We go deep in the verticals that define modern lifestyle.</div>
+  <div class="industry-tags reveal">
+    <span class="industry-tag">Fitness</span>
+    <span class="industry-tag">Wellness</span>
+    <span class="industry-tag">Outdoor & Adventure</span>
+    <span class="industry-tag">Health & Nutrition</span>
+    <span class="industry-tag">Apparel</span>
+    <span class="industry-tag">Equipment & Gear</span>
+    <span class="industry-tag">DTC Brands</span>
+    <span class="industry-tag">Sports & Athletics</span>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies" id="work">
+  <div class="section-label reveal">Case Studies</div>
+  <div class="section-title reveal">Real work. Real results. Here's what we've built.</div>
+  <div class="cases-grid">
+
+    <div class="case-card reveal">
+      <div class="case-industry">Fitness & Wellness</div>
+      <h3>X SHADYSIDE</h3>
+      <div class="case-tagline">Influencer-Led Membership Campaigns</div>
+      <p class="case-desc">X Shadyside is a family-owned, all-inclusive fitness facility in Pittsburgh's Shadyside neighborhood, operating since 1994. The Stoop built and managed multi-season influencer campaigns — "New Year, New Us" (Q1 2023) and "Fall into Fitness" (Q3 2023) — producing end-to-end creator activations, content shoots, social media management, and a multi-brand strategic partnership with SXP and Lucid Juice.</p>
+      <div class="case-services">
+        <span class="case-service-tag">Influencer Campaigns</span>
+        <span class="case-service-tag">Content Shoots</span>
+        <span class="case-service-tag">Social Media</span>
+        <span class="case-service-tag">Strategic Partnerships</span>
+      </div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">6+</div><div class="case-metric-label">Creators Activated</div></div>
+        <div><div class="case-metric-val">3</div><div class="case-metric-label">Campaign Seasons</div></div>
+        <div><div class="case-metric-val">IG + FB</div><div class="case-metric-label">Platforms Managed</div></div>
+        <div><div class="case-metric-val">Multi-Brand</div><div class="case-metric-label">Partnership Brokered</div></div>
+      </div>
+    </div>
+
+    <div class="case-card reveal">
+      <div class="case-industry">Health & Nutrition</div>
+      <h3>DR. TEA</h3>
+      <div class="case-tagline">#LoveIsBrewing — Brand Launch & Influencer Campaign</div>
+      <p class="case-desc">Dr. Tea is a family-owned bubble tea shop in Pittsburgh's Shadyside neighborhood. The Stoop executed a Valentine's Day influencer campaign, coordinated content shoots, managed creator deliverables, and provided a comprehensive $20K proposal spanning brand identity, social media strategy, quarterly ad campaigns, and influencer marketing.</p>
+      <div class="case-services">
+        <span class="case-service-tag">Influencer Campaign</span>
+        <span class="case-service-tag">Branding</span>
+        <span class="case-service-tag">Social Strategy</span>
+        <span class="case-service-tag">Digital Advertising</span>
+      </div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">480K+</div><div class="case-metric-label">Views Generated</div></div>
+        <div><div class="case-metric-val">6,154</div><div class="case-metric-label">Engagements</div></div>
+        <div><div class="case-metric-val">166</div><div class="case-metric-label">New Followers</div></div>
+        <div><div class="case-metric-val">$20K</div><div class="case-metric-label">Full-Service Proposal</div></div>
+      </div>
+    </div>
+
+    <div class="case-card reveal">
+      <div class="case-industry">Fitness & Equipment</div>
+      <h3>IRON 24</h3>
+      <div class="case-tagline">Corporate Content Production & Social Media</div>
+      <p class="case-desc">Iron 24 Holdings is a fitness facility headquartered in Pearland, TX. The Stoop delivered a full-scope corporate content engagement including professional videography, photography, droneography, and social media management proposals covering pre-launch through post-launch phases — all backed by a formal Master Services Agreement.</p>
+      <div class="case-services">
+        <span class="case-service-tag">Videography</span>
+        <span class="case-service-tag">Photography</span>
+        <span class="case-service-tag">Droneography</span>
+        <span class="case-service-tag">Social Media</span>
+      </div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">20</div><div class="case-metric-label">Videos Produced</div></div>
+        <div><div class="case-metric-val">60</div><div class="case-metric-label">Photos Delivered</div></div>
+        <div><div class="case-metric-val">$4K</div><div class="case-metric-label">Production SOW</div></div>
+        <div><div class="case-metric-val">Full MSA</div><div class="case-metric-label">Retainer Agreement</div></div>
+      </div>
+    </div>
+
+    <div class="case-card reveal">
+      <div class="case-industry">Nonprofit & Community</div>
+      <h3>MFPAA</h3>
+      <div class="case-tagline">Capital Campaign & Comprehensive Marketing Strategy</div>
+      <p class="case-desc">McCandless-Franklin Park Ambulance Authority is a nonprofit 501(c)(3) EMS provider serving five Pittsburgh-area townships. The Stoop built and executed a paid media capital campaign on Meta and LinkedIn, produced brand awareness videos, designed print collateral, and delivered a full-year organic and paid media strategy — all within a $15,995 annual engagement.</p>
+      <div class="case-services">
+        <span class="case-service-tag">Paid Media</span>
+        <span class="case-service-tag">Video Production</span>
+        <span class="case-service-tag">Strategy</span>
+        <span class="case-service-tag">Design</span>
+      </div>
+      <div class="case-metrics">
+        <div><div class="case-metric-val">$47,139</div><div class="case-metric-label">Donations Raised</div></div>
+        <div><div class="case-metric-val">446</div><div class="case-metric-label">Donors Acquired</div></div>
+        <div><div class="case-metric-val">-87%</div><div class="case-metric-label">CPC vs. Benchmark</div></div>
+        <div><div class="case-metric-val">3,678</div><div class="case-metric-label">New Website Users</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="about-content">
+    <div class="about-text reveal">
+      <div class="section-label">About The Stoop</div>
+      <div class="section-title">Where brands and creators come to sit, talk, and build something real.</div>
+      <p>The Stoop isn't just an agency name — it's a philosophy. The best ideas don't come from boardrooms. They come from real conversations, real culture, and real people.</p>
+      <p>Based in Pittsburgh, we operate at the intersection of influencer marketing, digital advertising, and creator empowerment. We help brands find their voice through authentic partnerships, and we help creators turn their platforms into sustainable careers.</p>
+      <p>Whether you're a brand looking to break through the noise or a creator ready to level up, you've found the right stoop to sit on.</p>
+    </div>
+    <div class="about-visual">
+      <div class="about-box about-box-1"></div>
+      <div class="about-box about-box-2"></div>
+      <div class="about-box about-box-3"><span>TSA</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-bg">LET'S WORK</div>
+  <div class="section-label reveal">Get Started</div>
+  <div class="section-title reveal">Ready to make<br>some noise?</div>
+  <p class="cta-sub reveal">Whether you're a brand looking for your next campaign or a creator ready to go pro — we want to hear from you.</p>
+  <div class="cta-buttons reveal">
+    <a href="/cdn-cgi/l/email-protection#bad2dfd6d6d5faced2dfc9ced5d5ca94dbdddfd4d9c3" class="btn btn-primary">Brands → Get a Proposal</a>
+    <a href="/cdn-cgi/l/email-protection#a3cbc6cfcfcce3d7cbc6d0d7ccccd38dc2c4c6cdc0da" class="btn btn-outline">Creators → Book Coaching</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="logo">
+      <svg viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+        <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+        <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+        <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="30" letter-spacing="4">THE STOOP</text>
+      </svg>
+    </a>
+    <p>A digital agency built at the intersection of culture, content, and commerce. Pittsburgh, PA.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Navigate</h4>
+    <ul>
+      <li><a href="#tracks">What We Do</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Connect</h4>
+    <p>
+      <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7afa2ababa887b3afa2b4b3a8a8b7e9a6a0a2a9a4be">[email&#160;protected]</a><br>
+      Instagram: @thestoop<br>
+      TikTok: @thestoop<br>
+      LinkedIn: The Stoop Agency
+    </p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 The Stoop. All Rights Reserved.</span>
+  <span>Pittsburgh, PA</span>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Stat counter animation
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const num = entry.target;
+        const target = parseInt(num.dataset.target);
+        const suffix = num.textContent.replace(/[0-9]/g, '');
+        let current = 0;
+        const step = Math.ceil(target / 40);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+       
