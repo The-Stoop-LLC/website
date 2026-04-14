@@ -461,6 +461,39 @@
     justify-content: space-between;
   }
 
+  .gallery {
+    padding: 80px 40px;
+    background: var(--dark-grey);
+  }
+
+  .gallery h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-grid img:hover {
+    transform: scale(1.02);
+  }
+
   /* REVEAL */
   .reveal {
     opacity: 0;
@@ -502,6 +535,8 @@
     .metrics-grid { grid-template-columns: 1fr; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
+    .gallery { padding: 60px 20px; }
+    .gallery-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
   }
 </style>
@@ -589,6 +624,15 @@
       <h3>"Fall into Fitness"</h3>
       <p>A back-to-routine campaign featuring creator activations, on-location content shoots, and social media takeovers. Built on the momentum of Q1 and expanded the creator roster to reach new audience segments.</p>
     </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2 class="reveal">From the Shoot</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1jyjqxEAiqweYmmQcqJSKrv9Y_5z_uz5w&sz=w800" alt="X Shadyside social media reel cover featuring fitness content" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1NMuP8s_u0i-1QNxpcoROb5xra5RSRoBd&sz=w800" alt="X Shadyside social media reel cover for influencer campaign" loading="lazy">
   </div>
 </section>
 

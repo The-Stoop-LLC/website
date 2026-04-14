@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iron 24 — Case Study | THE STOOP</title>
-<meta name="description" content="How The Stoop delivered full-scope corporate content production for Iron 24 Holdings — videography, photography, droneography, and social media management.">
-<meta property="og:title" content="Iron 24 — Case Study | THE STOOP">
-<meta property="og:description" content="Corporate content production and social media strategy for a fitness facility launch in Pearland, TX.">
+<title>SXP — Case Study | THE STOOP</title>
+<meta name="description" content="How The Stoop built a digital presence for SXP, a Pittsburgh-based sports performance clinic serving athletes from high school to professional levels.">
+<meta property="og:title" content="SXP — Case Study | THE STOOP">
+<meta property="og:description" content="Website design, content shoots, multi-brand partnerships, and social media campaigns for Pittsburgh's premier sports performance clinic.">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'><rect x='0' y='28' width='8' height='12' fill='%23F5C518'/><rect x='10' y='18' width='8' height='22' fill='%23F5C518'/><rect x='20' y='8' width='8' height='32' fill='%23F5C518'/></svg>">
@@ -47,6 +47,7 @@
     z-index: 9999;
   }
 
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -119,6 +120,7 @@
   .menu-toggle.active span:nth-child(2) { opacity: 0; }
   .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+  /* HERO */
   .case-hero {
     padding: 160px 40px 80px;
     position: relative;
@@ -187,6 +189,7 @@
     max-width: 640px;
   }
 
+  /* SERVICE TAGS */
   .case-tags {
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +206,7 @@
     color: var(--white);
   }
 
+  /* METRICS */
   .metrics-section {
     padding: 80px 40px;
     background: var(--yellow);
@@ -236,6 +240,7 @@
     opacity: 0.7;
   }
 
+  /* CONTENT SECTIONS */
   .case-content {
     padding: 100px 40px;
     max-width: 900px;
@@ -249,7 +254,9 @@
     margin-bottom: 24px;
   }
 
-  .case-content h2 .accent { color: var(--yellow); }
+  .case-content h2 .accent {
+    color: var(--yellow);
+  }
 
   .case-content p {
     font-size: 15px;
@@ -274,18 +281,18 @@
   }
 
   .case-content ul li::before {
-    content: '→';
+    content: '\2192';
     color: var(--yellow);
     font-weight: bold;
   }
 
-  /* DELIVERABLES GRID */
-  .deliverables {
+  /* IMAGE GALLERY */
+  .image-gallery {
     padding: 80px 40px;
     background: var(--grey);
   }
 
-  .deliverables h2 {
+  .image-gallery h2 {
     font-family: 'Outfit', sans-serif;
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 800;
@@ -293,24 +300,31 @@
     text-align: center;
   }
 
-  .deliverables-grid {
+  .image-gallery h2 .accent {
+    color: var(--yellow);
+  }
+
+  .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 2px;
     max-width: 1000px;
     margin: 0 auto;
   }
 
-  .deliverable-card {
+  .gallery-card {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.05);
-    padding: 48px 32px;
-    text-align: center;
-    transition: all 0.4s ease;
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    transition: all 0.4s ease;
   }
 
-  .deliverable-card::after {
+  .gallery-card::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0;
@@ -319,27 +333,50 @@
     transition: width 0.4s ease;
   }
 
-  .deliverable-card:hover { background: rgba(255,255,255,0.04); }
-  .deliverable-card:hover::after { width: 100%; }
+  .gallery-card:hover { background: rgba(255,255,255,0.04); }
+  .gallery-card:hover::after { width: 100%; }
 
-  .deliverable-num {
-    font-family: 'Anton', sans-serif;
-    font-size: 48px;
-    color: var(--yellow);
-    line-height: 1;
-    margin-bottom: 8px;
+  .gallery-card.dark-bg {
+    background: var(--black);
   }
 
-  .deliverable-label {
-    font-size: 12px;
-    letter-spacing: 2px;
+  .gallery-card.dark-bg:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  .gallery-card.light-bg {
+    background: var(--white);
+  }
+
+  .gallery-card.light-bg:hover {
+    background: rgba(255,255,255,0.9);
+  }
+
+  .gallery-card img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .gallery-card-label {
+    font-size: 10px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--mid);
+    color: var(--yellow);
+    margin-top: 20px;
   }
 
+  .gallery-card.light-bg .gallery-card-label {
+    color: var(--black);
+    opacity: 0.5;
+  }
+
+  /* CTA */
   .case-cta {
     text-align: center;
     padding: 120px 40px;
+    position: relative;
   }
 
   .case-cta h2 {
@@ -379,6 +416,19 @@
     box-shadow: 0 8px 30px rgba(245, 197, 24, 0.3);
   }
 
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+    transform: translateY(-2px);
+  }
+
+  /* FOOTER */
   footer {
     border-top: 1px solid rgba(255,255,255,0.08);
     padding: 60px 40px;
@@ -434,39 +484,7 @@
     justify-content: space-between;
   }
 
-  .gallery {
-    padding: 80px 40px;
-    background: var(--dark-grey);
-  }
-
-  .gallery h2 {
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 800;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .gallery-grid img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 2px;
-    transition: transform 0.4s ease;
-  }
-
-  .gallery-grid img:hover {
-    transform: scale(1.02);
-  }
-
+  /* REVEAL */
   .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -478,9 +496,10 @@
     transform: translateY(0);
   }
 
+  /* RESPONSIVE */
   @media (max-width: 1024px) {
     .metrics-grid { grid-template-columns: 1fr 1fr; }
-    .deliverables-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 768px) {
@@ -501,14 +520,11 @@
     .nav-links a { font-size: 18px; letter-spacing: 5px; }
     .case-hero { padding: 120px 20px 60px; }
     .case-content { padding: 60px 20px; }
-    .deliverables { padding: 60px 20px; }
-    .deliverables-grid { grid-template-columns: 1fr; }
+    .image-gallery { padding: 60px 20px; }
     .metrics-section { padding: 60px 20px; }
     .metrics-grid { grid-template-columns: 1fr; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
-    .gallery { padding: 60px 20px; }
-    .gallery-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
   }
 </style>
@@ -539,17 +555,18 @@
 
 <!-- HERO -->
 <section class="case-hero">
-  <div class="case-hero-bg">IRON 24</div>
-  <a href="/#work" class="case-back">← Back to Work</a>
-  <div class="case-industry-label reveal">Fitness & Equipment</div>
-  <h1 class="reveal">IRON 24</h1>
-  <div class="case-tagline reveal">Corporate Content Production & Social Media</div>
-  <p class="case-hero-desc reveal">Iron 24 Holdings is a fitness facility headquartered in Pearland, TX. The Stoop delivered a full-scope corporate content engagement including professional videography, photography, droneography, and social media management — all backed by a formal Master Services Agreement.</p>
+  <div class="case-hero-bg">SXP</div>
+  <a href="/#work" class="case-back">&larr; Back to Work</a>
+  <div class="case-industry-label reveal">Sports Performance</div>
+  <h1 class="reveal">SXP</h1>
+  <div class="case-tagline reveal">Elevating Athletic Performance Through Digital Strategy</div>
+  <p class="case-hero-desc reveal">SXP is a sports performance clinic in Pittsburgh, PA, providing personalized 1-on-1 and group training for athletes at every level — high school, college, and professional. The Stoop partnered with SXP to build their digital presence from the ground up, delivering a full website, content shoots, social media campaigns, brand assets, and a multi-brand strategic partnership.</p>
   <div class="case-tags reveal">
-    <span class="case-tag">Videography</span>
-    <span class="case-tag">Photography</span>
-    <span class="case-tag">Droneography</span>
+    <span class="case-tag">Website</span>
+    <span class="case-tag">Content Shoots</span>
     <span class="case-tag">Social Media</span>
+    <span class="case-tag">Brand Assets</span>
+    <span class="case-tag">Multi-Brand Partnership</span>
   </div>
 </section>
 
@@ -557,20 +574,20 @@
 <div class="metrics-section">
   <div class="metrics-grid">
     <div class="metric reveal">
-      <div class="metric-val">20</div>
-      <div class="metric-label">Videos Produced</div>
+      <div class="metric-val">Website</div>
+      <div class="metric-label">Redesign</div>
     </div>
     <div class="metric reveal">
-      <div class="metric-val">60</div>
-      <div class="metric-label">Photos Delivered</div>
+      <div class="metric-val">Content</div>
+      <div class="metric-label">Shoots</div>
     </div>
     <div class="metric reveal">
-      <div class="metric-val">$4K</div>
-      <div class="metric-label">Production SOW</div>
+      <div class="metric-val">Multi-Brand</div>
+      <div class="metric-label">Partnership</div>
     </div>
     <div class="metric reveal">
-      <div class="metric-val">Full MSA</div>
-      <div class="metric-label">Retainer Agreement</div>
+      <div class="metric-val">Social</div>
+      <div class="metric-label">Media Campaigns</div>
     </div>
   </div>
 </div>
@@ -578,65 +595,50 @@
 <!-- THE CHALLENGE -->
 <div class="case-content">
   <h2 class="reveal">The <span class="accent">Challenge</span></h2>
-  <p class="reveal">Iron 24 Holdings was preparing to launch a new fitness facility and needed professional content that matched the scale of their ambition. They required a production partner who could handle everything from cinematic video to aerial drone footage — and deliver it on a tight pre-launch timeline.</p>
-  <p class="reveal">Beyond content production, Iron 24 needed a social media strategy that would build anticipation before doors opened and sustain momentum after launch.</p>
+  <p class="reveal">SXP had the training expertise and a growing roster of athletes, but lacked the digital infrastructure to match their real-world reputation. Without a professional website, cohesive branding, or consistent social presence, they were invisible to the athletes and parents searching online for performance training in Pittsburgh.</p>
+  <p class="reveal">They needed a partner who understood the sports performance space — someone who could translate the intensity and precision of their training programs into a digital brand that commanded attention and drove bookings across all athlete tiers.</p>
 </div>
 
-<!-- DELIVERABLES -->
-<section class="deliverables">
-  <h2 class="reveal">Production Deliverables</h2>
-  <div class="deliverables-grid">
-    <div class="deliverable-card reveal">
-      <div class="deliverable-num">20</div>
-      <div class="deliverable-label">Professional Videos</div>
+<!-- IMAGE GALLERY -->
+<section class="image-gallery">
+  <h2 class="reveal">Brand <span class="accent">Identity</span></h2>
+  <div class="gallery-grid">
+    <div class="gallery-card dark-bg reveal">
+      <img src="https://drive.google.com/thumbnail?id=1xXH_hYmDidezMIhpHvznx6WN6UKI4ZTR&sz=w800" alt="SXP logo in white on dark background">
+      <div class="gallery-card-label">SXP White Logo</div>
     </div>
-    <div class="deliverable-card reveal">
-      <div class="deliverable-num">60</div>
-      <div class="deliverable-label">Professional Photos</div>
+    <div class="gallery-card light-bg reveal">
+      <img src="https://drive.google.com/thumbnail?id=1LEiFSNC6Gs6vFT2Ex9Neo2TFbit2rKEo&sz=w800" alt="SXP logo in black on light background">
+      <div class="gallery-card-label">SXP Black Logo</div>
     </div>
-    <div class="deliverable-card reveal">
-      <div class="deliverable-num">Aerial</div>
-      <div class="deliverable-label">Drone Footage</div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="gallery">
-  <h2 class="reveal">From the Shoot</h2>
-  <div class="gallery-grid reveal">
-    <img src="https://drive.google.com/thumbnail?id=1r9X-jpNzgxVM-hXjxqPuiMk3b6tOHCrR&sz=w800" alt="Iron 24 gym interior with fitness equipment" loading="lazy">
-    <img src="https://drive.google.com/thumbnail?id=1YG5_YbL-CiW4SG-wEMuD2jpUEybURjPA&sz=w800" alt="Iron 24 gym workout area and training space" loading="lazy">
-    <img src="https://drive.google.com/thumbnail?id=1gW-7DXkPqj7SyAgzjdEytSZpD5Qd6uHK&sz=w800" alt="Iron 24 gym facility and equipment showcase" loading="lazy">
-    <img src="https://drive.google.com/thumbnail?id=15LqYdlK89m_OjpQO2prxviMYNbMImWqt&sz=w800" alt="Iron 24 gym environment and branding" loading="lazy">
   </div>
 </section>
 
 <!-- THE APPROACH -->
 <div class="case-content">
   <h2 class="reveal">Our <span class="accent">Approach</span></h2>
-  <p class="reveal">The Stoop operated as Iron 24's end-to-end content production arm — handling pre-production planning, on-site shoots, post-production editing, and social media strategy. Everything was formalized under a Master Services Agreement for clear deliverables and accountability.</p>
+  <p class="reveal">The Stoop took a comprehensive approach to SXP's digital transformation — treating every touchpoint as an opportunity to reinforce their credibility and attract athletes at every competitive level.</p>
   <ul class="reveal">
-    <li>Professional videography covering facility tours, equipment showcases, and brand storytelling</li>
-    <li>High-resolution photography for marketing materials, social media, and web</li>
-    <li>Aerial droneography capturing the full scope of the facility and location</li>
-    <li>Social media management proposals for pre-launch, launch, and post-launch phases</li>
-    <li>Formal Master Services Agreement establishing scope, timelines, and retainer terms</li>
-    <li>Full post-production including editing, color grading, and format optimization</li>
+    <li>Designed and developed a custom website showcasing training programs, athlete tiers, and booking capabilities</li>
+    <li>Produced on-location content shoots capturing real training sessions, including the SXP February 28th shoot</li>
+    <li>Created brand assets including logos and merch designs that reflect SXP's performance-driven identity</li>
+    <li>Built and managed social media campaigns to grow awareness and drive athlete sign-ups</li>
+    <li>Brokered a multi-brand strategic partnership between SXP, X Shadyside, and Lucid Juice</li>
+    <li>Developed a cohesive visual language that translates across web, social, and physical merch</li>
   </ul>
 </div>
 
 <!-- THE RESULTS -->
 <div class="case-content">
   <h2 class="reveal">The <span class="accent">Results</span></h2>
-  <p class="reveal">The Stoop delivered a comprehensive content library — 20 professional videos and 60 photos — that gave Iron 24 a premium visual foundation for every marketing channel. The drone footage added a cinematic dimension that set their brand apart from competitors.</p>
-  <p class="reveal">The formal MSA established a long-term partnership framework, positioning The Stoop as Iron 24's ongoing content and social media partner through their growth phase.</p>
+  <p class="reveal">The Stoop delivered a complete digital ecosystem for SXP — from a professional website that converts visitors to a consistent social presence that builds community. The multi-brand partnership with X Shadyside and Lucid Juice created cross-promotional opportunities that expanded SXP's reach well beyond their existing athlete network.</p>
+  <p class="reveal">With cohesive brand assets, regular content production, and strategic social campaigns, SXP now has the digital foundation to scale their training programs and establish themselves as Pittsburgh's go-to sports performance clinic for athletes at every level.</p>
 </div>
 
 <!-- CTA -->
 <section class="case-cta">
-  <h2 class="reveal">Need premium content for your brand?</h2>
-  <p class="reveal">Let's produce something worth watching.</p>
+  <h2 class="reveal">Ready to elevate your brand?</h2>
+  <p class="reveal">Let's build a digital presence that performs as hard as you do.</p>
   <div class="reveal">
     <a href="mailto:mike@thestooppgh.com?subject=Brand%20Partnership%20Inquiry" class="btn btn-primary">Get a Proposal</a>
   </div>
