@@ -286,7 +286,33 @@
     font-weight: bold;
   }
 
-  /* IMAGE GALLERY */
+  /* GALLERY SECTIONS */
+  .gallery {
+    padding: 80px 40px;
+  }
+
+  .section-type-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .gallery h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .gallery h2 .accent {
+    color: var(--yellow);
+  }
+
+  /* IMAGE GALLERY (legacy) */
   .image-gallery {
     padding: 80px 40px;
     background: var(--grey);
@@ -310,6 +336,12 @@
     gap: 2px;
     max-width: 1000px;
     margin: 0 auto;
+  }
+
+  .gallery-grid > img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .gallery-card {
@@ -521,6 +553,7 @@
     .case-hero { padding: 120px 20px 60px; }
     .case-content { padding: 60px 20px; }
     .image-gallery { padding: 60px 20px; }
+    .gallery { padding: 60px 20px; }
     .metrics-section { padding: 60px 20px; }
     .metrics-grid { grid-template-columns: 1fr; }
     .case-cta { padding: 80px 20px; }
@@ -599,18 +632,27 @@
   <p class="reveal">They needed a partner who understood the sports performance space — someone who could translate the intensity and precision of their training programs into a digital brand that commanded attention and drove bookings across all athlete tiers.</p>
 </div>
 
-<!-- IMAGE GALLERY -->
-<section class="image-gallery">
-  <h2 class="reveal">Brand <span class="accent">Identity</span></h2>
-  <div class="gallery-grid">
-    <div class="gallery-card dark-bg reveal">
-      <img src="https://drive.google.com/thumbnail?id=1xXH_hYmDidezMIhpHvznx6WN6UKI4ZTR&sz=w800" alt="SXP logo in white on dark background">
-      <div class="gallery-card-label">SXP White Logo</div>
-    </div>
-    <div class="gallery-card light-bg reveal">
-      <img src="https://drive.google.com/thumbnail?id=1LEiFSNC6Gs6vFT2Ex9Neo2TFbit2rKEo&sz=w800" alt="SXP logo in black on light background">
-      <div class="gallery-card-label">SXP Black Logo</div>
-    </div>
+<!-- BRAND IDENTITY -->
+<section class="gallery">
+  <div class="section-type-label reveal">Logo Design</div>
+  <h2 class="reveal">Brand Identity</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1xXH_hYmDidezMIhpHvznx6WN6UKI4ZTR&sz=w600" alt="SXP logo — white on black" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1LEiFSNC6Gs6vFT2Ex9Neo2TFbit2rKEo&sz=w600" alt="SXP logo — black on white" loading="lazy" style="background:#fff; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1UT4QKGdd_p63JTuxQNsqMEuSJ4xaIf22&sz=w600" alt="SXP barbell logo — Instagram format" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1FxKNxwz376Y0jU5G3emzEgdF-3ufhpx7&sz=w600" alt="SXP white barbell logo" loading="lazy" style="background:#fff; object-fit:contain; padding:40px;">
+  </div>
+</section>
+
+<!-- MERCH DESIGNS -->
+<section class="gallery" style="background: var(--grey);">
+  <div class="section-type-label reveal">Brand Assets</div>
+  <h2 class="reveal">Merch & Apparel Designs</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1yb5riexa4SusQvGrljERqrjMVNxos0nn&sz=w600" alt="SXP black letters with tagline — merch design" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1XrGsed4GpbT49gteKn2SStemBohhndMj&sz=w600" alt="SXP white letters with tagline — merch design" loading="lazy" style="background:#fff; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1YImwgtLoDQC9gXXCCVyaTqBDiQWy730x&sz=w600" alt="SXP black letters — merch design" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1M7fDb7XWNT1izQe-qftklEaJQhds-P-T&sz=w600" alt="SXP black barbell — merch design" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
   </div>
 </section>
 
