@@ -516,6 +516,23 @@
     justify-content: space-between;
   }
 
+  /* VIDEO SECTION */
+  .video-section { padding: 80px 40px; background: var(--grey); }
+  .video-section h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .video-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; max-width: 1000px; margin: 0 auto;
+  }
+  .video-card { background: rgba(255,255,255,0.02); border-radius: 4px; overflow: hidden; }
+  .video-card iframe { display: block; }
+  .video-label {
+    padding: 16px; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--mid); text-align: center;
+  }
+
   /* REVEAL */
   .reveal {
     opacity: 0;
@@ -556,6 +573,8 @@
     .gallery { padding: 60px 20px; }
     .metrics-section { padding: 60px 20px; }
     .metrics-grid { grid-template-columns: 1fr; }
+    .video-section { padding: 60px 20px; }
+    .video-grid { grid-template-columns: 1fr; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
@@ -653,6 +672,22 @@
     <img src="https://drive.google.com/thumbnail?id=1XrGsed4GpbT49gteKn2SStemBohhndMj&sz=w600" alt="SXP white letters with tagline — merch design" loading="lazy" style="background:#fff; object-fit:contain; padding:40px;">
     <img src="https://drive.google.com/thumbnail?id=1YImwgtLoDQC9gXXCCVyaTqBDiQWy730x&sz=w600" alt="SXP black letters — merch design" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
     <img src="https://drive.google.com/thumbnail?id=1M7fDb7XWNT1izQe-qftklEaJQhds-P-T&sz=w600" alt="SXP black barbell — merch design" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
+  </div>
+</section>
+
+<!-- CAMPAIGN VIDEO -->
+<section class="video-section">
+  <div class="section-type-label reveal">Video Production</div>
+  <h2 class="reveal">Campaign Content</h2>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1SIpv0NNu9uyzS43UcO0GftPV9JhVKwcT/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Talking Headshot</div>
+    </div>
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Website Intro with Logo</div>
+    </div>
   </div>
 </section>
 
