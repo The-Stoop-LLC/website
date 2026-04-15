@@ -400,6 +400,46 @@
     justify-content: space-between;
   }
 
+  .section-type-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .gallery { padding: 80px 40px; background: var(--dark-grey); }
+  .gallery h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 4px; max-width: 1000px; margin: 0 auto;
+  }
+  .gallery-grid img {
+    width: 100%; height: 300px; object-fit: cover;
+    border-radius: 2px; transition: transform 0.4s ease;
+  }
+  .gallery-grid img:hover { transform: scale(1.02); }
+
+  .video-section { padding: 80px 40px; background: var(--grey); }
+  .video-section h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800; margin-bottom: 40px; text-align: center;
+  }
+  .video-grid {
+    display: grid; grid-template-columns: 1fr;
+    gap: 16px; max-width: 600px; margin: 0 auto;
+  }
+  .video-card { background: rgba(255,255,255,0.02); border-radius: 4px; overflow: hidden; }
+  .video-card iframe { display: block; }
+  .video-label {
+    padding: 16px; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--mid); text-align: center;
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -436,6 +476,9 @@
     .metrics-section { padding: 60px 20px; }
     .metrics-grid { grid-template-columns: 1fr; }
     .highlight-block { padding: 60px 20px; }
+    .gallery { padding: 60px 20px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .video-section { padding: 60px 20px; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
@@ -537,6 +580,30 @@
   <p class="reveal">The #LoveIsBrewing campaign exceeded expectations — generating over 480,000 views and more than 6,000 engagements from creator content alone. The campaign drove 166 new followers during the promotion window and established Dr. Tea as a social media presence in Pittsburgh's food scene.</p>
   <p class="reveal">Beyond the campaign, The Stoop delivered a full-service marketing proposal that gave Dr. Tea a clear roadmap for brand identity, quarterly advertising, and ongoing influencer partnerships — positioning them for long-term growth.</p>
 </div>
+
+<!-- CAMPAIGN CREATIVE -->
+<section class="gallery">
+  <div class="section-type-label reveal">Campaign Creative</div>
+  <h2 class="reveal">#LoveIsBrewing Content</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1gIENt6UuMnM-oNLo-A4U_N51jBE2IGVh&sz=w800" alt="Dr. Tea #LoveIsBrewing official campaign post" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1xGa-Bq8csTkdm9ZEtwrCRLGJX5i2UhJF&sz=w800" alt="Dr. Tea influencer story post 1" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1CQAPf_vupF9unHfm1Z5_fXcsATrEWtfi&sz=w800" alt="Dr. Tea influencer story post 2" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1Buvax9QvzNkr-XEwkQhkrW4olCj9qj19&sz=w800" alt="Dr. Tea influencer story post 3" loading="lazy">
+  </div>
+</section>
+
+<!-- INFLUENCER VIDEO -->
+<section class="video-section">
+  <div class="section-type-label reveal">Influencer Content</div>
+  <h2 class="reveal">Creator Video</h2>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1qAac42eeX7QrLXupI26TZPPkpe-sNmIA/preview" width="100%" height="500" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">Emily & Mike — Content Shoot</div>
+    </div>
+  </div>
+</section>
 
 <!-- CTA -->
 <section class="case-cta">
