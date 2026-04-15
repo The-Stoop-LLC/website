@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Specific Meal Prep — Case Study | THE STOOP</title>
+<meta name="description" content="How The Stoop managed social media, produced content, and designed catering menus for Case Specific Meal Prep, a Pittsburgh-based meal prep company.">
+<meta property="og:title" content="Case Specific Meal Prep — Case Study | THE STOOP">
+<meta property="og:description" content="Social media management, food photography, spotlight videos, and graphic design for a Pittsburgh meal prep company.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'><rect x='0' y='28' width='8' height='12' fill='%23F5C518'/><rect x='10' y='18' width='8' height='22' fill='%23F5C518'/><rect x='20' y='8' width='8' height='32' fill='%23F5C518'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000; --white: #ffffff; --yellow: #F5C518;
+    --yellow-bright: #FFD700; --grey: #1a1a1a; --mid: #888; --dark-grey: #111111;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow-x: hidden; }
+  ::selection { background: var(--yellow); color: var(--black); }
+  body::after { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .logo svg { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: var(--white); text-decoration: none; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; position: relative; padding-bottom: 4px; }
+  .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--yellow); transition: width 0.3s ease; }
+  .nav-links a:hover::after { width: 100%; }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 101; }
+  .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--white); margin: 5px 0; transition: all 0.3s ease; }
+  .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  .case-hero { padding: 160px 40px 80px; position: relative; overflow: hidden; }
+  .case-hero-bg { position: absolute; font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: clamp(80px, 12vw, 200px); color: transparent; -webkit-text-stroke: 1px rgba(245,197,24,0.05); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; user-select: none; }
+  .case-back { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--mid); text-decoration: none; margin-bottom: 40px; transition: color 0.3s ease; }
+  .case-back:hover { color: var(--yellow); }
+  .case-industry-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
+  .case-hero h1 { font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: clamp(40px, 7vw, 100px); line-height: 0.95; letter-spacing: -2px; margin-bottom: 20px; }
+  .case-tagline { font-family: 'Outfit', sans-serif; font-size: clamp(18px, 2.5vw, 24px); font-weight: 600; color: var(--white); margin-bottom: 24px; }
+  .case-hero-desc { font-size: 15px; line-height: 1.9; color: var(--mid); max-width: 640px; }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .case-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 18px; border: 1px solid rgba(255,255,255,0.12); color: var(--white); }
+
+  .metrics-section { padding: 80px 40px; background: var(--yellow); }
+  .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+  .metric { text-align: center; padding: 40px 20px; }
+  .metric-val { font-family: 'Anton', sans-serif; text-transform: uppercase; font-size: clamp(36px, 5vw, 64px); color: var(--black); line-height: 1; }
+  .metric-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--black); margin-top: 8px; opacity: 0.7; }
+
+  .case-content { padding: 100px 40px; max-width: 900px; margin: 0 auto; }
+  .case-content h2 { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 24px; }
+  .case-content h2 .accent { color: var(--yellow); }
+  .case-content p { font-size: 15px; line-height: 2; color: var(--mid); margin-bottom: 24px; }
+  .case-content ul { list-style: none; margin-bottom: 32px; }
+  .case-content ul li { font-size: 14px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; color: var(--white); }
+  .case-content ul li::before { content: '→'; color: var(--yellow); font-weight: bold; }
+
+  .section-type-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 12px; text-align: center; }
+  .gallery { padding: 80px 40px; background: var(--dark-grey); }
+  .gallery h2 { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 40px; text-align: center; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; max-width: 1000px; margin: 0 auto; }
+  .gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 2px; transition: transform 0.4s ease; }
+  .gallery-grid img:hover { transform: scale(1.02); }
+
+  .design-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 1000px; margin: 0 auto; }
+  .design-grid img { width: 100%; height: auto; border-radius: 4px; transition: transform 0.4s ease; border: 1px solid rgba(255,255,255,0.08); }
+  .design-grid img:hover { transform: scale(1.02); }
+
+  .video-section { padding: 80px 40px; background: var(--grey); }
+  .video-section h2 { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 40px; text-align: center; }
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 1000px; margin: 0 auto; }
+  .video-card { background: rgba(255,255,255,0.02); border-radius: 4px; overflow: hidden; }
+  .video-card iframe { display: block; }
+  .video-label { padding: 16px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--mid); text-align: center; }
+
+  .case-cta { text-align: center; padding: 120px 40px; }
+  .case-cta h2 { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 800; margin-bottom: 16px; }
+  .case-cta p { font-size: 14px; color: var(--mid); margin-bottom: 40px; }
+  .btn { display: inline-block; padding: 16px 36px; font-family: 'Outfit', 'Helvetica Neue', Helvetica, sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease; }
+  .btn-primary { background: var(--yellow); color: var(--black); }
+  .btn-primary:hover { background: var(--yellow-bright); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245, 197, 24, 0.3); }
+
+  footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; font-size: 12px; color: var(--mid); }
+  footer a { color: var(--mid); text-decoration: none; transition: color 0.3s; }
+  footer a:hover { color: var(--yellow); }
+  .footer-brand .logo svg { height: 24px; }
+  .footer-brand p { margin-top: 12px; line-height: 1.8; max-width: 280px; }
+  .footer-links h4, .footer-contact h4 { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-contact p { line-height: 2; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 40px; font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 2px; text-transform: uppercase; display: flex; justify-content: space-between; }
+
+  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 1024px) { .metrics-grid { grid-template-columns: 1fr 1fr; } .video-grid { grid-template-columns: 1fr; } .design-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .menu-toggle { display: block; }
+    .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); flex-direction: column; align-items: center; justify-content: center; gap: 40px; z-index: 100; }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 18px; letter-spacing: 5px; }
+    .case-hero { padding: 120px 20px 60px; }
+    .case-content { padding: 60px 20px; }
+    .gallery { padding: 60px 20px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .design-grid { grid-template-columns: 1fr; }
+    .video-section { padding: 60px 20px; }
+    .metrics-section { padding: 60px 20px; }
+    .metrics-grid { grid-template-columns: 1fr; }
+    .case-cta { padding: 80px 20px; }
+    footer { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../" class="logo">
+    <svg viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+      <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+      <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+      <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="34" letter-spacing="5">THE STOOP</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#tracks">What We Do</a></li>
+    <li><a href="../#services">Services</a></li>
+    <li><a href="../#work">Work</a></li>
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#contact">Contact</a></li>
+  </ul>
+  <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="case-hero">
+  <div class="case-hero-bg">CASE SPECIFIC</div>
+  <a href="../#work" class="case-back">← Back to Work</a>
+  <div class="case-industry-label reveal">Food & Nutrition</div>
+  <h1 class="reveal">CASE SPECIFIC<br>MEAL PREP</h1>
+  <div class="case-tagline reveal">Social Media Management & Content Production</div>
+  <p class="case-hero-desc reveal">Case Specific Meal Prep is a Pittsburgh-based meal prep and catering company founded by Vince, with Chef Dom crafting personalized, healthy dishes for clients across the city. The Stoop managed their full social media presence, produced food photography and spotlight video content, designed catering menus, and coordinated influencer kitchen collaborations.</p>
+  <div class="case-tags reveal">
+    <span class="case-tag">Social Media</span>
+    <span class="case-tag">Content Production</span>
+    <span class="case-tag">Graphic Design</span>
+    <span class="case-tag">Influencer Marketing</span>
+  </div>
+</section>
+
+<div class="metrics-section">
+  <div class="metrics-grid">
+    <div class="metric reveal"><div class="metric-val">Weekly</div><div class="metric-label">Content Calendar</div></div>
+    <div class="metric reveal"><div class="metric-val">Chef's</div><div class="metric-label">Choice Series</div></div>
+    <div class="metric reveal"><div class="metric-val">Influencer</div><div class="metric-label">Kitchen Collabs</div></div>
+    <div class="metric reveal"><div class="metric-val">Menu</div><div class="metric-label">Design & Catering</div></div>
+  </div>
+</div>
+
+<div class="case-content">
+  <h2 class="reveal">The <span class="accent">Challenge</span></h2>
+  <p class="reveal">Case Specific Meal Prep had built a loyal customer base through word-of-mouth and Chef Dom's incredible dishes, but their social media presence didn't reflect the quality of their product. They needed a partner who could tell their story visually — from the kitchen to the customer — and build the kind of consistent, engaging content that turns followers into orders.</p>
+  <p class="reveal">Beyond social media, CSMP was expanding into catering and needed professional menu designs and a content strategy that could support both their meal prep subscriptions and their growing catering business.</p>
+</div>
+
+<!-- FOOD PHOTOGRAPHY -->
+<section class="gallery">
+  <div class="section-type-label reveal">Food Photography</div>
+  <h2 class="reveal">From the Kitchen</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1L7Rn_DjkjVvPW33uNLHTXz9-bOVkt99J&sz=w800" alt="CSMP meal prep dish" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1yVRMWkCHjXUzWFOosAgSgRUK_jXvFoDy&sz=w800" alt="CSMP prepared meals" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=13Rk7f3SXPOCh83edmbfA2A-zNUfG2HKT&sz=w800" alt="CSMP food photography" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=17OYWYOzT2oWC0l_NQL0QewaM038xbu4Y&sz=w800" alt="CSMP healthy meal" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1I2MeCnEW-_Yc5H9VfrYP-jKLlt22eA-d&sz=w800" alt="CSMP meal preparation" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1MYinljQ209ycQH-NkioIf_es7aYlxE7Q&sz=w800" alt="CSMP plated dish" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1472LsFziLIG9yjePSyAX7-Xc6wu4KLWC&sz=w800" alt="CSMP fresh ingredients" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1R9ALh3tXD3oU59ot7DZCGKo5zJHWykgB&sz=w800" alt="CSMP spotlight photo" loading="lazy">
+  </div>
+</section>
+
+<!-- BRAND IDENTITY -->
+<section class="gallery" style="background: var(--grey);">
+  <div class="section-type-label reveal">Logo Design</div>
+  <h2 class="reveal">Brand Identity</h2>
+  <div class="gallery-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1eQesQJw74qc0TnIzYsE1WQC_9qFtSe5Y&sz=w600" alt="CSMP logo — white" loading="lazy" style="background:#000; object-fit:contain; padding:40px;">
+    <img src="https://drive.google.com/thumbnail?id=1A2_LsPTGq1FaEbvAUU4OagNF9Kn6SLAl&sz=w600" alt="CSMP logo — black" loading="lazy" style="background:#fff; object-fit:contain; padding:40px;">
+  </div>
+</section>
+
+<!-- GRAPHIC DESIGN -->
+<section class="gallery">
+  <div class="section-type-label reveal">Graphic Design</div>
+  <h2 class="reveal">Catering Menus</h2>
+  <div class="design-grid reveal">
+    <img src="https://drive.google.com/thumbnail?id=1prLwTJINfSfk1hFjhaKVY77IuAkwA677&sz=w800" alt="CSMP catering breakfast menu" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1jL8cWvOoGxU-bfZdRuXHecQ99g0SR0HM&sz=w800" alt="CSMP catering lunch and dinner menu" loading="lazy">
+    <img src="https://drive.google.com/thumbnail?id=1GExBfqaqwHHg8gFw15ywQwFYnC1JH17t&sz=w800" alt="CSMP catering in-flight menu" loading="lazy">
+  </div>
+</section>
+
+<!-- VIDEO PRODUCTION -->
+<section class="video-section">
+  <div class="section-type-label reveal">Video Production</div>
+  <h2 class="reveal">Spotlight Series</h2>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/1sZuf7XY9b-rBFT2aqVwnsEjpvNXrmnSh/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">CSMP Spotlight 1</div>
+    </div>
+    <div class="video-card">
+      <iframe src="https://drive.google.com/file/d/13AuqBsIxrGGCkHUX3VPZAbEcvFG6tmJp/preview" width="100%" height="400" allow="autoplay" allowfullscreen style="border:none;"></iframe>
+      <div class="video-label">CSMP Spotlight 2</div>
+    </div>
+  </div>
+</section>
+
+<div class="case-content">
+  <h2 class="reveal">Our <span class="accent">Approach</span></h2>
+  <p class="reveal">The Stoop built a comprehensive content ecosystem for CSMP — managing daily social media posts, producing professional food photography, and creating a themed weekly content calendar that kept the brand consistent and engaging.</p>
+  <ul class="reveal">
+    <li>Weekly content calendar with themed series — Chef's Choice, Ingredient Spotlight, Vendor Spotlight, Client Testimonials, Healthy Tips</li>
+    <li>Professional food photography showcasing Chef Dom's dishes and meal prep process</li>
+    <li>Spotlight video production featuring the team and kitchen operations</li>
+    <li>Influencer kitchen collaborations — creators cooking alongside Chef Dom</li>
+    <li>Catering menu design — breakfast, lunch/dinner, and in-flight menus</li>
+    <li>Interactive social media engagement strategy (polls, Q&As, reminders)</li>
+    <li>Brand identity and logo design</li>
+  </ul>
+</div>
+
+<div class="case-content">
+  <h2 class="reveal">The <span class="accent">Results</span></h2>
+  <p class="reveal">The Stoop transformed CSMP's social media from sporadic posts into a consistent, professionally produced content machine. The themed content series gave the brand a recognizable voice — from Chef Dom's Choice spotlights to Influencer in the Kitchen collaborations — driving engagement and building a community around healthy, personalized nutrition.</p>
+  <p class="reveal">The catering menu designs opened a new revenue stream, giving CSMP the professional collateral needed to pitch corporate catering and private events. The combination of consistent content, professional food photography, and strategic engagement turned social followers into paying customers.</p>
+</div>
+
+<section class="case-cta">
+  <h2 class="reveal">Have a food brand ready to grow?</h2>
+  <p class="reveal">Let's cook up something great together.</p>
+  <div class="reveal"><a href="mailto:mike@thestooppgh.com?subject=Brand%20Partnership%20Inquiry" class="btn btn-primary">Get a Proposal</a></div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <a href="../" class="logo">
+      <svg viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+        <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+        <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+        <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="30" letter-spacing="4">THE STOOP</text>
+      </svg>
+    </a>
+    <p>A digital agency built at the intersection of culture, content, and commerce. Pittsburgh, PA.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Navigate</h4>
+    <ul>
+      <li><a href="../#tracks">What We Do</a></li>
+      <li><a href="../#services">Services</a></li>
+      <li><a href="../#work">Work</a></li>
+      <li><a href="../#about">About</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Connect</h4>
+    <p>
+      <a href="mailto:mike@thestooppgh.com">mike@thestooppgh.com</a><br>
+      Instagram: @thestoop<br>
+      TikTok: @thestoop<br>
+      LinkedIn: The Stoop Agency
+    </p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>&copy; 2026 The Stoop. All Rights Reserved.</span>
+  <span>Pittsburgh, PA</span>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, i * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => { navLinks.classList.toggle('open'); menuToggle.classList.toggle('active'); });
+    navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('open'); menuToggle.classList.remove('active'); }); });
+  }
+</script>
+</body>
+</html>
