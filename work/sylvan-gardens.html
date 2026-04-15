@@ -89,6 +89,7 @@
     -webkit-text-stroke: 1px rgba(245,197,24,0.05);
     top: 50%; left: 50%; transform: translate(-50%, -50%);
     white-space: nowrap; pointer-events: none; user-select: none;
+    will-change: transform;
   }
   .case-back {
     display: inline-flex; align-items: center; gap: 8px;
@@ -224,6 +225,10 @@
     border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 40px;
     font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 2px;
     text-transform: uppercase; display: flex; justify-content: space-between;
+  }
+
+  @media (min-width: 769px) {
+    .case-hero { overflow: visible; }
   }
 
   .reveal {
@@ -448,6 +453,17 @@
 </div>
 
 <script>
+  // Parallax hero background text
+  if (window.innerWidth > 768) {
+    const heroBg = document.querySelector('.case-hero-bg');
+    window.addEventListener('scroll', () => {
+      if (heroBg) {
+        const scrollY = window.scrollY;
+        heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.4}px))`;
+      }
+    }, { passive: true });
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {

@@ -138,6 +138,7 @@
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
+    will-change: transform;
   }
 
   .case-back {
@@ -440,6 +441,10 @@
     text-transform: uppercase; color: var(--mid); text-align: center;
   }
 
+  @media (min-width: 769px) {
+    .case-hero { overflow: visible; }
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -659,6 +664,17 @@
 </div>
 
 <script>
+  // Parallax hero background text
+  if (window.innerWidth > 768) {
+    const heroBg = document.querySelector('.case-hero-bg');
+    window.addEventListener('scroll', () => {
+      if (heroBg) {
+        const scrollY = window.scrollY;
+        heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.4}px))`;
+      }
+    }, { passive: true });
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {

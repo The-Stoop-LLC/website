@@ -861,6 +861,46 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
+  /* PARALLAX */
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-bg-text {
+    will-change: transform;
+  }
+
+  .cta-bg {
+    will-change: transform;
+  }
+
+  .stats-bar {
+    background-attachment: fixed;
+    background-image: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-bright) 100%);
+  }
+
+  .track::before {
+    will-change: opacity;
+  }
+
+  /* SMOOTH SECTION TRANSITIONS */
+  section, .stats-bar, .marquee-wrap, .case-studies, .industries {
+    position: relative;
+  }
+
+  .case-studies::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, var(--black), transparent);
+    pointer-events: none;
+    z-index: 1;
+  }
+
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .tracks { grid-template-columns: 1fr; }
@@ -899,7 +939,12 @@
     .track { padding: 60px 28px; }
     footer { grid-template-columns: 1fr; }
     .hero-cta { flex-direction: column; }
-    .cta-buttons { flex-direction: column; align-items: center; }
+    .cta-section { padding: 100px 20px; }
+    .cta-buttons { flex-direction: column; align-items: center; gap: 12px; }
+    .case-card { padding: 32px 24px; }
+    .case-metrics { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .industry-tags { gap: 8px; }
+    .industry-tag { padding: 10px 20px; font-size: 11px; }
     .footer-bottom { flex-direction: column; gap: 8px; }
   }
 </style>
@@ -1322,6 +1367,46 @@
   }, { threshold: 0.3 });
 
   document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+  // Parallax scrolling
+  const heroBgText = document.querySelector('.hero-bg-text');
+  const ctaBg = document.querySelector('.cta-bg');
+  const trackNumbers = document.querySelectorAll('.track-number');
+
+  if (window.innerWidth > 768) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      if (heroBgText) {
+        heroBgText.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.3}px))`;
+      }
+
+      if (ctaBg) {
+        const ctaRect = ctaBg.parentElement.getBoundingClientRect();
+        if (ctaRect.top < window.innerHeight && ctaRect.bottom > 0) {
+          const offset = (ctaRect.top - window.innerHeight) * 0.15;
+          ctaBg.style.transform = `translateX(-50%) translateY(${offset}px)`;
+        }
+      }
+
+      trackNumbers.forEach(num => {
+        const rect = num.parentElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const offset = (rect.top - window.innerHeight * 0.5) * 0.1;
+          num.style.transform = `translateY(${offset}px)`;
+        }
+      });
+
+      // Service card numbers parallax
+      document.querySelectorAll('.service-num').forEach(num => {
+        const rect = num.parentElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const offset = (rect.top - window.innerHeight * 0.5) * 0.08;
+          num.style.transform = `translateY(${offset}px)`;
+        }
+      });
+    }, { passive: true });
+  }
 
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
