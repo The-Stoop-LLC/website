@@ -11,7 +11,7 @@ Digital advertising agency specializing in influencer marketing and creator coac
 - Intersection Observer for scroll animations
 
 ## Brand
-- **Colors:** True Black, True White, Tangerine Yellow (#F5C518)
+- **Colors:** True Black, True White, Tangerine Yellow (#FFCC00)
 - **Fonts:** Lemon Milk (→ Outfit), Akira Expanded (→ Anton), Helvetica
 - **Aesthetic:** Minimalistic, monochrome, black + yellow
 
