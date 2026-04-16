@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — THE STOOP</title>
+<meta name="description" content="Insights, strategies, case studies, and industry knowledge from The Stoop — a digital agency at the intersection of culture, content, and commerce.">
+<meta property="og:title" content="Blog — THE STOOP">
+<meta property="og:description" content="Strategies, case studies, and industry knowledge from the front lines of digital marketing.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'><rect x='0' y='28' width='8' height='12' fill='%23F5C518'/><rect x='10' y='18' width='8' height='22' fill='%23F5C518'/><rect x='20' y='8' width='8' height='32' fill='%23F5C518'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --white: #ffffff;
+    --yellow: #F5C518;
+    --yellow-bright: #FFD700;
+    --grey: #1a1a1a;
+    --mid: #888;
+    --dark-grey: #111111;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--yellow); color: var(--black); }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .logo svg { height: 28px; width: auto; }
+
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    color: var(--white); text-decoration: none; font-size: 11px;
+    letter-spacing: 3px; text-transform: uppercase;
+    position: relative; padding-bottom: 4px;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--yellow); transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  .menu-toggle {
+    display: none; background: none; border: none;
+    cursor: pointer; padding: 8px; z-index: 101;
+  }
+  .menu-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); margin: 5px 0; transition: all 0.3s ease;
+  }
+  .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  .case-hero {
+    padding: 160px 40px 80px; position: relative; overflow: hidden;
+  }
+  .case-hero-bg {
+    position: absolute; font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(100px, 14vw, 240px); color: transparent;
+    -webkit-text-stroke: 1px rgba(245,197,24,0.05);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    white-space: nowrap; pointer-events: none; user-select: none;
+    will-change: transform;
+  }
+  .case-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--mid); text-decoration: none; margin-bottom: 40px;
+    transition: color 0.3s ease;
+  }
+  .case-back:hover { color: var(--yellow); }
+  .case-industry-label {
+    font-size: 10px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--yellow); margin-bottom: 16px;
+  }
+  .case-hero h1 {
+    font-family: 'Anton', sans-serif; text-transform: uppercase;
+    font-size: clamp(48px, 9vw, 120px); line-height: 0.95;
+    letter-spacing: -2px; margin-bottom: 20px;
+  }
+  .case-tagline {
+    font-family: 'Outfit', sans-serif; font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 600; color: var(--white); margin-bottom: 24px;
+  }
+  .case-hero-desc {
+    font-size: 15px; line-height: 1.9; color: var(--mid); max-width: 640px;
+  }
+
+  /* Blog Grid */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .blog-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 40px 32px;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+  }
+
+  .blog-card:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-4px);
+    border-color: rgba(255,204,0,0.2);
+  }
+
+  .blog-card .blog-category {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 12px;
+  }
+
+  .blog-card h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  .blog-card .blog-excerpt {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--mid);
+    margin-bottom: 20px;
+  }
+
+  .blog-card .blog-meta {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .blog-card .read-more {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.4s ease;
+    display: inline-block;
+    margin-top: 16px;
+  }
+
+  .blog-card:hover .read-more {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .btn {
+    display: inline-block; padding: 16px 36px;
+    font-family: 'Outfit', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease;
+  }
+  .btn-primary { background: var(--yellow); color: var(--black); }
+  .btn-primary:hover {
+    background: var(--yellow-bright); transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(245, 197, 24, 0.3);
+  }
+
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px; font-size: 12px; color: var(--mid);
+  }
+  footer a { color: var(--mid); text-decoration: none; transition: color 0.3s; }
+  footer a:hover { color: var(--yellow); }
+  .footer-brand .logo svg { height: 24px; }
+  .footer-brand p { margin-top: 12px; line-height: 1.8; max-width: 280px; }
+  .footer-links h4, .footer-contact h4 {
+    font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 20px;
+  }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-contact p { line-height: 2; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 40px;
+    font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 2px;
+    text-transform: uppercase; display: flex; justify-content: space-between;
+  }
+
+  @media (min-width: 769px) {
+    .case-hero { overflow: visible; }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .menu-toggle { display: block; }
+    .nav-links {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.95); flex-direction: column;
+      align-items: center; justify-content: center; gap: 40px; z-index: 100;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 18px; letter-spacing: 5px; }
+    .case-hero { padding: 120px 20px 60px; }
+    .blog-grid { grid-template-columns: 1fr; padding: 0 20px; }
+    footer { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 8px; }
+  }
+</style>
+<link rel="canonical" href="https://thestooppgh.com/blog/">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../" class="logo">
+    <svg viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+      <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+      <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+      <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="34" letter-spacing="5">THE STOOP</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../#tracks">What We Do</a></li>
+    <li><a href="../#services">Services</a></li>
+    <li><a href="../#work">Work</a></li>
+    <li><a href="../#about">About</a></li>
+    <li><a href="../#contact">Contact</a></li>
+  </ul>
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="case-hero-bg">INSIGHTS</div>
+  <a href="../" class="case-back">&larr; Back to Home</a>
+  <div class="case-industry-label reveal">Blog</div>
+  <h1 class="reveal">INSIGHTS</h1>
+  <div class="case-tagline reveal">Strategies, case studies, and industry knowledge from the front lines of digital marketing.</div>
+</section>
+
+<!-- BLOG LISTING -->
+<section style="padding: 0 0 100px;">
+  <div class="blog-grid">
+
+    <a href="how-we-generated-480k-views-for-dr-tea.html" class="blog-card reveal">
+      <div class="blog-category">Case Study Breakdown</div>
+      <h2>How We Generated 480K Views for a Local Bubble Tea Shop</h2>
+      <p class="blog-excerpt">A deep dive into the #LoveIsBrewing Valentine's Day campaign &mdash; from creator sourcing to $4 CPM results.</p>
+      <div class="blog-meta">April 2026 &middot; 8 min read</div>
+      <span class="read-more">Read Article &rarr;</span>
+    </a>
+
+    <a href="anatomy-of-a-47k-nonprofit-campaign.html" class="blog-card reveal">
+      <div class="blog-category">Case Study Breakdown</div>
+      <h2>Anatomy of a $47K Nonprofit Capital Campaign</h2>
+      <p class="blog-excerpt">How targeted paid media on Meta and LinkedIn raised $47,139 in donations with 87% lower CPC than industry benchmarks.</p>
+      <div class="blog-meta">April 2026 &middot; 10 min read</div>
+      <span class="read-more">Read Article &rarr;</span>
+    </a>
+
+    <a href="influencer-marketing-roi-guide.html" class="blog-card reveal">
+      <div class="blog-category">Industry Knowledge</div>
+      <h2>How to Calculate Influencer Marketing ROI (With Real Numbers)</h2>
+      <p class="blog-excerpt">Using real campaign data from 15+ influencer activations, here's exactly how to measure what your influencer spend is actually returning.</p>
+      <div class="blog-meta">April 2026 &middot; 12 min read</div>
+      <span class="read-more">Read Article &rarr;</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="../" class="logo">
+      <svg viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="28" width="8" height="12" fill="#F5C518"/>
+        <rect x="9" y="20" width="8" height="20" fill="#F5C518"/>
+        <rect x="18" y="12" width="8" height="28" fill="#F5C518"/>
+        <text x="34" y="35" fill="white" font-family="'Anton', sans-serif" font-size="30" letter-spacing="4">THE STOOP</text>
+      </svg>
+    </a>
+    <p>A digital agency built at the intersection of culture, content, and commerce. Pittsburgh, PA.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Navigate</h4>
+    <ul>
+      <li><a href="../#tracks">What We Do</a></li>
+      <li><a href="../#services">Services</a></li>
+      <li><a href="../#work">Work</a></li>
+      <li><a href="../#about">About</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Connect</h4>
+    <p>
+      <a href="mailto:mike@thestooppgh.com">mike@thestooppgh.com</a><br>
+      <a href="https://www.instagram.com/thestooppgh/" target="_blank">Instagram: @thestooppgh</a><br>
+      <a href="https://www.facebook.com/thestooppgh/" target="_blank">Facebook: @thestooppgh</a><br>
+      <a href="https://www.linkedin.com/company/the-stoop-llc/" target="_blank">LinkedIn: The Stoop LLC</a>
+    </p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>&copy; 2026 The Stoop. All Rights Reserved.</span>
+  <span>Pittsburgh, PA</span>
+</div>
+
+<script>
+  // Parallax hero background text
+  if (window.innerWidth > 768) {
+    const heroBg = document.querySelector('.case-hero-bg');
+    window.addEventListener('scroll', () => {
+      if (heroBg) {
+        const scrollY = window.scrollY;
+        heroBg.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.4}px))`;
+      }
+    }, { passive: true });
+  }
+
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, i * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('active');
+      });
+    });
+  }
+</script>
+<!-- GoHighLevel Tracking & Chat -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="VFfiJB9V5cFgFY6M9QWC"></script>
+</body>
+</html>
