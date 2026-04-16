@@ -541,40 +541,91 @@
   .about-visual {
     position: relative;
     height: 500px;
-  }
-
-  .about-box {
-    position: absolute;
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .about-box-1 {
-    width: 300px; height: 300px;
-    top: 0; right: 0;
-    background: linear-gradient(135deg, var(--yellow), transparent);
-    opacity: 0.2;
-  }
-
-  .about-box-2 {
-    width: 200px; height: 200px;
-    bottom: 40px; left: 40px;
-    background: linear-gradient(135deg, var(--yellow-bright), transparent);
-    opacity: 0.15;
-  }
-
-  .about-box-3 {
-    width: 250px; height: 350px;
-    top: 60px; left: 60px;
-    background: rgba(255,255,255,0.03);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .about-box-3 span {
-    font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: 100px;
-    color: rgba(255,255,255,0.06);
+  .about-stoop-mark {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-stoop-mark .stoop-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-stoop-mark .stoop-bars .bar {
+    background: var(--yellow);
+    border-radius: 2px;
+    transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .about-stoop-mark .stoop-bars .bar-1 { width: 48px; height: 80px; }
+  .about-stoop-mark .stoop-bars .bar-2 { width: 48px; height: 140px; }
+  .about-stoop-mark .stoop-bars .bar-3 { width: 48px; height: 200px; }
+
+  .about-stoop-mark:hover .bar-1 { height: 120px; }
+  .about-stoop-mark:hover .bar-2 { height: 180px; }
+  .about-stoop-mark:hover .bar-3 { height: 240px; }
+
+  .about-stoop-mark .glow {
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,204,0,0.08) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .about-stats {
+    position: absolute;
+    bottom: 40px;
+    left: 0; right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .about-stat {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+  }
+
+  .about-stat-val {
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+    color: var(--yellow);
+    line-height: 1;
+  }
+
+  .about-stat-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-top: 6px;
+  }
+
+  .about-tagline {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.15);
     writing-mode: vertical-rl;
   }
 
@@ -1369,10 +1420,34 @@
       <p>Based in Pittsburgh, we operate at the intersection of influencer marketing, digital advertising, and creator empowerment. We help brands find their voice through authentic partnerships, and we help creators turn their platforms into sustainable careers.</p>
       <p>Whether you're a brand looking to break through the noise or a creator ready to level up, you've found the right stoop to sit on.</p>
     </div>
-    <div class="about-visual">
-      <div class="about-box about-box-1"></div>
-      <div class="about-box about-box-2"></div>
-      <div class="about-box about-box-3"><span>TSA</span></div>
+    <div class="about-visual reveal">
+      <div class="about-stoop-mark">
+        <div class="glow"></div>
+        <div class="stoop-bars">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
+        <div class="about-tagline">EST. 2024 — PITTSBURGH, PA</div>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-val">7</div>
+          <div class="about-stat-label">Clients Served</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-val">267K+</div>
+          <div class="about-stat-label">Views Delivered</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-val">15+</div>
+          <div class="about-stat-label">Creators Activated</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-val">8</div>
+          <div class="about-stat-label">Services Offered</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
