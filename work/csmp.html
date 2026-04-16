@@ -64,7 +64,7 @@
   .gallery { padding: 80px 40px; background: var(--dark-grey); }
   .gallery h2 { font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 40px; text-align: center; }
   .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; max-width: 1000px; margin: 0 auto; }
-  .gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 2px; transition: transform 0.4s ease; }
+  .gallery-grid img { width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--dark-grey); border-radius: 2px; transition: transform 0.4s ease; }
   .gallery-grid img:hover { transform: scale(1.02); }
 
   .design-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 1000px; margin: 0 auto; }
@@ -155,7 +155,7 @@
   <div class="case-hero-bg">CASE SPECIFIC</div>
   <a href="../#work" class="case-back">← Back to Work</a>
   <div class="reveal" style="margin-bottom:32px;">
-    <img src="https://drive.google.com/thumbnail?id=1eQesQJw74qc0TnIzYsE1WQC_9qFtSe5Y&sz=w300" alt="Case Specific Meal Prep logo" loading="lazy" style="height:60px; width:auto; object-fit:contain;">
+    <img src="https://drive.google.com/thumbnail?id=1eQesQJw74qc0TnIzYsE1WQC_9qFtSe5Y&sz=w500" alt="Case Specific Meal Prep logo" loading="lazy" style="height:100px; width:auto; object-fit:contain; filter:brightness(1.1);">
   </div>
   <div class="case-industry-label reveal">Food & Nutrition</div>
   <h1 class="reveal">CASE SPECIFIC<br>MEAL PREP</h1>
