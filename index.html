@@ -37,7 +37,7 @@
     color: var(--white);
     font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     overflow-x: hidden;
-    cursor: crosshair;
+    
   }
 
   ::selection {
@@ -65,7 +65,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    mix-blend-mode: difference;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
   }
 
   .logo {
@@ -407,11 +410,12 @@
   }
 
   .service-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
     padding: 48px 36px;
     transition: all 0.4s ease;
     position: relative;
+    cursor: pointer;
   }
 
   .service-card::after {
@@ -424,8 +428,9 @@
   }
 
   .service-card:hover {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.06);
     transform: translateY(-4px);
+    border-color: rgba(245,197,24,0.2);
   }
 
   .service-card:hover::after { width: 100%; }
@@ -433,7 +438,7 @@
   .service-num {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
     font-size: 48px;
-    color: rgba(255,255,255,0.06);
+    color: rgba(245,197,24,0.12);
     margin-bottom: 20px;
   }
 
@@ -448,6 +453,23 @@
     font-size: 12px;
     line-height: 1.8;
     color: var(--mid);
+  }
+
+  .service-card .learn-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.4s ease;
+  }
+
+  .service-card:hover .learn-more {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   /* STATS */
@@ -1076,31 +1098,37 @@
       <div class="service-num">01</div>
       <h3>Influencer Marketing</h3>
       <p>End-to-end influencer campaigns — from strategy and creator matching to execution, content approval, and ROI reporting.</p>
+      <span class="learn-more">Learn More →</span>
     </a>
     <a href="services/digital-advertising.html" class="service-card reveal" style="text-decoration:none; color:inherit; display:block;">
       <div class="service-num">02</div>
       <h3>Digital Advertising</h3>
       <p>Paid social and programmatic campaigns across Meta, TikTok, Google, and emerging platforms. Data-driven, creatively led.</p>
+      <span class="learn-more">Learn More →</span>
     </a>
     <a href="services/organic-social.html" class="service-card reveal" style="text-decoration:none; color:inherit; display:block;">
       <div class="service-num">03</div>
       <h3>Organic Social</h3>
       <p>Community-first social strategies that build loyal audiences. Content calendars, engagement playbooks, and growth tactics.</p>
+      <span class="learn-more">Learn More →</span>
     </a>
     <a href="services/content-development.html" class="service-card reveal" style="text-decoration:none; color:inherit; display:block;">
       <div class="service-num">04</div>
       <h3>Content Development</h3>
       <p>Scroll-stopping creative across formats — short-form video, UGC, photography, copywriting, and branded content series.</p>
+      <span class="learn-more">Learn More →</span>
     </a>
     <a href="services/automation-ops.html" class="service-card reveal" style="text-decoration:none; color:inherit; display:block;">
       <div class="service-num">05</div>
       <h3>Automation & Ops</h3>
       <p>Marketing automation, CRM workflows, and operational systems that let lean teams scale without burning out.</p>
+      <span class="learn-more">Learn More →</span>
     </a>
     <a href="services/design-branding.html" class="service-card reveal" style="text-decoration:none; color:inherit; display:block;">
       <div class="service-num">06</div>
       <h3>Design & Branding</h3>
       <p>Visual identity, brand guidelines, campaign creative, and design systems that give brands a distinct point of view.</p>
+      <span class="learn-more">Learn More →</span>
     </a>
   </div>
 </section>
@@ -1285,8 +1313,8 @@
   <div class="section-title reveal">Ready to make<br>some noise?</div>
   <p class="cta-sub reveal">Whether you're a brand looking for your next campaign or a creator ready to go pro — we want to hear from you.</p>
   <div class="cta-buttons reveal">
-    <a href="mailto:mike@thestooppgh.com?subject=Brand%20Partnership%20Inquiry" class="btn btn-primary">Brands → Get a Proposal</a>
-    <a href="mailto:mike@thestooppgh.com?subject=Influencer%20Coaching%20Inquiry" class="btn btn-outline">Creators → Book Coaching</a>
+    <a href="services/contact.html" class="btn btn-primary">Brands → Get a Proposal</a>
+    <a href="services/influencer-coaching.html" class="btn btn-outline">Creators → Book Coaching</a>
   </div>
 </section>
 
