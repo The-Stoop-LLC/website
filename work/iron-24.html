@@ -338,6 +338,60 @@
     color: var(--mid);
   }
 
+  .campaigns {
+    padding: 80px 40px;
+    background: var(--grey);
+  }
+
+  .campaigns h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .campaign-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 48px 36px;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+
+  .campaign-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--yellow);
+    transition: width 0.4s ease;
+  }
+
+  .campaign-card:hover { background: rgba(255,255,255,0.04); }
+  .campaign-card:hover::after { width: 100%; }
+
+  .campaign-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .campaign-quarter {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 16px;
+  }
+
+  .campaign-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
   .case-cta {
     text-align: center;
     padding: 120px 40px;
@@ -519,6 +573,7 @@
     .deliverables-grid { grid-template-columns: 1fr; }
     .metrics-section { padding: 60px 20px; }
     .metrics-grid { grid-template-columns: 1fr; }
+    .campaigns { padding: 60px 20px; }
     .case-cta { padding: 80px 20px; }
     footer { grid-template-columns: 1fr; }
     .gallery { padding: 60px 20px; }
@@ -568,13 +623,17 @@
   <a href="../#work" class="case-back">← Back to Work</a>
   <div class="case-industry-label reveal">Fitness & Equipment</div>
   <h1 class="reveal">IRON 24</h1>
-  <div class="case-tagline reveal">Corporate Content Production & Social Media</div>
-  <p class="case-hero-desc reveal">Iron 24 Holdings is a fitness facility headquartered in Pearland, TX. The Stoop delivered a full-scope corporate content engagement including professional videography, photography, droneography, and social media management — all backed by a formal Master Services Agreement.</p>
+  <div class="case-tagline reveal">Content Production & Influencer Activation</div>
+  <p class="case-hero-desc reveal">Iron 24 is a fitness facility with locations in Pearland, TX and Pittsburgh's South Hills. The Stoop delivered content production across both locations — videography, photography, droneography, and educational video series — plus activated 8 local influencers through membership gifting for UGC and organic brand exposure.</p>
   <div class="case-tags reveal">
     <span class="case-tag">Videography</span>
     <span class="case-tag">Photography</span>
     <span class="case-tag">Droneography</span>
-    <span class="case-tag">Social Media</span>
+    <span class="case-tag">Educational Video</span>
+    <span class="case-tag">Influencer Activation</span>
+    <span class="case-tag">UGC</span>
+    <span class="case-tag">Post-Production</span>
+    <span class="case-tag">MSA Retainer</span>
   </div>
 </section>
 
@@ -583,19 +642,19 @@
   <div class="metrics-grid">
     <div class="metric reveal">
       <div class="metric-val">20</div>
-      <div class="metric-label">Videos Produced</div>
+      <div class="metric-label">Videos (Corporate)</div>
     </div>
     <div class="metric reveal">
       <div class="metric-val">60</div>
-      <div class="metric-label">Photos Delivered</div>
+      <div class="metric-label">Photos (Corporate)</div>
     </div>
     <div class="metric reveal">
-      <div class="metric-val">$4K</div>
-      <div class="metric-label">Production SOW</div>
+      <div class="metric-val">8</div>
+      <div class="metric-label">Influencers Activated</div>
     </div>
     <div class="metric reveal">
-      <div class="metric-val">Full MSA</div>
-      <div class="metric-label">Retainer Agreement</div>
+      <div class="metric-val">$7,875</div>
+      <div class="metric-label">Total Production</div>
     </div>
   </div>
 </div>
@@ -603,25 +662,62 @@
 <!-- THE CHALLENGE -->
 <div class="case-content">
   <h2 class="reveal">The <span class="accent">Challenge</span></h2>
-  <p class="reveal">Iron 24 Holdings was preparing to launch a new fitness facility and needed professional content that matched the scale of their ambition. They required a production partner who could handle everything from cinematic video to aerial drone footage — and deliver it on a tight pre-launch timeline.</p>
-  <p class="reveal">Beyond content production, Iron 24 needed a social media strategy that would build anticipation before doors opened and sustain momentum after launch.</p>
+  <p class="reveal">Iron 24 needed professional content across two locations — their corporate headquarters in Pearland, TX and a new franchise location in Pittsburgh's South Hills neighborhood owned by Sam Pitcairn. They required cinematic video, professional photography, aerial drone footage, and educational content — all produced to a standard that could fuel their social media, website, and marketing channels.</p>
 </div>
 
-<!-- DELIVERABLES -->
-<section class="deliverables">
-  <h2 class="reveal">Production Deliverables</h2>
-  <div class="deliverables-grid">
-    <div class="deliverable-card reveal">
-      <div class="deliverable-num">20</div>
-      <div class="deliverable-label">Professional Videos</div>
+<!-- ENGAGEMENT 1: SOUTH HILLS FRANCHISE -->
+<section class="campaigns">
+  <div class="section-type-label reveal">Engagement 1 — Pittsburgh</div>
+  <h2 class="reveal">South Hills Franchise</h2>
+  <div class="campaign-card reveal" style="max-width:900px; margin:0 auto 40px;">
+    <div class="campaign-quarter">Franchise Owner: Sam Pitcairn</div>
+    <h3>Gym Tour + Educational Videos</h3>
+    <p>Produced a full gym tour video and educational content series for Iron 24's South Hills franchise location. Deliverables included a 2-minute gym tour video in 3 formats, 10 reels, 30 professional photos, plus a 3-minute educational video with 5 additional reels.</p>
+    <div style="margin-top:20px;">
+      <span class="case-tag" style="display:inline-block; margin:4px;">Gym Tour Video</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Educational Video</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">15 Reels</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">30 Photos</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">$2,875</span>
     </div>
-    <div class="deliverable-card reveal">
-      <div class="deliverable-num">60</div>
-      <div class="deliverable-label">Professional Photos</div>
+  </div>
+</section>
+
+<!-- INFLUENCER ACTIVATION — SOUTH HILLS -->
+<section class="campaigns" style="background: var(--dark-grey);">
+  <div class="section-type-label reveal">Influencer Activation — South Hills</div>
+  <h2 class="reveal">Creator UGC Program</h2>
+  <div class="campaign-card reveal" style="max-width:900px; margin:0 auto 40px;">
+    <div class="campaign-quarter">Membership Gifting → UGC + Brand Tags</div>
+    <h3>8 Local Creators Activated</h3>
+    <p>Activated 8 Pittsburgh-area fitness and lifestyle creators through membership gifting. Creators participated in the content shoot and received professional content in exchange for organic posts tagging @iron24pittsburghsouth and @iron24hq.</p>
+    <div style="margin-top:20px;">
+      <span class="case-tag" style="display:inline-block; margin:4px;">Chelsea (@vogue_chelsea)</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Michelle (@lagreedietetics)</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Roses & Wellness</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Nik Mirani</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Alex Nichols</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Noah Palladini</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">David J Kelly</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Cam Sunseri</span>
     </div>
-    <div class="deliverable-card reveal">
-      <div class="deliverable-num">Aerial</div>
-      <div class="deliverable-label">Drone Footage</div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT 2: CORPORATE -->
+<section class="campaigns" style="background: var(--grey);">
+  <div class="section-type-label reveal">Engagement 2 — Pearland, TX</div>
+  <h2 class="reveal">Corporate Content Production</h2>
+  <div class="campaign-card reveal" style="max-width:900px; margin:0 auto 40px;">
+    <div class="campaign-quarter">Master Services Agreement — $4,000</div>
+    <h3>Full-Scope Production</h3>
+    <p>Delivered a comprehensive content production engagement for Iron 24's corporate headquarters in Pearland, TX. The scope included professional videography (20 videos in 9x16 and 16x9), 60 color-graded photos, and aerial droneography — all produced during multiple 8-hour shoot blocks and backed by a formal Master Services Agreement.</p>
+    <div style="margin-top:20px;">
+      <span class="case-tag" style="display:inline-block; margin:4px;">20 Videos</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">60 Photos</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Drone Video</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">Full MSA</span>
+      <span class="case-tag" style="display:inline-block; margin:4px;">$4,000</span>
     </div>
   </div>
 </section>
@@ -659,22 +755,22 @@
 <!-- THE APPROACH -->
 <div class="case-content">
   <h2 class="reveal">Our <span class="accent">Approach</span></h2>
-  <p class="reveal">The Stoop operated as Iron 24's end-to-end content production arm — handling pre-production planning, on-site shoots, post-production editing, and social media strategy. Everything was formalized under a Master Services Agreement for clear deliverables and accountability.</p>
   <ul class="reveal">
-    <li>Professional videography covering facility tours, equipment showcases, and brand storytelling</li>
-    <li>High-resolution photography for marketing materials, social media, and web</li>
-    <li>Aerial droneography capturing the full scope of the facility and location</li>
-    <li>Social media management proposals for pre-launch, launch, and post-launch phases</li>
-    <li>Formal Master Services Agreement establishing scope, timelines, and retainer terms</li>
-    <li>Full post-production including editing, color grading, and format optimization</li>
+    <li>Produced gym tour video and educational content series for South Hills franchise</li>
+    <li>Delivered 20 videos, 60 photos, and aerial drone footage for corporate HQ</li>
+    <li>Managed full pre-production, production, and post-production pipeline</li>
+    <li>Color grading, audio mixing, text overlay, and branding across all deliverables</li>
+    <li>Activated 8 local influencers via membership gifting for organic UGC</li>
+    <li>Delivered all content in multiple formats (9x16, 16x9, 1x1)</li>
+    <li>Executed under a formal Master Services Agreement</li>
+    <li>Team: Mike Pernice (Account Manager) + Jason Robinson (Multimedia Producer)</li>
   </ul>
 </div>
 
 <!-- THE RESULTS -->
 <div class="case-content">
   <h2 class="reveal">The <span class="accent">Results</span></h2>
-  <p class="reveal">The Stoop delivered a comprehensive content library — 20 professional videos and 60 photos — that gave Iron 24 a premium visual foundation for every marketing channel. The drone footage added a cinematic dimension that set their brand apart from competitors.</p>
-  <p class="reveal">The formal MSA established a long-term partnership framework, positioning The Stoop as Iron 24's ongoing content and social media partner through their growth phase.</p>
+  <p class="reveal">The Stoop delivered a total production value of $7,875 across two locations — giving Iron 24 a comprehensive content library spanning 20+ videos, 60+ photos, drone footage, and 15 reels. The influencer activation through the South Hills shoot generated organic brand exposure across 8 creator accounts, establishing Iron 24's presence in the Pittsburgh fitness community before the franchise even fully launched.</p>
 </div>
 
 <!-- CTA -->
