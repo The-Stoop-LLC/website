@@ -1397,15 +1397,30 @@ footer {
 @media (max-width: 768px) {
   /* NAV */
   nav { padding: 16px 20px; }
-  .menu-toggle { display: block; }
+  .menu-toggle { display: block; z-index: 200; }
   .nav-links {
-    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--yellow); flex-direction: column;
-    align-items: center; justify-content: center; gap: 40px; z-index: 100;
+    display: none !important;
   }
-  .nav-links.open { display: flex; }
-  .nav-links a { font-size: 18px; letter-spacing: 5px; color: var(--black); }
-  .nav-links a::after { background: var(--black); }
+  .nav-links.open {
+    display: flex !important;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--yellow);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    z-index: 150;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links.open li { list-style: none; }
+  .nav-links.open a {
+    font-size: 22px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--black); text-decoration: none; font-weight: 700;
+  }
+  .nav-links.open a::after { background: var(--black); }
 
   /* HOMEPAGE */
   section { padding: 80px 20px; }
