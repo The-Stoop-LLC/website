@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
-  if(window.innerWidth>768){const h=document.querySelector('.case-hero-bg');window.addEventListener('scroll',()=>{if(h)h.style.transform=`translate(-50%,calc(-50% + ${window.scrollY*0.4}px))`},{passive:true})}
+  if(window.innerWidth>768&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches){const h=document.querySelector('.case-hero-bg');let t=false;window.addEventListener('scroll',()=>{if(t)return;t=true;requestAnimationFrame(()=>{if(h)h.style.transform=`translate(-50%,calc(-50% + ${window.scrollY*0.4}px))`;t=false})},{passive:true})}
   const reveals=document.querySelectorAll('.reveal');const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>{en.target.classList.add('visible')},i*100);obs.unobserve(en.target)}})},{threshold:0.1});reveals.forEach(el=>obs.observe(el));
   const mt=document.querySelector('.menu-toggle'),nl=document.querySelector('.nav-links');if(mt){mt.addEventListener('click',()=>{nl.classList.toggle('open');mt.classList.toggle('active')});nl.querySelectorAll('a').forEach(l=>{l.addEventListener('click',()=>{nl.classList.remove('open');mt.classList.remove('active')})})}
 </script>
