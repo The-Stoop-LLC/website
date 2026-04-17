@@ -208,6 +208,7 @@
   }
 
   @media (max-width: 768px) {
+    .work-strip-grid { grid-template-columns: 1fr !important; }
     nav { padding: 16px 20px; }
     .menu-toggle { display: block; }
     .nav-links {
@@ -339,6 +340,24 @@
   </div>
 </div>
 
+
+<!-- RECENT WORK -->
+<section style="padding:80px 40px;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <div class="section-type-label reveal" style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#FFCC00;margin-bottom:16px;">Recent Work</div>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(24px,3vw,32px);font-weight:800;margin-bottom:40px;" class="reveal">See It in Action</h2>
+    <div class="reveal work-strip-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+      <a href="../work/sxp.html" style="text-decoration:none;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:32px 24px;text-align:center;transition:all 0.4s ease;display:flex;flex-direction:column;align-items:center;gap:16px;" onmouseover="this.style.borderColor='rgba(255,204,0,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
+        <img src="https://drive.google.com/thumbnail?id=1xXH_hYmDidezMIhpHvznx6WN6UKI4ZTR&sz=w200" alt="SXP logo" loading="lazy" style="height:48px;width:auto;max-width:160px;object-fit:contain;filter:brightness(1.1);">
+        <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a0a0a0;">SXP</span>
+      </a>
+      <a href="../work/sylvan-gardens.html" style="text-decoration:none;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:32px 24px;text-align:center;transition:all 0.4s ease;display:flex;flex-direction:column;align-items:center;gap:16px;" onmouseover="this.style.borderColor='rgba(255,204,0,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
+        <img src="https://drive.google.com/thumbnail?id=1eKL7ZTnDX5_PX-YiOzJYQk6guku0lPGb&sz=w200" alt="Sylvan Gardens logo" loading="lazy" style="height:48px;width:auto;max-width:160px;object-fit:contain;filter:brightness(1.1);">
+        <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a0a0a0;">Sylvan Gardens</span>
+      </a>
+    </div>
+  </div>
+</section>
 <!-- INQUIRY FORM -->
 <section style="padding: 80px 40px; background: var(--grey);">
   <div style="max-width: 700px; margin: 0 auto; text-align: center;">
