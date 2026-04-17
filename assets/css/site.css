@@ -1404,16 +1404,18 @@ footer {
   .nav-links.open {
     display: flex !important;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
     background: var(--yellow);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 32px;
     z-index: 150;
     list-style: none;
-    padding: 0;
+    padding: 80px 20px 40px;
     margin: 0;
+    overflow-y: auto;
   }
   .nav-links.open li { list-style: none; }
   .nav-links.open a {
