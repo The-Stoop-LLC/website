@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://widgets.leadconnectorhq.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
 <style>
-  :root{--black:#000;--white:#fff;--yellow:#FFCC00;--yellow-bright:#FFD700;--grey:#1a1a1a;--mid:#888;--dark-grey:#111}
+  :root{--black:#000;--white:#fff;--yellow:#FFCC00;--yellow-bright:#FFD700;--grey:#1a1a1a;--mid:#a0a0a0;--dark-grey:#111}
   *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
   body{background:var(--black);color:var(--white);font-family:'Outfit','Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden}
   ::selection{background:var(--yellow);color:var(--black)}
@@ -79,7 +79,7 @@
 <!-- NAV -->
 <nav>
   <a href="../" class="logo">
-    <svg viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 280 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Stoop">
       <rect x="0" y="28" width="8" height="12" fill="#FFCC00"/>
       <rect x="9" y="20" width="8" height="20" fill="#FFCC00"/>
       <rect x="18" y="12" width="8" height="28" fill="#FFCC00"/>
@@ -92,12 +92,14 @@
     <li><a href="../#work">Work</a></li>
     <li><a href="../#about">About</a></li>
     <li><a href="../#contact">Contact</a></li>
-    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../blog/" aria-current="page">Blog</a></li>
   </ul>
   <button class="menu-toggle" aria-label="Toggle menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<main>
 
 <!-- HERO -->
 <section class="case-hero">
@@ -183,10 +185,12 @@
 </div>
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="footer-brand">
     <a href="../" class="logo">
-      <svg viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 260 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Stoop">
         <rect x="0" y="28" width="8" height="12" fill="#FFCC00"/>
         <rect x="9" y="20" width="8" height="20" fill="#FFCC00"/>
         <rect x="18" y="12" width="8" height="28" fill="#FFCC00"/>
@@ -203,7 +207,7 @@
       <li><a href="../#work">Work</a></li>
       <li><a href="../#about">About</a></li>
       <li><a href="../#contact">Contact</a></li>
-    <li><a href="../blog/">Blog</a></li>
+    <li><a href="../blog/" aria-current="page">Blog</a></li>
     </ul>
   </div>
   <div class="footer-contact">
