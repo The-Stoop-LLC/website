@@ -823,11 +823,11 @@ footer a:hover { color: var(--yellow); }
     background: var(--white); margin: 5px 0; transition: all 0.3s ease;
   }
 
-.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); background: var(--black); }
 
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
 
-.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background: var(--black); }
 
 /* PARALLAX */
   .parallax-bg {
@@ -1400,11 +1400,12 @@ footer {
   .menu-toggle { display: block; }
   .nav-links {
     display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.95); flex-direction: column;
+    background: var(--yellow); flex-direction: column;
     align-items: center; justify-content: center; gap: 40px; z-index: 100;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 18px; letter-spacing: 5px; }
+  .nav-links a { font-size: 18px; letter-spacing: 5px; color: var(--black); }
+  .nav-links a::after { background: var(--black); }
 
   /* HOMEPAGE */
   section { padding: 80px 20px; }
