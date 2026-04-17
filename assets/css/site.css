@@ -1294,17 +1294,6 @@ footer {
 
 .footer-links h4,.footer-contact h4{font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--white);margin-bottom:20px}
 
-.menu-toggle{display:block}
-.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.95);flex-direction:column;align-items:center;justify-content:center;gap:40px;z-index:100}
-.nav-links.open{display:flex}
-.nav-links a{font-size:18px;letter-spacing:5px}
-.case-hero{padding:120px 20px 60px}
-.article-body{padding:40px 20px}
-.stat-grid{grid-template-columns:1fr}
-.related{padding:0 20px 60px}
-footer{grid-template-columns:1fr}
-.footer-bottom{flex-direction:column;gap:8px}
-}
 
 /* Blog Grid */
   .blog-grid {
