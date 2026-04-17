@@ -79,6 +79,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 0 40px;
     position: relative;
     overflow: hidden;
@@ -103,7 +105,7 @@ body {
     font-size: clamp(60px, 10vw, 160px);
     line-height: 0.9;
     letter-spacing: -2px;
-    max-width: 900px;
+    max-width: 1000px;
     opacity: 0;
     animation: slideUp 0.8s ease forwards 0.5s;
   }
@@ -119,9 +121,9 @@ body {
 
 .hero-sub {
     margin-top: 32px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.8;
-    max-width: 480px;
+    max-width: 560px;
     color: var(--mid);
     opacity: 0;
     animation: slideUp 0.8s ease forwards 0.7s;
@@ -131,6 +133,7 @@ body {
     margin-top: 40px;
     display: flex;
     gap: 16px;
+    justify-content: center;
     opacity: 0;
     animation: slideUp 0.8s ease forwards 0.9s;
   }
