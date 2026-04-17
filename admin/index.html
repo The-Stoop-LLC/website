@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — THE STOOP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'><rect x='0' y='28' width='8' height='12' fill='%23FFCC00'/><rect x='10' y='18' width='8' height='22' fill='%23FFCC00'/><rect x='20' y='8' width='8' height='32' fill='%23FFCC00'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Anton&display=swap" rel="stylesheet">
+<style>
+  :root { --black: #000; --white: #fff; --yellow: #FFCC00; --grey: #1a1a1a; --mid: #a0a0a0; --dark: #111; --green: #00c853; --red: #ff3d00; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--black); color: var(--white); font-family: 'Outfit', sans-serif; min-height: 100vh; }
+  ::selection { background: var(--yellow); color: var(--black); }
+
+  /* LOGIN GATE */
+  #login-gate { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 40px; }
+  #login-gate.hidden { display: none; }
+  .login-box { text-align: center; max-width: 400px; width: 100%; }
+  .login-box h1 { font-family: 'Anton', sans-serif; font-size: 48px; color: var(--yellow); margin-bottom: 8px; }
+  .login-box p { color: var(--mid); font-size: 13px; margin-bottom: 32px; }
+  .login-box input { width: 100%; padding: 16px 20px; background: var(--grey); border: 1px solid rgba(255,255,255,0.1); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 14px; letter-spacing: 2px; text-align: center; outline: none; transition: border-color 0.3s; }
+  .login-box input:focus { border-color: var(--yellow); }
+  .login-box input::placeholder { color: rgba(255,255,255,0.3); }
+  .login-box button { width: 100%; padding: 16px; background: var(--yellow); color: var(--black); font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; border: none; cursor: pointer; margin-top: 12px; transition: all 0.3s; }
+  .login-box button:hover { background: #FFD700; }
+  .login-error { color: var(--red); font-size: 12px; margin-top: 12px; display: none; }
+
+  /* DASHBOARD */
+  #dashboard { display: none; }
+  #dashboard.visible { display: block; }
+  .dash-header { padding: 24px 40px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; }
+  .dash-header h1 { font-family: 'Anton', sans-serif; font-size: 24px; letter-spacing: 2px; }
+  .dash-header h1 span { color: var(--yellow); }
+  .dash-header .logout { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mid); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 8px 16px; background: none; transition: all 0.3s; }
+  .dash-header .logout:hover { border-color: var(--yellow); color: var(--yellow); }
+
+  .dash-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; padding: 40px; }
+  @media (max-width: 1024px) { .dash-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) { .dash-grid { grid-template-columns: 1fr; padding: 20px; } }
+
+  .card { background: var(--grey); border: 1px solid rgba(255,255,255,0.06); padding: 28px; transition: border-color 0.3s; }
+  .card:hover { border-color: rgba(255,204,0,0.2); }
+  .card-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--yellow); margin-bottom: 16px; }
+  .card h2 { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+  .card ul { list-style: none; }
+  .card ul li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 13px; }
+  .card ul li:last-child { border: none; }
+  .card ul li a { color: var(--white); text-decoration: none; transition: color 0.2s; display: flex; justify-content: space-between; align-items: center; }
+  .card ul li a:hover { color: var(--yellow); }
+  .card ul li a .arrow { color: var(--mid); font-size: 11px; }
+  .card ul li a:hover .arrow { color: var(--yellow); }
+
+  .stat-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+  .stat-item { flex: 1; min-width: 80px; text-align: center; padding: 16px 12px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); }
+  .stat-val { font-family: 'Anton', sans-serif; font-size: 28px; color: var(--yellow); }
+  .stat-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--mid); margin-top: 4px; }
+
+  .ext-link { display: inline-block; padding: 10px 20px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(255,255,255,0.15); color: var(--white); margin: 4px; transition: all 0.3s; }
+  .ext-link:hover { border-color: var(--yellow); color: var(--yellow); }
+
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+  .status-dot.green { background: var(--green); }
+  .status-dot.yellow { background: var(--yellow); }
+  .status-dot.red { background: var(--red); }
+
+  .full-width { grid-column: 1 / -1; }
+  .two-col { grid-column: span 2; }
+  @media (max-width: 768px) { .two-col { grid-column: span 1; } }
+
+  .checklist li { display: flex; align-items: center; gap: 8px; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN GATE -->
+<div id="login-gate">
+  <div class="login-box">
+    <h1>THE STOOP</h1>
+    <p>Admin Control Center</p>
+    <input type="password" id="password" placeholder="Enter password" autocomplete="off">
+    <button onclick="login()">Access Dashboard</button>
+    <div class="login-error" id="login-error">Incorrect password</div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard">
+  <div class="dash-header">
+    <h1>THE STOOP <span>ADMIN</span></h1>
+    <button class="logout" onclick="logout()">Log Out</button>
+  </div>
+
+  <div class="dash-grid">
+
+    <!-- SITE OVERVIEW -->
+    <div class="card two-col">
+      <div class="card-label">Site Overview</div>
+      <div class="stat-row">
+        <div class="stat-item"><div class="stat-val">36</div><div class="stat-label">Total Pages</div></div>
+        <div class="stat-item"><div class="stat-val">8</div><div class="stat-label">Blog Posts</div></div>
+        <div class="stat-item"><div class="stat-val">7</div><div class="stat-label">Case Studies</div></div>
+        <div class="stat-item"><div class="stat-val">9</div><div class="stat-label">Services</div></div>
+        <div class="stat-item"><div class="stat-val">9</div><div class="stat-label">Thank-You</div></div>
+      </div>
+      <p style="font-size:12px; color:var(--mid);">Domain: thestooppgh.com &middot; Hosted: GitHub Pages &middot; CRM: GoHighLevel &middot; Analytics: GA4 + GTM</p>
+    </div>
+
+    <!-- EXTERNAL TOOLS -->
+    <div class="card">
+      <div class="card-label">External Tools</div>
+      <h2>Quick Links</h2>
+      <a href="https://analytics.google.com/" target="_blank" class="ext-link">Google Analytics</a>
+      <a href="https://tagmanager.google.com/" target="_blank" class="ext-link">Tag Manager</a>
+      <a href="https://app.gohighlevel.com/" target="_blank" class="ext-link">GoHighLevel</a>
+      <a href="https://github.com/The-Stoop-LLC/website" target="_blank" class="ext-link">GitHub Repo</a>
+      <a href="https://search.google.com/search-console" target="_blank" class="ext-link">Search Console</a>
+      <a href="https://www.facebook.com/thestooppgh/" target="_blank" class="ext-link">Facebook</a>
+      <a href="https://www.instagram.com/thestooppgh/" target="_blank" class="ext-link">Instagram</a>
+      <a href="https://www.linkedin.com/company/the-stoop-llc/" target="_blank" class="ext-link">LinkedIn</a>
+    </div>
+
+    <!-- PAGES: CASE STUDIES -->
+    <div class="card">
+      <div class="card-label">Case Studies</div>
+      <h2>Client Work (7)</h2>
+      <ul>
+        <li><a href="../work/x-shadyside.html" target="_blank">X Shadyside <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../work/dr-tea.html" target="_blank">Dr. Tea <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../work/mfpaa.html" target="_blank">MFPAA <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../work/iron-24.html" target="_blank">Iron 24 <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../work/sxp.html" target="_blank">SXP <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../work/sylvan-gardens.html" target="_blank">Sylvan Gardens <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../work/csmp.html" target="_blank">CSMP <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </div>
+
+    <!-- PAGES: SERVICES -->
+    <div class="card">
+      <div class="card-label">Service Pages</div>
+      <h2>Landing Pages (9)</h2>
+      <ul>
+        <li><a href="../services/influencer-marketing.html" target="_blank">Influencer Marketing <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/digital-advertising.html" target="_blank">Digital Advertising <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/organic-social.html" target="_blank">Organic Social <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/content-development.html" target="_blank">Content Development <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/automation-ops.html" target="_blank">Automation & Ops <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/design-branding.html" target="_blank">Design & Branding <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/website-design.html" target="_blank">Website Design <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/influencer-coaching.html" target="_blank">Influencer Coaching <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../services/contact.html" target="_blank">General Contact <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </div>
+
+    <!-- PAGES: BLOG -->
+    <div class="card">
+      <div class="card-label">Blog</div>
+      <h2>Articles (8)</h2>
+      <ul>
+        <li><a href="../blog/15-fitness-creators-267k-views.html" target="_blank">15 Fitness Creators, 267K Views <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/how-we-generated-480k-views-for-dr-tea.html" target="_blank">480K Views for Dr. Tea <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/anatomy-of-a-47k-nonprofit-campaign.html" target="_blank">$47K Nonprofit Campaign <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/cross-brand-partnerships-guide.html" target="_blank">Cross-Brand Partnerships <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/organic-social-growth-landscaping.html" target="_blank">Organic Social: Sylvan Gardens <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/themed-content-calendar-food-brands.html" target="_blank">Themed Content Calendar <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/content-production-at-scale-gym.html" target="_blank">81 Assets for Iron 24 <span class="arrow">&rarr;</span></a></li>
+        <li><a href="../blog/influencer-marketing-roi-guide.html" target="_blank">Influencer Marketing ROI Guide <span class="arrow">&rarr;</span></a></li>
+      </ul>
+    </div>
+
+    <!-- SITE HEALTH -->
+    <div class="card">
+      <div class="card-label">Site Health</div>
+      <h2>Status Checklist</h2>
+      <ul class="checklist">
+        <li><span class="status-dot green"></span> Google Analytics (G-L3QFSMDD86)</li>
+        <li><span class="status-dot green"></span> Google Tag Manager (GTM-PWLD85D9)</li>
+        <li><span class="status-dot green"></span> GoHighLevel CRM Widget</li>
+        <li><span class="status-dot green"></span> SSL / HTTPS</li>
+        <li><span class="status-dot green"></span> Sitemap.xml (27 URLs)</li>
+        <li><span class="status-dot green"></span> robots.txt</li>
+        <li><span class="status-dot green"></span> JSON-LD Schema (all pages)</li>
+        <li><span class="status-dot green"></span> OG Image Tags (all pages)</li>
+        <li><span class="status-dot green"></span> Mobile Responsive</li>
+        <li><span class="status-dot green"></span> External CSS (site.css)</li>
+        <li><span class="status-dot green"></span> Preconnect Hints</li>
+        <li><span class="status-dot yellow"></span> 3 logos still on Google Drive</li>
+        <li><span class="status-dot yellow"></span> Missing og:url on subpages</li>
+      </ul>
+    </div>
+
+    <!-- GHL FORMS -->
+    <div class="card">
+      <div class="card-label">GHL Forms</div>
+      <h2>Form Embeds (9)</h2>
+      <ul>
+        <li>Influencer Marketing &mdash; <span style="color:var(--mid);font-size:11px;">7QnJvUQXJSykvsRBlV6D</span></li>
+        <li>Digital Advertising &mdash; <span style="color:var(--mid);font-size:11px;">NJxSVFD0H5lkq6DSv2pv</span></li>
+        <li>Organic Social &mdash; <span style="color:var(--mid);font-size:11px;">PKaSHfxtxv8cM7QWd7rM</span></li>
+        <li>Content Development &mdash; <span style="color:var(--mid);font-size:11px;">PbhzeRzwqHBk2Fke82Qp</span></li>
+        <li>Automation &amp; Ops &mdash; <span style="color:var(--mid);font-size:11px;">RmrE8m2pEFhIotHysdXz</span></li>
+        <li>Design &amp; Branding &mdash; <span style="color:var(--mid);font-size:11px;">PQ3DbXYXUakhTScSEQlD</span></li>
+        <li>Website Design &mdash; <span style="color:var(--mid);font-size:11px;">EZRqMmFN7ARXOIGBFKGK</span></li>
+        <li>Influencer Coaching &mdash; <span style="color:var(--mid);font-size:11px;">r2OQx3IlFKIACeubdKpq</span></li>
+        <li>General Contact &mdash; <span style="color:var(--mid);font-size:11px;">TGpnjFroxSrAzZhw3yPn</span></li>
+      </ul>
+    </div>
+
+    <!-- TRACKING IDS -->
+    <div class="card">
+      <div class="card-label">Tracking & IDs</div>
+      <h2>Configuration</h2>
+      <ul>
+        <li>GA4 &mdash; <span style="color:var(--yellow);font-size:12px;font-family:monospace;">G-L3QFSMDD86</span></li>
+        <li>GTM &mdash; <span style="color:var(--yellow);font-size:12px;font-family:monospace;">GTM-PWLD85D9</span></li>
+        <li>GHL Location &mdash; <span style="color:var(--yellow);font-size:12px;font-family:monospace;">VFfiJB9V5cFgFY6M9QWC</span></li>
+        <li>Domain &mdash; <span style="color:var(--yellow);font-size:12px;font-family:monospace;">thestooppgh.com</span></li>
+        <li>GitHub &mdash; <span style="color:var(--yellow);font-size:12px;font-family:monospace;">The-Stoop-LLC/website</span></li>
+        <li>Email &mdash; <span style="color:var(--yellow);font-size:12px;font-family:monospace;">mike@thestooppgh.com</span></li>
+      </ul>
+    </div>
+
+    <!-- CLIENT DIRECTORY -->
+    <div class="card full-width">
+      <div class="card-label">Client Directory</div>
+      <h2>Active & Past Clients</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:12px; margin-top:16px;">
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>X Shadyside</strong><br><span style="font-size:11px; color:var(--mid);">Fitness &middot; Influencer Campaigns</span>
+        </div>
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>Dr. Tea</strong><br><span style="font-size:11px; color:var(--mid);">F&B &middot; Influencer Campaign</span>
+        </div>
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>MFPAA</strong><br><span style="font-size:11px; color:var(--mid);">Nonprofit EMS &middot; Full Marketing</span>
+        </div>
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>Iron 24</strong><br><span style="font-size:11px; color:var(--mid);">Gym &middot; Content Production</span>
+        </div>
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>SXP</strong><br><span style="font-size:11px; color:var(--mid);">Sports Performance &middot; Brand Videos</span>
+        </div>
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>Sylvan Gardens</strong><br><span style="font-size:11px; color:var(--mid);">Landscaping &middot; Organic Social</span>
+        </div>
+        <div style="padding:16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);">
+          <strong>CSMP</strong><br><span style="font-size:11px; color:var(--mid);">Meal Prep &middot; Social + Content</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const PASS_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8';
+
+async function sha256(message) {
+  const msgBuffer = new TextEncoder().encode(message);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function login() {
+  const pw = document.getElementById('password').value;
+  const hash = await sha256(pw);
+  if (hash === PASS_HASH) {
+    sessionStorage.setItem('stoop_admin', 'true');
+    showDashboard();
+  } else {
+    document.getElementById('login-error').style.display = 'block';
+    document.getElementById('password').value = '';
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem('stoop_admin');
+  location.reload();
+}
+
+function showDashboard() {
+  document.getElementById('login-gate').classList.add('hidden');
+  document.getElementById('dashboard').classList.add('visible');
+}
+
+document.getElementById('password').addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') login();
+});
+
+if (sessionStorage.getItem('stoop_admin') === 'true') {
+  showDashboard();
+}
+</script>
+</body>
+</html>
