@@ -1389,13 +1389,17 @@ footer{grid-template-columns:1fr}
    RESPONSIVE: TABLET (max-width: 1024px)
    ============================================ */
 @media (max-width: 1024px) {
+  /* Homepage */
   .tracks { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .stats-bar { grid-template-columns: 1fr 1fr; }
   .about-content { grid-template-columns: 1fr; }
   .about-visual { display: none; }
+  /* Case studies */
   .metrics-grid { grid-template-columns: 1fr 1fr; }
   .campaign-grid { grid-template-columns: 1fr; }
+  .video-grid { grid-template-columns: 1fr; }
+  .design-grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ============================================
@@ -1440,6 +1444,8 @@ footer{grid-template-columns:1fr}
   .video-grid { grid-template-columns: 1fr; }
   .gallery { padding: 60px 20px; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .highlight-block { padding: 60px 20px; }
+  .design-grid { grid-template-columns: 1fr; }
 
   /* BLOG */
   .blog-grid { grid-template-columns: 1fr; padding: 0 20px; }
@@ -1447,8 +1453,13 @@ footer{grid-template-columns:1fr}
   .stat-grid { grid-template-columns: 1fr; }
   .related { padding: 0 20px 60px; }
 
-  /* SERVICE WORK STRIPS */
+  /* SERVICE PAGES */
   .work-strip-grid { grid-template-columns: 1fr !important; }
+
+  /* THANK-YOU PAGES */
+  .thank-you-hero { padding: 140px 20px 60px; }
+  .next-steps { padding: 60px 20px; }
+  .steps-grid { grid-template-columns: 1fr; }
 
   /* FOOTER */
   footer { grid-template-columns: 1fr; }
