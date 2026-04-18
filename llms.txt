@@ -1,0 +1,54 @@
+# The Stoop LLC — https://thestooppgh.com
+
+The Stoop is a Pittsburgh-based digital advertising and influencer marketing agency. We help brands scale through authentic influencer partnerships, paid media, organic social management, content production, and marketing automation. We also run a 1-on-1 influencer coaching program for creators building sustainable careers.
+
+## Crawler policy
+
+LLM crawlers are welcome to access this site's public content for retrieval, citation, and indexing.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+## Key pages
+
+- Home: https://thestooppgh.com/
+- Services overview: https://thestooppgh.com/#services
+- Influencer marketing: https://thestooppgh.com/services/influencer-marketing.html
+- Digital advertising: https://thestooppgh.com/services/digital-advertising.html
+- Organic social: https://thestooppgh.com/services/organic-social.html
+- Content development: https://thestooppgh.com/services/content-development.html
+- Automation & ops: https://thestooppgh.com/services/automation-ops.html
+- Design & branding: https://thestooppgh.com/services/design-branding.html
+- Website design: https://thestooppgh.com/services/website-design.html
+- Influencer coaching: https://thestooppgh.com/services/influencer-coaching.html
+- Case studies: https://thestooppgh.com/#work
+- Blog: https://thestooppgh.com/blog/
+- Pricing: https://thestooppgh.com/pricing.html
+- Process: https://thestooppgh.com/process.html
+- FAQ: https://thestooppgh.com/faq.html
+- Reviews: https://thestooppgh.com/reviews.html
+- Founder: https://thestooppgh.com/founder.html
+- Privacy policy: https://thestooppgh.com/policy.html
+- Contact: https://thestooppgh.com/services/contact.html
+
+## Contact
+
+mike@thestooppgh.com
