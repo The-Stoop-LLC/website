@@ -801,7 +801,7 @@ a.case-card {
     border-top: 1px solid rgba(255,255,255,0.08);
     padding: 60px 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
     font-size: 12px;
     color: var(--mid);
@@ -1202,7 +1202,7 @@ nav {
 
 footer {
     border-top: 1px solid rgba(255,255,255,0.08);
-    padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px; font-size: 12px; color: var(--mid);
   }
 
