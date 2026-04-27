@@ -1,0 +1,53 @@
+name: Build Drive galleries
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 12:00 UTC. Picks up new Drive files without a manual trigger.
+    - cron: "0 12 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-galleries
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install script dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Regenerate galleries
+        env:
+          DRIVE_API_KEY: ${{ secrets.DRIVE_API_KEY }}
+        run: python3 scripts/build_galleries.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No gallery changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Regenerate Drive galleries
+
+          Automated run of scripts/build_galleries.py. Picks up any new or
+          renamed files in the Drive folders referenced by DRIVE_GALLERY
+          markers across the site."
+          git push origin main
