@@ -71,17 +71,21 @@ You need a service account with the Drive API enabled.
    - Name: `DRIVE_SA_KEY` (exactly that)
    - Secret: paste the entire JSON, including the outer `{...}` braces.
      No quotes around it. No trailing newline.
-7. Share each Drive folder referenced by a `DRIVE_GALLERY` marker with
-   the service account email as **Viewer**:
-   - Right-click the folder in Drive -> **Share**
-   - In the "Add people, groups, and calendar events" field, paste the
-     service account email
-   - Set role to **Viewer**, uncheck "Notify people", click **Share**
-   - Repeat for every Drive folder you reference.
+7. Set each Drive folder referenced by a `DRIVE_GALLERY` marker to
+   **"Anyone with the link -> Viewer"**:
+   - Right-click the folder in Drive -> **Share** -> **Share**
+   - Click **General access** in the lower section -> change from
+     "Restricted" to **"Anyone with the link"**, role **Viewer**
+   - Click **Done**
 
-   Folders that are also "Anyone with the link -> Viewer" will work too,
-   but explicit per-folder sharing with the service account is the
-   reliable default.
+   This is required, not optional. The rendered page loads thumbnails
+   from `https://drive.google.com/thumbnail?id=FILE_ID` directly from
+   the visitor's browser - those URLs only resolve if the file is set
+   to "Anyone with the link". Sharing only with the service account
+   email lets the script enumerate, but the rendered page would still
+   show broken images. Setting the parent folder to public also
+   reliably cascades the permission to all current and future
+   sub-folders, which sharing-by-email does not always do.
 
 8. (Optional cleanup) If the previous `DRIVE_API_KEY` secret still
    exists, delete it from the repo secrets page.
