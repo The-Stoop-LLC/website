@@ -33,7 +33,7 @@ jobs:
 
       - name: Regenerate galleries
         env:
-          DRIVE_API_KEY: ${{ secrets.DRIVE_API_KEY }}
+          DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
         run: python3 scripts/build_galleries.py
 
       - name: Commit and push if changed
