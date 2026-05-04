@@ -28,6 +28,15 @@ Attributes:
   Drive URL).
 - `label` (optional) - used as the `alt` text and iframe `title` prefix.
   Each generated tile gets a numeric suffix.
+- `exclude` (optional) - comma-separated list of sub-folder names (case
+  insensitive) to skip when recursing. Defaults to `Raw` so private
+  "Raw" sub-folders inside a shared parent stay private. Override to add
+  more, e.g. `exclude="Raw,Working,Originals"`.
+
+The script **recurses into sub-folders** automatically (up to 10 levels
+deep). Files from the entire tree are flattened, deduplicated by ID, and
+sorted by name. So a folder organized like `Showcase/Photos/...` and
+`Showcase/Videos/...` is rendered as a single combined gallery.
 
 Anything between the two markers is overwritten on every run, so don't
 hand-edit it. If the API call fails the script aborts before writing, so
@@ -126,9 +135,10 @@ a real diff, so it stays quiet when nothing changed.
 - **HTTP 403 from the Drive API** - either the Drive API isn't enabled
   on the service account's project, or the service account is disabled.
   Check both in Google Cloud Console.
-- **Empty gallery body, no error** - the folder has no images or videos
-  (only sub-folders, Docs, etc.). Sub-folders are intentionally skipped
-  so you can keep "Raw" or "Working" sub-folders private inside a shared
-  parent.
+- **Empty gallery body, no error** - the folder (and all its non-excluded
+  sub-folders) contained no images or videos, only Docs/Sheets/etc.
+  Or every sub-folder is in the `exclude` list. The script recurses by
+  default, so this usually means the source is empty rather than that
+  the script ignored content.
 - **HTTP 429** - rate limited. The script retries with backoff; if it
   still fails, slow the workflow schedule or batch fewer folders.
