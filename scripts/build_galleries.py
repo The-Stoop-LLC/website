@@ -78,36 +78,65 @@ def build_session() -> AuthorizedSession:
     return AuthorizedSession(credentials)
 
 
-def list_folder(folder_id: str, session: AuthorizedSession) -> list[dict]:
-    """Return all non-trashed, non-folder children of a Drive folder, sorted by name."""
-    items: list[dict] = []
-    page_token: str | None = None
-    while True:
-        params = {
-            "q": f"'{folder_id}' in parents and trashed=false and mimeType != 'application/vnd.google-apps.folder'",
-            "fields": "nextPageToken,files(id,name,mimeType)",
-            "pageSize": 1000,
-            "orderBy": "name",
-        }
-        if page_token:
-            params["pageToken"] = page_token
-        for attempt in range(3):
-            response = session.get(API_BASE, params=params, timeout=30)
-            if response.status_code == 200:
+FOLDER_MIME = "application/vnd.google-apps.folder"
+DEFAULT_EXCLUDE_FOLDER_NAMES = frozenset({"raw"})
+MAX_DEPTH = 10
+
+
+def list_folder(
+    folder_id: str,
+    session: AuthorizedSession,
+    exclude_folder_names: frozenset[str] = DEFAULT_EXCLUDE_FOLDER_NAMES,
+) -> list[dict]:
+    """Return all non-trashed image/video files under a Drive folder, recursing
+    into sub-folders. Folders whose name (case-insensitive) matches
+    `exclude_folder_names` are skipped, so private "Raw" siblings stay private.
+    Files are sorted by name across the merged tree.
+    """
+    collected: list[dict] = []
+    seen: set[str] = set()
+    excludes_lower = {name.strip().lower() for name in exclude_folder_names if name.strip()}
+
+    def walk(current_id: str, depth: int) -> None:
+        if current_id in seen or depth > MAX_DEPTH:
+            return
+        seen.add(current_id)
+        page_token: str | None = None
+        while True:
+            params = {
+                "q": f"'{current_id}' in parents and trashed=false",
+                "fields": "nextPageToken,files(id,name,mimeType)",
+                "pageSize": 1000,
+                "orderBy": "name",
+            }
+            if page_token:
+                params["pageToken"] = page_token
+            for attempt in range(3):
+                response = session.get(API_BASE, params=params, timeout=30)
+                if response.status_code == 200:
+                    break
+                if response.status_code in (429, 500, 502, 503, 504) and attempt < 2:
+                    time.sleep(2 ** attempt)
+                    continue
+                raise RuntimeError(
+                    f"Drive API list failed for folder {current_id}: "
+                    f"HTTP {response.status_code} {response.text[:300]}"
+                )
+            payload = response.json()
+            for child in payload.get("files", []):
+                if child.get("mimeType") == FOLDER_MIME:
+                    if child.get("name", "").lower() in excludes_lower:
+                        continue
+                    walk(child["id"], depth + 1)
+                else:
+                    collected.append(child)
+            page_token = payload.get("nextPageToken")
+            if not page_token:
                 break
-            if response.status_code in (429, 500, 502, 503, 504) and attempt < 2:
-                time.sleep(2 ** attempt)
-                continue
-            raise RuntimeError(
-                f"Drive API list failed for folder {folder_id}: "
-                f"HTTP {response.status_code} {response.text[:300]}"
-            )
-        payload = response.json()
-        items.extend(payload.get("files", []))
-        page_token = payload.get("nextPageToken")
-        if not page_token:
-            break
-    return items
+
+    walk(folder_id, 0)
+    collected.sort(key=lambda f: f.get("name", "").lower())
+    return collected
 
 
 def render_image(file: dict, label: str, index: int) -> str:
@@ -160,7 +189,7 @@ def render_gallery(files: list[dict], label: str) -> str:
 def process_file(
     path: Path,
     session: AuthorizedSession,
-    folder_cache: dict[str, list[dict]],
+    folder_cache: dict[tuple[str, frozenset[str]], list[dict]],
 ) -> int:
     """Rewrite gallery markers in `path`. Returns the number of galleries replaced."""
     original = path.read_text(encoding="utf-8")
@@ -172,9 +201,16 @@ def process_file(
         if not folder_id:
             return match.group(0)
         label = attrs.get("label", "")
-        if folder_id not in folder_cache:
-            folder_cache[folder_id] = list_folder(folder_id, session)
-        body = render_gallery(folder_cache[folder_id], label)
+        exclude_attr = attrs.get("exclude", "")
+        excludes = (
+            frozenset(name.strip() for name in exclude_attr.split(",") if name.strip())
+            if exclude_attr
+            else DEFAULT_EXCLUDE_FOLDER_NAMES
+        )
+        cache_key = (folder_id, excludes)
+        if cache_key not in folder_cache:
+            folder_cache[cache_key] = list_folder(folder_id, session, excludes)
+        body = render_gallery(folder_cache[cache_key], label)
         counter[0] += 1
         return match.group(1) + body + match.group(4)
 
@@ -198,7 +234,7 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 2
 
-    folder_cache: dict[str, list[dict]] = {}
+    folder_cache: dict[tuple[str, frozenset[str]], list[dict]] = {}
     total_galleries = 0
     files_touched = 0
     for html_path in iter_html_files(REPO_ROOT):
