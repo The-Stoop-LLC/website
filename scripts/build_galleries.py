@@ -96,16 +96,23 @@ def list_folder(
     collected: list[dict] = []
     seen: set[str] = set()
     excludes_lower = {name.strip().lower() for name in exclude_folder_names if name.strip()}
+    debug = os.environ.get("DEBUG_GALLERY") == "1"
 
     def walk(current_id: str, depth: int) -> None:
         if current_id in seen or depth > MAX_DEPTH:
             return
         seen.add(current_id)
         page_token: str | None = None
+        n_children = 0
+        n_folders = 0
+        n_files = 0
+        n_skipped = 0
+        n_other = 0
+        other_mimes: dict[str, int] = {}
         while True:
             params = {
                 "q": f"'{current_id}' in parents and trashed=false",
-                "fields": "nextPageToken,files(id,name,mimeType)",
+                "fields": "nextPageToken,files(id,name,mimeType,shortcutDetails(targetId,targetMimeType))",
                 "pageSize": 1000,
                 "orderBy": "name",
             }
@@ -123,16 +130,53 @@ def list_folder(
                     f"HTTP {response.status_code} {response.text[:300]}"
                 )
             payload = response.json()
-            for child in payload.get("files", []):
-                if child.get("mimeType") == FOLDER_MIME:
-                    if child.get("name", "").lower() in excludes_lower:
+            children = payload.get("files", [])
+            n_children += len(children)
+            for child in children:
+                mime = child.get("mimeType", "")
+                # Resolve shortcuts to their targets so the script can follow
+                # them either as recursable folders or as renderable files.
+                if mime == "application/vnd.google-apps.shortcut":
+                    sd = child.get("shortcutDetails") or {}
+                    target_id = sd.get("targetId")
+                    target_mime = sd.get("targetMimeType", "")
+                    if not target_id:
+                        n_other += 1
+                        other_mimes[mime] = other_mimes.get(mime, 0) + 1
                         continue
+                    child = {
+                        "id": target_id,
+                        "name": child.get("name", target_id),
+                        "mimeType": target_mime,
+                    }
+                    mime = target_mime
+                if mime == FOLDER_MIME:
+                    if child.get("name", "").lower() in excludes_lower:
+                        n_skipped += 1
+                        continue
+                    n_folders += 1
                     walk(child["id"], depth + 1)
-                else:
+                elif mime.startswith("image/") or mime.startswith("video/"):
+                    n_files += 1
                     collected.append(child)
+                else:
+                    n_other += 1
+                    other_mimes[mime] = other_mimes.get(mime, 0) + 1
             page_token = payload.get("nextPageToken")
             if not page_token:
                 break
+        if debug:
+            indent = "  " * depth
+            other_summary = (
+                "; other: " + ", ".join(f"{m}={c}" for m, c in other_mimes.items())
+                if other_mimes
+                else ""
+            )
+            print(
+                f"{indent}folder {current_id}: {n_children} children "
+                f"({n_folders} subfolders recursed, {n_files} media added, "
+                f"{n_skipped} excluded, {n_other} other{other_summary})"
+            )
 
     walk(folder_id, 0)
     collected.sort(key=lambda f: f.get("name", "").lower())
