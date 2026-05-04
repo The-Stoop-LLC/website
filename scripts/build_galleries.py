@@ -115,6 +115,8 @@ def list_folder(
                 "fields": "nextPageToken,files(id,name,mimeType,shortcutDetails(targetId,targetMimeType))",
                 "pageSize": 1000,
                 "orderBy": "name",
+                "supportsAllDrives": "true",
+                "includeItemsFromAllDrives": "true",
             }
             if page_token:
                 params["pageToken"] = page_token

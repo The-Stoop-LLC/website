@@ -71,7 +71,19 @@ You need a service account with the Drive API enabled.
    - Name: `DRIVE_SA_KEY` (exactly that)
    - Secret: paste the entire JSON, including the outer `{...}` braces.
      No quotes around it. No trailing newline.
-7. Set each Drive folder referenced by a `DRIVE_GALLERY` marker to
+7. **For folders inside a Shared Drive**, also add the service account
+   email as a member of that Shared Drive:
+   - Open the Shared Drive in Drive
+   - Click **Manage members** (top right)
+   - Add the service account email (`website-galleries@<project>.iam.gserviceaccount.com`),
+     role **Viewer**, **Notify** unchecked, click **Send**
+   - This is required because Shared Drives don't honor folder-level
+     "Anyone with the link" sharing for Drive API enumeration.
+   The script automatically passes `supportsAllDrives=true` and
+   `includeItemsFromAllDrives=true` on every API call so Shared Drive
+   contents are returned.
+
+8. Set each Drive folder referenced by a `DRIVE_GALLERY` marker to
    **"Anyone with the link -> Viewer"**:
    - Right-click the folder in Drive -> **Share** -> **Share**
    - Click **General access** in the lower section -> change from
@@ -87,7 +99,7 @@ You need a service account with the Drive API enabled.
    reliably cascades the permission to all current and future
    sub-folders, which sharing-by-email does not always do.
 
-8. (Optional cleanup) If the previous `DRIVE_API_KEY` secret still
+9. (Optional cleanup) If the previous `DRIVE_API_KEY` secret still
    exists, delete it from the repo secrets page.
 
 ## Running locally
