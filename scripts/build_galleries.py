@@ -214,7 +214,7 @@ def render_gallery(files: list[dict], label: str) -> str:
 
     parts: list[str] = ["\n"]
     if images:
-        parts.append('  <div class="gallery-grid reveal">\n')
+        parts.append('  <div class="drive-gallery-grid reveal">\n')
         for index, file in enumerate(images, start=1):
             parts.append(render_image(file, label, index) + "\n")
         parts.append("  </div>\n")
