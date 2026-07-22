@@ -1,54 +1,48 @@
-# The Stoop LLC — https://thestooppgh.com
+# The Stoop LLC
 
-The Stoop is a Pittsburgh-based digital advertising and influencer marketing agency. We help brands scale through authentic influencer partnerships, paid media, organic social management, content production, and marketing automation. We also run a 1-on-1 influencer coaching program for creators building sustainable careers.
+> The Stoop is a Pittsburgh-based digital advertising and influencer marketing agency founded in 2019 by Michael Pernice. We help brands scale through authentic influencer partnerships, paid media, organic social management, content production, and marketing automation, and we run a 1-on-1 influencer coaching program for creators building sustainable careers. Contact: mike@thestooppgh.com, +1 (412) 616-0542.
 
-## Crawler policy
+Key facts: based in Pittsburgh, PA; serves local and national clients; specialties include fitness, food & beverage, healthcare, nonprofits, landscaping, and sports performance. Documented results include 480,334 views for the Dr. Tea #LoveIsBrewing campaign, a $47,139 nonprofit capital campaign for MFPAA (446 donors, 87% lower CPC than benchmarks), and 267,838 views across two X Shadyside influencer campaign seasons.
 
-LLM crawlers are welcome to access this site's public content for retrieval, citation, and indexing.
+## Services
 
-User-agent: GPTBot
-Allow: /
+- [Influencer Marketing](https://thestooppgh.com/services/influencer-marketing.html): End-to-end influencer campaigns — strategy, sourcing, vetting, execution, and ROI reporting
+- [Digital Advertising](https://thestooppgh.com/services/digital-advertising.html): Paid social and programmatic campaigns across Meta, TikTok, and Google
+- [Organic Social](https://thestooppgh.com/services/organic-social.html): Community-first social media management and growth strategy
+- [Content Development](https://thestooppgh.com/services/content-development.html): Short-form video, UGC, photography, and branded content production
+- [Automation & Ops](https://thestooppgh.com/services/automation-ops.html): Marketing automation, CRM workflows, and operational systems
+- [Design & Branding](https://thestooppgh.com/services/design-branding.html): Visual identity, brand guidelines, and campaign creative
+- [Website Design](https://thestooppgh.com/services/website-design.html): Custom, SEO-optimized websites built to convert
+- [Influencer Coaching](https://thestooppgh.com/services/influencer-coaching.html): 1-on-1 coaching for creators — pitching, negotiation, media kits, and monetization
+- [Pricing](https://thestooppgh.com/pricing.html): Transparent pricing for all services
+- [Contact](https://thestooppgh.com/services/contact.html): Get a free proposal
 
-User-agent: ClaudeBot
-Allow: /
+## Case Studies
 
-User-agent: anthropic-ai
-Allow: /
+- [X Shadyside](https://thestooppgh.com/work/x-shadyside.html): Two influencer-led membership campaign seasons for a Pittsburgh fitness facility — 267K+ views, 15 influencers
+- [Dr. Tea](https://thestooppgh.com/work/dr-tea.html): #LoveIsBrewing brand launch and influencer campaign — 480,334 views, 651,244 impressions
+- [MFPAA](https://thestooppgh.com/work/mfpaa.html): Nonprofit EMS capital campaign — $47,139 raised from 446 donors in 30 days
+- [Iron 24](https://thestooppgh.com/work/iron-24.html): Content production and influencer activation across two markets
+- [SXP](https://thestooppgh.com/work/sxp.html): Brand video production and multi-brand partnership for a sports performance clinic
+- [Sylvan Gardens](https://thestooppgh.com/work/sylvan-gardens.html): Organic social growth for a landscaping company
+- [Case Specific Meal Prep](https://thestooppgh.com/work/csmp.html): Themed content calendar and production for a food brand
 
-User-agent: PerplexityBot
-Allow: /
+## About
 
-User-agent: Google-Extended
-Allow: /
+- [Founder — Michael Pernice](https://thestooppgh.com/founder.html): MBA/MS Marketing Science (Pitt), Adjunct Professor of Influencer Marketing at Point Park University, President of AMA Pittsburgh
+- [How We Work](https://thestooppgh.com/process.html): Our 4-step process — Discovery, Strategy, Execute, Report
+- [FAQ](https://thestooppgh.com/faq.html): Answers on pricing, process, influencer vetting, and results
+- [Reviews](https://thestooppgh.com/reviews.html): Client reviews and campaign results
 
-User-agent: CCBot
-Allow: /
+## Blog
 
-User-agent: Applebot-Extended
-Allow: /
+- [Blog index](https://thestooppgh.com/blog/): Insights and case-study breakdowns with real campaign numbers
+- [How We Generated 480K Views for a Local Bubble Tea Shop](https://thestooppgh.com/blog/how-we-generated-480k-views-for-dr-tea.html): Full Dr. Tea campaign breakdown
+- [Anatomy of a $47K Nonprofit Campaign](https://thestooppgh.com/blog/anatomy-of-a-47k-nonprofit-campaign.html): MFPAA capital campaign deep dive
+- [How 15 Fitness Influencers Drove 267K+ Views](https://thestooppgh.com/blog/15-fitness-influencers-267k-views.html): X Shadyside campaign breakdown with real spend
+- [Influencer Marketing ROI Guide](https://thestooppgh.com/blog/influencer-marketing-roi-guide.html): How to measure influencer campaign ROI
 
-## Key pages
+## Optional
 
-- Home: https://thestooppgh.com/
-- Services overview: https://thestooppgh.com/#services
-- Influencer marketing: https://thestooppgh.com/services/influencer-marketing.html
-- Digital advertising: https://thestooppgh.com/services/digital-advertising.html
-- Organic social: https://thestooppgh.com/services/organic-social.html
-- Content development: https://thestooppgh.com/services/content-development.html
-- Automation & ops: https://thestooppgh.com/services/automation-ops.html
-- Design & branding: https://thestooppgh.com/services/design-branding.html
-- Website design: https://thestooppgh.com/services/website-design.html
-- Influencer coaching: https://thestooppgh.com/services/influencer-coaching.html
-- Case studies: https://thestooppgh.com/#work
-- Blog: https://thestooppgh.com/blog/
-- Pricing: https://thestooppgh.com/pricing.html
-- Process: https://thestooppgh.com/process.html
-- FAQ: https://thestooppgh.com/faq.html
-- Reviews: https://thestooppgh.com/reviews.html
-- Founder: https://thestooppgh.com/founder.html
-- Privacy policy: https://thestooppgh.com/policy.html
-- Contact: https://thestooppgh.com/services/contact.html
-
-## Contact
-
-mike@thestooppgh.com
+- [Privacy Policy](https://thestooppgh.com/policy.html): Privacy, terms, and ethics
+- [Sitemap](https://thestooppgh.com/sitemap.xml): All indexable pages

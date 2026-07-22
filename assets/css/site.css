@@ -5,6 +5,40 @@
   /* Lemon Milk approximation via Outfit (geometric sans-serif) */
   /* Helvetica as secondary per brand guide */
 
+/* SELF-HOSTED FONTS (no third-party render-blocking CSS) */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/anton-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/anton-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/outfit-var-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/outfit-var-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
   :root {
     --black: #000000;
     --white: #ffffff;
@@ -17,7 +51,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 body {
     background: var(--black);
@@ -48,11 +82,35 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    padding-left: max(40px, env(safe-area-inset-left));
+    padding-right: max(40px, env(safe-area-inset-right));
     background: rgba(0,0,0,0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
+
+.skip-link {
+    position: fixed;
+    top: -100px; left: 16px;
+    z-index: 300;
+    background: var(--yellow);
+    color: var(--black);
+    padding: 14px 22px;
+    font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+    text-decoration: none;
+  }
+
+.skip-link:focus { top: 16px; }
+
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+  }
+
+.btn-primary:focus-visible, .stat:focus-visible { outline-color: var(--white); }
+
+.nav-links.open a:focus-visible, .menu-toggle.active:focus-visible { outline-color: var(--black); }
 
 .logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
 
@@ -61,9 +119,10 @@ body {
 .nav-links { display: flex; gap: 32px; list-style: none; }
 
 .nav-links a {
-    color: var(--white); text-decoration: none; font-size: 11px;
+    color: var(--white); text-decoration: none; font-size: 0.6875rem;
     letter-spacing: 3px; text-transform: uppercase;
-    position: relative; padding-bottom: 4px;
+    position: relative; padding: 8px 0;
+    display: inline-block;
   }
 
 .nav-links a::after {
@@ -75,7 +134,8 @@ body {
 
 /* HERO */
   .hero {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,28 +177,40 @@ body {
     z-index: 1;
   }
 
-.hero-bg-text {
+.hero > .hero-bg-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(11.25rem, 32vw, 32.5rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,204,0,0.06);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
     will-change: transform;
   }
 
 .hero-label {
-    font-size: 11px;
+    font-size: 0.6875rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--yellow);
     margin-bottom: 24px;
     opacity: 0;
-    animation: slideUp 0.8s ease forwards 0.3s;
+    animation: slideUp 0.6s ease forwards 0.1s;
   }
 
 .hero h1 {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(60px, 10vw, 160px);
+    font-size: clamp(2.75rem, 10vw, 10rem);
     line-height: 0.9;
     letter-spacing: -2px;
     max-width: 1000px;
     opacity: 0;
-    animation: slideUp 0.8s ease forwards 0.5s;
+    animation: slideUp 0.6s ease forwards 0.2s;
   }
 
 .hero h1 .outline {
@@ -152,12 +224,12 @@ body {
 
 .hero-sub {
     margin-top: 32px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.8;
     max-width: 560px;
     color: var(--mid);
     opacity: 0;
-    animation: slideUp 0.8s ease forwards 0.7s;
+    animation: slideUp 0.6s ease forwards 0.35s;
   }
 
 .hero-cta {
@@ -166,13 +238,13 @@ body {
     gap: 16px;
     justify-content: center;
     opacity: 0;
-    animation: slideUp 0.8s ease forwards 0.9s;
+    animation: slideUp 0.6s ease forwards 0.5s;
   }
 
 .btn {
     display: inline-block; padding: 16px 36px;
     font-family: 'Outfit', 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    font-size: 0.6875rem; letter-spacing: 3px; text-transform: uppercase;
     text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease;
   }
 
@@ -197,7 +269,7 @@ body {
     position: absolute;
     bottom: 40px;
     left: 40px;
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--mid);
@@ -210,7 +282,7 @@ body {
     bottom: 40px;
     right: 40px;
     text-align: right;
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--mid);
@@ -232,10 +304,10 @@ body {
 
 .marquee span {
     font-family: 'Anton', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     letter-spacing: 8px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.45);
     padding: 0 40px;
   }
 
@@ -250,7 +322,7 @@ body {
   }
 
 .section-label {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -259,11 +331,12 @@ body {
 
 .section-title {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(32px, 5vw, 56px);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 40px;
     max-width: 700px;
+    text-wrap: balance;
   }
 
 /* TWO TRACKS */
@@ -308,7 +381,7 @@ body {
 
 .track-number {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: 120px;
+    font-size: 7.5rem;
     color: rgba(255,255,255,0.04);
     position: absolute;
     top: 20px;
@@ -317,7 +390,7 @@ body {
   }
 
 .track-label {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -330,13 +403,13 @@ body {
 
 .track h2 {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 0.95;
     margin-bottom: 24px;
   }
 
 .track p {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.9;
     color: var(--mid);
     max-width: 400px;
@@ -349,7 +422,7 @@ body {
   }
 
 .track-list li {
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     padding: 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -405,20 +478,20 @@ body {
 
 .service-num {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: 48px;
+    font-size: 3rem;
     color: rgba(255,204,0,0.12);
     margin-bottom: 20px;
   }
 
 .service-card h3 {
     font-family: 'Outfit', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 16px;
   }
 
 .service-card p {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.8;
     color: var(--mid);
   }
@@ -426,7 +499,7 @@ body {
 .service-card .learn-more {
     display: inline-block;
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -462,13 +535,13 @@ body {
 
 .stat-num {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(48px, 6vw, 80px);
+    font-size: clamp(3rem, 6vw, 5rem);
     color: var(--black);
     line-height: 1;
   }
 
 .stat-label {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--black);
@@ -485,14 +558,14 @@ body {
   }
 
 .about-text p {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 2;
     color: var(--mid);
     margin-bottom: 20px;
   }
 
 .about-text p:first-of-type {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--white);
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
@@ -566,13 +639,13 @@ body {
 
 .about-stat-val {
     font-family: 'Anton', sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
     color: var(--yellow);
     line-height: 1;
   }
 
 .about-stat-label {
-    font-size: 9px;
+    font-size: 0.625rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--mid);
@@ -583,7 +656,7 @@ body {
     position: absolute;
     top: 20px;
     right: 0;
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.15);
@@ -605,7 +678,7 @@ body {
 .industry-tag {
     padding: 14px 28px;
     border: 1px solid rgba(255,255,255,0.12);
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s ease;
@@ -668,7 +741,7 @@ a.case-card {
 .case-card:hover::before { height: 100%; }
 
 .case-industry {
-    font-size: 9px;
+    font-size: 0.625rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--mid);
@@ -685,18 +758,18 @@ a.case-card {
 
 .case-card h3 {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1;
     margin-bottom: 16px;
   }
 
 .case-tagline {
-    font-family: 'Outfit', sans-serif; font-size: clamp(18px, 2.5vw, 24px);
+    font-family: 'Outfit', sans-serif; font-size: clamp(1.125rem, 2.5vw, 1.5rem);
     font-weight: 600; color: var(--white); margin-bottom: 24px;
   }
 
 .case-desc {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.9;
     color: var(--mid);
     margin-bottom: 28px;
@@ -711,7 +784,7 @@ a.case-card {
   }
 
 .case-service-tag {
-    font-size: 9px;
+    font-size: 0.625rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 6px 14px;
@@ -729,7 +802,7 @@ a.case-card {
 
 .case-metric-val {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1;
   }
 
@@ -742,7 +815,7 @@ a.case-card {
 .case-card:nth-child(4) .case-metric-val { color: var(--yellow-bright); }
 
 .case-metric-label {
-    font-size: 9px;
+    font-size: 0.625rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--mid);
@@ -763,7 +836,7 @@ a.case-card {
   }
 
 .cta-sub {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--mid);
     margin-bottom: 48px;
     line-height: 1.8;
@@ -779,7 +852,7 @@ a.case-card {
     position: absolute;
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
-    font-size: clamp(100px, 15vw, 250px);
+    font-size: clamp(6.25rem, 15vw, 15.625rem);
     color: transparent;
     -webkit-text-stroke: 1px rgba(255,204,0,0.04);
     bottom: 20px;
@@ -803,7 +876,7 @@ a.case-card {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--mid);
   }
 
@@ -815,18 +888,22 @@ footer a:hover { color: var(--yellow); }
 
 .footer-brand p { margin-top: 12px; line-height: 1.8; max-width: 280px; }
 
-.footer-links h4, .footer-contact h4 {
-    font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700;
+.footer-links h4, .footer-contact h4,
+.footer-links .footer-heading, .footer-contact .footer-heading {
+    font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 700;
     letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 20px;
   }
 
-.footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+.footer-links a, .footer-contact a { display: inline-block; padding: 4px 0; }
 
 .footer-contact p { line-height: 2; }
 
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 40px;
-    font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 2px;
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+    font-size: 0.625rem; color: rgba(255,255,255,0.6); letter-spacing: 2px;
     text-transform: uppercase; display: flex; justify-content: space-between;
   }
 
@@ -852,12 +929,14 @@ footer a:hover { color: var(--yellow); }
 
   }
 
-.reveal {
+/* Reveal animations only engage when JS is running (html.js), so content
+   is never stuck hidden for no-JS users or if the script fails to load. */
+  html.js .reveal {
     opacity: 0; transform: translateY(40px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-.reveal.visible { opacity: 1; transform: translateY(0); }
+html.js .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* HAMBURGER MENU */
   .menu-toggle {
@@ -881,7 +960,6 @@ footer a:hover { color: var(--yellow); }
 .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); background: var(--black); }
 
 .stats-bar {
-    background-attachment: fixed;
     background-image: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-bright) 100%);
   }
 
@@ -933,7 +1011,7 @@ body::after {
 
 .case-hero-bg {
     position: absolute; font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(100px, 14vw, 240px); color: transparent;
+    font-size: clamp(6.25rem, 14vw, 15rem); color: transparent;
     -webkit-text-stroke: 1px rgba(255,204,0,0.05);
     top: 50%; left: 50%; transform: translate(-50%, -50%);
     white-space: nowrap; pointer-events: none; user-select: none;
@@ -942,7 +1020,7 @@ body::after {
 
 .case-back {
     display: inline-flex; align-items: center; gap: 8px;
-    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    font-size: 0.6875rem; letter-spacing: 3px; text-transform: uppercase;
     color: var(--mid); text-decoration: none; margin-bottom: 40px;
     transition: color 0.3s ease;
   }
@@ -950,18 +1028,18 @@ body::after {
 .case-back:hover { color: var(--yellow); }
 
 .case-industry-label {
-    font-size: 10px; letter-spacing: 5px; text-transform: uppercase;
+    font-size: 0.625rem; letter-spacing: 5px; text-transform: uppercase;
     color: var(--yellow); margin-bottom: 16px;
   }
 
 .case-hero h1 {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(48px, 9vw, 120px); line-height: 0.95;
+    font-size: clamp(3rem, 9vw, 7.5rem); line-height: 0.95;
     letter-spacing: -2px; margin-bottom: 20px;
   }
 
 .case-hero-desc {
-    font-size: 15px; line-height: 1.9; color: var(--mid); max-width: 640px;
+    font-size: 0.9375rem; line-height: 1.9; color: var(--mid); max-width: 640px;
   }
 
 /* SERVICE TAGS */
@@ -973,7 +1051,7 @@ body::after {
   }
 
 .case-tag {
-    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    font-size: 0.625rem; letter-spacing: 2px; text-transform: uppercase;
     padding: 8px 18px; border: 1px solid rgba(255,255,255,0.12); color: var(--white);
   }
 
@@ -989,11 +1067,11 @@ body::after {
 
 .metric-val {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
-    font-size: clamp(36px, 5vw, 64px); color: var(--black); line-height: 1;
+    font-size: clamp(2.25rem, 5vw, 4rem); color: var(--black); line-height: 1;
   }
 
 .metric-label {
-    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    font-size: 0.625rem; letter-spacing: 3px; text-transform: uppercase;
     color: var(--black); margin-top: 8px; opacity: 0.7;
   }
 
@@ -1005,18 +1083,18 @@ body::after {
   }
 
 .case-content h2 {
-    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-family: 'Outfit', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 800; margin-bottom: 24px;
   }
 
 .case-content h2 .accent { color: var(--yellow); }
 
-.case-content p { font-size: 15px; line-height: 2; color: var(--mid); margin-bottom: 24px; }
+.case-content p { font-size: 0.9375rem; line-height: 2; color: var(--mid); margin-bottom: 24px; }
 
 .case-content ul { list-style: none; margin-bottom: 32px; }
 
 .case-content ul li {
-    font-size: 14px; padding: 12px 0;
+    font-size: 0.875rem; padding: 12px 0;
     border-bottom: 1px solid rgba(255,255,255,0.06);
     display: flex; align-items: center; gap: 12px; color: var(--white);
   }
@@ -1031,7 +1109,7 @@ body::after {
 
 .campaigns h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(28px, 4vw, 40px);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 48px;
     text-align: center;
@@ -1068,13 +1146,13 @@ body::after {
 
 .campaign-card h3 {
     font-family: 'Outfit', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 8px;
   }
 
 .campaign-quarter {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -1082,7 +1160,7 @@ body::after {
   }
 
 .campaign-card p {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.8;
     color: var(--mid);
   }
@@ -1096,13 +1174,13 @@ body::after {
 
 .case-cta h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: 800;
     margin-bottom: 16px;
   }
 
 .case-cta p {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--mid);
     margin-bottom: 40px;
   }
@@ -1113,7 +1191,7 @@ body::after {
   }
 
 .section-type-label {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -1122,7 +1200,7 @@ body::after {
 
 .gallery h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(28px, 4vw, 40px);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 40px;
     text-align: center;
@@ -1172,7 +1250,7 @@ body::after {
 .video-section { padding: 80px 40px; background: var(--grey); }
 
 .video-section h2 {
-    font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px);
+    font-family: 'Outfit', sans-serif; font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 800; margin-bottom: 40px; text-align: center;
   }
 
@@ -1186,7 +1264,7 @@ body::after {
 .video-card iframe { display: block; }
 
 .video-label {
-    padding: 16px; font-size: 12px; letter-spacing: 2px;
+    padding: 16px; font-size: 0.75rem; letter-spacing: 2px;
     text-transform: uppercase; color: var(--mid); text-align: center;
   }
 
@@ -1196,7 +1274,7 @@ body::after {
   }
 
 /* REVEAL */
-  .reveal {
+  html.js .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1224,7 +1302,7 @@ nav {
 footer {
     border-top: 1px solid rgba(255,255,255,0.08);
     padding: 60px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 40px; font-size: 12px; color: var(--mid);
+    gap: 40px; font-size: 0.75rem; color: var(--mid);
   }
 
 
@@ -1238,7 +1316,7 @@ footer {
 .thank-you-hero h1 {
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
-    font-size: clamp(48px, 9vw, 100px);
+    font-size: clamp(3rem, 9vw, 6.25rem);
     line-height: 0.95;
     letter-spacing: -2px;
     margin-bottom: 20px;
@@ -1246,14 +1324,14 @@ footer {
 
 .thank-you-tagline {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(18px, 2.5vw, 24px);
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
     font-weight: 600;
     color: var(--white);
     margin-bottom: 24px;
   }
 
 .thank-you-desc {
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.9;
     color: var(--mid);
     margin-bottom: 40px;
@@ -1279,7 +1357,7 @@ footer {
 
 .next-steps h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(28px, 4vw, 40px);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 48px;
   }
@@ -1298,31 +1376,31 @@ footer {
 
 .step-number {
     font-family: 'Anton', sans-serif;
-    font-size: 48px;
+    font-size: 3rem;
     color: var(--yellow);
     line-height: 1;
     margin-bottom: 16px;
   }
 
 .step-text {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.8;
     color: var(--mid);
   }
 
 .article-body{max-width:800px;margin:0 auto;padding:80px 40px}
 
-.article-body h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(24px,3vw,36px);letter-spacing:-1px;margin:56px 0 20px;color:var(--white)}
+.article-body h2{font-family:'Anton',sans-serif;text-transform:uppercase;font-size: clamp(1.5rem, 3vw, 2.25rem);letter-spacing:-1px;margin:56px 0 20px;color:var(--white)}
 
 .article-body h2:first-child{margin-top:0}
 
-.article-body p{font-size:15px;line-height:1.9;color:var(--mid);margin-bottom:20px}
+.article-body p{font-size: 0.9375rem;line-height:1.9;color:var(--mid);margin-bottom:20px}
 
 .article-body strong{color:var(--white)}
 
 .article-body ul{list-style:none;margin:0 0 24px;padding:0}
 
-.article-body ul li{font-size:15px;line-height:1.9;color:var(--mid);padding-left:20px;position:relative;margin-bottom:8px}
+.article-body ul li{font-size: 0.9375rem;line-height:1.9;color:var(--mid);padding-left:20px;position:relative;margin-bottom:8px}
 
 .article-body ul li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:6px;background:var(--yellow)}
 
@@ -1330,29 +1408,29 @@ footer {
 
 .stat-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:28px 24px;text-align:center}
 
-.stat-box .num{font-family:'Anton',sans-serif;font-size:32px;color:var(--yellow);margin-bottom:6px}
+.stat-box .num{font-family:'Anton',sans-serif;font-size: 2rem;color:var(--yellow);margin-bottom:6px}
 
-.stat-box .label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mid)}
+.stat-box .label{font-size: 0.6875rem;letter-spacing:2px;text-transform:uppercase;color:var(--mid)}
 
 .cta-box{background:rgba(255,204,0,0.05);border:1px solid rgba(255,204,0,0.15);padding:40px;margin:48px 0;text-align:center}
 
-.cta-box p{color:var(--white);margin-bottom:20px;font-size:16px;font-weight:500}
+.cta-box p{color:var(--white);margin-bottom:20px;font-size: 1rem;font-weight:500}
 
 .related{max-width:800px;margin:0 auto;padding:0 40px 100px}
 
-.related h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:24px;margin-bottom:24px;letter-spacing:-1px}
+.related h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size: 1.5rem;margin-bottom:24px;letter-spacing:-1px}
 
 .related a{display:block;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:28px 24px;text-decoration:none;color:inherit;transition:all 0.4s ease;margin-bottom:16px}
 
 .related a:hover{background:rgba(255,255,255,0.05);transform:translateY(-2px);border-color:rgba(255,204,0,0.2)}
 
-.related a .cat{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--yellow);margin-bottom:8px}
+.related a .cat{font-size: 0.625rem;letter-spacing:4px;text-transform:uppercase;color:var(--yellow);margin-bottom:8px}
 
-.related a h4{font-size:18px;font-weight:700;color:var(--white);margin-bottom:8px}
+.related a h4{font-size: 1.125rem;font-weight:700;color:var(--white);margin-bottom:8px}
 
-.related a .meta{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.related a .meta{font-size: 0.625rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.6)}
 
-.footer-links h4,.footer-contact h4{font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--white);margin-bottom:20px}
+.footer-links h4,.footer-contact h4,.footer-links .footer-heading,.footer-contact .footer-heading{font-family:'Outfit',sans-serif;font-size: 0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--white);margin-bottom:20px}
 
 
 /* Blog Grid */
@@ -1383,7 +1461,7 @@ footer {
   }
 
 .blog-card .blog-category {
-    font-size: 9px;
+    font-size: 0.625rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -1392,7 +1470,7 @@ footer {
 
 .blog-card h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 16px;
@@ -1400,21 +1478,21 @@ footer {
   }
 
 .blog-card .blog-excerpt {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.8;
     color: var(--mid);
     margin-bottom: 20px;
   }
 
 .blog-card .blog-meta {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.6);
   }
 
 .blog-card .read-more {
-    font-size: 10px;
+    font-size: 0.625rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--yellow);
@@ -1443,7 +1521,12 @@ footer {
   .services-grid { grid-template-columns: 1fr 1fr; }
   .stats-bar { grid-template-columns: 1fr 1fr; }
   .about-content { grid-template-columns: 1fr; }
-  .about-visual { display: none; }
+  /* Keep the About stats visible on tablet/mobile; hide only the decorative mark */
+  .about-visual { padding: 0; gap: 0; }
+  .about-stoop-mark, .about-tagline { display: none; }
+  /* Tighten desktop nav so it fits portrait-tablet widths (769-1024px) */
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 0.625rem; letter-spacing: 2px; }
   /* Case studies */
   .metrics-grid { grid-template-columns: 1fr 1fr; }
   .campaign-grid { grid-template-columns: 1fr; }
@@ -1466,7 +1549,7 @@ footer {
     display: flex !important;
     position: fixed;
     top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    width: 100%; height: 100vh; height: 100dvh;
     background: var(--yellow);
     flex-direction: column;
     align-items: center;
@@ -1474,13 +1557,14 @@ footer {
     gap: 32px;
     z-index: 150;
     list-style: none;
-    padding: 80px 20px 40px;
+    padding: calc(80px + env(safe-area-inset-top)) 20px calc(40px + env(safe-area-inset-bottom));
     margin: 0;
     overflow-y: auto;
   }
+  body.nav-open { overflow: hidden; }
   .nav-links.open li { list-style: none; }
   .nav-links.open a {
-    font-size: 22px; letter-spacing: 5px; text-transform: uppercase;
+    font-size: 1.375rem; letter-spacing: 5px; text-transform: uppercase;
     color: var(--black); text-decoration: none; font-weight: 700;
   }
   .nav-links.open a::after { background: var(--black); }
@@ -1497,7 +1581,7 @@ footer {
   .case-metrics { grid-template-columns: 1fr 1fr; gap: 12px; }
   .cases-grid { grid-template-columns: 1fr; }
   .industry-tags { gap: 8px; }
-  .industry-tag { padding: 10px 20px; font-size: 11px; }
+  .industry-tag { padding: 10px 20px; font-size: 0.6875rem; }
   .cta-section { padding: 100px 20px; }
   .cta-buttons { flex-direction: column; align-items: center; gap: 12px; }
 
@@ -1536,10 +1620,75 @@ footer {
 }
 
 /* ============================================
+   TOUCH DEVICES — hover-revealed affordances stay visible
+   ============================================ */
+@media (hover: none) {
+  .service-card .learn-more,
+  .blog-card .read-more { opacity: 1; transform: none; }
+}
+
+/* ============================================
+   SCROLL-DRIVEN PARALLAX (CSS scroll-driven animations)
+   Progressive enhancement: browsers with animation-timeline support
+   run parallax on the compositor; site.js skips its scroll handler.
+   ============================================ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-width: 769px) {
+    .hero > .hero-bg-text {
+      animation: hero-parallax linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0vh 120vh;
+    }
+    .case-hero-bg {
+      animation: hero-parallax-centered linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0vh 120vh;
+    }
+    .cta-bg {
+      animation: cta-drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    .track-number, .service-num {
+      animation: num-drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+@keyframes hero-parallax {
+  from { transform: translate(-50%, -50%); }
+  to { transform: translate(-50%, calc(-50% + 36vh)); }
+}
+
+@keyframes hero-parallax-centered {
+  from { transform: translate(-50%, -50%); }
+  to { transform: translate(-50%, calc(-50% + 48vh)); }
+}
+
+@keyframes cta-drift {
+  from { transform: translateX(-50%) translateY(-14vh); }
+  to { transform: translateX(-50%) translateY(2vh); }
+}
+
+@keyframes num-drift {
+  from { transform: translateY(4vh); }
+  to { transform: translateY(-4vh); }
+}
+
+/* ============================================
    REDUCED MOTION
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .marquee { animation: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .reveal, html.js .reveal { opacity: 1; transform: none; transition: none; }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
 }

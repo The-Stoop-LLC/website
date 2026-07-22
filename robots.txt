@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# AI / LLM crawlers are explicitly welcome (see also /llms.txt)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://thestooppgh.com/sitemap.xml
