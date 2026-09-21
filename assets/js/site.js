@@ -25,36 +25,81 @@
     }
   }
 
-  /* ---------- Stat counters ---------- */
-  var statNums = document.querySelectorAll('.stat-num[data-target]');
-  if (statNums.length) {
-    var finishStat = function (num) {
-      var target = parseInt(num.dataset.target, 10);
-      var suffix = num.textContent.replace(/[0-9]/g, '');
-      num.textContent = target + suffix;
+  /* ---------- Animated numbers ----------
+     Counts headline stats up from zero the first time they scroll into view.
+     Understands "$47,139", "267K+", "-87%", "1.55%", "+275". Anything that is
+     not a single number (e.g. "FB + IG", "1 Year") is left untouched. The
+     legacy homepage markup ("0+" with data-target="50") still works. */
+  var counters = document.querySelectorAll('.stat-num, .metric-val, .case-metric-val, .case-card-stat-val, [data-count]');
+  if (counters.length) {
+    var PREFIX_OK = /^[\s$+\-~−≈]*$/;
+    var SUFFIX_OK = /^[\s+%KMBkmbx×]*$/;
+    var parseStat = function (el) {
+      var text = el.textContent.trim();
+      var target = el.getAttribute('data-target');
+      if (target !== null) {
+        return { prefix: '', suffix: text.replace(/[\d,.]/g, ''), value: parseFloat(target), decimals: 0, comma: false };
+      }
+      var m = text.match(/^([^\d]*)(\d[\d,]*(?:\.\d+)?)([^\d]*)$/);
+      if (!m || !PREFIX_OK.test(m[1]) || !SUFFIX_OK.test(m[3])) return null;
+      var raw = m[2];
+      var clean = raw.replace(/,/g, '');
+      var value = parseFloat(clean);
+      if (isNaN(value) || value < 5) return null;
+      return {
+        prefix: m[1], suffix: m[3], value: value,
+        decimals: (clean.split('.')[1] || '').length,
+        comma: raw.indexOf(',') !== -1
+      };
     };
+    var formatStat = function (p, v) {
+      var s = v.toFixed(p.decimals);
+      if (p.comma) {
+        var parts = s.split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        s = parts.join('.');
+      }
+      return p.prefix + s + p.suffix;
+    };
+    var finishStat = function (el) { el.textContent = formatStat(el._stat, el._stat.value); };
+    var animateStat = function (el) {
+      var p = el._stat, startTs = null, duration = 1400;
+      var step = function (ts) {
+        if (startTs === null) startTs = ts;
+        var t = Math.min((ts - startTs) / duration, 1);
+        var eased = 1 - Math.pow(1 - t, 4);
+        el.textContent = formatStat(p, p.value * eased);
+        if (t < 1) requestAnimationFrame(step); else finishStat(el);
+      };
+      requestAnimationFrame(step);
+    };
+    var statTargets = [];
+    counters.forEach(function (el) {
+      var p = parseStat(el);
+      if (p) { el._stat = p; statTargets.push(el); }
+    });
     if (reduceMotion.matches || !('IntersectionObserver' in window)) {
-      statNums.forEach(finishStat);
+      statTargets.forEach(finishStat);
     } else {
       var statObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
-          var num = entry.target;
-          var target = parseInt(num.dataset.target, 10);
-          var suffix = num.textContent.replace(/[0-9]/g, '');
-          var current = 0;
-          var step = Math.ceil(target / 40);
-          var timer = setInterval(function () {
-            current += step;
-            if (current >= target) { current = target; clearInterval(timer); }
-            num.textContent = current + suffix;
-          }, 30);
-          statObserver.unobserve(num);
+          statObserver.unobserve(entry.target);
+          animateStat(entry.target);
         });
       }, { threshold: 0.3 });
-      statNums.forEach(function (el) { statObserver.observe(el); });
+      statTargets.forEach(function (el) { statObserver.observe(el); });
     }
   }
+
+  /* ---------- Cover image fallback ----------
+     Cover photos are served from Google Drive. If one fails to load, drop it
+     so the card or hero falls back to its designed logo-on-black state. */
+  document.querySelectorAll('.case-card-media img, .case-hero-cover img').forEach(function (img) {
+    var drop = function () { if (img.parentNode) img.parentNode.removeChild(img); };
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) { drop(); return; }
+    img.addEventListener('error', drop);
+  });
 
   /* ---------- Parallax (JS fallback) ----------
      Browsers with CSS scroll-driven animation support run parallax on the
