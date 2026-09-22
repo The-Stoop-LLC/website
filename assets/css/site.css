@@ -2152,6 +2152,8 @@ footer {
 
 .cs-tile--contain img { object-fit: contain; padding: 8%; }
 
+.cs-tile--contain.is-flush img { padding: 0; }
+
 .cs-tile:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px; }
 
 .cs-tile-cap {
