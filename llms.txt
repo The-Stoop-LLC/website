@@ -2,7 +2,7 @@
 
 > The Stoop is a Pittsburgh-based digital advertising and influencer marketing agency founded in 2019 by Michael Pernice. We help brands scale through authentic influencer partnerships, paid media, organic social management, content production, and marketing automation, and we run a 1-on-1 influencer coaching program for creators building sustainable careers. Contact: mike@thestooppgh.com, +1 (412) 616-0542.
 
-Key facts: based in Pittsburgh, PA; serves local and national clients; specialties include fitness, food & beverage, healthcare, nonprofits, landscaping, and sports performance. Documented results include 480,334 views for the Dr. Tea #LoveIsBrewing campaign, a $47,139 nonprofit capital campaign for MFPAA (446 donors, 87% lower CPC than benchmarks), and 267,838 views across two X Shadyside influencer campaign seasons.
+Key facts: based in Pittsburgh, PA; serves local and national clients; specialties include fitness, food & beverage, healthcare and patient advocacy, nonprofits, landscaping, and sports performance. Documented results include 480,334 views for the Dr. Tea #LoveIsBrewing campaign, a $47,139 nonprofit capital campaign for MFPAA (446 donors, 87% lower CPC than benchmarks), and 267,838 views across two X Shadyside influencer campaign seasons.
 
 ## Services
 
@@ -11,7 +11,7 @@ Key facts: based in Pittsburgh, PA; serves local and national clients; specialti
 - [Organic Social](https://thestooppgh.com/services/organic-social.html): Community-first social media management and growth strategy
 - [Content Development](https://thestooppgh.com/services/content-development.html): Short-form video, UGC, photography, and branded content production
 - [Automation & Ops](https://thestooppgh.com/services/automation-ops.html): Marketing automation, CRM workflows, and operational systems
-- [Design & Branding](https://thestooppgh.com/services/design-branding.html): Visual identity, brand guidelines, and campaign creative
+- [Design & Branding](https://thestooppgh.com/services/design-branding.html): Logo and brand identity systems, guidelines, stationery, campaign creative, and brand films
 - [Website Design](https://thestooppgh.com/services/website-design.html): Custom, SEO-optimized websites built to convert
 - [Influencer Coaching](https://thestooppgh.com/services/influencer-coaching.html): 1-on-1 coaching for creators — pitching, negotiation, media kits, and monetization
 - [Pricing](https://thestooppgh.com/pricing.html): Transparent pricing for all services
@@ -27,6 +27,7 @@ Key facts: based in Pittsburgh, PA; serves local and national clients; specialti
 - [SXP](https://thestooppgh.com/work/sxp.html): Brand video production and multi-brand partnership for a sports performance clinic
 - [Sylvan Gardens](https://thestooppgh.com/work/sylvan-gardens.html): Organic social growth for a landscaping company
 - [Case Specific Meal Prep](https://thestooppgh.com/work/csmp.html): Themed content calendar and production for a food brand
+- [Take a Nurse](https://thestooppgh.com/work/take-a-nurse.html): Brand identity system for a Pittsburgh patient-advocacy business — logo lockups in five color variants, palette, type system, business cards, letterhead, and a nine-page brand guide (August–September 2026)
 
 ## About
 
@@ -42,8 +43,14 @@ Key facts: based in Pittsburgh, PA; serves local and national clients; specialti
 - [Anatomy of a $47K Nonprofit Campaign](https://thestooppgh.com/blog/anatomy-of-a-47k-nonprofit-campaign.html): MFPAA capital campaign deep dive
 - [How 15 Fitness Influencers Drove 267K+ Views](https://thestooppgh.com/blog/15-fitness-influencers-267k-views.html): X Shadyside campaign breakdown with real spend
 - [Influencer Marketing ROI Guide](https://thestooppgh.com/blog/influencer-marketing-roi-guide.html): How to measure influencer campaign ROI
+- [Cross-Brand Partnerships That Work](https://thestooppgh.com/blog/cross-brand-partnerships-guide.html): How to broker partnerships between complementary local businesses
+- [9 Months of Organic Social for a Landscaper](https://thestooppgh.com/blog/organic-social-growth-landscaping.html): Sylvan Gardens Instagram growth breakdown
+- [Themed Content Calendars for Food Brands](https://thestooppgh.com/blog/themed-content-calendar-food-brands.html): The weekly series format used for Case Specific Meal Prep
+- [Shooting 81 Assets for a National Gym Brand](https://thestooppgh.com/blog/content-production-at-scale-gym.html): Iron 24 content production breakdown
+- [RSS feed](https://thestooppgh.com/blog/feed.xml): Blog feed
 
 ## Optional
 
 - [Privacy Policy](https://thestooppgh.com/policy.html): Privacy, terms, and ethics
 - [Sitemap](https://thestooppgh.com/sitemap.xml): All indexable pages
+- [llms-full.txt](https://thestooppgh.com/llms-full.txt): Full text of the service, case study, founder, process, FAQ, and reviews pages in one file
