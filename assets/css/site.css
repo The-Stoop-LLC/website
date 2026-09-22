@@ -2126,6 +2126,11 @@ footer {
 
 .cs-media--tall { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
 
+/* Logo-variant and color-swatch rows (Take a Nurse case study) */
+.cs-media--logos { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+.cs-media--palette { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+
 .cs-tile {
   position: relative;
   display: block;
@@ -2347,6 +2352,8 @@ footer {
   .cs-media { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .cs-media--tall { grid-template-columns: repeat(2, 1fr); }
   .cs-media--wide { grid-template-columns: 1fr; }
+  .cs-media--logos { grid-template-columns: repeat(2, 1fr); }
+  .cs-media--palette { grid-template-columns: repeat(3, 1fr); }
   .cs-videos { grid-template-columns: 1fr; }
   .cs-videos--portrait { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .cs-list { columns: 1; }
