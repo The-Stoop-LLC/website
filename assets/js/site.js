@@ -119,7 +119,7 @@
     var limit;
     if (isVideo) limit = grid.classList.contains('cs-videos--portrait') ? (small ? 4 : 5) : (small ? 2 : 3);
     else limit = grid.classList.contains('cs-media--wide') ? (small ? 3 : 6) : (small ? 6 : 10);
-    if (items.length <= limit) return;
+    if (items.length <= limit + 1) return; // collapse only when it hides at least two items
     grid.classList.add('is-collapsed');
     var btn = document.createElement('button');
     btn.type = 'button'; btn.className = 'cs-more';

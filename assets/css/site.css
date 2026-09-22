@@ -2303,7 +2303,13 @@ footer {
 
 
 /* Inline CTA after each stack item (service + founder pages) */
-.cs-cta { text-align: center; max-width: 640px; margin: 40px auto 0; padding: 0 24px; }
+.cs-cta { text-align: center; max-width: 640px; margin: 40px auto 0; padding: 0 24px 64px; }
+
+.case-content + .cs-cta { margin-top: -48px; }
+
+.article-body .cs-cta { margin: 36px auto 8px; padding-bottom: 16px; }
+
+.svc-band .cs-cta { padding-bottom: 0; margin-top: 48px; }
 
 .cs-cta p { font-size: 15px; color: var(--mid); margin-bottom: 20px; line-height: 1.7; }
 
@@ -2343,8 +2349,8 @@ footer {
   .cs-videos--portrait { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .cs-list { columns: 1; }
   .cs-stats { gap: 20px 12px; }
-  .cs-videos.is-collapsed > figure:nth-child(n+3),
   .cs-videos--pair { grid-template-columns: 1fr; }
+  .cs-videos.is-collapsed > figure:nth-child(n+3),
   .cs-videos--portrait.is-collapsed > figure:nth-child(n+5),
   .cs-media.is-collapsed > .cs-tile:nth-child(n+7),
   .cs-media--wide.is-collapsed > .cs-tile:nth-child(n+4) { display: none; }
