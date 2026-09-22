@@ -30,7 +30,7 @@
      Understands "$47,139", "267K+", "-87%", "1.55%", "+275". Anything that is
      not a single number (e.g. "FB + IG", "1 Year") is left untouched. The
      legacy homepage markup ("0+" with data-target="50") still works. */
-  var counters = document.querySelectorAll('.stat-num, .metric-val, .case-metric-val, .case-card-stat-val, [data-count]');
+  var counters = document.querySelectorAll('.stat-num, .metric-val, .case-metric-val, .case-card-stat-val, .cs-stat-val, [data-count]');
   if (counters.length) {
     var PREFIX_OK = /^[\s$+\-~−≈]*$/;
     var SUFFIX_OK = /^[\s+%KMBkmbx×]*$/;
@@ -92,10 +92,67 @@
     }
   }
 
+  /* ---------- Video tiles ----------
+     Case study videos show a poster frame with a play button; the Drive
+     player is only loaded when someone asks for it. */
+  document.querySelectorAll('.cs-video[data-src]').forEach(function (fig) {
+    var btn = fig.querySelector('.cs-video-play');
+    var frame = fig.querySelector('.cs-video-frame');
+    if (!btn || !frame) return;
+    btn.addEventListener('click', function () {
+      var iframe = document.createElement('iframe');
+      iframe.src = fig.getAttribute('data-src');
+      iframe.setAttribute('allow', 'autoplay; fullscreen');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.title = btn.getAttribute('aria-label') || 'Video';
+      frame.innerHTML = '';
+      frame.appendChild(iframe);
+    });
+  });
+
+  /* ---------- Lightbox for photo tiles ---------- */
+  // Long photo/video grids start collapsed with a "Show all" button
+  document.querySelectorAll('.cs-media, .cs-videos').forEach(function (grid) {
+    var isVideo = grid.classList.contains('cs-videos');
+    var items = grid.querySelectorAll(isVideo ? ':scope > figure' : ':scope > .cs-tile');
+    var small = window.matchMedia('(max-width: 768px)').matches;
+    var limit;
+    if (isVideo) limit = grid.classList.contains('cs-videos--portrait') ? (small ? 4 : 5) : (small ? 2 : 3);
+    else limit = grid.classList.contains('cs-media--wide') ? (small ? 3 : 6) : (small ? 6 : 10);
+    if (items.length <= limit) return;
+    grid.classList.add('is-collapsed');
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'cs-more';
+    btn.textContent = 'Show all ' + items.length + (isVideo ? ' videos' : ' photos');
+    btn.addEventListener('click', function () { grid.classList.remove('is-collapsed'); btn.remove(); });
+    grid.insertAdjacentElement('afterend', btn);
+  });
+
+  var tiles = document.querySelectorAll('a.cs-tile');
+  if (tiles.length && typeof HTMLDialogElement === 'function') {
+    var box = document.createElement('dialog');
+    box.className = 'cs-lightbox';
+    box.innerHTML = '<button class="cs-lightbox-close" type="button" aria-label="Close">×</button><img alt="">';
+    document.body.appendChild(box);
+    var boxImg = box.querySelector('img');
+    box.querySelector('.cs-lightbox-close').addEventListener('click', function () { box.close(); });
+    box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+    box.addEventListener('close', function () { boxImg.removeAttribute('src'); });
+    tiles.forEach(function (tile) {
+      tile.addEventListener('click', function (e) {
+        e.preventDefault();
+        var img = tile.querySelector('img');
+        boxImg.alt = img ? img.alt : '';
+        boxImg.src = tile.getAttribute('href');
+        box.showModal();
+      });
+    });
+  }
+
   /* ---------- Cover image fallback ----------
      Cover photos are served from Google Drive. If one fails to load, drop it
      so the card or hero falls back to its designed logo-on-black state. */
-  document.querySelectorAll('.case-card-media img, .case-hero-cover img').forEach(function (img) {
+  document.querySelectorAll('.case-card-media img, .case-hero-cover img, .cs-video-frame > img').forEach(function (img) {
     var drop = function () { if (img.parentNode) img.parentNode.removeChild(img); };
     if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) { drop(); return; }
     img.addEventListener('error', drop);

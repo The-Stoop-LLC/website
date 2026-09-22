@@ -10,8 +10,9 @@ Looks for marker pairs of the form:
 
 For each pair, this script:
   1. Calls Drive API v3 files.list on the folder using a service account
-  2. Emits an `<img>` thumbnail tile per image file (Drive thumbnail URLs)
-  3. Emits an `<iframe>` preview per video file
+  2. Emits an `<a class="cs-tile">` photo tile per image file (local copy from
+     assets/images/drive/ when present, else the Drive thumbnail URL)
+  3. Emits a click-to-play `<figure class="cs-video">` per video file
   4. Replaces the marker body in-place
 
 Each Drive folder must either be shared with the service account's email
@@ -185,26 +186,72 @@ def list_folder(
     return collected
 
 
+LOCAL_IMAGE_DIR = Path(__file__).resolve().parent.parent / "assets" / "images" / "drive"
+
+
+def _jpeg_size(path: Path):
+    """Return (width, height) of a baseline/progressive JPEG without external libraries."""
+    data = path.read_bytes()
+    i = 2
+    while i + 9 < len(data):
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            height = int.from_bytes(data[i + 5:i + 7], "big")
+            width = int.from_bytes(data[i + 7:i + 9], "big")
+            return width, height
+        i += 2 + int.from_bytes(data[i + 2:i + 4], "big")
+    return None
+
+
+def _orientation(file_id: str) -> str:
+    """'wide', 'tall', 'square' or 'unknown', based on the localized copy if one exists."""
+    local = LOCAL_IMAGE_DIR / f"{file_id}.jpg"
+    if not local.exists():
+        return "unknown"
+    size = _jpeg_size(local)
+    if not size:
+        return "unknown"
+    w, h = size
+    if w / h > 1.15:
+        return "wide"
+    if h / w > 1.15:
+        return "tall"
+    return "square"
+
+
 def render_image(file: dict, label: str, index: int) -> str:
+    """One <a class="cs-tile"> photo tile. Uses the localized JPEG in assets/images/drive/
+    when present (run scripts/localize_drive_images.py), otherwise hotlinks the Drive thumbnail."""
     file_id = file["id"]
     alt = html.escape(f"{label} - {index}" if label else file.get("name", file_id))
+    local = LOCAL_IMAGE_DIR / f"{file_id}.jpg"
+    if local.exists():
+        src = f"../assets/images/drive/{file_id}.jpg"
+        href = src
+    else:
+        src = f"https://drive.google.com/thumbnail?id={file_id}&sz=w800"
+        href = f"https://drive.google.com/thumbnail?id={file_id}&sz=w1600"
     return (
-        f'    <img src="https://drive.google.com/thumbnail?id={file_id}&sz=w800" '
-        f'srcset="https://drive.google.com/thumbnail?id={file_id}&sz=w400 400w, '
-        f'https://drive.google.com/thumbnail?id={file_id}&sz=w800 800w" '
-        f'sizes="(max-width: 768px) 400px, 800px" '
-        f'alt="{alt}" loading="lazy">'
+        f'    <a class="cs-tile" href="{href}">'
+        f'<img src="{src}" alt="{alt}" loading="lazy" decoding="async"></a>'
     )
 
 
 def render_video(file: dict, label: str, index: int) -> str:
+    """One click-to-play <figure class="cs-video">. The poster is Drive's own thumbnail of the
+    video; assets/js/site.js swaps in the preview iframe when the play button is pressed."""
     file_id = file["id"]
     title = html.escape(f"{label} - {index}" if label else file.get("name", file_id))
     return (
-        f'    <iframe src="https://drive.google.com/file/d/{file_id}/preview" '
-        f'style="width:100%; aspect-ratio:9/16; border:1px solid rgba(255,255,255,0.08); '
-        f'border-radius:4px; background:#000;" loading="lazy" allow="autoplay" '
-        f'title="{title}"></iframe>'
+        f'    <figure class="cs-video reveal cs-video--portrait" '
+        f'data-src="https://drive.google.com/file/d/{file_id}/preview">\n'
+        f'      <div class="cs-video-frame">'
+        f'<img src="https://drive.google.com/thumbnail?id={file_id}&sz=w800" alt="" loading="lazy" decoding="async">'
+        f'<button class="cs-video-play" type="button" aria-label="Play: {title}"></button></div>\n'
+        f"    </figure>"
     )
 
 
@@ -214,16 +261,19 @@ def render_gallery(files: list[dict], label: str) -> str:
 
     parts: list[str] = ["\n"]
     if images:
-        parts.append('  <div class="drive-gallery-grid reveal">\n')
+        orientations = [_orientation(f["id"]) for f in images]
+        modifier = ""
+        if orientations.count("tall") > len(orientations) / 2:
+            modifier = " cs-media--tall"
+        elif orientations.count("wide") > len(orientations) / 2:
+            modifier = " cs-media--wide"
+        parts.append(f'  <div class="cs-media reveal{modifier}">\n')
         for index, file in enumerate(images, start=1):
             parts.append(render_image(file, label, index) + "\n")
         parts.append("  </div>\n")
     if videos:
-        parts.append(
-            '  <div class="reveal" style="display:grid; '
-            "grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); "
-            'gap:16px; margin-top:24px;">\n'
-        )
+        single = " cs-videos--single" if len(videos) == 1 else ""
+        parts.append(f'  <div class="cs-videos reveal cs-videos--portrait{single}">\n')
         for index, file in enumerate(videos, start=1):
             parts.append(render_video(file, label, index) + "\n")
         parts.append("  </div>\n")

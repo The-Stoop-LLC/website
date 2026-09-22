@@ -140,7 +140,10 @@
 <main id="main">
 
 <!-- HERO -->
-<section class="case-hero">
+<section class="case-hero has-cover">
+  <div class="case-hero-cover" aria-hidden="true">
+    <img style="object-position: center 40%;" src="../assets/images/drive/1DtG0ZPKV5sRyjLlsGB1Tilxo7IefIyXC.jpg" alt="" fetchpriority="high" decoding="async">
+  </div>
   <div class="case-hero-bg" aria-hidden="true">AUTOMATION</div>
   <a href="../#services" class="case-back">&larr; Back to Services</a>
   <div class="case-industry-label reveal">Service</div>
@@ -158,6 +161,10 @@
     <span class="case-tag">Zapier</span>
     <span class="case-tag">GoHighLevel</span>
   </div>
+  <div class="reveal" style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+    <a href="#inquiry" class="btn btn-primary">Request a Proposal</a>
+    <a href="#recent-work" class="btn btn-outline">See the Work</a>
+  </div>
 </section>
 
 <!-- WHAT'S INCLUDED -->
@@ -173,6 +180,11 @@
     <li>Reporting dashboards and automated analytics</li>
     <li>Tool integration (Zapier, GoHighLevel, HubSpot, Mailchimp)</li>
   </ul>
+</div>
+
+<div class="cs-cta reveal">
+  <p>Want systems that run while you sleep?</p>
+  <a href="#inquiry" class="btn btn-primary">Request a Proposal</a>
 </div>
 
 <!-- WHO IT'S FOR -->
@@ -204,25 +216,53 @@
 </div>
 
 
+<div class="cs-cta reveal">
+  <p>Ready to scale without adding headcount?</p>
+  <a href="#inquiry" class="btn btn-primary">Request a Proposal</a>
+</div>
+
 <!-- RECENT WORK -->
-<section style="padding:80px 40px;">
-  <div style="max-width:900px;margin:0 auto;text-align:center;">
+<section id="recent-work" style="padding:80px 40px;">
+  <div style="max-width:1100px;margin:0 auto;text-align:center;">
     <div class="section-type-label reveal" style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#FFCC00;margin-bottom:16px;">Recent Work</div>
     <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(24px,3vw,32px);font-weight:800;margin-bottom:40px;" class="reveal">See It in Action</h2>
-    <div class="reveal work-strip-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
-      <a href="../work/mfpaa.html" style="text-decoration:none;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:32px 24px;text-align:center;transition:all 0.4s ease;display:flex;flex-direction:column;align-items:center;gap:16px;" onmouseover="this.style.borderColor='rgba(255,204,0,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
-        <img src="../assets/images/logos/mfpaa.png" alt="MFPAA logo" loading="lazy" style="height:48px;width:auto;max-width:160px;object-fit:contain;background:rgba(255,255,255,0.95);border-radius:6px;padding:4px 8px;" decoding="async" width="577" height="311">
-        <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a0a0a0;">MFPAA</span>
-      </a>
-      <a href="../work/x-shadyside.html" style="text-decoration:none;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:32px 24px;text-align:center;transition:all 0.4s ease;display:flex;flex-direction:column;align-items:center;gap:16px;" onmouseover="this.style.borderColor='rgba(255,204,0,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)';this.style.transform='translateY(0)'">
-        <img src="../assets/images/logos/x-shadyside.svg" alt="X Shadyside logo" loading="lazy" style="height:48px;width:auto;max-width:160px;object-fit:contain;filter:brightness(0) invert(1);" decoding="async">
-        <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a0a0a0;">X Shadyside</span>
-      </a>
-    </div>
+    <div class="reveal svc-cases">
+    <a href="../work/mfpaa.html" class="case-card reveal case-card--mini">
+          <div class="case-card-media" aria-hidden="true">
+            <img style="object-position: center 40%;" src="../assets/images/covers/mfpaa-800.jpg" srcset="../assets/images/covers/mfpaa-800.jpg 800w, ../assets/images/covers/mfpaa-1600.jpg 1600w" sizes="(max-width: 768px) 100vw, 50vw" alt="" loading="lazy" decoding="async">
+            <img class="case-card-logo is-boxed" src="../assets/images/logos/mfpaa.png" alt="" loading="lazy" decoding="async">
+            <div class="case-card-stat"><div class="case-card-stat-val">$47,139</div><div class="case-card-stat-label">Raised in 31 Days</div></div>
+          </div>
+          <div class="case-card-body">
+            <div class="case-industry">Case Study</div>
+            <h3>MFPAA</h3>
+            <div class="case-tagline">Capital Campaign &amp; Comprehensive Marketing Strategy</div>
+            <span class="case-link">View Case Study</span>
+          </div>
+        </a>
+    <a href="../work/x-shadyside.html" class="case-card reveal case-card--mini">
+          <div class="case-card-media" aria-hidden="true">
+            <img style="object-position: center 25%;" src="../assets/images/covers/x-shadyside-800.jpg" srcset="../assets/images/covers/x-shadyside-800.jpg 800w, ../assets/images/covers/x-shadyside-1600.jpg 1600w" sizes="(max-width: 768px) 100vw, 50vw" alt="" loading="lazy" decoding="async">
+            <img class="case-card-logo" src="../assets/images/logos/x-shadyside.svg" alt="" loading="lazy" decoding="async">
+            <div class="case-card-stat"><div class="case-card-stat-val">267K+</div><div class="case-card-stat-label">Views</div></div>
+          </div>
+          <div class="case-card-body">
+            <div class="case-industry">Case Study</div>
+            <h3>X SHADYSIDE</h3>
+            <div class="case-tagline">Influencer-Led Membership Campaigns</div>
+            <span class="case-link">View Case Study</span>
+          </div>
+        </a>
+</div>
   </div>
 </section>
+<div class="cs-cta reveal">
+  <p>See how automation fits your operation.</p>
+  <a href="#inquiry" class="btn btn-primary">Book an Ops Audit</a>
+</div>
+
 <!-- INQUIRY FORM -->
-<section style="padding: 80px 40px; background: var(--grey);">
+<section id="inquiry" style="padding: 80px 40px; background: var(--grey);">
   <div style="max-width: 700px; margin: 0 auto; text-align: center;">
     <div class="section-type-label reveal">Get Started</div>
     <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 16px;" class="reveal">Request a Proposal</h2>
@@ -251,6 +291,16 @@
       <h3 style="font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--white);">Will you train my team on the new systems?</h3>
       <p style="font-size: 14px; line-height: 1.8; color: var(--mid);">Yes — we provide documentation and training so your team can manage the systems independently after setup.</p>
     </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="case-cta">
+  <h2 class="reveal">Lean team, big goals?</h2>
+  <p class="reveal">Let's build the systems that let you scale.</p>
+  <div class="reveal" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="#inquiry" class="btn btn-primary">Request a Proposal</a>
+    <a href="contact.html" class="btn btn-outline">Talk to Us</a>
   </div>
 </section>
 

@@ -2051,3 +2051,302 @@ footer {
   .case-card-stat-val { font-size: 2rem; }
   .more-work { padding: 70px 20px; }
 }
+
+/* ============================================
+   CASE STUDY COMPONENTS
+   Uniform stat rows, photo tiles (with lightbox) and click-to-play
+   video tiles replace the per-page inline grids.
+   ============================================ */
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px 16px;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.cs-stat { min-width: 0; }
+
+.cs-stat-val {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1.9rem, 3.4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: 1px;
+  color: var(--yellow);
+  overflow-wrap: anywhere;
+}
+
+.cs-stat-val.is-long { font-size: clamp(1.5rem, 2.6vw, 2.5rem); letter-spacing: 1px; }
+
+.cs-stats--big .cs-stat-val.is-long { font-size: clamp(1.75rem, 3.2vw, 3rem); }
+
+.cs-stat-val.is-text {
+  font-size: clamp(1.2rem, 1.9vw, 1.7rem);
+  letter-spacing: 2px;
+  padding-top: 0.3em;
+}
+
+.cs-stats--big { margin-top: 40px; }
+
+.cs-stats--big .cs-stat-val { font-size: clamp(2.25rem, 4.6vw, 4rem); }
+
+.cs-stats--big .cs-stat-val.is-text { font-size: clamp(1.35rem, 2.2vw, 2rem); }
+
+.cs-stat-label {
+  font-size: 0.625rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 8px;
+}
+
+.cs-meta {
+  text-align: center;
+  font-size: 0.6875rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin: 0 auto 24px;
+  padding: 0 24px;
+}
+
+/* Photo tiles */
+.cs-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  max-width: 1100px;
+  margin: 32px auto 0;
+}
+
+.cs-media--wide { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+.cs-media--tall { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+
+.cs-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.cs-media--wide .cs-tile { aspect-ratio: 16 / 10; }
+
+.cs-media--tall .cs-tile { aspect-ratio: 4 / 5; }
+
+.cs-tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.cs-tile:hover img { transform: scale(1.05); }
+
+.cs-tile--contain { background: #111; }
+
+.cs-tile--contain img { object-fit: contain; padding: 8%; }
+
+.cs-tile:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px; }
+
+.cs-tile-cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 28px 12px 10px;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--white);
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
+  pointer-events: none;
+}
+
+/* Video tiles: Drive poster frame + play button; the player loads on click */
+.cs-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+  max-width: 1100px;
+  margin: 24px auto 0;
+}
+
+.cs-videos--portrait { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+
+.cs-videos--single { max-width: 720px; }
+
+.cs-videos--portrait.cs-videos--single { max-width: 320px; }
+
+.cs-video {
+  margin: 0;
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.cs-video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000 radial-gradient(ellipse at 30% 20%, rgba(255,204,0,0.08), transparent 55%);
+}
+
+.cs-videos--portrait .cs-video-frame,
+.cs-video--portrait .cs-video-frame { aspect-ratio: 9 / 16; }
+
+.cs-video-frame > img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+}
+
+.cs-video-frame > .cs-tile { position: absolute; inset: 0; aspect-ratio: auto; border: 0; }
+
+.cs-video-play {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%);
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.cs-video-play::before {
+  content: '';
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cs-video-play::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 11px 0 11px 19px;
+  border-color: transparent transparent transparent var(--black);
+  margin-left: 5px;
+}
+
+.cs-video-play:hover::before, .cs-video-play:focus-visible::before { transform: scale(1.1); background: var(--yellow-bright); }
+
+.cs-video-play:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px; }
+
+.cs-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+.cs-video figcaption {
+  padding: 12px 14px;
+  font-size: 0.6875rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+/* Instagram embeds */
+.cs-embeds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+  max-width: 1100px;
+  margin: 32px auto 0;
+}
+
+/* Long bullet lists inside campaign sections flow in two columns */
+.campaigns .case-content { max-width: 1000px; }
+
+.cs-list { columns: 2; column-gap: 48px; }
+
+.cs-list li { break-inside: avoid; }
+
+/* Lightbox */
+.cs-lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: 96vw;
+  max-height: 96vh;
+  overflow: visible;
+}
+
+.cs-lightbox::backdrop { background: rgba(0,0,0,0.94); }
+
+.cs-lightbox img {
+  display: block;
+  max-width: 96vw;
+  max-height: 92vh;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+}
+
+.cs-lightbox-close {
+  position: fixed;
+  top: 18px; right: 18px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.6);
+  color: var(--white);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cs-lightbox-close:hover { border-color: var(--yellow); color: var(--yellow); }
+
+
+/* Inline CTA after each stack item (service + founder pages) */
+.cs-cta { text-align: center; max-width: 640px; margin: 40px auto 0; padding: 0 24px; }
+
+.cs-cta p { font-size: 15px; color: var(--mid); margin-bottom: 20px; line-height: 1.7; }
+
+.metrics-section + .cs-cta { margin-top: 56px; }
+
+.svc-band { padding-top: 72px; }
+
+.svc-band .cs-meta { margin-bottom: 32px; }
+
+.svc-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; max-width: 1100px; margin: 0 auto; text-align: left; }
+
+.cs-videos--pair { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
+
+/* Collapsible galleries: site.js adds .is-collapsed + a "Show all" button when a grid is long */
+.campaigns .section-type-label { text-align: center; }
+
+.cs-videos.is-collapsed > figure:nth-child(n+4),
+.cs-videos--portrait.is-collapsed > figure:nth-child(n+6),
+.cs-media.is-collapsed > .cs-tile:nth-child(n+11),
+.cs-media--wide.is-collapsed > .cs-tile:nth-child(n+7) { display: none; }
+
+.cs-more {
+  display: block; margin: 20px auto 0;
+  padding: 12px 28px;
+  font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--white); background: transparent; border: 1px solid rgba(255,255,255,0.25); border-radius: 2px;
+  cursor: pointer; transition: border-color 0.2s, color 0.2s;
+}
+
+.cs-more:hover, .cs-more:focus-visible { border-color: var(--yellow); color: var(--yellow); outline: none; }
+
+@media (max-width: 768px) {
+  .cs-media { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .cs-media--tall { grid-template-columns: repeat(2, 1fr); }
+  .cs-media--wide { grid-template-columns: 1fr; }
+  .cs-videos { grid-template-columns: 1fr; }
+  .cs-videos--portrait { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cs-list { columns: 1; }
+  .cs-stats { gap: 20px 12px; }
+  .cs-videos.is-collapsed > figure:nth-child(n+3),
+  .cs-videos--pair { grid-template-columns: 1fr; }
+  .cs-videos--portrait.is-collapsed > figure:nth-child(n+5),
+  .cs-media.is-collapsed > .cs-tile:nth-child(n+7),
+  .cs-media--wide.is-collapsed > .cs-tile:nth-child(n+4) { display: none; }
+}
+
