@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Stoop Blog</title>
+    <link>https://thestooppgh.com/blog/</link>
+    <atom:link href="https://thestooppgh.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Influencer marketing, digital advertising, and content production insights from The Stoop, a Pittsburgh digital agency, with real campaign numbers.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Content Production at Scale: How We Shot 81 Assets for a National Gym Brand</title>
+      <link>https://thestooppgh.com/blog/content-production-at-scale-gym.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/content-production-at-scale-gym.html</guid>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 +0000</pubDate>
+      <description>A behind-the-scenes breakdown of the Iron 24 Corporate content shoot — 20 videos, 60 photos, 1 drone video, 4 shooting blocks, 13 total shoot hours.</description>
+    </item>
+    <item>
+      <title>How to Build a Themed Content Calendar for Food &amp; Beverage Brands</title>
+      <link>https://thestooppgh.com/blog/themed-content-calendar-food-brands.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/themed-content-calendar-food-brands.html</guid>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
+      <description>A practical framework for a repeatable, themed content calendar — drawn from a year of managing a Pittsburgh meal prep brand.</description>
+    </item>
+    <item>
+      <title>9 Months of Organic Social: Growing a Landscaping Business on Instagram</title>
+      <link>https://thestooppgh.com/blog/organic-social-growth-landscaping.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/organic-social-growth-landscaping.html</guid>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <description>How a strategy-first, organic-only approach drove 38K+ impact and +275 followers for Sylvan Gardens across 9 months of social media management.</description>
+    </item>
+    <item>
+      <title>How to Build Cross-Brand Partnerships That Actually Work</title>
+      <link>https://thestooppgh.com/blog/cross-brand-partnerships-guide.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/cross-brand-partnerships-guide.html</guid>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <description>Using the real X Shadyside x SXP x Lucid Juice partnership as a case study — structure, incentives, custom products, and why a broker makes it work.</description>
+    </item>
+    <item>
+      <title>How 15 Fitness Influencers Drove 267K+ Views in 2 Campaigns</title>
+      <link>https://thestooppgh.com/blog/15-fitness-influencers-267k-views.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/15-fitness-influencers-267k-views.html</guid>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <description>A full breakdown of the X Shadyside influencer campaigns — 15 influencers, 2 seasons, 267,838 views, $6,750 total spend.</description>
+    </item>
+    <item>
+      <title>How to Calculate Influencer Marketing ROI (With Real Numbers)</title>
+      <link>https://thestooppgh.com/blog/influencer-marketing-roi-guide.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/influencer-marketing-roi-guide.html</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <description>Using real data from 15+ influencer activations, here&#x27;s how to measure CPM, CPC, and engagement to calculate actual influencer marketing ROI.</description>
+    </item>
+    <item>
+      <title>Anatomy of a $47K Nonprofit Capital Campaign</title>
+      <link>https://thestooppgh.com/blog/anatomy-of-a-47k-nonprofit-campaign.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/anatomy-of-a-47k-nonprofit-campaign.html</guid>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <description>How targeted paid media on Meta and LinkedIn raised $47,139 in donations for a nonprofit EMS provider.</description>
+    </item>
+    <item>
+      <title>How We Generated 480K Views for a Local Bubble Tea Shop</title>
+      <link>https://thestooppgh.com/blog/how-we-generated-480k-views-for-dr-tea.html</link>
+      <guid isPermaLink="true">https://thestooppgh.com/blog/how-we-generated-480k-views-for-dr-tea.html</guid>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <description>A deep dive into the #LoveIsBrewing Valentine&#x27;s Day campaign for Dr. Tea — from influencer sourcing to 480,334 views at $4 CPM.</description>
+    </item>
+  </channel>
+</rss>
