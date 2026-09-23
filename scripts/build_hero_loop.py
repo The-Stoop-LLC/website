@@ -237,7 +237,8 @@ def snap_to_cuts(src: Path, start: float, dur: float) -> tuple[float, float]:
     head = [t for t in cuts if t < SLIVER]
     tail = [t for t in cuts if t > dur - SLIVER]
     new_start = start + (max(head) + 1 / FPS if head else 0)
-    new_end = start + (min(tail) if tail else dur)
+    # one frame of margin either side: the frame-rate conversion can move a cut by a frame
+    new_end = start + (min(tail) - 1 / FPS if tail else dur)
     return round(new_start, 3), round(new_end - new_start, 3)
 
 
