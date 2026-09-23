@@ -2386,6 +2386,11 @@ footer {
 /* Collapsible galleries: site.js adds .is-collapsed + a "Show all" button when a grid is long */
 .campaigns .section-type-label { text-align: center; }
 
+/* Case study -> companion blog post link, under the results CTA */
+.cs-read-more { max-width: 760px; margin: 20px auto 0; padding: 0 24px; text-align: center; font-size: 0.875rem; line-height: 1.7; color: var(--mid); }
+.cs-read-more a { color: var(--yellow); text-decoration: underline; text-underline-offset: 3px; }
+.cs-read-more a:hover { color: var(--yellow-bright); }
+
 .cs-videos.is-collapsed > figure:nth-child(n+4),
 .cs-videos--portrait.is-collapsed > figure:nth-child(n+6),
 .cs-media.is-collapsed > .cs-tile:nth-child(n+11),
