@@ -2,188 +2,48 @@
   "_readme": "Cut list for the homepage hero loop. Edit on a branch; the Build hero loop workflow rebuilds assets/video/ there. See scripts/build_hero_loop.py for the fields.",
   "scout": [
     {
-      "id": "1pWYjLPAC_H67qXGvQsQV8U3IWviReowd",
-      "label": "Sylvan Gardens - Drone Vertical 1"
+      "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
+      "label": "CSMP - Fire Roasted Tomato Soup (Chef's Choice)"
     },
     {
-      "id": "1DpwsbJFu1a6a_fn3sT_u0WEXSAMrrGsq",
-      "label": "Sylvan Gardens - Drone Vertical 2"
+      "id": "1vdml70b7rdW83lhTi7R-nR3LvwGXX3j6",
+      "label": "CSMP - Turkey Sausage (Chef's Choice)"
     },
     {
-      "id": "1lcvHws1NOnFeoTxPH0a080z_mCUbXWvt",
-      "label": "Sylvan Gardens - Drone Vertical 3"
+      "id": "1VeTPAH-Ao7wdruGD6BF221BQT9vJ6crL",
+      "label": "CSMP - Roasted Tomato Sauce Pasta (Chef's Choice)"
     },
     {
-      "id": "1E5lr_FzoQpZL7NF3s80eK9bbrq0fZ95Y",
-      "label": "Sylvan Gardens - Drone Vertical 4"
+      "id": "1kGyzMbB787XQ1utLaeApSNzd29jLA8zN",
+      "label": "CSMP - A La Carte Sauces (Chef's Choice)"
     },
     {
-      "id": "1Ue5WnXSlFDDkWm5sEj4dYZLCmaFoEUDp",
-      "label": "Sylvan Gardens - Drone Clip 1"
+      "id": "1orCn-wbmnngH3xhEh3jg8U5RBXU5GLXc",
+      "label": "CSMP - Brocc Cheddar Soup (Chef's Choice)"
     },
     {
-      "id": "17L_bgUS6QSWv6KprHBYLB3ppv_9QzKnM",
-      "label": "Sylvan Gardens - Drone Clip 2"
+      "id": "1pw1qdSMPW35A6TrR86dm2bs5te04ATPz",
+      "label": "CSMP - Eggplant Chermoula (Chef's Choice)"
     },
     {
-      "id": "16aZUbEZlpHz-yR9st4rKcMwnf07WEyww",
-      "label": "Sylvan Gardens - Drone Clip 3"
+      "id": "1LLnW4yY--iqShYNQDEe38p7PzSEhfPke",
+      "label": "CSMP - Stir Fry Tofu (Influencer in the Kitchen)"
     },
     {
-      "id": "1CCSOoxNg0O6KhQ2BKN7W_vZzBittgvqa",
-      "label": "Sylvan Gardens - Drone Clip 4"
+      "id": "1UH6ajQTDE2zwb2HARZm60867ZHZK3HHZ",
+      "label": "CSMP - Freeze Meals"
     },
     {
-      "id": "1kGlDgZlsrjqYST7hgmQJ0iCf4mQ7gP2W",
-      "label": "Sylvan Gardens - Sava 36807"
+      "id": "1CfaOPfzntbsMjGFZZPX84gPn4Ctb2Ia1",
+      "label": "CSMP - Hibachi"
     },
     {
-      "id": "11x8eyD_yon5rzSDQfeNHeYW2n6vEK0L-",
-      "label": "Sylvan Gardens - Sava 39817"
+      "id": "1f428PnbQiqm9KR5N2rDoiRBLyvXYvrRL",
+      "label": "CSMP - Mediterranean Chicken Wrap"
     },
     {
-      "id": "1wXfXUFSwck9lr253LrBhpM5t7N3a_Sx5",
-      "label": "Sylvan Gardens - Sava 43237"
-    },
-    {
-      "id": "1pc9ZTX8TQ_Wb9L2bqaawa7kIEsbu0aqn",
-      "label": "Sylvan Gardens - Sava 45367"
-    },
-    {
-      "id": "1ykmDiOFjg-2-HE--fh3AdVc1WFf2To09",
-      "label": "Sylvan Gardens - Sava 49412"
-    },
-    {
-      "id": "1V3nCujx8pbyKBYTcw4GeStPPgcrm-D8n",
-      "label": "Sylvan Gardens - Thel 01"
-    },
-    {
-      "id": "1umQKPO9yxH2EBjcmyQVOgGFyBkhxIWMT",
-      "label": "Sylvan Gardens - Thel 02"
-    },
-    {
-      "id": "1xVQyTqrx3VgWKdavg2crop8aQc6FB4Gz",
-      "label": "Sylvan Gardens - Thel 03"
-    },
-    {
-      "id": "1Ax4Wfz7malHuNXnpuPHcQ3BClRcKKwGU",
-      "label": "Sylvan Gardens - Thel 04"
-    },
-    {
-      "id": "1Y46PlkLJ_MTryF1ij3nLDC_DCT5Cy8cl",
-      "label": "Sylvan Gardens - Thel 05"
-    },
-    {
-      "id": "1SnWbSjp1z0FEZsFXxvyJLYY0A_xvdNvY",
-      "label": "Sylvan Gardens - Thel 06"
-    },
-    {
-      "id": "1JR5yyk9-LaSBnOx81K2XUBYhxA0_0CnN",
-      "label": "Sylvan Gardens - Thel 07"
-    },
-    {
-      "id": "1DrMhToYaztALOmCPpW6pBjB94-aV62-p",
-      "label": "Sylvan Gardens - Thel 08"
-    },
-    {
-      "id": "1L_kD8dQy9agf7Tm8XrLkYOjVZQB6TcQE",
-      "label": "Sylvan Gardens - Thel 09"
-    },
-    {
-      "id": "1HBABFzBc34yykD4IAU5FZ9uhlcvEH22I",
-      "label": "Sylvan Gardens - Thel 10"
-    },
-    {
-      "id": "15mW4j0M8_VJfNYSkIiIyDuoDqfCJH1xA",
-      "label": "Sylvan Gardens - Thel 11"
-    },
-    {
-      "id": "1_xWZB3ykp9gpdXCxgK7Xtq6_U5usdm7w",
-      "label": "Sylvan Gardens - Thel 12"
-    },
-    {
-      "id": "1agVGlFwQEvQydECKCnW47DQbcLWRETff",
-      "label": "Sylvan Gardens - Thel 13"
-    },
-    {
-      "id": "1aK0LeuVb0nq-_W9vRjdClb0mcDVhCbi6",
-      "label": "Sylvan Gardens - Thel 14"
-    },
-    {
-      "id": "1z-pv14g2D_YTy0ohFIKR2mUE7dwKgytQ",
-      "label": "Sylvan Gardens - Thel 15"
-    },
-    {
-      "id": "1r3gMtcYUagkhnZYEpseeFp7tFQZI4fGj",
-      "label": "Sylvan Gardens - 85 Crawford 01"
-    },
-    {
-      "id": "1Pp3GUIhuqiGPuvvJPFrUN8yjUTcmGG02",
-      "label": "Sylvan Gardens - 85 Crawford 02"
-    },
-    {
-      "id": "1fCoA-1v7J_SV09sTfzL0KnKhyZ2kP-LX",
-      "label": "Sylvan Gardens - 85 Crawford 03"
-    },
-    {
-      "id": "1bpOFccr4EDS_WOK_6i5RXEeUc3QpOjvJ",
-      "label": "Sylvan Gardens - 85 Crawford 04"
-    },
-    {
-      "id": "1S-2cAGfkQc0TITFlzsrmUd_BRS-X0ym4",
-      "label": "Sylvan Gardens - 85 Crawford 05"
-    },
-    {
-      "id": "1UeMYLbJbezFKZiE09PgZP2JifZMCQKxu",
-      "label": "Sylvan Gardens - 85 Crawford 06"
-    },
-    {
-      "id": "1Vz5mTEow7Yn0ChABpUY8N17ozSo2dSsE",
-      "label": "Sylvan Gardens - 85 Crawford 07"
-    },
-    {
-      "id": "1Y1Z-TekdIBvM5Bvu5jEhwlwcSMmxmM-A",
-      "label": "Sylvan Gardens - 85 Crawford 08"
-    },
-    {
-      "id": "11aU5DYxzL7pYUvuaoX8k7jCMaThpMFqE",
-      "label": "Sylvan Gardens - 85 Crawford 09"
-    },
-    {
-      "id": "1H4j21ug0iTYht31zfS173noYSy6uyClt",
-      "label": "Sylvan Gardens - 85 Crawford 10"
-    },
-    {
-      "id": "1yi5_AQRcSnUFFLSTKILWuWRO8YEP91A0",
-      "label": "Sylvan Gardens - 85 Crawford 11"
-    },
-    {
-      "id": "1mA6ZPvxfxsWbiSW9cJA2M9-eFX67DmLr",
-      "label": "Sylvan Gardens - 85 Crawford 12"
-    },
-    {
-      "id": "15GnMeMIuETmJMCClThKHspoyP_pHW6Qz",
-      "label": "Sylvan Gardens - 85 Crawford 13"
-    },
-    {
-      "id": "1NaRCOv3qZMp9Spj-n87uaHkgrjTXPW1f",
-      "label": "Sylvan Gardens - 85 Crawford 14"
-    },
-    {
-      "id": "1FSpTEf8lhtqtKI3XSTmJxKAq7YsvJicX",
-      "label": "Sylvan Gardens - 85 Crawford 15"
-    },
-    {
-      "id": "1aaUiN2lSGRcEyL_gdC3r-PpLzAbipVNm",
-      "label": "Sylvan Gardens - 85 Crawford 16"
-    },
-    {
-      "id": "1OVjrJuCEnu3nmsqw5sDNiJ0U8c-FBGtJ",
-      "label": "Sylvan Gardens - 85 Crawford 17"
-    },
-    {
-      "id": "1uRAUumF6OWXfK5eF3dN2Iaj921_EH5OU",
-      "label": "Sylvan Gardens - 85 Crawford 18"
+      "id": "1nlC30qz3FT8uBRZTYU38NLqcHcbV9YrI",
+      "label": "CSMP - Vince, Expert in the Kitchen"
     }
   ],
   "segments": []
