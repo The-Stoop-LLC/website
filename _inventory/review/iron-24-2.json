@@ -1,0 +1,1166 @@
+{
+ "chunk": "iron-24-2",
+ "videos": [
+  {
+   "id": "1NPQEg8B7lT8ZYmFNlmNcmSi558QVsB1O",
+   "score": 2,
+   "type": "talking-head",
+   "orientation": "landscape",
+   "summary": "Trainer seated on a calf-raise machine explains an assessment drill to camera in a wide gym shot.",
+   "best_frame": 1,
+   "placements": [],
+   "issues": [
+    "orange pillar crowds right edge",
+    "static locked-off framing"
+   ],
+   "why": "Useful client education but static, long and visually repetitive."
+  },
+  {
+   "id": "1pCmwJhWmdxaV4gzkvdsJpkv307mdXrXY",
+   "score": 2,
+   "type": "talking-head",
+   "orientation": "landscape",
+   "summary": "Trainer at a whiteboard against a bare white wall introduces the assessment series.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "plain white-wall setup",
+    "whiteboard text unreadable at web size"
+   ],
+   "why": "Bare setting and a lecture format; no hook for a site visitor."
+  },
+  {
+   "id": "1l8AZLV10O4i6tcwzQ9B_-d2S_j57no2U",
+   "score": 2,
+   "type": "talking-head",
+   "orientation": "landscape",
+   "summary": "Trainer beside a cable tower talks through a chest-mobility check, hand on chest.",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "static wide shot",
+    "long for the web"
+   ],
+   "why": "Clean 4K and on-brand setting, but a lecture with little motion."
+  },
+  {
+   "id": "1dYwR_w1zu_Tn_LcjB3Frb9dorkf0Mh_r",
+   "score": 2,
+   "type": "talking-head",
+   "orientation": "landscape",
+   "summary": "Trainer demonstrates a hamstring stretch with one foot on a box, then talks to camera.",
+   "best_frame": 1,
+   "placements": [],
+   "issues": [
+    "subject small in frame",
+    "rig upright blocks left side"
+   ],
+   "why": "Functional demo with awkward framing; not showcase material."
+  },
+  {
+   "id": "1s7mAV56R3MrYNeDMNB92c9qvprqwuoAR",
+   "score": 3,
+   "type": "talking-head",
+   "orientation": "landscape",
+   "summary": "Trainer in a half-kneeling hip-flexor stretch in front of the orange-accented rig wall.",
+   "best_frame": 2,
+   "placements": [
+    "service:content-development",
+    "blog:content-production-at-scale-gym"
+   ],
+   "issues": [
+    "static, talk-driven"
+   ],
+   "why": "Best-framed of the assessment series; fine as a supporting example of educational content."
+  },
+  {
+   "id": "1oSLmMKfPDUDKUp69qq29TMCydMtKT_HS",
+   "score": 2,
+   "type": "other",
+   "orientation": "landscape",
+   "summary": "Six-minute follow-along routine: mostly a big countdown timer, with brief floor demos of a side-lying shoulder drill.",
+   "best_frame": 4,
+   "placements": [],
+   "issues": [
+    "timer graphic fills most of the runtime",
+    "6 min long"
+   ],
+   "why": "A practical member workout, but visually it is mostly a timer screen."
+  },
+  {
+   "id": "1LDLyLgbhnyaRwO2zMFLfguzJsDgOIABw",
+   "score": 3,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "Vertical gimbal tour of the empty gym: rigs, dumbbell wall, sauna rooms, and a red-light room.",
+   "best_frame": 7,
+   "placements": [
+    "hero-loop",
+    "case-study"
+   ],
+   "hero_moment": "1:02 push into the saturated red-light room (vertical stack)",
+   "issues": [
+    "no people in shot",
+    "near-duplicate of the on-site Logos version"
+   ],
+   "why": "Smooth and clean but an empty-room tour; the clean no-logo cut is the one to pull hero shots from."
+  },
+  {
+   "id": "1xP0D0rUxcxrPgKB0rjE2IewoOl-t3BSE",
+   "score": 3,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "Same vertical gym tour with an Iron 24 logo bug in the lower right.",
+   "best_frame": 3,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "logo bug bottom-right",
+    "near-duplicate of the no-logo version"
+   ],
+   "why": "Already on the Iron 24 page; solid facility tour, no people or hook."
+  },
+  {
+   "id": "1v9wjqPDzUsooWaHLEsoj3ObubMLsF2jN",
+   "score": 3,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "4K landscape gimbal walkthrough of the empty gym floor, dumbbell wall, sauna hall and red-light room.",
+   "best_frame": 0,
+   "placements": [
+    "hero-loop",
+    "case-study"
+   ],
+   "hero_moment": "0:03 low-angle glide under the rig and skylights; 0:50 red-light room",
+   "issues": [
+    "no people in shot",
+    "alternate cut of the on-site with-logos version"
+   ],
+   "why": "Polished, clean, logo-free facility b-roll; good for 3-5 s hero cutaways, not a standalone feature."
+  },
+  {
+   "id": "1l3YlUFpfL_YiZkfIaIvr5e1OXpOk2QlJ",
+   "score": 3,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "Landscape walkthrough of the empty gym with an Iron 24 logo bug in the lower right.",
+   "best_frame": 1,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "logo bug bottom-right",
+    "near-duplicate of Gym Walkthrough"
+   ],
+   "why": "Already on the Iron 24 page; competent but people-free facility tour."
+  }
+ ],
+ "folders": [
+  {
+   "folder_id": "1E5tIdGNKLIb41zqyg7vAzMSOGgBgBzgA",
+   "raw": false,
+   "score": 2,
+   "summary": "Single Iron 24 full-color logo SVG; a brand utility asset, not content.",
+   "best": [],
+   "issues": [
+    "logo file only"
+   ]
+  },
+  {
+   "folder_id": "1WtejbNDaSaoYnPM9zZpuheMUkDTt_pR8",
+   "raw": true,
+   "score": 1,
+   "summary": "Two client-supplied reference drone clips (a dark tunnel, a strip-mall storefront); examples, not Stoop work.",
+   "best": [],
+   "issues": [
+    "reference material, not agency output"
+   ]
+  },
+  {
+   "folder_id": "1mfY4qfR8Uv384nVPke8XGjjMBERPHjrG",
+   "raw": true,
+   "score": 1,
+   "summary": "Stock gym photos collected as a mood board; not Stoop work.",
+   "best": [],
+   "issues": [
+    "Shutterstock/Depositphotos watermarks (cells 10, 12, 13)",
+    "stock imagery, not usable as portfolio"
+   ]
+  },
+  {
+   "folder_id": "1zRRnm14UVc6HNW-p5-gZPVw_PvihU4ku",
+   "raw": false,
+   "score": 3,
+   "summary": "78 empty-facility stills: stair climbers by the orange quote wall, logo wall and lockers, infrared saunas, gym floor; heavy bracketed duplicates.",
+   "best": [
+    {
+     "n": 25,
+     "id": "1mPI1TNMSjbGm44QxGh_ZrFCt1j4hpjq6",
+     "score": 4,
+     "why": "Clean establishing still of the Iron 24 logo wall and lockers",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 57,
+     "id": "1iBYbIzIUCAWL7gXLVMiQ43gfgY-tqiBk",
+     "score": 4,
+     "why": "Moody sauna interior in blue glow; strong texture shot",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 65,
+     "id": "1DQTVOhpor-Cgt6pufoxg18g5Js1r-qB7",
+     "score": 4,
+     "why": "Warm-lit sauna cabin with SAUNA door lettering, balanced landscape",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "many near-duplicate brackets",
+    "windows blown out in stair-climber shots",
+    "cell 72 (DSC05809) already on site via Corporate/Photos copy"
+   ]
+  },
+  {
+   "folder_id": "1QiaZRDCOCi186T1hnYLTTjELQXIT9wGt",
+   "raw": false,
+   "score": 3,
+   "summary": "20 landscape stills: empty gym wides and trainers coaching members; generally dark exposure.",
+   "best": [
+    {
+     "n": 18,
+     "id": "1OTN1xWoIja6xlDEwOBrWxxF8XSN7aict",
+     "score": 4,
+     "why": "Two members on stair climbers under the quote wall; energy plus brand message",
+     "placements": [
+      "case-study",
+      "blog:content-production-at-scale-gym"
+     ]
+    }
+   ],
+   "issues": [
+    "underexposed / dark",
+    "cells 8, 13, 16 are originals of copies already on site"
+   ]
+  },
+  {
+   "folder_id": "1ZxswmB6rEdvFo0Ha-_2hNJLwqRAxpNI5",
+   "raw": false,
+   "score": 4,
+   "summary": "54 vertical action portraits of members lifting, trainers coaching and app check-in; consistent moody grade and the strongest Block 2 set.",
+   "best": [
+    {
+     "n": 4,
+     "id": "1WixbE6PjLKau86hLEJ8iXUxjgzOiqpWU",
+     "score": 4,
+     "why": "Intense close-up of member gripping the barbell; dramatic, editorial",
+     "placements": [
+      "case-study",
+      "cover",
+      "service:content-development"
+     ]
+    },
+    {
+     "n": 17,
+     "id": "1eOmQpqDEDtvggRvtLw-arRUhJ1154pFu",
+     "score": 4,
+     "why": "Overhead dumbbell press, strong angle and effort",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 15,
+     "id": "1viiEO-1PGvRDTAqwEIdF55CSgyw6wPUY",
+     "score": 4,
+     "why": "Cable curl against the orange wall; bold brand color",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 26,
+     "id": "1AsnmCf4GSZ6sPdXO36GqKha0XzcqiA4y",
+     "score": 4,
+     "why": "Shoulder press framed by orange wall, clean composition",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 8,
+     "id": "19g_ykrAFh0CIRTCrDhZvu2QYL2pcOEQ2",
+     "score": 4,
+     "why": "Deadlift setup with side light on the Torque plate",
+     "placements": [
+      "gallery",
+      "blog:content-production-at-scale-gym"
+     ]
+    },
+    {
+     "n": 40,
+     "id": "1OC1wU0ueoMru54U4OB-vZ-QXM1azE4f-",
+     "score": 4,
+     "why": "Stair climber in motion under 'You may not be there yet' wall",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    }
+   ],
+   "issues": [
+    "some near-duplicate frames"
+   ]
+  },
+  {
+   "folder_id": "1NCqQdY7BwOH9LbRWMkvRRJPQVFoj5Jlm",
+   "raw": true,
+   "score": 3,
+   "summary": "40 graded landscape clips: logo wall, rigs, members arriving and scanning the app at the door, machine work and coaching.",
+   "best": [
+    {
+     "n": 34,
+     "id": "1Q2W4ZOwyKeaEtNKUQlRbHU4aT1U3l0Jh",
+     "score": 4,
+     "why": "Member on plate-loaded machine against the orange wall; clean 9 s motion",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1cfvWiyDYI7c7uikZ1BzcHqXpXr_PC5Ks",
+   "raw": true,
+   "score": 3,
+   "summary": "41 graded vertical clips mirroring the landscape set: app scan-in at the door, rigs, stair climber, assisted stretches.",
+   "best": [
+    {
+     "n": 30,
+     "id": "1M4VmEKGwu3-TIc1Z9DfWlyKml61kuuez",
+     "score": 4,
+     "why": "Member on stair climber under the orange quote wall; vertical stack candidate",
+     "placements": [
+      "hero-loop"
+     ]
+    },
+    {
+     "n": 39,
+     "id": "1a2k3Er9mRD33YhK30Zj5kGmutxrLjXgR",
+     "score": 4,
+     "why": "Close trainer-assisted hamstring stretch; human, active",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1ed3jj1aSQJuJuWnHvHTgTf6cqfKwlvd0",
+   "raw": false,
+   "score": 3,
+   "summary": "10 POV shots of a hand using the Iron 24 app to unlock recovery rooms (sauna, plunge, red light).",
+   "best": [
+    {
+     "n": 6,
+     "id": "1RPEY2-N8d4GYoVa-6ZWYlkX4XNpMqmNw",
+     "score": 4,
+     "why": "Phone held against the glowing RED LIGHT door sign; bold color",
+     "placements": [
+      "case-study",
+      "service:content-development"
+     ]
+    }
+   ],
+   "issues": [
+    "repetitive framing"
+   ]
+  },
+  {
+   "folder_id": "1syb6BaeOXRkeI8F4zvau40_4zFPW2mVa",
+   "raw": false,
+   "score": 3,
+   "summary": "12 near-identical symmetrical cable-fly shots of a smiling trainer, well lit against the orange wall.",
+   "best": [
+    {
+     "n": 10,
+     "id": "1veUECY9SVD8XjrFGIbIj3nPSIMVf-8Gn",
+     "score": 4,
+     "why": "Big genuine smile, tight landscape crop, orange backdrop",
+     "placements": [
+      "case-study",
+      "blog:15-fitness-influencers-267k-views"
+     ]
+    }
+   ],
+   "issues": [
+    "near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1fSjPVF00_MENhKJcKYHHR4EDCs99Mmff",
+   "raw": false,
+   "score": 3,
+   "summary": "10 near-identical cable-fly shots of a bearded member; clean but repetitive.",
+   "best": [],
+   "issues": [
+    "near-duplicates of the Alex set"
+   ]
+  },
+  {
+   "folder_id": "1lV01Pf_bpcjXnLVMOq-f91IFU4GT8qpU",
+   "raw": false,
+   "score": 3,
+   "summary": "8 frames of one athlete coaching the other on the cable fly; candid but busy.",
+   "best": [],
+   "issues": [
+    "cluttered background"
+   ]
+  },
+  {
+   "folder_id": "1-uMoVisGa_tNy-NLfXRYY8tbvvCqq6Tz",
+   "raw": false,
+   "score": 3,
+   "summary": "18 shots of a smiling member on the seated cable row with trainers and the logo wall behind; bright and candid.",
+   "best": [
+    {
+     "n": 13,
+     "id": "1UEhvJhyphdQ_F-ReN5WkiO5j-X5XX9jL",
+     "score": 4,
+     "why": "Genuine smile mid-row with the Iron 24 logo wall behind",
+     "placements": [
+      "case-study",
+      "service:content-development"
+     ]
+    }
+   ],
+   "issues": [
+    "near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1wGDCxx_ckYiZnCWvv_poFy17P9PpwyVa",
+   "raw": false,
+   "score": 3,
+   "summary": "15 frames: athletic member in the navy cold-plunge room, plus app-unlock close-ups; clean but clinical.",
+   "best": [
+    {
+     "n": 3,
+     "id": "1O1yzmxD5exxZJBZ-PWKaIyxGRY0n7_Fa",
+     "score": 4,
+     "why": "Member sitting in the plunge tub, calm and clean landscape",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "shirtless shots may not suit all placements"
+   ]
+  },
+  {
+   "folder_id": "1ejp4vUQa29QrNie5pg0VZIy_Ert8hNFh",
+   "raw": false,
+   "score": 3,
+   "summary": "9 candid coaching shots of a trainer and member laughing at the curl station.",
+   "best": [
+    {
+     "n": 5,
+     "id": "1pmN98o9xIkRwr_W3CzXtmCnzMgVgSDpO",
+     "score": 4,
+     "why": "Member laughing mid-curl with trainer, logo in background",
+     "placements": [
+      "case-study",
+      "service:content-development"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1AEXI1ppHyFCbcQtWuipzMCnQl9j2qQJz",
+   "raw": false,
+   "score": 3,
+   "summary": "11 staff group shots under the logo wall; two are already on site via Corporate/Photos copies.",
+   "best": [
+    {
+     "n": 6,
+     "id": "1AJsyKdsXGIgtjL8b-VzuRq18SQ_bZiZe",
+     "score": 4,
+     "why": "Female coaches laughing together; candid and warm",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "cells 1 and 11 are originals of copies already on site",
+    "cell 3 near-duplicates on-site cell 1",
+    "cells 5-8 near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1AEw5QE9TJaCi9CXxmnVqrUM0vSH4wuUF",
+   "raw": false,
+   "score": 3,
+   "summary": "5 staff headshots of Alex under the logo wall; competent, standard.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1s3F0yaiKGaSTQeKFXfGel6Nqkj9cukjS",
+   "raw": false,
+   "score": 3,
+   "summary": "3 staff headshots of Chelsea under the logo wall; competent, standard.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1srX8CzIIDLE3Aj2JERoiS0CuWME1PYew",
+   "raw": false,
+   "score": 3,
+   "summary": "5 arms-crossed headshots of Niki under the logo wall; competent, standard.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1oju_grOgpFOJLUvqNJ3kaYDyt0gDIItv",
+   "raw": false,
+   "score": 3,
+   "summary": "17 portraits of Sam inside the gym and outside the South Hills storefront.",
+   "best": [
+    {
+     "n": 6,
+     "id": "1mrlyQ3SaWHI2ipTakZEc5OvnzG1qBum1",
+     "score": 4,
+     "why": "Sam in front of the Iron 24 storefront; tells the franchise story",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 11,
+     "id": "11tRZ1SQd45efJzEDEl0D4iq-D4eRDAS9",
+     "score": 4,
+     "why": "Landscape portrait under the logo wall with rigs behind",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1viMboC_ovkc9sGZwnyWLBlK6txizfGx4",
+   "raw": false,
+   "score": 3,
+   "summary": "7 frames of a member on the hip-thrust machine with coaches cheering; wide lens, busy.",
+   "best": [],
+   "issues": [
+    "wide-angle distortion",
+    "cluttered framing"
+   ]
+  },
+  {
+   "folder_id": "1CiJpSmENv4iKe-sfAG_lKWfpYht0gufO",
+   "raw": false,
+   "score": 2,
+   "summary": "5 ultra-wide shots of a member at a locker; distorted and harshly lit.",
+   "best": [],
+   "issues": [
+    "wide-angle distortion",
+    "hot ceiling lights"
+   ]
+  },
+  {
+   "folder_id": "1Du95MXVn1rHAtdhsUVdQ12H3zEBSzi7C",
+   "raw": false,
+   "score": 3,
+   "summary": "11 shots of two smiling members on the plate-loaded row with the logo wall behind; cheerful but repetitive.",
+   "best": [],
+   "issues": [
+    "cells 7 and 11 are originals of copies already on site",
+    "near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1zNwVVLxhklTqSG8PPfIsSspWvpKGjnIT",
+   "raw": false,
+   "score": 3,
+   "summary": "4 back-to-camera pull-up shots in the rig with the logo wall behind.",
+   "best": [],
+   "issues": [
+    "subject faces away"
+   ]
+  },
+  {
+   "folder_id": "14KY3kwADo8PtEPQV2nW7VEjtPS8bxPNC",
+   "raw": false,
+   "score": 4,
+   "summary": "11 red-light therapy room shots: members in goggles against a bold orange wall and in deep red glow; the most striking color in the Block 3/4 shoot.",
+   "best": [
+    {
+     "n": 8,
+     "id": "1TnEM0AGq7tpTASfsxoYxs-GydHfQsr08",
+     "score": 4,
+     "why": "Profile silhouette in saturated red glow; cinematic and instantly readable",
+     "placements": [
+      "cover",
+      "case-study",
+      "service:content-development"
+     ]
+    },
+    {
+     "n": 2,
+     "id": "1xGrtA3PyI9bCYuU2EBd0U57oEBJkKu20",
+     "score": 4,
+     "why": "Seated member bathed in red light beside the panel",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 6,
+     "id": "1Cp3obeZ5WilE4SUB88Q1VTANYqsXgnmk",
+     "score": 4,
+     "why": "Member adjusting goggles against the orange instruction wall",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    }
+   ],
+   "issues": [
+    "instruction-wall text in some frames"
+   ]
+  },
+  {
+   "folder_id": "1I9iMQSsA6A6jMI8mSilYQzBCnNawLkW_",
+   "raw": false,
+   "score": 4,
+   "summary": "8 treadmill shots of a tattooed member running and laughing by the quote wall and orange rig; three already on site.",
+   "best": [
+    {
+     "n": 5,
+     "id": "1y6QX-gVT-1zgCFA1Ncihd0aMI5TJlP8E",
+     "score": 4,
+     "why": "Profile running shot, genuine smile, orange backdrop",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    }
+   ],
+   "issues": [
+    "cells 1, 3, 7 are originals of copies already on site"
+   ]
+  },
+  {
+   "folder_id": "1OsnR8-ijrticF4SPl8DnvtApXti7g0SD",
+   "raw": false,
+   "score": 3,
+   "summary": "13 portraits of members posing at the SAUNA door with towels; bright and friendly; three already on site.",
+   "best": [
+    {
+     "n": 3,
+     "id": "1qLpizmzzAw5ZauxbbU2apxRDXK2fzZ-f",
+     "score": 4,
+     "why": "Member laughing in the sauna doorway with towel; warm and natural",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "cells 2, 12, 13 are originals of copies already on site",
+    "posed and repetitive"
+   ]
+  },
+  {
+   "folder_id": "19eqVKGUz2UMGqIP65pNwoalvajwzyawg",
+   "raw": false,
+   "score": 3,
+   "summary": "9 symmetrical shots of trainers spotting members on the dumbbell shoulder press.",
+   "best": [],
+   "issues": [
+    "near-duplicates",
+    "stiff posed feel"
+   ]
+  },
+  {
+   "folder_id": "1at6g-w67YczTnbzuqRb2L6rrKwDZWsVK",
+   "raw": false,
+   "score": 3,
+   "summary": "4 sled-push frames in front of the logo wall; cell 3 already on site.",
+   "best": [],
+   "issues": [
+    "cell 3 is the original of a copy already on site"
+   ]
+  },
+  {
+   "folder_id": "1qnDF62JljNeIeBhHvCAI29ECgic9OR4G",
+   "raw": false,
+   "score": 3,
+   "summary": "9 front-on back-squat frames with blue bumper plates and a trainer spotting.",
+   "best": [
+    {
+     "n": 6,
+     "id": "1wulUR45PXoCatE_ghRsASufa7sXZxIYH",
+     "score": 4,
+     "why": "Tight squat frame between blue plates, trainer behind; strong effort shot",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1ZTD8O2w6YgAHulfZ3yqFr4VTW8DuyWM2",
+   "raw": false,
+   "score": 3,
+   "summary": "8 shots of a smiling member stretching on the orange-wall rig; parking lot visible through windows.",
+   "best": [],
+   "issues": [
+    "parking lot in background"
+   ]
+  },
+  {
+   "folder_id": "1Q0y_twGuq6eOEwctDJ5mvC7bBcTVGDeZ",
+   "raw": true,
+   "score": 2,
+   "summary": "Raw ARW/DNG camera dump (1,413 files) behind the edited Block 3/4 sets; nothing here beats the edits.",
+   "best": [],
+   "issues": [
+    "unedited RAW files"
+   ]
+  },
+  {
+   "folder_id": "1vBTgvaw1AZZ2URlxb3iRNxoqbIrtAr9_",
+   "raw": true,
+   "score": 2,
+   "summary": "Ungraded flat-profile camera clips (124) of coaching, recovery rooms and cold plunge; needs grading before use.",
+   "best": [
+    {
+     "n": 41,
+     "id": "1ywWcy1VomNulvFqfp-ZCTSSVfMiVqYQf",
+     "score": 4,
+     "why": "Member in the red-light room glow; hero-loop once graded",
+     "placements": [
+      "hero-loop"
+     ]
+    },
+    {
+     "n": 25,
+     "id": "1sJm-85AhYNDGlIOHevhI0Uve3hJWfuBU",
+     "score": 4,
+     "why": "Close tracking shot of member on stair climber under YESTERDAY lettering",
+     "placements": [
+      "hero-loop"
+     ]
+    }
+   ],
+   "issues": [
+    "flat log footage, ungraded"
+   ]
+  },
+  {
+   "folder_id": "1xBwcnhsOygbbDs5kpmHECvyXO91NbpPd",
+   "raw": false,
+   "score": 3,
+   "summary": "69 edited stills delivered to influencer Alex: cable fly, plunge, curls, group, headshots, row, sauna, squat; same files as the corporate Block 3/4 sets.",
+   "best": [
+    {
+     "n": 56,
+     "id": "14UFfA90gwrl3O8ejHWdWx0RULGGJAE1Z",
+     "score": 4,
+     "why": "Big grin on the row machine, vertical; same shot as corporate Row Machine-9",
+     "placements": [
+      "blog:15-fitness-influencers-267k-views",
+      "service:influencer-marketing"
+     ]
+    }
+   ],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)"
+   ]
+  },
+  {
+   "folder_id": "1QpI6w-dfPwiq_G9USe1LkHn352MOEuH-",
+   "raw": true,
+   "score": 3,
+   "summary": "17 graded clips of Alex: moody cold-plunge close-ups and cable work in the rig.",
+   "best": [
+    {
+     "n": 6,
+     "id": "16CxgcycbL9viv1YRwxhY4h5e009QeiCW",
+     "score": 4,
+     "why": "Tight face close-up in the dark plunge room; calm, cinematic hero cut",
+     "placements": [
+      "hero-loop",
+      "blog:15-fitness-influencers-267k-views"
+     ]
+    },
+    {
+     "n": 10,
+     "id": "1EtbNamyn-tRgXcok0rc440hvx2nt2Yf6",
+     "score": 4,
+     "why": "Over-shoulder cable pull with light streaks; strong motion",
+     "placements": [
+      "hero-loop"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1bjjfOO4E7-lQ_l4wLXdga2efYxdrpucO",
+   "raw": false,
+   "score": 3,
+   "summary": "10 stills delivered to Cam: cold plunge, trainer group shots, shoulder press; all duplicates of corporate selects.",
+   "best": [],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)"
+   ]
+  },
+  {
+   "folder_id": "1mXewwdS2_Uz4DYDEIyKKP2jDoJFW89ca",
+   "raw": true,
+   "score": 2,
+   "summary": "7 clips of Cam in the cold plunge plus two arms-crossed trainer shots; includes a selfie-style flex.",
+   "best": [],
+   "issues": [
+    "awkward selfie-angle clip (cell 2)"
+   ]
+  },
+  {
+   "folder_id": "1aR-vnNrSxb-ReGMzP_a-NO_qj-0yYPc9",
+   "raw": false,
+   "score": 3,
+   "summary": "46 stills delivered to Chelsea: cable row, red light, group, headshots, hip thrust, squat; same files as corporate sets.",
+   "best": [],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)",
+    "cell 13 is a 'Copy of' duplicate of cell 29"
+   ]
+  },
+  {
+   "folder_id": "1xXoa6wOeIGkQTuNV-kLaHl70sqW4SdAI",
+   "raw": true,
+   "score": 3,
+   "summary": "11 graded clips of Chelsea: seated cable row with the logo wall and red-light therapy close-ups.",
+   "best": [
+    {
+     "n": 5,
+     "id": "1MGxSTNOr6jEN5lUYVbmPdGZl8mObo5uL",
+     "score": 4,
+     "why": "Red-light glow close-up in goggles; saturated, instant read",
+     "placements": [
+      "hero-loop",
+      "blog:15-fitness-influencers-267k-views"
+     ]
+    }
+   ],
+   "issues": [
+    "green line artifact across cell 2"
+   ]
+  },
+  {
+   "folder_id": "19l62lwEfTx8pBvDBzp9ytPbwyc5NUkyb",
+   "raw": false,
+   "score": 3,
+   "summary": "31 stills delivered to David: cable fly, red light, row machine, shoulder press; duplicates of corporate sets.",
+   "best": [
+    {
+     "n": 19,
+     "id": "1pnJGE0fkbbCyB7vbsNiZLfARJ4a5f1lw",
+     "score": 4,
+     "why": "Member in goggles against the bold orange red-light wall; strong color",
+     "placements": [
+      "case-study",
+      "blog:15-fitness-influencers-267k-views"
+     ]
+    }
+   ],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)"
+   ]
+  },
+  {
+   "folder_id": "1MlEoDDytU4Df4qWygGBv8m45kfAi1cGK",
+   "raw": true,
+   "score": 2,
+   "summary": "9 graded clips of David on cable stations; dark and repetitive.",
+   "best": [],
+   "issues": [
+    "green line artifact across cell 9",
+    "underexposed"
+   ]
+  },
+  {
+   "folder_id": "1CytAL6BX7q8b5LrIxJogRiwykx8BFnbs",
+   "raw": false,
+   "score": 3,
+   "summary": "32 stills delivered to Michelle: cable row, group, hip thrust, sauna, sled; duplicates of corporate sets.",
+   "best": [],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)"
+   ]
+  },
+  {
+   "folder_id": "1o9pe4Sv5QGgQVar-hS7EocSS7f-uQLid",
+   "raw": false,
+   "score": 3,
+   "summary": "33 stills delivered to Miranda: group, hip thrust, sauna, shoulder press, stretching; duplicates of corporate sets.",
+   "best": [],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)"
+   ]
+  },
+  {
+   "folder_id": "1QUvUrP6sNchPKfh6v-8-EDIzsJVvUU4q",
+   "raw": true,
+   "score": 2,
+   "summary": "2 graded clips of Miranda at the cable row and chatting with coaches; ordinary coverage.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1MY5FrgDEAzgtELqrEXirIJtbIlSK1v48",
+   "raw": false,
+   "score": 3,
+   "summary": "32 stills delivered to Niki: headshots, hip thrust, lockers, treadmill, shoulder press; duplicates of corporate sets.",
+   "best": [],
+   "issues": [
+    "per-influencer delivery copy of the corporate Block 3/4 selects (duplicates)"
+   ]
+  },
+  {
+   "folder_id": "1jjwm0ALSa1PakJZ0KZlkqRvUZAFSFQu7",
+   "raw": true,
+   "score": 3,
+   "summary": "11 graded clips of Niki: laughing treadmill run past the quote wall, spotted dumbbell press, rig work.",
+   "best": [
+    {
+     "n": 6,
+     "id": "1iPpKNVwA_UI-GM70IcuzOxZQ28qKfxbk",
+     "score": 4,
+     "why": "Close tracking shot of Niki laughing mid-run under YESTERDAY lettering",
+     "placements": [
+      "hero-loop",
+      "blog:15-fitness-influencers-267k-views"
+     ]
+    },
+    {
+     "n": 2,
+     "id": "104Xv5KeqcTxAX1fBlGy60RFBpYsw_akX",
+     "score": 4,
+     "why": "Trainer spotting an overhead dumbbell press; energetic 7 s",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "quote-wall text in several frames"
+   ]
+  },
+  {
+   "folder_id": "1Ac1VlEzmYGtN54aR8CNDEtJgoOm2PJUv",
+   "raw": false,
+   "score": 2,
+   "summary": "Single Iron 24 logo SVG; duplicate of the root logo file.",
+   "best": [],
+   "issues": [
+    "duplicate logo file"
+   ]
+  },
+  {
+   "folder_id": "19j540cAxsUeYFROv6-Hn1Uew50xCIPln",
+   "raw": false,
+   "score": 4,
+   "summary": "64 moody vertical stills from the South Hills (SAM) shoot: red-light silhouettes, glowing cold plunge, lifting and coaching; the most cinematic set in the chunk.",
+   "best": [
+    {
+     "n": 58,
+     "id": "1ROrLzou0JKXiVF5An4mp7DZ_lezgjX9K",
+     "score": 5,
+     "why": "Member floating in the glowing blue cold plunge; stops the scroll",
+     "placements": [
+      "cover",
+      "case-study",
+      "service:content-development"
+     ]
+    },
+    {
+     "n": 12,
+     "id": "1UkwS_5iCkGrEYJmsIydhXKPaP0DJpD4-",
+     "score": 4,
+     "why": "Top-down glowing plunge tub; graphic, abstract",
+     "placements": [
+      "case-study",
+      "blog:content-production-at-scale-gym"
+     ]
+    },
+    {
+     "n": 7,
+     "id": "1ACNDRyCDRik8TI8-iXiNPF65b-VlSfgZ",
+     "score": 4,
+     "why": "Red-light panel with silhouette shadow; abstract and bold",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 54,
+     "id": "1_3PeAi6lCdiTSTnt3Y0DYfVW7vJRXSSC",
+     "score": 4,
+     "why": "Man silhouetted against the red-light panel",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 57,
+     "id": "1UddarGaVKqnIcz0RSQjf0J864iKyFU7l",
+     "score": 4,
+     "why": "Alt angle of the glowing plunge float",
+     "placements": [
+      "gallery",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 44,
+     "id": "1Fr17Ou_Qho7ZFbrgpDJP8PfU1Zh12mtW",
+     "score": 4,
+     "why": "Runner from behind on treadmill, orange and blue light",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 27,
+     "id": "1Xb4CpNcDyq2HRpCUcROonI9jjS63cY4B",
+     "score": 4,
+     "why": "Clean side-lit deadlift against a black wall",
+     "placements": [
+      "gallery",
+      "service:organic-social"
+     ]
+    }
+   ],
+   "issues": [
+    "cells 1, 2, 8, 15, 21, 25, 26, 28, 38 already on site via South Hills copies",
+    "cell 3 near-duplicates on-site cell 2",
+    "Sunlighten sauna logo in cell 60",
+    "some frames very dark (10, 41)"
+   ]
+  },
+  {
+   "folder_id": "1Eej-uwD_vsuFA4KM0KvGJ88AlfCJhEOC",
+   "raw": false,
+   "score": 4,
+   "summary": "15 corporate selects already on the site: group shots, row machine, treadmill, sauna, sled, curl.",
+   "best": [
+    {
+     "n": 3,
+     "id": "1a_OgaY4_mwwO7vQa7arHhiqgRv1_86nc",
+     "score": 4,
+     "why": "Two trainers arms-crossed under the logo; already used",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 9,
+     "id": "1dPgFFwfKO2lj1U4hY2JoYG8a0GEta8pA",
+     "score": 4,
+     "why": "Tattooed member running and smiling; already used",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 14,
+     "id": "1mkY8ulq47ThEpy38UjUC8QU0mTS3d_za",
+     "score": 4,
+     "why": "Curl against the orange wall; already used",
+     "placements": [
+      "case-study"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1gXLVV46IMLICUNanqLdnPWhCu3Q6QD82",
+   "raw": false,
+   "score": 4,
+   "summary": "9 South Hills franchise selects already on the site: red light, glowing plunge, squat, box jump, lat pulldown.",
+   "best": [
+    {
+     "n": 2,
+     "id": "1ao7MCVMDeFHdsu9nrRt5bAZnxBswRTEP",
+     "score": 4,
+     "why": "Red-light profile silhouette; already used",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 3,
+     "id": "1SqWLf7eT5JFR4n74R4nRbR9tYW_h0hcs",
+     "score": 4,
+     "why": "Member in the glowing plunge; already used",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 8,
+     "id": "1VobrbQOAv-YUV9s_OP1yZrevw7tVEKLS",
+     "score": 4,
+     "why": "Front-rack barbell in low light; already used",
+     "placements": [
+      "case-study"
+     ]
+    }
+   ],
+   "issues": []
+  }
+ ],
+ "takeaways": "The strongest unused material is the South Hills (SAM) photo shoot: the glowing cold-plunge float (cell 58, a 5) and the red-light silhouettes (cells 7, 54) should be the Iron 24 cover image and lead stills on work/iron-24, alongside the Block 3/4 red-light profile (cell 8). Block 2 Vertical has six strong action portraits (barbell close-up, overhead press, orange-wall cable curl) that fit work/iron-24 and service:organic-social. For the hero loop, the best new clips are in the raw graded folders: Niki laughing on the treadmill (Niki/Video 6), the Chelsea red-light close-up (Chelsea/Video 5), the Alex plunge face close-up (Alex/Video 6), and the orange-wall machine shot (Block 2 Landscape clips 34). The clean no-logo Gym Walkthrough can supply 3-5 s facility cutaways. The five Assessment Reels are static talking-head tutorials and not worth featuring. The influencer Photos folders are duplicate copies of the corporate selects, so pick from the corporate folders to avoid double-listing. The two Example Content folders are stock and reference material (with stock watermarks), not Stoop work."
+}

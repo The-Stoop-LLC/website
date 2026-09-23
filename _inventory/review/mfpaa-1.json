@@ -1,0 +1,811 @@
+{
+ "chunk": "mfpaa-1",
+ "videos": [
+  {
+   "id": "1bZbL_TtFYxXzCV6qX7k1MHF-ZgeRl_mP",
+   "score": 4,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "30 s brand spot: logo over station, Chief Chris Dell on camera, EMTs treating a patient, dispatch, and '6% government funded' stat cards.",
+   "best_frame": 2,
+   "placements": [
+    "case-study",
+    "service:digital-advertising",
+    "blog:anatomy-of-a-47k-nonprofit-campaign"
+   ],
+   "issues": [
+    "royal-blue kinetic text has low contrast on busy frames ('7 MINUTE' at 0:13)"
+   ],
+   "why": "Polished, well-shot brand spot with a clear message; blue-on-footage type slightly weakens it."
+  },
+  {
+   "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
+   "score": 4,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "60 s brand spot: station and fleet, EMT fitting an oxygen mask, snowy-station ambulance, Chief Dell to camera, 'Local care powered by residents' close.",
+   "best_frame": 2,
+   "placements": [
+    "case-study",
+    "service:content-development",
+    "blog:anatomy-of-a-47k-nonprofit-campaign"
+   ],
+   "issues": [
+    "lower-third bug and blue text over footage on some shots"
+   ],
+   "why": "Strongest finished MFPAA piece: clean grade, varied real-crew footage, confident pacing."
+  },
+  {
+   "id": "1tSuS89MCYZmL9n-SG20inBvEyTbRC64K",
+   "score": 3,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "15 s capital-donation ad: Chief intro, EMTs loading the rig, patient care inside, hospital bay, with '100% tax deductible' stat cards.",
+   "best_frame": 1,
+   "placements": [
+    "case-study",
+    "blog:anatomy-of-a-47k-nonprofit-campaign"
+   ],
+   "issues": [
+    "stat text is clipped at frame edge while animating in",
+    "blue/orange text over busy footage hard to read",
+    "last 3 s are a static end card"
+   ],
+   "why": "Good footage and a clear ask, but the type treatment reads cluttered."
+  },
+  {
+   "id": "1HsgEoz6f-4X2-1f2vL04-26R_dhaf22o",
+   "score": 3,
+   "type": "testimonial",
+   "orientation": "landscape",
+   "summary": "15 s donor testimonial: local business owner Jason Wolfe explains why he gives, cut with EMTs loading a stretcher and ambulance interiors.",
+   "best_frame": 3,
+   "placements": [
+    "case-study",
+    "blog:anatomy-of-a-47k-nonprofit-campaign",
+    "service:digital-advertising"
+   ],
+   "issues": [
+    "small 'Real Donor Not Paid Actor' disclaimer text",
+    "blue text over busy footage"
+   ],
+   "why": "Authentic peer testimonial that rounds out the capital-campaign story; not yet on site, execution is solid but not standout."
+  },
+  {
+   "id": "1DTRSaXvuriEfqys-l9x8OHUus_QgIL23",
+   "score": 3,
+   "type": "testimonial",
+   "orientation": "landscape",
+   "summary": "15 s patient-story ad: Christine Ralston Bell recounts her emergency over paramedic driving, dispatch and hospital-bay footage.",
+   "best_frame": 1,
+   "placements": [
+    "case-study",
+    "service:digital-advertising"
+   ],
+   "issues": [
+    "stacked blue/orange text ('In shock husband called 9-1-1') is hard to read on busy frames",
+    "3 s static end card"
+   ],
+   "why": "Emotional real-patient hook, but cluttered type holds it back."
+  },
+  {
+   "id": "1TfLzl2svL4sKLGbJpWTW3tEmvMuEeMiP",
+   "score": 2,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "76 s fleet walk-around: phone-shot ambulance exteriors, a lineup of rigs outside the station and a drone top-down, no graphics.",
+   "best_frame": 5,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "vertical phone clips pillarboxed with black bars",
+    "reads as an unedited assembly, not a finished piece"
+   ],
+   "why": "Rough fleet footage; only the lineup shot at 0:52 is presentable."
+  },
+  {
+   "id": "1mt91d1FxUq9znCJxNAvmfXJVBbpfMXov",
+   "score": 1,
+   "type": "motion-graphic",
+   "orientation": "landscape",
+   "summary": "3 s animated MFPAA end card with phone number and website.",
+   "best_frame": 7,
+   "placements": [],
+   "issues": [
+    "component asset, not standalone content"
+   ],
+   "why": "End-card building block only."
+  },
+  {
+   "id": "1t4xvjVF71uxmpgDiBflFZ9jnSwX3nFtl",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Textless 7|60 base cut: officer to camera, EMTs working on a patient inside the ambulance, drone top-down of rig in a lot.",
+   "best_frame": 2,
+   "placements": [],
+   "issues": [
+    "draft: green 'ENDING BUMPER / CALL TO ACTION' placeholder text",
+    "near-duplicate of the 7|90 base"
+   ],
+   "why": "Working base for the finished 7|60 ad; the finished version supersedes it."
+  },
+  {
+   "id": "1DxEFMJ-aaVksHx-CTfGMygI4YlIjHuka",
+   "score": 1,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Textless 7|90 base cut, frame-for-frame the same as the 7|60 base.",
+   "best_frame": 2,
+   "placements": [],
+   "issues": [
+    "draft: green placeholder bumper text",
+    "duplicate of the 7|60 base"
+   ],
+   "why": "Duplicate draft."
+  },
+  {
+   "id": "106h7yVfsZf3iiuN2P34_y5XimgTvY_hz",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Textless 'It's Your Job' base: stock crashed-motorbike and nursery shots, then crew rushing a stretcher to a patient on grass and loading the rig.",
+   "best_frame": 2,
+   "placements": [],
+   "issues": [
+    "draft: green 'ENDING BUMPER / CALL TO ACTION' placeholder text",
+    "mixes stock footage"
+   ],
+   "why": "Draft base; the low-angle stretcher run at 0:03 is the only standout shot."
+  },
+  {
+   "id": "1QmL0BWLCA06QX4suLgSnc8gzzwKVCHaO",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Textless 'Streaming' base: stock family-on-tablet and TV-remote shots, officer to camera, drone top-down of a patient loaded into rig 136.",
+   "best_frame": 6,
+   "placements": [],
+   "issues": [
+    "draft: green placeholder bumper text",
+    "mostly stock footage"
+   ],
+   "why": "Draft of a stock-heavy spot."
+  },
+  {
+   "id": "1eBeOLwSKuoHg0hbhT0BNn1qiXKpohbUK",
+   "score": 3,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "Textless master of the February 60 s spot: station, oxygen-mask care, snowy-station rig, Chief to camera, no lower-thirds or stat text.",
+   "best_frame": 2,
+   "placements": [
+    "hero-loop"
+   ],
+   "hero_moment": "0:18 EMT fits oxygen mask on patient; 0:26 rig outside snowy station (no lower-third here)",
+   "issues": [
+    "duplicate of the final except for graphics"
+   ],
+   "why": "Same content as the finished 60 s, but the clean frames make a better source for hero-loop cuts."
+  },
+  {
+   "id": "1fMCAYbRifRnnfxTBE4RHeqwv9R_xUYYA",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Alternate 55 s motion-graphics reference cut: paramedic driving, dispatch, winter drone past a plaza, press event, Chief pointing at camera.",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "reference/draft cut",
+    "text collides with logo over the press-event shot at 0:24"
+   ],
+   "why": "Internal reference edit with overlapping graphics; a few shots (Chief pointing, winter drone) are unique."
+  },
+  {
+   "id": "1QvmRgTV_UVYPk2uCcGnDnF8R1vaArtcA",
+   "score": 2,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "Textless master of the February 30 s spot: station, Chief, EMTs treating a patient on the ground, dispatch, garage walk.",
+   "best_frame": 2,
+   "placements": [],
+   "issues": [
+    "duplicate of the 30 s final minus graphics"
+   ],
+   "why": "Redundant with the final; useful only as clean source footage."
+  },
+  {
+   "id": "1MdUI_72gPmfR0J7iXb4fdHo9b3WVRS4X",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Draft of the 911 spot: plain audio waveform on black, then dispatch, EMT at the rig, paramedic driving, drone top-down.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "draft: placeholder 'ENDING BUMPER / CALL TO ACTION' text",
+    "first 5 s are a bare waveform on black"
+   ],
+   "why": "Superseded by the finished 911 ad."
+  },
+  {
+   "id": "1SHWLzo288f2bkY-T0qTUleaev8Pv8YXD",
+   "score": 2,
+   "type": "motion-graphic",
+   "orientation": "landscape",
+   "summary": "10 s blue audio waveform over blurred, dark emergency-light bokeh.",
+   "best_frame": 5,
+   "placements": [],
+   "issues": [
+    "component asset, very dark"
+   ],
+   "why": "Moody building block for the 911 ad, not standalone content."
+  },
+  {
+   "id": "1QdlJB_qSGrv36xFf6WUfhYJzgP-q-ztq",
+   "score": 1,
+   "type": "motion-graphic",
+   "orientation": "landscape",
+   "summary": "5 s animated MFPAA closer card with 'Learn more about us at MFPAA.org'.",
+   "best_frame": 7,
+   "placements": [],
+   "issues": [
+    "component asset",
+    "near-duplicate of the other end card"
+   ],
+   "why": "End-card building block only."
+  },
+  {
+   "id": "1VObvnT3GGK-8qsYUhF8dkx_AWwUwTCWy",
+   "score": 3,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "12 s subscription ad: officer to camera, EMTs treating a patient, '7 minutes is worth $60', 'Subscribe now'.",
+   "best_frame": 3,
+   "placements": [
+    "case-study",
+    "blog:anatomy-of-a-47k-nonprofit-campaign"
+   ],
+   "issues": [
+    "typo: 'DONT' missing apostrophe",
+    "blue text low contrast over footage",
+    "2.5 s static end card"
+   ],
+   "why": "Clear offer and real care footage, but heavy text blocks and a visible typo."
+  },
+  {
+   "id": "1TWFLwafGy0cM0d2c7eDz1F-0fstUlZ-F",
+   "score": 3,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "11 s subscription ad: stock holiday dinner table, patient care in the rig, '7 minutes is worth $90', officer says subscribe.",
+   "best_frame": 2,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "blue text low contrast over footage",
+    "near-duplicate of the 7|60 ad",
+    "2 s static end card"
+   ],
+   "why": "Solid variant of the 7|60 spot; adds little on its own."
+  },
+  {
+   "id": "15uDHU9RGWgGq2XUbfoOnRGZm8tI3Ghxr",
+   "score": 3,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "17 s ad built on a real 911 call: captioned waveform over emergency-light bokeh, then an EMT at the rig and a paramedic driving.",
+   "best_frame": 6,
+   "placements": [
+    "case-study",
+    "service:digital-advertising"
+   ],
+   "issues": [
+    "first 10 s are a dark waveform with small captions, weak as a silent autoplay"
+   ],
+   "why": "Distinctive audio-led concept that works with sound but reads slowly muted on a web page."
+  },
+  {
+   "id": "14km2xCOKtQEEsxw-BivR8FdJ6oqhDVWE",
+   "score": 3,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "12 s subscription ad: crashed motorbike, crew rushing to a patient on grass, stretcher in the rig, IV hang, 'Subscribe now'.",
+   "best_frame": 1,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "typo: 'THATS' missing apostrophe",
+    "blue text low contrast on busy frames"
+   ],
+   "why": "Most dramatic of the subscription set, with good action footage; typo and type contrast hold it back."
+  },
+  {
+   "id": "1dlqn0cReVe51jHxTcvrjimih6iJNQtcw",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "13 s subscription ad: stock families streaming TV, 'Three streaming services / swap one', drone top-down of rig 136, officer to camera.",
+   "best_frame": 4,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "mostly generic stock footage",
+    "blue text low contrast"
+   ],
+   "why": "Clever price comparison but the stock opening looks generic next to the real-crew spots."
+  }
+ ],
+ "folders": [
+  {
+   "folder_id": "1nGz3KLEveGC_f76KrGd9hedwoB8Et87X",
+   "raw": false,
+   "score": 1,
+   "summary": "A single screenshot of the MFPAA logo.",
+   "best": [],
+   "issues": [
+    "screenshot, not content"
+   ]
+  },
+  {
+   "folder_id": "19FROd_RwFvLUL4X0sp7rXP8jc1PhE59W",
+   "raw": false,
+   "score": 3,
+   "summary": "Eight full-size portraits of Chief Chris Dell in dress uniform before the flags and MFPAA seal; clean, well lit, near-identical poses.",
+   "best": [],
+   "issues": [
+    "same eight shots as the Web Ready folder (use those for the site)",
+    "files named 'Captain' although the subject is the Chief"
+   ]
+  },
+  {
+   "folder_id": "1Cwk8ZjKRChmyEGzdMk7SJSA__WEYVqgR",
+   "raw": false,
+   "score": 3,
+   "summary": "Web-ready copies of the eight Chief Dell portraits; the tighter portrait crop with a full smile is the pick.",
+   "best": [
+    {
+     "n": 7,
+     "id": "1TFdbd-fGO-cm1-kuabo3fBlbtMrC-GqF",
+     "score": 4,
+     "why": "Tight, warm portrait of the Chief; puts a face on the client story",
+     "placements": [
+      "case-study",
+      "blog:anatomy-of-a-47k-nonprofit-campaign"
+     ]
+    }
+   ],
+   "issues": [
+    "duplicate of the Jpeg Large folder"
+   ]
+  },
+  {
+   "folder_id": "1oh--CUnb_hD0SWF8pqjAeVxnseZt5NZm",
+   "raw": false,
+   "score": 2,
+   "summary": "Camera originals from the Chief's January talking-head shoot: three long MOV takes plus NEF portraits matching the headshot folders.",
+   "best": [],
+   "issues": [
+    "unedited camera files (MOV/NEF)",
+    "stills duplicate the Chief headshot folders"
+   ]
+  },
+  {
+   "folder_id": "1DSoWRtKnDbviXW04Oy1u39-QOd3sYJ5u",
+   "raw": true,
+   "score": 2,
+   "summary": "Two long raw takes of donor Jason Wolfe speaking in front of the station mural.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1c6hh6ehHvfoEmbtI5qj_65H0TYtOFhMy",
+   "raw": false,
+   "score": 3,
+   "summary": "Edited Feb 2026 set: mission/vision wall signs, seven near-identical press-table group shots, crew lineup outside the station in snow, and a patch/flag close-up.",
+   "best": [
+    {
+     "n": 4,
+     "id": "1vtSXBvF2AtaVB9qh2bZIoHQHgylCthyh",
+     "score": 4,
+     "why": "Full crew lined up with a rig in front of the MFPAA station; the most representative team photo",
+     "placements": [
+      "case-study",
+      "blog:anatomy-of-a-47k-nonprofit-campaign"
+     ]
+    }
+   ],
+   "issues": [
+    "press-table shots are near-duplicates of each other",
+    "crew lineup is small in frame"
+   ]
+  },
+  {
+   "folder_id": "1CCT1N5Px9MNFdEcIujFRErrTSraFmr4M",
+   "raw": true,
+   "score": 2,
+   "summary": "NEF originals of the Feb 2026 shoot: signs, press table, a dozen near-identical crew lineups, and one clean rig-and-station shot not in the edited set.",
+   "best": [
+    {
+     "n": 12,
+     "id": "1M8M8Jyso0ErYvVfgIFd2L4kiu-8wXR47",
+     "score": 4,
+     "why": "Clean rig parked in front of the MFPAA station under blue sky; strong cover still once processed",
+     "placements": [
+      "cover",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "needs editing from NEF"
+   ]
+  },
+  {
+   "folder_id": "1kYhpBv5hAhC5BKxaVm3UFCrVjpr54c-p",
+   "raw": true,
+   "score": 1,
+   "summary": "Three raw clips: officials walking into the press room, the press table, and an accidental shot of snowy pavement.",
+   "best": [],
+   "issues": [
+    "one clip is an accidental ground shot"
+   ]
+  },
+  {
+   "folder_id": "1cDgvUH4ZJlXFq6x_wUgFv81syTVVPVhC",
+   "raw": true,
+   "score": 2,
+   "summary": "Raw talking-head takes of an officer in a white shirt in front of the rig, plus two takes with two EMTs reviewing a document.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1s9PgFqypW9yhDd_Sw-ATej3mqcTp_s4A",
+   "raw": true,
+   "score": 4,
+   "summary": "The main July 2025 b-roll camera: dispatch, rigs, a staged patient rescue on grass, in-rig care, hospital bay, and moving shots of the ambulance on local roads.",
+   "best": [
+    {
+     "n": 36,
+     "id": "1gy_-iUO3UKo6reIXQdl8OtRK8zg5jlGo",
+     "score": 4,
+     "why": "Ambulance driving toward camera down an open road; clean, instantly readable motion",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    },
+    {
+     "n": 44,
+     "id": "1Uz-VyWkH6IOh2CCLMGI9_0xPrYcMfB6B",
+     "score": 4,
+     "why": "Follow-car shot of the rig on a tree-lined road; not used in any finished ad",
+     "placements": [
+      "hero-loop"
+     ]
+    },
+    {
+     "n": 11,
+     "id": "1iefWIEJN30933RCH4QkVFF80MFJVhaUZ",
+     "score": 4,
+     "why": "Low-angle EMT kneeling to treat a patient beside the rig; dramatic and text-free",
+     "placements": [
+      "hero-loop",
+      "service:content-development"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1DZLp7lvYnYPldrViEP06uMFA0If3uwQV",
+   "raw": true,
+   "score": 2,
+   "summary": "Second b-roll camera: wide ambulance-interior shots, the patient-on-grass rescue and stretcher, a side-mirror driving shot; mostly covered better by Cam B.",
+   "best": [],
+   "issues": [
+    "many interior shots overexposed at the doors"
+   ]
+  },
+  {
+   "folder_id": "1WffrVOjPSJu6-mO5HPUL1YxDTkaxl9yG",
+   "raw": true,
+   "score": 3,
+   "summary": "iPhone footage and stills: in-rig care, then a run of chase shots of the ambulance approaching with lights on along a winding road.",
+   "best": [
+    {
+     "n": 19,
+     "id": "1Kj5puQUt59eApq2QnITNaglLurSZVCY5",
+     "score": 4,
+     "why": "Rig rounds a curve toward camera with lights flashing; instant emergency read",
+     "placements": [
+      "hero-loop"
+     ]
+    },
+    {
+     "n": 21,
+     "id": "1J-n8SgUTRQ-AJNNO6tQ1MabZiQsRR77k",
+     "score": 4,
+     "why": "Lit-up rig emerging from tree shade; the most dramatic road shot",
+     "placements": [
+      "hero-loop"
+     ]
+    }
+   ],
+   "issues": [
+    "phone footage, check sharpness at full size"
+   ]
+  },
+  {
+   "folder_id": "15CwrCV3LLp_gYMP_4k2dUJgRcH3Qc3fH",
+   "raw": true,
+   "score": 3,
+   "summary": "Drone clips of the rig and crew in a parking lot, behind-the-scenes phone photos of the talking-head setup, and dash-cam driving clips.",
+   "best": [
+    {
+     "n": 1,
+     "id": "10PfKW_n9Khi6x2GA30FdjULpMN-g5Gb8",
+     "score": 4,
+     "why": "Top-down drone of crew working behind the rig; graphic and text-free",
+     "placements": [
+      "hero-loop"
+     ]
+    },
+    {
+     "n": 5,
+     "id": "1s7CcJpmYVA47NroQs9QAs95lhSdDlgPn",
+     "score": 4,
+     "why": "Behind-the-scenes shot of the interview setup with lights and rig; proves in-house production",
+     "placements": [
+      "service:content-development",
+      "blog:anatomy-of-a-47k-nonprofit-campaign"
+     ]
+    }
+   ],
+   "issues": [
+    "dash-cam clips are unusable"
+   ]
+  },
+  {
+   "folder_id": "1HIxPO3pS2fSpM13mjMYmQ5RQ4YPZlUEe",
+   "raw": false,
+   "score": 3,
+   "summary": "Sept 2025 stills: Franklin Park Station exteriors under a dramatic sky, dash shots, 16 near-identical Chief portraits at the MFPAA logo wall, and one clean three-quarter shot of a rig.",
+   "best": [
+    {
+     "n": 31,
+     "id": "1fA-tUFUNaKf5hqb_VRmE7N-ws2lR6Ebk",
+     "score": 4,
+     "why": "Clean three-quarter view of a rig on open asphalt; simple, on-brand cover still",
+     "placements": [
+      "cover",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "mostly NEF camera originals, not edited",
+    "heavy duplication in the Chief portraits",
+    "Chief's head blocks part of the MFPAA logo behind him"
+   ]
+  },
+  {
+   "folder_id": "14gPnxDIJY_DZz_BFos0dCxLRjzwQZiQ2",
+   "raw": false,
+   "score": 3,
+   "summary": "Sept 2025 camera clips: Chief and patient Christine on camera, a manikin training room, rigs pulling out of the bay, the EMS patch wall and hall mural, plus dash-cam driving.",
+   "best": [
+    {
+     "n": 36,
+     "id": "1wMMEw2ppXtDkB8l3_R6V4jnK6UJ1Kpw0",
+     "score": 4,
+     "why": "Pan across a wall of colorful EMS patches; rich, text-free texture that reads 'first responders'",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "unedited camera files despite not being flagged raw",
+    "accidental floor/ground clips (46, 48)",
+    "dash-cam clips unusable"
+   ]
+  },
+  {
+   "folder_id": "1lGPKIRKTyW9ost9m0cp-gUYt9vyIL8cO",
+   "raw": false,
+   "score": 2,
+   "summary": "Back-of-card print designs for the subscription and payment cards; transparent PNGs that preview on black.",
+   "best": [],
+   "issues": [
+    "transparent background makes previews hard to read"
+   ]
+  },
+  {
+   "folder_id": "1fXdu0UV3_78ojEv3TK9_Ms9AKkBbjAEK",
+   "raw": false,
+   "score": 2,
+   "summary": "Brand working assets: end-card animations, logo PNG/PSD variants, QR codes, and a vertical fleet-lineup image with an extended sky.",
+   "best": [],
+   "issues": [
+    "'Extended image' sky looks artificially extended and over-saturated"
+   ]
+  },
+  {
+   "folder_id": "1VhJSzk2Q7ke-jiqLYsWzLJ79-U9uxn2y",
+   "raw": true,
+   "score": 1,
+   "summary": "Pieces of the 911 visualizer: a bare waveform on black, a dark night clip of emergency lights, and the composited visualizer.",
+   "best": [],
+   "issues": [
+    "very dark"
+   ]
+  },
+  {
+   "folder_id": "1aaDyTy4en36PEMA_FRCeITwbrUep09-d",
+   "raw": false,
+   "score": 3,
+   "summary": "Feb 2026 working folder: the 30 s and 60 s finals and textless bases (reviewed as videos), plus lower-third, logo and service-area graphics.",
+   "best": [],
+   "issues": [
+    "multiple copies of the same finals",
+    "'16x19' typo in a logo file name"
+   ]
+  },
+  {
+   "folder_id": "1aBHSL-MiILPRbxYJvcdAohc_Z7CaF5Pd",
+   "raw": false,
+   "score": 1,
+   "summary": "Four animated text-overlay GIFs for the 7|60 and 7|90 ads.",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays"
+   ]
+  },
+  {
+   "folder_id": "1NG2HahEYpiEnUUa9GPgn4wkPfXVbQe-1",
+   "raw": false,
+   "score": 1,
+   "summary": "Three animated text-overlay GIFs for the 'It's Your Job' parenting ad.",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays"
+   ]
+  },
+  {
+   "folder_id": "19rZXAxlMwgj4z5MBpuzkgAKTky7Oz5di",
+   "raw": false,
+   "score": 1,
+   "summary": "Four animated text-overlay GIFs for the Streaming ad.",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays"
+   ]
+  },
+  {
+   "folder_id": "1jARbxmngX53s2hBqLEtd2KCvqRP1oTfL",
+   "raw": false,
+   "score": 2,
+   "summary": "Eight full-size Chief Dell portraits, identical to the Chief Headshots/Jpeg Large set.",
+   "best": [],
+   "issues": [
+    "exact duplicate of the Chief Headshots folders",
+    "named 'Captain' although the subject is the Chief"
+   ]
+  },
+  {
+   "folder_id": "1VmF85CGnQ2xEJJnI_xjvWvw2bpCR1kS6",
+   "raw": false,
+   "score": 2,
+   "summary": "Web-ready copies of the same eight Chief Dell portraits.",
+   "best": [],
+   "issues": [
+    "exact duplicate of Chief Headshots/Web Ready (pick listed there)"
+   ]
+  },
+  {
+   "folder_id": "1U9lUMUlAdB0vtQRtdFIqC8w26YsJmzO1",
+   "raw": true,
+   "score": 3,
+   "summary": "Client-supplied photos: HDR fleet lineups outside the station, station interiors and bays, officer portraits, and award/event snapshots.",
+   "best": [
+    {
+     "n": 3,
+     "id": "1WkXJX70thI2M8n5fjBKdXDDpFLTjX2b1",
+     "score": 4,
+     "why": "Full fleet angled in front of the MFPAA station under a bright sky; the most representative fleet image",
+     "placements": [
+      "cover",
+      "case-study"
+     ]
+    },
+    {
+     "n": 4,
+     "id": "1UpHolKRt0bBTFRO4CZT_qw7JJk-UBqda",
+     "score": 4,
+     "why": "Crisp close three-quarter view of a rig with full livery",
+     "placements": [
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "client-shot, not Stoop work: do not present as agency photography",
+    "heavy HDR look on the fleet shots",
+    "event snapshots are casual phone quality"
+   ]
+  },
+  {
+   "folder_id": "1xnBTJ6_KsHQQKpqLLJATT96qqFO132sS",
+   "raw": true,
+   "score": 2,
+   "summary": "Client-supplied clips: a vertical drone top-down of a rig on a road, a logo animation, rigs in the lot and bay, and several accidental pavement shots.",
+   "best": [
+    {
+     "n": 1,
+     "id": "1SwO9A9FOGV9KIcOxfgavqQnLDyFwBOCo",
+     "score": 4,
+     "why": "Vertical top-down drone following the rig down a road; fits the hero's vertical stacks",
+     "placements": [
+      "hero-loop"
+     ]
+    }
+   ],
+   "issues": [
+    "client-shot, confirm usage rights",
+    "accidental pavement clips (3, 5)",
+    "'Athority' typo in a file name"
+   ]
+  },
+  {
+   "folder_id": "1BWd24Ko7diDZssIEtG7jML-uLCCQhX7N",
+   "raw": false,
+   "score": 1,
+   "summary": "Six animated stat-overlay GIFs for the Feb 2026 spots (7-minute response, 6% government funded, training, etc.).",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays"
+   ]
+  },
+  {
+   "folder_id": "1yhi7mKZjiwGwoqQSNETFmEDpf6xO2-TS",
+   "raw": false,
+   "score": 1,
+   "summary": "Five animated text-overlay GIFs for the 7|60 and 7|90 ads (July set).",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays",
+    "duplicates the Billy Jo working overlays"
+   ]
+  },
+  {
+   "folder_id": "1WaOG4P_XZzg68GGEcZxRAHabhZ8v9HHY",
+   "raw": false,
+   "score": 1,
+   "summary": "Three animated text-overlay GIFs for the 'It's Your Job' ad (July set).",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays",
+    "duplicates the Billy Jo working overlays"
+   ]
+  },
+  {
+   "folder_id": "1nWaQ5tIm_mfapIxTTLooU2XSB9uFMxO9",
+   "raw": false,
+   "score": 1,
+   "summary": "Four animated text-overlay GIFs for the Streaming ad (July set).",
+   "best": [],
+   "issues": [
+    "thumbnails render blank: transparent animated text overlays",
+    "duplicates the Billy Jo working overlays"
+   ]
+  }
+ ],
+ "takeaways": "The best unused MFPAA material is raw motion b-roll. Rigs driving toward camera and follow-car road shots (Cam B 36/44, iPhone 19/21 with lights flashing), the top-down drone (Mike's Footage 1) and the EMS patch-wall pan would make the hero loop feel more like an emergency service than the current cut from the 60 s brand spot does. For any hero cut from the Feb spot, use the textless '60 Sec (1 minute base)' master instead of the final, which has lower-thirds and stat text baked in. Jason Wolfe's donor testimonial is the only finished capital-campaign ad not on the site; it belongs on work/mfpaa and in anatomy-of-a-47k-nonprofit-campaign next to the Chief and Patient spots, along with the behind-the-scenes photo of the interview setup (Mike's Footage 5), which also proves production on content-development. For the MFPAA cover, the agency-shot rig outside the station (2.4.26 RAW 12) or the 9.26.25 rig still (31) are safe picks. The client-supplied HDR fleet lineup is stronger but is not Stoop work. Two on-site subscription ads show typos ('DONT' in 7|60, 'THATS' in It's Your Job) and should be fixed or demoted."
+}

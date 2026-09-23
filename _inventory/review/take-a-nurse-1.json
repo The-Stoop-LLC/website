@@ -1,0 +1,305 @@
+{
+ "chunk": "take-a-nurse-1",
+ "videos": [
+  {
+   "id": "1yUdh0xLF0P4RWwFR_Ppk_-bpxA5t4K6h",
+   "score": 4,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Founder Kathy Fadgen narrates a 60 s 4K brand film: home visit, kitchen-table consult, pill organizer, hand-holding, helping a client into an SUV.",
+   "best_frame": 3,
+   "placements": [
+    "case-study",
+    "service:content-development"
+   ],
+   "issues": [
+    "burned-in captions on every shot",
+    "lower third over opening shot"
+   ],
+   "why": "Warm, well-lit, emotionally clear founder story that proves The Stoop can shoot healthcare; captions keep it out of the hero loop."
+  },
+  {
+   "id": "1ljIiW-JjRNUUppVTPmFQ9_uqXHjHFyAo",
+   "score": 2,
+   "type": "ad",
+   "orientation": "landscape",
+   "summary": "Rough cut of the hero video: same shots as v1 without captions or lower third.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "labelled rough cut / draft",
+    "near-duplicate of Hero Video v1"
+   ],
+   "why": "Superseded by the finished v1; only useful as a caption-free source if Loop.mp4 is not enough."
+  },
+  {
+   "id": "1ccM-5mL26TcB7Mc_Or8psQnowkqdJCek",
+   "score": 4,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "30 s 4K text-free loop: nurse on the phone, walking up to a brick porch, kitchen-table consult, hands clasped, pill-organizer hand-off.",
+   "best_frame": 2,
+   "placements": [
+    "case-study",
+    "hero-loop",
+    "service:content-development"
+   ],
+   "hero_moment": "0:05 nurse walks up to the front porch; 0:20-0:25 hand-on-hand and pill-organizer close-ups",
+   "issues": [],
+   "why": "Clean, graded, no text or logos, so it drops straight into the case-study header and gives the hero loop a human, non-food, non-fitness beat; motion is gentle rather than striking."
+  },
+  {
+   "id": "1DHb2Rmz7N6nmhbqt5TTBV3RF31q41Nlw",
+   "score": 1,
+   "type": "motion-graphic",
+   "orientation": "landscape",
+   "summary": "Black 60 s overlay track with a single lower third (Kathy Fadgen, RN, BSN, MPH, Founder).",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "overlay/export asset, mostly blank black"
+   ],
+   "why": "Editing asset, not viewable content."
+  },
+  {
+   "id": "1PGjY-tadnakmJ4Q6l9z05nwrB8Aju3AA",
+   "score": 2,
+   "type": "motion-graphic",
+   "orientation": "landscape",
+   "summary": "4 s end card: Take a Nurse logo fades in with 'Patient First.' and website/phone.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [],
+   "why": "Clean but a simple logo fade; the case study already shows the logo."
+  }
+ ],
+ "folders": [
+  {
+   "folder_id": "15QDctP9baiiUk2JduIO11xGsUddu2Kpt",
+   "raw": false,
+   "score": 3,
+   "summary": "Social kit: Facebook cover, LinkedIn banner and N-logomark profile icon; clean but plain white with stripe.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "19jMI0nLjzGBk2rFpdGq_-HIjEJAjTBIl",
+   "raw": false,
+   "score": 3,
+   "summary": "Full logo system as JPEGs: horizontal, logomark and stacked in black, blue, magenta, primary and white.",
+   "best": [],
+   "issues": [
+    "duplicate of the PNG and SVG logo folders",
+    "logos already shown on the case study"
+   ]
+  },
+  {
+   "folder_id": "1NIDNScm1RbP_3jBA6tspyooDYYFd3mPK",
+   "raw": false,
+   "score": 3,
+   "summary": "Same 15-logo system as transparent PNGs.",
+   "best": [],
+   "issues": [
+    "duplicate of the JPEG and SVG logo folders",
+    "logos already shown on the case study"
+   ]
+  },
+  {
+   "folder_id": "1YDoNvE-73RotjeEexeH37FprdQPSn-Bl",
+   "raw": false,
+   "score": 3,
+   "summary": "Same 15-logo system as SVG masters; the best source if the site needs crisp logos.",
+   "best": [
+    {
+     "n": 14,
+     "id": "1uNcuVcRosrUVL_IK4oKSPXeoLbz39JHi",
+     "score": 4,
+     "why": "Stacked primary logo, vector master; stethoscope N with heart reads well",
+     "placements": [
+      "service:design-branding",
+      "case-study"
+     ]
+    },
+    {
+     "n": 9,
+     "id": "1mP4latGHz_dGugHA_VoPuLgs8I3uWWCf",
+     "score": 4,
+     "why": "Primary two-color logomark, strong as an icon tile",
+     "placements": [
+      "service:design-branding"
+     ]
+    }
+   ],
+   "issues": [
+    "logos already shown on the case study"
+   ]
+  },
+  {
+   "folder_id": "1dEJZBa4bkdGKi8UY0Lve2QU6n-zHGRvo",
+   "raw": true,
+   "score": 3,
+   "summary": "Raw stills from the shoot (studio portraits, home visit, SUV, hands, props); retouched versions live in Touched Photos, so use those.",
+   "best": [],
+   "issues": [
+    "unedited; slightly flat color"
+   ]
+  },
+  {
+   "folder_id": "1lfH8KkIVp5gO757WVCs6iigqZYQDXxaS",
+   "raw": true,
+   "score": 2,
+   "summary": "Ungraded S-Log video clips of the home visit, SUV, hands, walker and founder interview; the graded Loop.mp4 already holds the best of it.",
+   "best": [],
+   "issues": [
+    "flat log color, needs grading",
+    "long interview takes"
+   ]
+  },
+  {
+   "folder_id": "1inIybE0XCmKmmgfK8E06F3wuWjiE21dU",
+   "raw": false,
+   "score": 4,
+   "summary": "Jason's copy of the retouched shoot (48 of 1,006 sampled): founder portraits in white suit and scrubs, kitchen-table consults, porch and SUV scenes, hand and pill-organizer details.",
+   "best": [
+    {
+     "n": 14,
+     "id": "1lIakfT4yYTE2SRwsf8eyYnAoBs5vPkeN",
+     "score": 4,
+     "why": "Nurse and client laugh over pill organizer by bright windows",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 4,
+     "id": "1al4oqUlz1F3euIFFf-u9HpP8vsz17-lW",
+     "score": 4,
+     "why": "Founder in white suit, arms crossed, on black",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 30,
+     "id": "1gYoQ8ZJ2ZPKiQgEG18CA04KxwsZrSm_F",
+     "score": 4,
+     "why": "Nurse walks client arm-in-arm out of the house in sun",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 3,
+     "id": "1AWn16xH6Y2BkVB1vzJGFr0P6ai3lydVB",
+     "score": 4,
+     "why": "Laughing profile in branded scrubs and stethoscope",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 40,
+     "id": "1pnX-40Di3nbZwbgl-y7fFP2_woOx0d75",
+     "score": 4,
+     "why": "Branded 'Questions to ask' form in hand, shows the identity in use",
+     "placements": [
+      "case-study",
+      "service:design-branding"
+     ]
+    }
+   ],
+   "issues": [
+    "duplicate copy of Take a Nurse/Touched Photos (same file names, different IDs); prefer that folder's IDs"
+   ]
+  },
+  {
+   "folder_id": "1c3jGDwtCHTNxtPbpTh0UD8hQFs1P3mUX",
+   "raw": false,
+   "score": 4,
+   "summary": "Canonical retouched 2026 shoot (1,008 stills): founder portraits (white suit, scrubs), kitchen-table consults, porch greetings, SUV and walking scenes, hand/pill/form details; well lit and consistent, but shot in long near-identical bursts.",
+   "best": [
+    {
+     "n": 180,
+     "id": "1mg7BAdE7oxJsmXTunLH_Ir-AXtxKp36m",
+     "score": 5,
+     "why": "Nurse and couple laughing over the pill organizer by bright windows; the whole service in one warm frame",
+     "placements": [
+      "cover",
+      "case-study"
+     ]
+    },
+    {
+     "n": 373,
+     "id": "1WchHeo6tLYOSR9cZ-0iv09rME-VBX1d4",
+     "score": 4,
+     "why": "Family dog jumps up to greet the nurse at the door, everyone laughing",
+     "placements": [
+      "case-study",
+      "service:content-development"
+     ]
+    },
+    {
+     "n": 216,
+     "id": "1jMPshhYQ9g9VrQYr7MVgpVKmG8yl1sRz",
+     "score": 4,
+     "why": "Nurse and client reviewing paperwork in soft window light, landscape",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 278,
+     "id": "1AMM2dVNETngKg3ZlHepGyZPLrcyDewzq",
+     "score": 4,
+     "why": "Client grins as the nurse walks him through his pill organizer",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 748,
+     "id": "1_F_1ZMnHC4pTZhNmrfvx0KA4Tn-JRIWQ",
+     "score": 4,
+     "why": "Nurse takes a call in a lamp-lit living room; a natural story opener",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 758,
+     "id": "1Xs9PLwxlUZ7DGRQPHXv91oLJ8k_9c2_C",
+     "score": 4,
+     "why": "Hand-on-hand close-up, the emotional detail of the shoot",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 614,
+     "id": "16shYIDot3q7r_pq9l5EYl8l7Hwk6dyc9",
+     "score": 4,
+     "why": "Nurse walks a client arm-in-arm past the brick house in sun",
+     "placements": [
+      "case-study"
+     ]
+    },
+    {
+     "n": 21,
+     "id": "1C8RcV9NOrT-x9fV6iW_e5Anls_fnFHcK",
+     "score": 4,
+     "why": "Founder Kathy Fadgen in white suit, arms crossed, clean black backdrop",
+     "placements": [
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "long bursts of near-identical frames (10-30 per setup)",
+    "full-length white-suit frames show backdrop edge and stand (e.g. 420, 509, 553)",
+    "black-scrubs headshots (880-993) on a wrinkled blue-grey backdrop",
+    "Jason/Touched Photos is a duplicate copy of this folder"
+   ]
+  }
+ ],
+ "takeaways": "Take a Nurse has a complete, unused 2026 photo and video shoot, so the case study can go from brand-only to full production proof. Put Hero Video v1 (4K founder film, captioned) on work/take-a-nurse as the main video and use the text-free Loop.mp4 as the header background; its 0:05 porch walk-up or 0:20 hand-on-hand shot can add a human healthcare beat to the homepage hero loop. For the cover use Touched Photos #180 (Touched up-253.jpg: nurse and couple laughing over the pill organizer), and build the gallery from #216, #278, #748, #758, #614, #373 (dog greeting at the door) plus founder portrait #21. Use the main Take a Nurse/Touched Photos IDs (Jason's folder is a duplicate), and skip the rough cut, lower-thirds track and raw S-Log clips. The shoot also belongs on service:content-development as proof of a full photo+video day for a small healthcare business."
+}

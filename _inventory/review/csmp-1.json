@@ -1,0 +1,822 @@
+{
+ "chunk": "csmp-1",
+ "videos": [
+  {
+   "id": "11rtifH-m8mcuIIQFKk7atw0XzSS-hpTU",
+   "score": 2,
+   "type": "talking-head",
+   "summary": "A CSMP team member in overalls explains the chronic-disease meal packages behind a row of prepped containers.",
+   "best_frame": 4,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "one static angle for 1:38",
+    "eyes closed at 1:19.8",
+    "client logo bug top-right"
+   ],
+   "why": "Clean, bright light, but a 98-second talking head with no cutaways.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1_w0nGf1MPF_7fJAXNEKIzwBmcZqlhtCa",
+   "score": 3,
+   "type": "reel",
+   "summary": "The owner of a local beauty business tastes a dish with the CSMP chef and talks to camera in a bright studio kitchen.",
+   "best_frame": 2,
+   "placements": [
+    "service:influencer-marketing",
+    "gallery"
+   ],
+   "issues": [
+    "guest's own brand logo on T-shirt",
+    "people cut off at frame edges",
+    "client logo bug top-right"
+   ],
+   "why": "The guest brings warm energy, but it is mostly medium talking shots with little food on screen.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1UH6ajQTDE2zwb2HARZm60867ZHZK3HHZ",
+   "score": 2,
+   "type": "talking-head",
+   "summary": "The chef talks to camera about freezing meals over a single prepped container.",
+   "best_frame": 0,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "eyes closed at 0:18.1 and 0:22.1",
+    "one static angle"
+   ],
+   "why": "A competent tip video, but static, with nothing that hooks visually.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
+   "score": 3,
+   "type": "reel",
+   "summary": "A Chef's Choice title card, then the chef presents tomato soup with a macro cream-swirl shot and a tasting.",
+   "best_frame": 3,
+   "placements": [
+    "hero-loop",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "hero_moment": "0:20 macro of cream swirled into the soup (already in the hero loop)",
+   "issues": [
+    "plain office backdrop with a drop ceiling",
+    "mouth-full tasting frame at 0:38"
+   ],
+   "why": "The cream-swirl macro is a strong beat; the rest is plain talking to camera.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1vdml70b7rdW83lhTi7R-nR3LvwGXX3j6",
+   "score": 2,
+   "type": "reel",
+   "summary": "Title cards introduce Chef Dominick's turkey sausage breakfast sandwich, then he unwraps it and plates it on camera.",
+   "best_frame": 1,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "low, looking-down framing; head cropped at 0:28.9",
+    "unwrapping from foil reads as reheated",
+    "drop ceiling fills the frame"
+   ],
+   "why": "Awkward framing and a flat set undercut a simple product demo.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1MTTcuN036QqjMHweaWWiqSmISB2GS-gr",
+   "score": 1,
+   "type": "reel",
+   "summary": "A draft cut of the grain-bowl Influencer in the Kitchen episode with Devon and the chef.",
+   "best_frame": 1,
+   "placements": [],
+   "issues": [
+    "draft ('Draft 1' in the file name)",
+    "near-duplicate of Grain Bowl Final"
+   ],
+   "why": "Superseded by the final cut.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "12OJ6A3MI_7ERsvnaaKvd7OZOYb4smPGy",
+   "score": 3,
+   "type": "reel",
+   "summary": "Influencer Devon and the chef present a grain bowl, with macro food shots and an animated ingredients card.",
+   "best_frame": 1,
+   "placements": [
+    "service:influencer-marketing",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "issues": [
+    "ingredients card reads 'PHARAOH & QUINOA'; check it (probably 'Farro')",
+    "client logo bug top-right"
+   ],
+   "why": "Good macros and branded graphics lift a standard two-shot format.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1M68NOSvl9N35RKo2jo1kiC5nXeeCs8Sb",
+   "score": 1,
+   "type": "reel",
+   "summary": "A misnamed file: it is the Fire Roasted Tomato Soup Chef's Choice video, not a grain bowl.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "mislabelled: frames identical to Fire Roasted Tomato Soup.mp4",
+    "duplicate of a piece already in the hero loop"
+   ],
+   "why": "An exact duplicate of the tomato soup reel under the wrong name.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1wedQG3hn8SHget8FO21ozK4QiAFJl4V5",
+   "score": 3,
+   "type": "reel",
+   "summary": "Influencer Michelle and the chef taste a tofu burrito bowl, with an animated ingredients card midway.",
+   "best_frame": 3,
+   "placements": [
+    "service:influencer-marketing",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "issues": [
+    "stray animated text/line artifact at 0:05.5",
+    "client logo bug top-right"
+   ],
+   "why": "Friendly on-camera chemistry, but mostly static two-shots with one good food graphic.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1jrwevkuNh82Fdvccbr_a5jRR-I0NgLm-",
+   "score": 1,
+   "type": "motion-graphic",
+   "summary": "A 14-second animated ingredients card for the burrito bowl.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "title reads 'GRAIN BOWL' over burrito-bowl ingredients",
+    "an insert graphic, not a standalone piece"
+   ],
+   "why": "An insert card with the wrong dish title.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1x_4QTVTS_xPzHh09YGDhJYPCecPDUe1g",
+   "score": 3,
+   "type": "reel",
+   "summary": "Chef's Choice chicken wrap: the chef explains the dish over a clean ingredient spread, with wrap close-ups and branded open and close cards.",
+   "best_frame": 5,
+   "placements": [
+    "blog:themed-content-calendar-food-brands",
+    "service:content-development"
+   ],
+   "issues": [
+    "white 'CHICKEN GO WRAP' subtitle barely legible on light teal",
+    "extreme face close-up at 0:20.2"
+   ],
+   "why": "The cleaner set and templated branding show the series maturing, but it is still talk-heavy.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1IDo1Qp25yrPfIL2gkH7n5qdcTOJjqC8r",
+   "score": 3,
+   "type": "reel",
+   "summary": "Chef's Choice oatmeal: the chef walks through the toppings, intercut with soft-focus ingredient B-roll and branded cards.",
+   "best_frame": 0,
+   "placements": [
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "issues": [
+    "white 'Oatmeal' subtitle is low-contrast on teal"
+   ],
+   "why": "Polished branded bookends and B-roll, but the subject is low-drama.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1zNBz7nYvR29LtyNj44Z4QT1ecwbzDR1g",
+   "score": 3,
+   "type": "reel",
+   "summary": "Influencer in the Kitchen: the chef and @deasyszn present chicken alfredo, with macro pasta shots and branded title and end cards.",
+   "best_frame": 0,
+   "placements": [
+    "service:influencer-marketing",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "issues": [
+    "blurred-fill band at the bottom of reframed shots"
+   ],
+   "why": "The cleanest IITK graphics in the set, but the footage is reframed landscape with blurred fill.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1Y2XsiWdmvziiYaKh6kOAYT9ZW2mpl3LN",
+   "score": 2,
+   "type": "reel",
+   "summary": "Influencer in the Kitchen with @sweatbarfitness: three men discuss a masala dish, with punch-in close-ups.",
+   "best_frame": 0,
+   "placements": [
+    "service:influencer-marketing"
+   ],
+   "issues": [
+    "soft digital punch-in crops the guest's head at 0:13.7",
+    "blurred-fill band at the bottom",
+    "check the spelling of the handle '@PITTSBURGHGUYATITIAN'"
+   ],
+   "why": "A good local-fitness tie-in, but the close-ups are soft and awkwardly cropped.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1t-YTHm97l8dk9FJNL2MR7sOkzCp8usS3",
+   "score": 2,
+   "type": "talking-head",
+   "summary": "A seated man in a CSMP tee and cap talks to camera behind a plate of pasta.",
+   "best_frame": 1,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "Rogue logo on cap",
+    "blown-out windows",
+    "near-duplicate of Vince Head Shot 1"
+   ],
+   "why": "One static angle for 48 s: interview source, not a finished piece.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1ga6zW-dRpjf46mbLCmcH05-k_m5qJXEM",
+   "score": 2,
+   "type": "talking-head",
+   "summary": "The same seated man in a CSMP tee talks to camera behind a plate of pasta, as a longer take.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "near-duplicate of Vince Head Shot 2",
+    "Rogue logo on cap",
+    "blown-out windows"
+   ],
+   "why": "A static single-angle clip that repeats Head Shot 2.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1U9R607cJuNQ8fjeQq9cIy6HqE0cZMTHT",
+   "score": 2,
+   "type": "motion-graphic",
+   "summary": "A green geometric template animation announces a five-meal giveaway, cycling through meal photos.",
+   "best_frame": 0,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "fully black frame at 0:11.4",
+    "text overlapped by shapes at 0:17.9",
+    "stock-template look"
+   ],
+   "why": "A busy template motion graphic that reads as dated.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1pw1qdSMPW35A6TrR86dm2bs5te04ATPz",
+   "score": 3,
+   "type": "reel",
+   "summary": "Chef Dominick spoons chermoula over an eggplant grain bowl, with burrata and macro plating shots.",
+   "best_frame": 7,
+   "placements": [
+    "blog:themed-content-calendar-food-brands",
+    "case-study"
+   ],
+   "issues": [
+    "client logo bug top-right",
+    "gloved hands in the pour shot"
+   ],
+   "why": "Real cooking action and appetizing macros, stronger than most Chef's Choice cuts.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1orCn-wbmnngH3xhEh3jg8U5RBXU5GLXc",
+   "score": 3,
+   "type": "reel",
+   "summary": "Chef Dominick presents broccoli cheddar soup, featuring a Wexford Creamery cheddar block and a macro spoon shot.",
+   "best_frame": 3,
+   "placements": [
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "issues": [
+    "Wexford Creamery label prominent (third-party brand)",
+    "client logo bug top-right"
+   ],
+   "why": "A solid macro and a local vendor tie-in; otherwise standard talking to camera.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1LLnW4yY--iqShYNQDEe38p7PzSEhfPke",
+   "score": 3,
+   "type": "reel",
+   "summary": "Influencer Devon Kroesche and the chef present a tofu stir-fry, with animated name cards and shiitake close-ups.",
+   "best_frame": 3,
+   "placements": [
+    "service:influencer-marketing",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "issues": [
+    "third-party sauce labels in frame",
+    "mouth-full tasting frame at 0:35.8"
+   ],
+   "why": "A lively guest and nice food close-ups; the graphics are busy.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1r089cL9p8SL6wxVkdPAgsZFdcopwRi5X",
+   "score": 3,
+   "type": "reel",
+   "summary": "Devon and the chef present a breakfast bowl of potatoes and eggs, with macro food shots and a CSMP end card.",
+   "best_frame": 4,
+   "placements": [
+    "service:influencer-marketing"
+   ],
+   "issues": [
+    "wide-angle distortion on the two-shot",
+    "red cutting board clashes with the palette"
+   ],
+   "why": "Appealing food macros; the people shots are flat and wide-angle.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1wjbg73_61fousYG-ZHxELfDUxmqxM2sK",
+   "score": 3,
+   "type": "reel",
+   "summary": "A juice vendor in a red polo presents cold-pressed juices and pulp dog treats on a colorful produce spread, with 4K macro cutaways.",
+   "best_frame": 2,
+   "placements": [
+    "blog:cross-brand-partnerships-guide",
+    "case-study"
+   ],
+   "issues": [
+    "vendor's labels dominate the macros",
+    "client logo bug top-right"
+   ],
+   "why": "A colorful 4K set and crisp macros, but it is mostly a static talk.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1CfaOPfzntbsMjGFZZPX84gPn4Ctb2Ia1",
+   "score": 4,
+   "type": "reel",
+   "summary": "The chef presents a hibachi tofu bowl with yum-yum sauce in 4K shallow-focus macros, then a guest in a denim jacket tastes it.",
+   "best_frame": 3,
+   "placements": [
+    "hero-loop",
+    "case-study",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "hero_moment": "0:08 slow macro across the sauced hibachi bowl (crop out the top-right logo)",
+   "issues": [
+    "client logo bug top-right",
+    "ceiling vents visible in the guest shots"
+   ],
+   "why": "The best food cinematography in the chunk: 4K shallow-focus macros make the dish look premium.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1BcUX4FNi3J_bapVUo3fjgfT8I7C57r8p",
+   "score": 2,
+   "type": "testimonial",
+   "summary": "An MMA fighter in a Mat Factory tee speaks to camera, with one cutaway of him in a cage fight.",
+   "best_frame": 2,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "Mat Factory logo on shirt",
+    "caught mid-word in most frames"
+   ],
+   "why": "A short, static talk; the fight cutaway is the only hook.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1f428PnbQiqm9KR5N2rDoiRBLyvXYvrRL",
+   "score": 4,
+   "type": "reel",
+   "summary": "The chef and an MMA athlete present a Mediterranean chicken wrap, with 4K shallow-focus macros of the sliced wrap.",
+   "best_frame": 7,
+   "placements": [
+    "hero-loop",
+    "case-study",
+    "blog:themed-content-calendar-food-brands"
+   ],
+   "hero_moment": "0:24-0:40 macro push on the sliced red wrap and chicken",
+   "issues": [
+    "client logo bug top-right",
+    "Mat Factory logo on the guest's shirt",
+    "unflattering low angle at 0:08"
+   ],
+   "why": "Rich color and beautiful food macros; the talking segments are standard.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1hTg7mLDy-NZemBHmQG1kQXPjpR3reWqU",
+   "score": 3,
+   "type": "reel",
+   "summary": "The chef introduces guest Alison Wade, who talks about her tomato rotini dish, with macro pasta cutaways.",
+   "best_frame": 2,
+   "placements": [
+    "service:influencer-marketing"
+   ],
+   "issues": [
+    "pained expression at 1:03.9",
+    "client logo bug top-right"
+   ],
+   "why": "Nice pasta macros, but long talking segments.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1XTAVN-nqaVdQ6C1KHBYc3EednITwzyhs",
+   "score": 2,
+   "type": "reel",
+   "summary": "The chef talks through a breakfast sandwich, then the video switches to the udon dish from Chef's Choice 1.",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "black frame at 0:28.3",
+    "second half repeats the udon segment (does not match the title)",
+    "odd candle-lantern prop"
+   ],
+   "why": "A static, rough-looking assembly with a blank gap.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1wzHy4A6uR-zGcI3o0rcwWKT7o4gn0pN8",
+   "score": 2,
+   "type": "talking-head",
+   "summary": "A man in a Case Specific Athletics hoodie explains the chronic-disease health alliance to camera.",
+   "best_frame": 3,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "one static angle for 1:13",
+    "eyes closed at 0:13.8 and 0:59.8"
+   ],
+   "why": "Clear delivery, but no visuals beyond one talking shot.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1SoJDI27zObEpltR3FndtFOlW6S76wLLJ",
+   "score": 2,
+   "type": "interview",
+   "summary": "Two men talk side by side behind an empty black table in a wide static shot.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "bottom third is empty black table",
+    "drop ceiling fills the top",
+    "no cutaways"
+   ],
+   "why": "Awkward framing and no B-roll.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1DJPNh8m-33_eeaJNEY_bOFpyaatl2REO",
+   "score": 2,
+   "type": "reel",
+   "summary": "The chef presents an udon noodle dish with one macro cutaway, beside a candle-lantern prop.",
+   "best_frame": 3,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "mostly one static angle",
+    "odd candle-lantern prop",
+    "segment repeated inside the Breakfast Sandwich video"
+   ],
+   "why": "One nice noodle macro; the rest is static.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1Xoq-vhFfY71Vdw1qNPZ4qhUNPP1iMBFU",
+   "score": 2,
+   "type": "reel",
+   "summary": "The chef and a bearded guest in a Gymshark tee discuss a burrito, with one macro of the cut burrito.",
+   "best_frame": 1,
+   "placements": [
+    "service:influencer-marketing"
+   ],
+   "issues": [
+    "Gymshark logo on the guest's shirt",
+    "drop ceiling fills the top of the frame"
+   ],
+   "why": "A mostly static two-shot with one appetizing macro.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1Vzz3qyuPDaLsi9m_TJTigxSs93EfLLHA",
+   "score": 2,
+   "type": "reel",
+   "summary": "A guest in a maroon cardigan and the chef discuss tomato soup, with one macro and handheld close-ups.",
+   "best_frame": 3,
+   "placements": [
+    "service:influencer-marketing"
+   ],
+   "issues": [
+    "exit sign and fire alarm in the close-up backgrounds",
+    "static two-shot"
+   ],
+   "why": "The standard IITK format with little visual variety.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1kGyzMbB787XQ1utLaeApSNzd29jLA8zN",
+   "score": 2,
+   "type": "reel",
+   "summary": "The chef and a guest in a pink tee and cap talk through à la carte sauces on a colorful table.",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "guest looks down in most frames",
+    "people cut off at frame edges",
+    "logo on the guest's cap"
+   ],
+   "why": "Long (1:32) and loosely framed, with little food on screen.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1c2LY8NHpvLnHHwAaM2dyIJJ-1oAbOWtm",
+   "score": 2,
+   "type": "interview",
+   "summary": "Expert in the Kitchen: the chef introduces Ahmad Mtour, who speaks in tight shots with a blurred dish in the foreground.",
+   "best_frame": 2,
+   "placements": [],
+   "issues": [
+    "eyes down in most close-ups",
+    "repetitive framing"
+   ],
+   "why": "Flat delivery and one repeated framing.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1sZuf7XY9b-rBFT2aqVwnsEjpvNXrmnSh",
+   "score": 2,
+   "type": "testimonial",
+   "summary": "Two Pitt Nutrition students talk about CSMP in a static shot behind a meal container.",
+   "best_frame": 3,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "one static angle for 1:07",
+    "Pitt logos dominate the frame"
+   ],
+   "why": "Credible partnership proof, but visually flat for a case-study feature (already on work/csmp).",
+   "orientation": "portrait"
+  },
+  {
+   "id": "13AuqBsIxrGGCkHUX3VPZAbEcvFG6tmJp",
+   "score": 2,
+   "type": "testimonial",
+   "summary": "A man in a pink tee talks to camera behind white plastic grocery bags on a colorful table.",
+   "best_frame": 7,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "plastic bags fill the lower frame",
+    "one static angle"
+   ],
+   "why": "The plastic bags make an unappealing foreground, which makes it weak as case-study video (already on work/csmp).",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1VeTPAH-Ao7wdruGD6BF221BQT9vJ6crL",
+   "score": 2,
+   "type": "reel",
+   "summary": "The chef, in black gloves, talks about roasted tomato sauce pasta in a single static shot.",
+   "best_frame": 6,
+   "placements": [],
+   "issues": [
+    "no cutaways",
+    "eyes down in several frames"
+   ],
+   "why": "Static and repetitive.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1nlC30qz3FT8uBRZTYU38NLqcHcbV9YrI",
+   "score": 3,
+   "type": "reel",
+   "summary": "The chef presents a chimichurri chicken grain bowl in rich macros, and Vince tastes it.",
+   "best_frame": 2,
+   "placements": [
+    "blog:themed-content-calendar-food-brands",
+    "case-study"
+   ],
+   "issues": [
+    "client logo bug top-right",
+    "wide-angle distortion at 0:29.3"
+   ],
+   "why": "Excellent food macros; the talking section is ordinary.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1LTaCUTIRgj829ujzgGImRsxry7P8kzkL",
+   "score": 2,
+   "type": "reel",
+   "summary": "An early Chef's Choice: the chef mixes granola while kinetic ingredient words fly across the screen.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "lower third spells 'CHEF DOMINIC' (later videos use 'Dominick')",
+    "dated kinetic text"
+   ],
+   "why": "An early, dated style superseded by later cuts.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1OdjN4dHPDhfVu7S_ZMZBe2kFZ6e7jojj",
+   "score": 2,
+   "type": "reel",
+   "summary": "The chef explains potato soup over raw vegetables, with a yellow streak intro and kinetic text.",
+   "best_frame": 6,
+   "placements": [],
+   "issues": [
+    "dated yellow streak intro",
+    "one static angle"
+   ],
+   "why": "Early style, and static.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "140WgO0um2rnMI0gJnh8EFtC96ApxtBxe",
+   "score": 2,
+   "type": "reel",
+   "summary": "Influencer in the Kitchen with CSN CEO Andrew Wade: a landscape two-shot letterboxed with wood-texture bars, making steamed shrimp.",
+   "best_frame": 1,
+   "placements": [
+    "service:influencer-marketing"
+   ],
+   "issues": [
+    "landscape footage letterboxed with wood-texture bars",
+    "mouth-full eating close-up at 0:56.3"
+   ],
+   "why": "A dated letterbox treatment that wastes the vertical frame.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1p5T1RfzTH-ABx0W6pExna7IDXRR_nr8W",
+   "score": 2,
+   "type": "reel",
+   "summary": "IITK with Scott Fichter of No Slack: a letterboxed two-shot with ingredient close-ups and a pulled pork plate at the end.",
+   "best_frame": 7,
+   "placements": [],
+   "issues": [
+    "lower third says 'NO SLACK JUST HUSTLE' but the file says 'All Hustle'; check the brand name",
+    "'CHEF DOMINIC' spelling differs from the later 'Dominick'",
+    "letterbox misaligned at 0:52.9",
+    "identical to Pulled Pork Reel (Scott).m4v"
+   ],
+   "why": "A dated letterbox format with visible edit artifacts.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1NFdiU1ov4-jGAfDzvKPrKH9JfBuSZkVU",
+   "score": 1,
+   "type": "reel",
+   "summary": "The same letterboxed IITK episode with Scott Fichter of No Slack, ending on a pulled pork plate.",
+   "best_frame": 7,
+   "placements": [],
+   "issues": [
+    "exact duplicate of No Slack All Hustle (IITK).m4v (identical frames)",
+    "'CHEF DOMINIC' spelling",
+    "letterbox misaligned at 0:52.9"
+   ],
+   "why": "A duplicate of the No Slack video under another name.",
+   "orientation": "portrait"
+  },
+  {
+   "id": "1-IQsl4-ZhwQow4Zpi0n_3lON-BLbDxCP",
+   "score": 2,
+   "type": "reel",
+   "summary": "A 15-second early Chef's Choice: a hand seasons tofu bacon on a dark plate, then the CSMP end card.",
+   "best_frame": 5,
+   "placements": [],
+   "issues": [
+    "wall outlet and blown-out window in the background",
+    "dated kinetic title text"
+   ],
+   "why": "A simple early product shot with low production value.",
+   "orientation": "portrait"
+  }
+ ],
+ "folders": [
+  {
+   "folder_id": "1E-2uZ8zvGtEk2vx9SbCDPRwB5pB__aMi",
+   "raw": false,
+   "score": 2,
+   "summary": "Brand source files (CSMP and CSN logos in black and white, plus a bamboo texture): working assets, not showcase content.",
+   "best": [],
+   "issues": [
+    "black logo files show as blank thumbnails (cells 2 and 4)"
+   ]
+  },
+  {
+   "folder_id": "1H67tvydVjPXfoJVHlAHIwfCRXYMm0z_D",
+   "raw": false,
+   "score": 2,
+   "summary": "Four blank Chef's Choice feed and story PSD templates in blue and green on a gray-wood texture, with 'NAME OF MEAL HERE' placeholders.",
+   "best": [],
+   "issues": [
+    "placeholder text",
+    "placeholder or stock photos",
+    "dated gray-wood texture"
+   ]
+  },
+  {
+   "folder_id": "1XuXhOCFGnxIpx2UvPpvGhJaraugoEejY",
+   "raw": false,
+   "score": 1,
+   "summary": "Four text-only testimonial templates filled with placeholder copy.",
+   "best": [],
+   "issues": [
+    "typo in the header of all four: 'CLIENT TESTIMONAL'",
+    "body placeholder also reads 'ENTER TESTIMONAL HERE'"
+   ]
+  },
+  {
+   "folder_id": "1LqWl0uCtK0HnzjAXJ8C4FkUFd6Q3TAFv",
+   "raw": false,
+   "score": 1,
+   "summary": "Four text-only Healthy Tip templates filled with 'ENTER HEALTHY TIP HERE' placeholders.",
+   "best": [],
+   "issues": [
+    "placeholder text only"
+   ]
+  },
+  {
+   "folder_id": "1bk-4hiAT-mbYwYs13It9QHFwiKVc-4Rm",
+   "raw": false,
+   "score": 2,
+   "summary": "Four blank Influencer in the Kitchen feed and story templates with 'NAME HERE' placeholders and stock-style photos.",
+   "best": [],
+   "issues": [
+    "placeholder text",
+    "placeholder or stock photos"
+   ]
+  },
+  {
+   "folder_id": "1CBTdlMBznn1cj0hWT6Qdl3qWO9wGBbhA",
+   "raw": false,
+   "score": 2,
+   "summary": "Four blank Ingredient Spotlight feed and story templates with placeholder text and photos.",
+   "best": [],
+   "issues": [
+    "placeholder text",
+    "placeholder or stock photos"
+   ]
+  },
+  {
+   "folder_id": "1Bdpj7nRNwEQ4-4hJTmQY_PPTVxnx88AM",
+   "raw": false,
+   "score": 1,
+   "summary": "Four story templates with an empty color box under a 'Question for you' header.",
+   "best": [],
+   "issues": [
+    "header punctuation is inconsistent: PNGs read 'QUESTION FOR YOU!', PSDs 'QUESTION FOR YOU?'",
+    "empty placeholder box"
+   ]
+  },
+  {
+   "folder_id": "16DJ-RpjsSviWgInRqIVk3WiW89RSTgU1",
+   "raw": false,
+   "score": 1,
+   "summary": "Two order-reminder story templates with 'INSERT IMAGE HERE' and 'INSERT LINK HERE' placeholders.",
+   "best": [],
+   "issues": [
+    "placeholder text"
+   ]
+  },
+  {
+   "folder_id": "1Bkikz_H38EoFYqvIejsqOQfzvAQegNua",
+   "raw": false,
+   "score": 2,
+   "summary": "Four blank Vendor Spotlight feed and story templates with placeholder text and photos.",
+   "best": [],
+   "issues": [
+    "story versions (cells 2 and 4) say 'NAME OF MEAL HERE' instead of vendor",
+    "placeholder or stock photos"
+   ]
+  },
+  {
+   "folder_id": "1Z_Hw-S4dYX5JzOGrzzDzKkfsvYA4nJAb",
+   "raw": false,
+   "score": 3,
+   "summary": "Finished Healthy Tip feed and story graphics: a food photo beside a teal panel of dietitian quotes (Balestrino, Beam, Kuhn); decent supporting material.",
+   "best": [],
+   "issues": [
+    "dense, tiny all-caps text is hard to read",
+    "the stock-looking vegetable flat-lay is reused in cells 3, 6, 7 and 8"
+   ]
+  }
+ ],
+ "takeaways": "The strongest unused CSMP material is the June 2023 4K pair, HIbachi.mov and Mediterranean Chicken wrap.mov (both 4). Their shallow-focus food macros are the best food cinematography in the chunk. Crop out the top-right logo and use them as vertical hero-loop stacks, and use them on work/csmp. They should replace CSMP Spotlight 1.mp4 and 2.mp4, the two static talking-head videos now on work/csmp; the second shows a man behind plastic grocery bags. Vince Expert In The Kitchen and Eggplant Chermoula have strong macros for blog:themed-content-calendar-food-brands. The best Influencer in the Kitchen episodes (Grain Bowl Final, Alfredo, Stir Fry Tofu) can prove service:influencer-marketing. Most of the rest (Nov 2022 to Mar 2023) is static talking to camera in a drop-ceiling office, with dated letterboxing or kinetic text. The template folders are placeholder-only, and the Client Testimonial set has a 'TESTIMONAL' typo, so none of it belongs on the site."
+}

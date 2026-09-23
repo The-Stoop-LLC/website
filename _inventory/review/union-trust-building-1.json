@@ -1,0 +1,884 @@
+{
+ "chunk": "union-trust-building-1",
+ "videos": [
+  {
+   "id": "1tfvEc_mU3fs0KtaViAMFTt3vBs0mEsc0",
+   "score": 3,
+   "type": "event-recap",
+   "orientation": "portrait",
+   "summary": "Q Theatre build-out reel: whip-pan intro, stage rigging, opening-night crowd, split-screen EVENTS/ENTERTAINMENT titles, night exterior of the building.",
+   "best_frame": 7,
+   "placements": [
+    "case-study",
+    "gallery"
+   ],
+   "issues": [
+    "earlier/shorter cut of Revised.mp4",
+    "soft handheld crowd shots"
+   ],
+   "why": "Good arc from construction to opening night, but the crowd footage is casual phone video and the 60 s revision is stronger."
+  },
+  {
+   "id": "1qjGcRIR04av4Mw6lR90hhakKaWBf2WwO",
+   "score": 4,
+   "type": "event-recap",
+   "orientation": "portrait",
+   "summary": "60 s Q Theatre \"Cabinet of Dr. Caligari\" launch reel: costumed actors in black and white on set, program board, opening crowd, ends on a top-down shot of the domed atrium.",
+   "best_frame": 4,
+   "placements": [
+    "case-study",
+    "service:content-development",
+    "hero-loop"
+   ],
+   "hero_moment": "0:56 top-down reveal of the stained-glass rotunda atrium",
+   "issues": [
+    "near-duplicate of UTB Revised.mp4",
+    "soft handheld crowd shots mid-reel"
+   ],
+   "why": "Stylized B&W actor shots and the rotunda overhead are genuinely striking; the reception footage in the middle drags it below a 5."
+  },
+  {
+   "id": "1qyEPSFg-kTcth7r3Lmy2q8UzfvWqRr9T",
+   "score": 3,
+   "type": "event-recap",
+   "orientation": "portrait",
+   "summary": "Alternate 59 s cut of the Q Theatre launch reel: same actors, program board and atrium overhead, with a stage-rigging shot in place of the telephone close-up.",
+   "best_frame": 4,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "near-duplicate of Revised.mp4; pick one"
+   ],
+   "why": "Same material as Revised.mp4; keep only one, and the other cut opens stronger with the actress on the telephone."
+  },
+  {
+   "id": "1Zt5dg6XkWKSqnLC6bvz8cQz_pRfq1RzS",
+   "score": 4,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "Day in the Life of UTB property managers: rooftop hard-hat walk by the Gothic spires, tenant meetings, lobby, sidewalk inspections, each with a bold role caption.",
+   "best_frame": 1,
+   "placements": [
+    "case-study",
+    "service:organic-social"
+   ],
+   "issues": [],
+   "why": "Clear format, bright 4K, varied locations and real staff make it the best staff-spotlight piece; captions sit a little low-contrast on busy frames."
+  },
+  {
+   "id": "1rU1-Vhq38exbVd0OorxCtXEBruq9Vmuk",
+   "score": 3,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "Day in the Life Part 2 (Midday): marquee intro, Freshii bowl, Mellon Park walk, flower-wall swings at Ritual House, a tenant seminar.",
+   "best_frame": 4,
+   "placements": [
+    "case-study",
+    "gallery"
+   ],
+   "issues": [
+    "metadata says 3840x2160 but plays portrait"
+   ],
+   "why": "Tidy series format with nice neighborhood color, but weaker than Part 1 Morning; the seminar room shots are flat."
+  },
+  {
+   "id": "1wDpycntdDryjYsTORDkcOQWQx-gjWKqV",
+   "score": 4,
+   "type": "talking-head",
+   "orientation": "portrait",
+   "summary": "\"History with Charles\": the concierge presents the building's original bank vault, with close-ups of the giant round door and its brass locking bolts.",
+   "best_frame": 1,
+   "placements": [
+    "case-study",
+    "service:content-development",
+    "hero-loop"
+   ],
+   "hero_moment": "0:10 slow push across the vault door's brass bolt mechanism",
+   "issues": [
+    "talking-head segments are static and repetitive"
+   ],
+   "why": "A distinctive, ownable story (the vault) with beautiful detail shots; the static stand-up keeps it from a 5."
+  },
+  {
+   "id": "1NnJ4KQxxObhv29m6djPG_3Dg3Wqsczww",
+   "score": 3,
+   "type": "testimonial",
+   "orientation": "portrait",
+   "summary": "Tenant spotlight: Glenmede regional director Mark Busher speaks in front of the firm's logo, then a pan through the finished office (\"What a beautiful office space!\").",
+   "best_frame": 0,
+   "placements": [
+    "case-study",
+    "gallery"
+   ],
+   "issues": [
+    "static lower-third talking head for most of the runtime"
+   ],
+   "why": "A useful tenant-testimonial format, clean and well lit, but visually static."
+  },
+  {
+   "id": "1HfWkKtpJcFtoWxB8LL6iByOunDchBciI",
+   "score": 2,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "National Exercise Day reel promoting the new Peloton bike in the building gym, with over-the-shoulder screen shots and caption questions.",
+   "best_frame": 2,
+   "placements": [],
+   "issues": [
+    "awkward low angles",
+    "TV news visible in background",
+    "screen-recording feel"
+   ],
+   "why": "An amenity post with weak framing and little visual payoff."
+  },
+  {
+   "id": "12jUNXGRbFc9dATyAigyFJhBbS0T2p50q",
+   "score": 2,
+   "type": "talking-head",
+   "orientation": "portrait",
+   "summary": "11 s staff spotlight: maintenance staffer Rich Wyatt talks to camera in front of a large fan unit.",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "single static take",
+    "no captions or b-roll"
+   ],
+   "why": "Authentic but a single static shot with no edit to carry it."
+  },
+  {
+   "id": "1OU5CTne8l6woZeB8u4mXerUaUH0cX-R2",
+   "score": 3,
+   "type": "talking-head",
+   "orientation": "portrait",
+   "summary": "Staff spotlight on engineer Dan Marshall: rooftop stand-up against the Gothic facade, the marquee sign, then boiler-room work and a burner-flame close-up.",
+   "best_frame": 1,
+   "placements": [
+    "case-study",
+    "gallery"
+   ],
+   "issues": [],
+   "why": "Good behind-the-scenes b-roll (marquee, flame) around a plain stand-up."
+  },
+  {
+   "id": "1SxLTFI_OEpna-TQZeD4H037aQC4j8T0a",
+   "score": 3,
+   "type": "talking-head",
+   "orientation": "portrait",
+   "summary": "Staff spotlight: engineer speaks at a podium in the red-seat theater, with cutaways to the chiller controls, the marquee and a lobby event.",
+   "best_frame": 0,
+   "placements": [
+    "gallery"
+   ],
+   "issues": [
+    "podium stand-up is static"
+   ],
+   "why": "The theater setting is nice but it is mostly a static talking head."
+  },
+  {
+   "id": "11yKWdAsaq3bFcfBaokLaA04KVJSd9DtK",
+   "score": 3,
+   "type": "talking-head",
+   "orientation": "portrait",
+   "summary": "Concierge Charles speaks in front of the blue-and-gold mosaic UNION TRUST BUILDING wall, cut with a lobby tenant reception and catering spread.",
+   "best_frame": 0,
+   "placements": [
+    "case-study",
+    "gallery"
+   ],
+   "issues": [
+    "static seated talking head"
+   ],
+   "why": "The mosaic wall is an iconic backdrop, but the piece is mostly a static talking head."
+  },
+  {
+   "id": "1oCbAE3buo1hGyUv0eaMEuHNVaWE-2FPY",
+   "score": 4,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "Day in the Life Part 1 (Morning): marquee intro, valet, key-card into the gym, the domed blue-carpet atrium (\"Meditate under the dome\"), breakfast at The Speckled Egg.",
+   "best_frame": 5,
+   "placements": [
+    "case-study",
+    "service:organic-social",
+    "hero-loop"
+   ],
+   "hero_moment": "0:17 caption-free glide through the domed atrium over the blue patterned carpet",
+   "issues": [
+    "captions on most shots; cut hero clips from the caption-free moments"
+   ],
+   "why": "Fast, bright and varied, and it sells the building as a lifestyle; the atrium glide is the best motion shot in the chunk."
+  },
+  {
+   "id": "1hlQsyz9vqsMyOyFy2HEGMs9ZLZBoJwsr",
+   "score": 2,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "Vacant-suite reveal: \"Renovation in progress\" walk through raw drywall to the finished glass offices and a view of the Warner Centre sign.",
+   "best_frame": 7,
+   "placements": [],
+   "issues": [
+    "emoji captions",
+    "first third is plain construction walls"
+   ],
+   "why": "A before/after idea, but slow, with flat walkthrough footage and dated caption styling."
+  },
+  {
+   "id": "17OtBVuBUrZhmIc7ioc0h8s8k-vlW9TIp",
+   "score": 2,
+   "type": "story",
+   "orientation": "portrait",
+   "summary": "15 s story: pan from the glass offices to the window view of downtown and the Warner Centre marquee.",
+   "best_frame": 7,
+   "placements": [],
+   "issues": [
+    "near-duplicate of the FCWB Reel ending"
+   ],
+   "why": "A pleasant view but a filler story clip."
+  },
+  {
+   "id": "1BeFn_qmcSwdu56sjyphSrSF0we_14VHd",
+   "score": 2,
+   "type": "reel",
+   "orientation": "portrait",
+   "summary": "National Cocktail Day: bartender pours pink martinis and orange rimmed cocktails, ending on a letterboxed purple-cocktail pour.",
+   "best_frame": 1,
+   "placements": [],
+   "issues": [
+    "smeared frame-interpolation glitches around 0:17 and 0:21",
+    "final clip is letterboxed third-party footage (Eddie V's)"
+   ],
+   "why": "The pours look appetizing, but visible glitch artifacts and a borrowed clip make it unusable as-is."
+  },
+  {
+   "id": "1jabDQlOPp-zAP6W_VC70aP-GKosXLz5_",
+   "score": 3,
+   "type": "event-recap",
+   "orientation": "portrait",
+   "summary": "UTB x BNY Mellon Make-A-Wish fundraiser: tenants making cards, the silent auction, group check presentation in front of the mosaic wall, \"we raised over $8,000.\"",
+   "best_frame": 7,
+   "placements": [
+    "case-study"
+   ],
+   "issues": [
+    "letterboxed phone photos with black bars",
+    "plain gray caption boxes"
+   ],
+   "why": "The strongest story and hard result in the chunk ($8k raised), but the execution is a basic photo slideshow."
+  },
+  {
+   "id": "1ne2FziyjHevkwUpcev8__wB7XA9P9rdD",
+   "score": 1,
+   "type": "b-roll",
+   "orientation": "landscape",
+   "summary": "5 s letterboxed clip of a purple cocktail being poured at an Eddie V's restaurant.",
+   "best_frame": 3,
+   "placements": [],
+   "issues": [
+    "640x360 low resolution",
+    "third-party (Eddie V's) footage, not Stoop work",
+    "pillarboxed"
+   ],
+   "why": "Low-res borrowed footage, not agency work."
+  },
+  {
+   "id": "1NmnHNEmymCDCj10PNyTvLhjP0Dv0JI4b",
+   "score": 2,
+   "type": "event-recap",
+   "orientation": "portrait",
+   "summary": "Taste of UTB Halloween tenant tasting: carved pumpkins, restaurant tables (Del Frisco's etc.), shrimp tower, tenants posing in the lobby.",
+   "best_frame": 5,
+   "placements": [],
+   "issues": [
+    "720x1280 low resolution",
+    "letterboxed photos with black bars"
+   ],
+   "why": "A low-res photo slideshow of a casual event."
+  },
+  {
+   "id": "1w2m-f_bfQb37N4Y21DW9nBhBEhjP6dEq",
+   "score": 2,
+   "type": "story",
+   "orientation": "portrait",
+   "summary": "51 s single-take story: two property managers draw raffle winners in front of a Davis logo wall.",
+   "best_frame": 0,
+   "placements": [],
+   "issues": [
+    "single unedited take",
+    "tenant (Davis) logo dominates frame"
+   ],
+   "why": "An informational story post with no edit, no use on the site."
+  }
+ ],
+ "folders": [
+  {
+   "folder_id": "1peg3a9EFEKFwPvhsBiokaRxcBqc4st-X",
+   "raw": true,
+   "score": 2,
+   "summary": "Client-supplied phone photos and clips: orchid display in the atrium, lobby Christmas trees, a bartender making cocktails, Makers Market vendor tables.",
+   "best": [],
+   "issues": [
+    "client-supplied snapshots, not Stoop-shot"
+   ]
+  },
+  {
+   "folder_id": "1ddVXJVwxEQEktGzh0tbXHxZ8CA3xaXzE",
+   "raw": false,
+   "score": 3,
+   "summary": "VTS tenant-app assets: UTB logo resized for app icons and splash screens, plus a login background photo of the stained-glass dome and lantern.",
+   "best": [
+    {
+     "n": 2,
+     "id": "1nsZZf04u0TmTdO4NgZZjbYutqDd53R1H",
+     "score": 4,
+     "why": "Stained-glass dome with brass lantern, warm and symmetrical; a strong interior still",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "logo files are resizes of the existing UTB mark, not new design work"
+   ]
+  },
+  {
+   "folder_id": "16RSZ5jWSSOIz6AkgZWglZzhlfsJzNfN9",
+   "raw": true,
+   "score": 2,
+   "summary": "Quantum Theatre's own production photos and Caligari promo graphics (Q logo on every graphic), plus a black 40 s video thumbnail.",
+   "best": [],
+   "issues": [
+    "third-party Quantum Theatre assets with their logo, not Stoop work",
+    "cell 10 video thumbnail is black"
+   ]
+  },
+  {
+   "folder_id": "1-afBfbq3o-K3W_3Fr2exp0Lj1D46SAXI",
+   "raw": false,
+   "score": 4,
+   "summary": "Phone photos and clips from the Q Theatre opening night: the building lit up at night, dizzying top-down views of the rotunda, the stained-glass dome, catering and the crowd.",
+   "best": [
+    {
+     "n": 18,
+     "id": "1I1XIn7zGg90ovv7GUVWc02qfJ5XFrQeR",
+     "score": 5,
+     "why": "Top-down spiral into the blue-carpet rotunda; instantly arresting and unmistakably UTB",
+     "placements": [
+      "cover",
+      "case-study"
+     ]
+    },
+    {
+     "n": 6,
+     "id": "1KTP3flwMUOBEA7KHmn1NEM8lOQ0vDVFD",
+     "score": 4,
+     "why": "Night exterior of the fully lit Gothic facade; the cleanest building establishing shot",
+     "placements": [
+      "cover",
+      "case-study"
+     ]
+    },
+    {
+     "n": 22,
+     "id": "1lygxYjkAVZ9_G37o9ABAKg14UGUOOW93",
+     "score": 4,
+     "why": "19 s top-down rotunda clip: vertical, no text, reads instantly",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    },
+    {
+     "n": 24,
+     "id": "1xuCNDOpIbI5F-pa5J2CCxTDhaOqrX0Mj",
+     "score": 4,
+     "why": "Stained-glass dome from below, perfectly centered",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 19,
+     "id": "1H9CIUPsuS_ChEzfSry7MUGFTv_sSkai9",
+     "score": 4,
+     "why": "Tighter overhead of the atrium floor with its lounge furniture",
+     "placements": [
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "several near-duplicates (3-6 night exteriors, 17-22 overheads)"
+   ]
+  },
+  {
+   "folder_id": "1WCg8NtbspclB7yRQUWpIP2fmQbE4xTcr",
+   "raw": true,
+   "score": 2,
+   "summary": "DJI time-lapse of the Caligari set in the theater from the balcony (27 min source), plus 0 s LRF proxies.",
+   "best": [],
+   "issues": [
+    "cells 1-2 are empty 0 s proxy/stub files",
+    "cells 4 and 5 are the same file"
+   ]
+  },
+  {
+   "folder_id": "1JR-ia6fV9DZhPUSCau8i8YuusdxZHjVa",
+   "raw": true,
+   "score": 1,
+   "summary": "494-frame GoPro time-lapse of the Caligari set seen from the balcony; 48 sampled frames barely change apart from lighting.",
+   "best": [],
+   "issues": [
+    "fisheye distortion",
+    "near-identical frames"
+   ]
+  },
+  {
+   "folder_id": "15oka9D9Cnth9OpUAULFbPd_IT6TRnHUr",
+   "raw": false,
+   "score": 3,
+   "summary": "Phone clips from the 2023 holiday happy hour: pianist, bartender, cocktails, the decorated atrium from above, brass elevators and revolving doors.",
+   "best": [
+    {
+     "n": 38,
+     "id": "1pwYshVVXtGucqQR7UruLF4yHsEGah_cL",
+     "score": 4,
+     "why": "Red and yellow cocktails on a black high-top with the chandeliered lobby blurred behind",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 30,
+     "id": "1-HF-QjbJCUtmd7tnv2uK4joddLTbHh0m",
+     "score": 4,
+     "why": "8 s balcony view down onto the decorated blue-carpet atrium full of guests",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    }
+   ],
+   "issues": [
+    "mostly short handheld clips",
+    "cell 42 is a dark/blank clip"
+   ]
+  },
+  {
+   "folder_id": "1uFKw4fTf7ii6ofg3R9tCL0G2hKgJZbAR",
+   "raw": false,
+   "score": 2,
+   "summary": "2023 Makers Market: phone snapshots of vendor tables (jewelry, pop-art pet paintings, woodcraft, alpaca plush) set up along the blue-carpet arcade.",
+   "best": [],
+   "issues": [
+    "product snapshots of vendors' goods, not the building",
+    "tenant signage (Eddie V's, Freshii) behind many tables",
+    "many near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1fMYRxWHkyopfDBlekvErrXsesgPrmnU7",
+   "raw": false,
+   "score": 3,
+   "summary": "2023 Harvest Party: the stained-glass dome and rotunda from below, lobby crowd, pumpkin carver, bar prep and marquee clips.",
+   "best": [
+    {
+     "n": 1,
+     "id": "1KDHkQlNl3durrOkWhIC_QJtgDC_NjXyw",
+     "score": 4,
+     "why": "Centered look up at the stained-glass dome ringed by balconies",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 3,
+     "id": "1q2B8BiItdKbm3vVIxz4IrKKM2Aq0ysa4",
+     "score": 4,
+     "why": "Upward wide of the full rotunda with the party crowd below",
+     "placements": [
+      "case-study"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1pDBq9wtSMYUAegjoBJIbSSRYX2I6y4Wf",
+   "raw": false,
+   "score": 3,
+   "summary": "385-item Sept 2023-Jan 2024 grab bag: staff portraits on the balconies, theater, gym, rooftop Gothic spires and skyline, dome and rotunda views, archive flat-lays, Freshii bowls, Makers Market vendors, event crowds and a few templated holiday graphics.",
+   "best": [
+    {
+     "n": 93,
+     "id": "1CFol5awOOeeGcrk5jX3LPQguHOgX8iZJ",
+     "score": 4,
+     "why": "Looking straight up the rotunda rings to the stained-glass dome",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 373,
+     "id": "11XawJ4g0pQQWD6ik9MfugTvhHuaHAn39",
+     "score": 4,
+     "why": "Top-down rotunda spiral to the blue floor (alt to the Opening Ceremony shot)",
+     "placements": [
+      "gallery"
+     ]
+    },
+    {
+     "n": 351,
+     "id": "1GbLorElclt1b6qZUuRgBfmDkRrDqF7bs",
+     "score": 4,
+     "why": "14 s tilt up the rotunda over a lobby event; vertical, no text",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    },
+    {
+     "n": 85,
+     "id": "1ZsEo8Ue8WkqQmM2nNcOSgsO5lTQmb33z",
+     "score": 4,
+     "why": "Grand entrance: stained-glass window glowing over brass revolving doors",
+     "placements": [
+      "case-study",
+      "cover"
+     ]
+    },
+    {
+     "n": 60,
+     "id": "1dVkL1ta3YXovGkIwJywJxPZw5Un4DIcn",
+     "score": 4,
+     "why": "Gothic spire silhouetted against blue sky from the roof",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 362,
+     "id": "1BN68XYVnw5zE0R7hoHnblF78KkioF9EL",
+     "score": 4,
+     "why": "Dinner under the glass-roofed Q space lit magenta and blue",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 342,
+     "id": "1RHIe5zRKq8zLtJtMfLW9-dVZA7N1rcQH",
+     "score": 4,
+     "why": "Balcony view down onto a packed tenant mixer at the lobby bar",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 79,
+     "id": "1BFT1uglxs0mB_3ifhe6otz2mGiIIv_cq",
+     "score": 4,
+     "why": "Balcony view of the blue-carpet lobby leading to the ornate arched entry",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "heavy near-duplication (e.g. 14 Freshii bowl shots, 5+ of each staff portrait)",
+    "templated Canva-style holiday/congrats graphics (377, 382-385)",
+    "many dim vendor snapshots from the Makers Market"
+   ]
+  },
+  {
+   "folder_id": "1VTeTYDUKch87pdwmWtX5wc4th41636_R",
+   "raw": false,
+   "score": 3,
+   "summary": "April 2024 shoot for the published pieces: the bank vault and bronze vault gate, Rich Wyatt by the fan, the red fire-pump room, Ritual House flower wall, Pelotons, Glenmede, and a basketball-arcade tenant event in the glass-roofed space.",
+   "best": [
+    {
+     "n": 41,
+     "id": "1bySxvGmoSied6J54I2_xpZfRA6fAtm5F",
+     "score": 4,
+     "why": "17 s slow move across the full round vault door and brass bolts; vertical, no text",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    },
+    {
+     "n": 8,
+     "id": "1yvBkWecaWLP8pxSI8feYkBA2zdU0wirR",
+     "score": 4,
+     "why": "Open and closed vault doors side by side, clean and symmetrical",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 12,
+     "id": "1xOQd-z56ztSZ4w091LeoZ9Q9SNcghC0o",
+     "score": 4,
+     "why": "Bronze vault gate with clock, rich warm detail",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 62,
+     "id": "1DiHnefb3hAwln8GVcCiZ4w94hZHrmzS4",
+     "score": 4,
+     "why": "Glass roof of the Q space with the building's Gothic crown seen through it",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "many near-duplicates",
+    "cell 49 is a 0 s video",
+    "Peloton/TV screens in several clips"
+   ]
+  },
+  {
+   "folder_id": "1LqzrRjtXygUrZmQ9Du0tEU4_s7RKJ9PQ",
+   "raw": false,
+   "score": 3,
+   "summary": "Published DITL Part 2 package: the reel plus a Q&A-sticker story over the stained-glass dome.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1Ci1dEOGSECo2u4CCMJYPP-1mQoWStkRk",
+   "raw": false,
+   "score": 3,
+   "summary": "Published History with Charles package: the vault reel plus two covers (letterboxed vault gate, black-and-white vault doors).",
+   "best": [],
+   "issues": [
+    "cover 1 is letterboxed with black bars"
+   ]
+  },
+  {
+   "folder_id": "1gLhpMGTVoy3WPV5qVospzs_y5s6-29mH",
+   "raw": false,
+   "score": 3,
+   "summary": "Published Glenmede tenant-testimonial package: the reel plus branded black-and-gold reel and story covers.",
+   "best": [
+    {
+     "n": 2,
+     "id": "1cEEQU72B9zJ5Y3aBtkRa8gVXZ_837cHK",
+     "score": 4,
+     "why": "Clean branded story cover (name, title, tenant logo) from the Tenant Testimonials series",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    }
+   ],
+   "issues": []
+  },
+  {
+   "folder_id": "1F7Xr7ER62CraMIAd58QMRLLPJJ_AuLOI",
+   "raw": false,
+   "score": 2,
+   "summary": "Published National Exercise Day package: the Peloton reel, a kettlebell story graphic and a Peloton cover.",
+   "best": [],
+   "issues": []
+  },
+  {
+   "folder_id": "1dVF2OyuVpPC6S0dWf09pnEHGoNcfb5KU",
+   "raw": false,
+   "score": 3,
+   "summary": "Published Rich Wyatt staff-spotlight package: the 11 s clip plus branded story and reel covers from the Staff Spotlights series.",
+   "best": [
+    {
+     "n": 1,
+     "id": "1zTdH_1L8Y2pBAqBtxnflYorXriGwmCAG",
+     "score": 4,
+     "why": "Branded Staff Spotlight story cover; shows the consistent series template",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    }
+   ],
+   "issues": [
+    "tenant/manager logo (Davis) on covers"
+   ]
+  },
+  {
+   "folder_id": "1H0sx5YRatHciTV9lFI4Vig2qYyG_73sk",
+   "raw": true,
+   "score": 3,
+   "summary": "Five long raw DJI drone clips around Mellon Square; the thumbnails mostly show ground-level takeoff frames.",
+   "best": [
+    {
+     "n": 2,
+     "id": "1u-wVwMOTTCzPxQ1jAluwwcPxgTfeLoAk",
+     "score": 4,
+     "why": "Top-down over Mellon Square's triangle paving; the only aerial UTB footage. Only the first frame is visible, so pull the clip to confirm",
+     "placements": [
+      "hero-loop"
+     ]
+    }
+   ],
+   "issues": [
+    "thumbnails are first frames only (mostly ground-level)",
+    "very long clips (67-327 s) need cutting"
+   ]
+  },
+  {
+   "folder_id": "1dmoGflxXFIXyLbFOEFAxt2s5mbrs9w1Y",
+   "raw": false,
+   "score": 3,
+   "summary": "Employee spotlight raw: a concierge standing at the blue-and-gold mosaic UNION TRUST wall, 2 photos and 2 clips.",
+   "best": [],
+   "issues": [
+    "near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1Tcua9wbqst7VnVva4lvyupKh9aXKRR5S",
+   "raw": false,
+   "score": 2,
+   "summary": "14 near-identical phone shots of magenta orchids in glass vases in the lobby, with the mosaic wall behind.",
+   "best": [],
+   "issues": [
+    "14 near-duplicates of one setup"
+   ]
+  },
+  {
+   "folder_id": "1bJaAvN_i6CACQw2ELYcT0Zd0lgkJO3Zo",
+   "raw": false,
+   "score": 2,
+   "summary": "Raw testimonial-montage clips: tenants chatting in the lobby and at The Speckled Egg bar.",
+   "best": [],
+   "issues": [
+    "casual handheld framing",
+    "talking mid-sentence"
+   ]
+  },
+  {
+   "folder_id": "15uGKqQqbNnDGgXvLOZYILblbynhcLYn3",
+   "raw": false,
+   "score": 2,
+   "summary": "August 2024 happy hour: Live Photo JPEG+MOV pairs of the Pirates-ticket giveaway, bar chats and selfies.",
+   "best": [],
+   "issues": [
+    "Live Photo pairs duplicate every shot",
+    "selfie-style, soft focus",
+    "Pirates logo on giveaway sign"
+   ]
+  },
+  {
+   "folder_id": "1xA5vFJ-aFW330YF6XKkL6_jhHwU7yV-F",
+   "raw": false,
+   "score": 2,
+   "summary": "Tenant-directory reference shots: storefronts and lobby logo walls for Del Frisco's, Eddie V's, Ritual House, Freshii, law firms and banks.",
+   "best": [],
+   "issues": [
+    "every frame is another brand's logo",
+    "duplicates of each sign"
+   ]
+  },
+  {
+   "folder_id": "1n61X5mXYFA8GDAqAVOQ9EdrqefVu-YLB",
+   "raw": false,
+   "score": 3,
+   "summary": "2024 tenant holiday happy hour photos: the rotunda packed with guests, bartenders, a strolling violinist, the mosaic ceiling and the marquee at night.",
+   "best": [
+    {
+     "n": 14,
+     "id": "1CvDfCS4GNQgbgglaVu-8vRrCw-gzvr4E",
+     "score": 4,
+     "why": "Balcony view down onto the decorated atrium full of guests",
+     "placements": [
+      "case-study",
+      "service:organic-social"
+     ]
+    },
+    {
+     "n": 29,
+     "id": "1KnAhWZTNxWH-hvl4Ih9AmE4xkcTQPtcW",
+     "score": 4,
+     "why": "Lit UNION TRUST BUILDING marquee at night with the church tower behind",
+     "placements": [
+      "case-study",
+      "cover"
+     ]
+    },
+    {
+     "n": 1,
+     "id": "1MhFU0fylR_mrVClGuwQmRHFXFQ06GqZu",
+     "score": 4,
+     "why": "Look up the rotunda rings with the party below",
+     "placements": [
+      "case-study",
+      "gallery"
+     ]
+    },
+    {
+     "n": 22,
+     "id": "1gW3XuLAzapqa3dQqr9Pcw1DhZaV1uecW",
+     "score": 4,
+     "why": "Ornate mosaic vault ceiling over Gothic stained glass",
+     "placements": [
+      "gallery"
+     ]
+    }
+   ],
+   "issues": [
+    "bartender sequence 6-9 near-duplicates"
+   ]
+  },
+  {
+   "folder_id": "1x73SQdosxsex1d7Fx8bX0E08DfevOijl",
+   "raw": true,
+   "score": 3,
+   "summary": "2024 holiday happy hour raw phone clips: rotunda tilts, crowd from the balcony, violinist, bar service, mosaic details and the marquee at night.",
+   "best": [
+    {
+     "n": 30,
+     "id": "1Oiai_J4A1-kfukD4hpuzg_7t8G2oGxb8",
+     "score": 4,
+     "why": "19 s slow look up the rotunda rings to the stained-glass oculus; clean, vertical",
+     "placements": [
+      "hero-loop"
+     ]
+    },
+    {
+     "n": 13,
+     "id": "1uPSc3yrWUmNDb0hcXNUcwpMtiotGFc4c",
+     "score": 4,
+     "why": "9 s balcony view down onto the busy decorated atrium",
+     "placements": [
+      "hero-loop",
+      "case-study"
+     ]
+    },
+    {
+     "n": 26,
+     "id": "1Mt5IZHe9h4qabt8T1kUu1azehc-1ABJU",
+     "score": 4,
+     "why": "12 s glowing marquee sign at night",
+     "placements": [
+      "case-study"
+     ]
+    }
+   ],
+   "issues": []
+  }
+ ],
+ "takeaways": "There is no UTB work on the site yet. For a new work/union-trust-building page, lead with the Q Theatre 'Revised' Caligari reel and Day in the Life Part 1 (Morning), with History with Charles (the vault) as the signature series and the Make-A-Wish recap as the proof point ($8k raised). Use the top-down rotunda spiral (Opening Ceremony cell 18, the only 5) as the cover, with the lit night exterior (cell 6) or the glowing marquee (HH 2024 cell 29) as the alternate. The building's architecture is the hero-loop gift: clean vertical rotunda tilts (HH 2024 video 30, Sept-Jan 351, Opening Ceremony 22), the vault-door move (April 2024 cell 41), the 0:17 atrium glide in DITL Part 1, and the Mellon Square drone clip once someone confirms it. The DITL series and the branded Staff Spotlight/Tenant Testimonial covers prove service:organic-social. Most of the rest (vendor tables, tenant-logo walls, Live Photo pairs, Peloton and cocktail reels) should stay off the site."
+}
