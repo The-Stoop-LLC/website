@@ -55,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://widgets.leadconnectorhq.com">
 <link rel="preload" href="assets/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/outfit-var-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=20260923c">
+<link rel="stylesheet" href="assets/css/site.css?v=20260923d">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -257,16 +257,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-gallery" aria-hidden="true">
-    <picture><source type="image/webp" srcset="assets/images/covers/x-shadyside-800.webp"><img src="assets/images/covers/x-shadyside-800.jpg" alt="" loading="eager" decoding="async" width="800" height="533"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/sylvan-gardens-800.webp"><img src="assets/images/covers/sylvan-gardens-800.jpg" alt="" loading="eager" decoding="async" width="800" height="533"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/dr-tea-800.webp"><img src="assets/images/covers/dr-tea-800.jpg" alt="" loading="lazy" decoding="async" width="800" height="1067"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/iron-24-800.webp"><img src="assets/images/covers/iron-24-800.jpg" alt="" loading="lazy" decoding="async" width="800" height="450"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/csmp-800.webp"><img src="assets/images/covers/csmp-800.jpg" alt="" loading="lazy" decoding="async" width="800" height="1200"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/mfpaa-800.webp"><img src="assets/images/covers/mfpaa-800.jpg" alt="" loading="lazy" decoding="async" width="800" height="600"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/sxp-800.webp"><img src="assets/images/covers/sxp-800.jpg" alt="" loading="lazy" decoding="async" width="800" height="1200"></picture>
-    <picture><source type="image/webp" srcset="assets/images/covers/x-shadyside-alt-800.webp"><img src="assets/images/covers/x-shadyside-alt-800.jpg" alt="" loading="lazy" decoding="async" width="800" height="534"></picture>
+  <!-- Background loop: the poster paints first, assets/js/site.js loads the video
+       after the page (skipped for reduced motion and Data Saver). Rebuilt from
+       scripts/hero_loop.json by the Build hero loop workflow. -->
+  <div class="hero-media" aria-hidden="true">
+    <picture>
+      <source media="(orientation: portrait)" type="image/webp" srcset="assets/video/hero-poster-portrait.webp">
+      <source media="(orientation: portrait)" srcset="assets/video/hero-poster-portrait.jpg">
+      <source type="image/webp" srcset="assets/video/hero-poster.webp">
+      <img src="assets/video/hero-poster.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+    </picture>
+    <video class="hero-video" muted loop playsinline preload="none" disablepictureinpicture tabindex="-1"
+      data-src-1080="assets/video/hero-1080.mp4" data-src-720="assets/video/hero-720.mp4" data-src-portrait="assets/video/hero-portrait.mp4"></video>
   </div>
+  <button class="hero-video-toggle" type="button" aria-label="Pause background video" hidden></button>
   <div class="hero-bg-text" aria-hidden="true">STOOP</div>
   <div class="hero-label">Digital Advertising × Influencer Marketing</div>
   <h1>
@@ -756,7 +760,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- GoHighLevel External Tracking: page views, lead attribution and the /contact form.
      The onload/onerror flags let assets/js/contact.js tell whether it loaded. -->
 <script defer src="https://link.thestooppgh.com/js/external-tracking.js" data-tracking-id="tk_00bf48d3b0b44df5a72309753dfcfd62" onload="window.stoopTracker='loaded'" onerror="window.stoopTracker='failed'"></script>
-<script src="assets/js/site.js?v=20260922d" defer></script>
+<script src="assets/js/site.js?v=20260923a" defer></script>
 <!-- GoHighLevel Tracking & Chat -->
 <script defer src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="VFfiJB9V5cFgFY6M9QWC"></script>
 </body>

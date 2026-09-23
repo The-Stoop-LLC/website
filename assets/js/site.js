@@ -255,4 +255,68 @@
       }
     });
   }
+
+  /* ---------- Homepage hero video ----------
+     The poster <picture> paints first. After the page has loaded, the video
+     gets a file sized for the screen (9:16 when the viewport is portrait) and
+     fades in only once frames are playing, so a blocked autoplay (iOS Low
+     Power Mode) just leaves the poster. Skipped for reduced motion and Data
+     Saver. It pauses off screen and in background tabs, and the button stops
+     it for the rest of the visit (WCAG 2.2.2). */
+  var heroVideo = document.querySelector('.hero-video');
+  var saveData = navigator.connection && navigator.connection.saveData;
+  if (heroVideo && !saveData) {
+    var videoToggle = document.querySelector('.hero-video-toggle');
+    var portrait = window.matchMedia('(orientation: portrait)');
+    var userPaused = false;
+    var heroInView = true;
+    var pickVideo = function () {
+      if (portrait.matches) return heroVideo.getAttribute('data-src-portrait');
+      var px = heroVideo.parentNode.clientWidth * (window.devicePixelRatio || 1);
+      return heroVideo.getAttribute(px > 1400 ? 'data-src-1080' : 'data-src-720');
+    };
+    var syncVideo = function () {
+      if (userPaused || !heroInView || document.hidden || reduceMotion.matches) {
+        heroVideo.pause();
+        return;
+      }
+      var playing = heroVideo.play();
+      if (playing && playing.catch) playing.catch(function () {});
+    };
+    var loadVideo = function () {
+      // Some Linux builds of Chromium and Firefox lack H.264: keep the poster, skip the download.
+      if (reduceMotion.matches || !heroVideo.canPlayType('video/mp4; codecs="avc1.640028"')) return;
+      var src = pickVideo();
+      if (heroVideo.getAttribute('src') === src) return;
+      heroVideo.classList.remove('is-playing');
+      heroVideo.muted = true;
+      heroVideo.src = src;
+      syncVideo();
+    };
+    heroVideo.addEventListener('playing', function () {
+      heroVideo.classList.add('is-playing');
+      if (videoToggle) videoToggle.hidden = false;
+    });
+    if (videoToggle) {
+      videoToggle.addEventListener('click', function () {
+        userPaused = !userPaused;
+        videoToggle.classList.toggle('is-paused', userPaused);
+        videoToggle.setAttribute('aria-label', (userPaused ? 'Play' : 'Pause') + ' background video');
+        syncVideo();
+      });
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        heroInView = entries[0].isIntersecting;
+        syncVideo();
+      }).observe(heroVideo.parentNode);
+    }
+    document.addEventListener('visibilitychange', syncVideo);
+    if (portrait.addEventListener) {
+      portrait.addEventListener('change', loadVideo);
+      reduceMotion.addEventListener('change', function () { loadVideo(); syncVideo(); });
+    }
+    if (document.readyState === 'complete') loadVideo();
+    else window.addEventListener('load', loadVideo);
+  }
 })();
