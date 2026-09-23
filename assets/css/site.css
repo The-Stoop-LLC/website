@@ -186,6 +186,14 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     pointer-events: none;
   }
 
+/* Small hero copy sits over moving footage: a soft shadow keeps it legible
+   whatever frame is behind it. */
+.hero-label,
+.hero-sub,
+.hero-tag {
+    text-shadow: 0 1px 14px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.6);
+  }
+
 .hero > .hero-video-toggle {
     position: absolute;
     right: 24px;
@@ -1882,6 +1890,12 @@ footer {
   /* HOMEPAGE */
   section { padding: 80px 20px; }
   .hero { padding: 0 20px; }
+  .hero-media::after {
+    background:
+      radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.68) 55%, rgba(0,0,0,0.55) 100%),
+      linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6) 100%);
+  }
+  .hero-sub { color: #cfcfcf; }
   .hero-scroll, .hero-tag { display: none; }
   .hero-cta { flex-direction: column; }
   .services-grid { grid-template-columns: 1fr; }
