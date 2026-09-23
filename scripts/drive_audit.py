@@ -386,9 +386,12 @@ def thumb(drive: Drive, link: str | None) -> Image.Image | None:
     return None
 
 
-def mosaic(drive: Drive, folder: str, rows: list[dict], raw_meta: dict[str, dict]) -> list[dict]:
+def mosaic(drive: Drive, folder: str, rows: list[dict], raw_meta: dict[str, dict],
+           limit: int | None = None) -> list[dict]:
     items = [r for r in rows if r["parent"] == folder and r["kind"] in ("image", "video")]
     items.sort(key=lambda r: r["name"].lower())
+    if limit and len(items) > limit:  # raw folders: an even sample, not every frame
+        items = [items[round(i * (len(items) - 1) / (limit - 1))] for i in range(limit)]
     per, cols, cell = 48, 8, 200
     sheets = []
     with ThreadPoolExecutor(8) as pool:
@@ -440,12 +443,17 @@ def make_sheets(drive: Drive, rows: list[dict], config: dict) -> None:
     with ThreadPoolExecutor(int(config.get("workers", 6))) as pool:
         list(pool.map(one, todo))
 
-    folders = [f for f in config.get("mosaics", []) if f not in index["mosaics"]]
-    if folders:
-        for fid in folders:
-            raw_meta = {f["id"]: f for f in drive.list(f"'{fid}' in parents and trashed=false")}
-            index["mosaics"][fid] = mosaic(drive, fid, rows, raw_meta)
-            print(f"mosaic {by_id.get(fid, {}).get('name', fid)}: {len(index['mosaics'][fid])} sheet(s)", flush=True)
+    # entries are a folder ID, or {"id": ..., "max": N} to sample N items evenly
+    folders = [f if isinstance(f, dict) else {"id": f} for f in config.get("mosaics", [])]
+    folders = [f for f in folders if f["id"] not in index["mosaics"]]
+    print(f"mosaics: {len(folders)} folders to make", flush=True)
+    for n, f in enumerate(folders, 1):
+        fid = f["id"]
+        raw_meta = {m["id"]: m for m in drive.list(f"'{fid}' in parents and trashed=false")}
+        index["mosaics"][fid] = mosaic(drive, fid, rows, raw_meta, f.get("max"))
+        if n % 25 == 0:
+            print(f"  {n}/{len(folders)}", flush=True)
+            index_path.write_text(json.dumps(index, indent=1))
     index_path.write_text(json.dumps(index, indent=1))
     errors = {k: v for k, v in index["videos"].items() if "error" in v}
     print(f"sheets done; {len(errors)} video errors", flush=True)
