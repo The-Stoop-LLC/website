@@ -224,13 +224,16 @@ def _orientation(file_id: str) -> str:
 
 def render_image(file: dict, label: str, index: int) -> str:
     """One <a class="cs-tile"> photo tile. Uses the localized JPEG in assets/images/drive/
-    when present (run scripts/localize_drive_images.py), otherwise hotlinks the Drive thumbnail."""
+    when present (run scripts/localize_drive_images.py), otherwise hotlinks the Drive thumbnail.
+    The tile shows the WebP thumbnail from scripts/make_thumbs.py when one exists; the href
+    (opened by the lightbox) always points at the full JPEG."""
     file_id = file["id"]
     alt = html.escape(f"{label} - {index}" if label else file.get("name", file_id))
     local = LOCAL_IMAGE_DIR / f"{file_id}.jpg"
     if local.exists():
-        src = f"../assets/images/drive/{file_id}.jpg"
-        href = src
+        href = f"../assets/images/drive/{file_id}.jpg"
+        thumb = LOCAL_IMAGE_DIR / "thumbs" / f"{file_id}.webp"
+        src = f"../assets/images/drive/thumbs/{file_id}.webp" if thumb.exists() else href
     else:
         src = f"https://drive.google.com/thumbnail?id={file_id}&sz=w800"
         href = f"https://drive.google.com/thumbnail?id={file_id}&sz=w1600"
