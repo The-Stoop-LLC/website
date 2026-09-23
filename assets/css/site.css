@@ -62,6 +62,10 @@ body {
 
 ::selection { background: var(--yellow); color: var(--black); }
 
+/* Cover images are <picture> (WebP + JPEG fallback); keep the <img> laid out
+   as if it were the direct child, so existing cover styles apply unchanged. */
+picture { display: contents; }
+
 /* GRAIN OVERLAY */
   body::after {
     content: '';
