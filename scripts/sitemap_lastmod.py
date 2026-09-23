@@ -65,7 +65,7 @@ def image_urls(path, cap=60):
         # ("more case studies") aren't this page's images; only listing
         # pages (home, /work/) claim every card cover.
         context = s[max(0, m.start() - 300):m.start()]
-        if not listing and "case-hero-cover" not in context and "hero-gallery" not in context:
+        if not listing and "case-hero-cover" not in context:
             continue
         stem = m.group(1)
         for variant in ("-1600.jpg", "-800.jpg", ".jpg"):

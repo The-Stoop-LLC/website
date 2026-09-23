@@ -9,7 +9,9 @@ Plain HTML, CSS and JavaScript. No build step, no framework.
 
 Every push to `main` deploys to GitHub Pages through
 `.github/workflows/deploy-pages.yml` (about a minute). GitHub Pages serves
-`/contact` from `contact.html`, so extensionless links work.
+`/contact` from `contact.html`, so extensionless links work. A finished
+"Build Drive galleries" run also triggers a deploy, since the commits it
+pushes don't count as pushes.
 
 After changing `assets/css/site.css` or `assets/js/site.js`, bump the `?v=`
 on every page's `<link>`/`<script>` so browsers fetch the new file.
@@ -64,6 +66,7 @@ pageviews would count twice.
 | `scripts/localize_drive_images.py` | Copies Drive-hosted images and video posters into the repo (runs in that Action). |
 | `scripts/make_thumbs.py` | Builds WebP thumbnails for gallery tiles (runs in that Action). |
 | `scripts/gallery_alt.json` | Hand-written alt text for gallery photos, keyed by Drive file id. |
+| `scripts/hero_loop.json` | The homepage background video's cut list (Drive file, start, length, crop anchors). Edit it on a branch and push: the "Build hero loop" Action downloads the clips, rebuilds `assets/video/` and commits it to that branch. Its `scout` list writes contact sheets to `_scout/` for picking shots; empty it before merging. |
 | `scripts/sitemap_lastmod.py --write` | After content changes: sets each sitemap `<lastmod>` from the page's schema dates and lists its images. |
 
 ## Brand
