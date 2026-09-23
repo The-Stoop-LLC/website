@@ -25,7 +25,8 @@ import subprocess
 import sys
 def file_for(url):
     p=url.replace("https://thestooppgh.com/","")
-    return (p+"index.html") if (p=="" or p.endswith("/")) else p
+    if p=="" or p.endswith("/"): return p+"index.html"
+    return p if p.endswith(".html") else p+".html"  # GitHub Pages serves /contact from contact.html
 def schema_dates(path):
     s=open(path,encoding="utf-8").read(); mod=[]; pub=[]
     def walk(o, top):
