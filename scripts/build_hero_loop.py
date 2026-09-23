@@ -326,7 +326,7 @@ def encode(parts: list[Path], tmp: Path, name: str, w: int, h: int, crf: int, kb
     out = VIDEO_DIR / f"{name}.mp4"
     run(["ffmpeg", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(listing),
          "-vf", f"scale={w}:{h}:flags=lanczos,setsar=1,format=yuv420p",
-         "-an", "-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-crf", str(crf),
+         "-an", "-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-level:v", "4.0", "-crf", str(crf),
          "-maxrate", f"{kbps}k", "-bufsize", f"{kbps * 2}k", "-g", str(FPS * 2),
          "-movflags", "+faststart", "-map_metadata", "-1", "-y", str(out)])
     return out
