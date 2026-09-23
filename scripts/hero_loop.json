@@ -1,50 +1,155 @@
 {
   "_readme": "Cut list for the homepage hero loop. Edit on a branch; the Build hero loop workflow rebuilds assets/video/ there. See scripts/build_hero_loop.py for the fields.",
-  "scout": [
+  "scout": [],
+  "segments": [
     {
+      "note": "Iron 24: trainer and client laughing (also the poster)",
+      "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
+      "start": 0.3,
+      "dur": 1.5,
+      "mx": 0.7
+    },
+    {
+      "note": "MFPAA: medics working in the ambulance",
+      "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
+      "start": 17.2,
+      "dur": 1.3,
+      "mx": 0.8
+    },
+    {
+      "note": "Stack: X Shadyside crew, Dr. Tea drinks, Sylvan Gardens drone",
+      "dur": 1.6,
+      "stack": [
+        {
+          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+          "start": 5.3
+        },
+        {
+          "id": "1qAac42eeX7QrLXupI26TZPPkpe-sNmIA",
+          "start": 10.3
+        },
+        {
+          "id": "1lcvHws1NOnFeoTxPH0a080z_mCUbXWvt",
+          "start": 0.5
+        }
+      ]
+    },
+    {
+      "note": "X Shadyside crew under red light",
+      "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+      "start": 5.3,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "Iron 24: drone through the red-light room",
+      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
+      "start": 38.0,
+      "dur": 1.3
+    },
+    {
+      "note": "SXP: sled push",
+      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
+      "start": 24.9,
+      "dur": 1.3,
+      "mx": 0.45
+    },
+    {
+      "note": "Iron 24: cable work against the orange wall",
+      "id": "1ES7F6bl4UuxhhCdjfe-BpbNGei-doEYF",
+      "start": 4.3,
+      "dur": 1.3
+    },
+    {
+      "note": "Stack: Dr. Tea drink, X Shadyside deadlift, Lucid Juice",
+      "dur": 1.6,
+      "stack": [
+        {
+          "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
+          "start": 1.2
+        },
+        {
+          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+          "start": 26.2
+        },
+        {
+          "id": "16WNhsLUswbmsWj0H31djgYLrtBIMNyR4",
+          "start": 3.2
+        }
+      ]
+    },
+    {
+      "note": "Dr. Tea: two drinks, cheers",
+      "id": "1qAac42eeX7QrLXupI26TZPPkpe-sNmIA",
+      "start": 10.3,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "Iron 24: cold plunge",
+      "id": "1tKugk68mh8h1-Ie2Oj1ob5ZNFNGXo2zN",
+      "start": 10.2,
+      "dur": 1.3,
+      "mx": 0.3
+    },
+    {
+      "note": "MFPAA: crew group shot",
+      "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
+      "start": 52.4,
+      "dur": 1.3,
+      "mx": 0.62
+    },
+    {
+      "note": "Iron 24: trainer spotting a dumbbell press",
+      "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
+      "start": 4.3,
+      "dur": 1.4,
+      "mx": 0.45
+    },
+    {
+      "note": "Stack: Sylvan Gardens walkway, X Shadyside treadmills, CSMP tomato soup",
+      "dur": 1.6,
+      "stack": [
+        {
+          "id": "1kGlDgZlsrjqYST7hgmQJ0iCf4mQ7gP2W",
+          "start": 6.0
+        },
+        {
+          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+          "start": 11.0
+        },
+        {
+          "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
+          "start": 19.6
+        }
+      ]
+    },
+    {
+      "note": "Sylvan Gardens: drone over a finished front yard",
+      "id": "1lcvHws1NOnFeoTxPH0a080z_mCUbXWvt",
+      "start": 0.5,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "Iron 24: drone across the gym floor",
+      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
+      "start": 18.6,
+      "dur": 1.4
+    },
+    {
+      "note": "CSMP: cream drizzled into tomato soup",
       "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
-      "label": "CSMP - Fire Roasted Tomato Soup (Chef's Choice)"
+      "start": 19.6,
+      "dur": 1.3,
+      "only": "portrait"
     },
     {
-      "id": "1vdml70b7rdW83lhTi7R-nR3LvwGXX3j6",
-      "label": "CSMP - Turkey Sausage (Chef's Choice)"
-    },
-    {
-      "id": "1VeTPAH-Ao7wdruGD6BF221BQT9vJ6crL",
-      "label": "CSMP - Roasted Tomato Sauce Pasta (Chef's Choice)"
-    },
-    {
-      "id": "1kGyzMbB787XQ1utLaeApSNzd29jLA8zN",
-      "label": "CSMP - A La Carte Sauces (Chef's Choice)"
-    },
-    {
-      "id": "1orCn-wbmnngH3xhEh3jg8U5RBXU5GLXc",
-      "label": "CSMP - Brocc Cheddar Soup (Chef's Choice)"
-    },
-    {
-      "id": "1pw1qdSMPW35A6TrR86dm2bs5te04ATPz",
-      "label": "CSMP - Eggplant Chermoula (Chef's Choice)"
-    },
-    {
-      "id": "1LLnW4yY--iqShYNQDEe38p7PzSEhfPke",
-      "label": "CSMP - Stir Fry Tofu (Influencer in the Kitchen)"
-    },
-    {
-      "id": "1UH6ajQTDE2zwb2HARZm60867ZHZK3HHZ",
-      "label": "CSMP - Freeze Meals"
-    },
-    {
-      "id": "1CfaOPfzntbsMjGFZZPX84gPn4Ctb2Ia1",
-      "label": "CSMP - Hibachi"
-    },
-    {
-      "id": "1f428PnbQiqm9KR5N2rDoiRBLyvXYvrRL",
-      "label": "CSMP - Mediterranean Chicken Wrap"
-    },
-    {
-      "id": "1nlC30qz3FT8uBRZTYU38NLqcHcbV9YrI",
-      "label": "CSMP - Vince, Expert in the Kitchen"
+      "note": "SXP: coached squat",
+      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
+      "start": 26.3,
+      "dur": 1.3,
+      "only": "landscape"
     }
-  ],
-  "segments": []
+  ]
 }
