@@ -26,6 +26,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PWLD85D9');</script>
 <!-- End Google Tag Manager -->
+<!-- Lead conversion: fires once per browser session per form, so a
+     refresh of this page doesn't count a second lead. -->
+<script>
+  (function () {
+    var key = 'lead_sent_organic-social';
+    try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, '1'); } catch (e) {}
+    gtag('event', 'generate_lead', { form_name: 'Organic Social' });
+  })();
+</script>
 <script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Thank You — Organic Social | THE STOOP</title>
