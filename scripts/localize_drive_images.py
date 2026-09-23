@@ -19,9 +19,9 @@ Behavior:
   - Downloads each unique file id once, at the largest size referenced
     (minimum w800), to assets/images/drive/<id>.jpg. Already-downloaded
     ids are skipped, so re-runs are cheap and idempotent.
-  - Rewrites the <img> srcs to the local path (correct relative prefix per
-    page depth). Video <iframe> previews are left on Drive — they need the
-    Drive player.
+  - Rewrites the <img> srcs and gallery tile hrefs to the local path (correct
+    relative prefix per page depth). Video <iframe> previews are left on
+    Drive — they need the Drive player.
 
 Note: if you re-run scripts/build_galleries.py it will regenerate gallery
 bodies with Drive thumbnail URLs — run this script again afterwards.
@@ -81,10 +81,14 @@ def main() -> int:
             failed.add(fid)
             print(f"[{i}/{len(wanted)}] {fid} FAILED: {e}", file=sys.stderr)
 
-    # 3. rewrite srcs (only for ids that downloaded successfully);
-    #    img tags only — iframe video previews stay on Drive.
+    # 3. rewrite srcs (only for ids that downloaded successfully): <img> srcs
+    #    and gallery tile hrefs (what the lightbox opens). Iframe video
+    #    previews stay on Drive — they need the Drive player.
     img_re = re.compile(
         r'(<img[^>]*?src=")https://drive\.google\.com/thumbnail\?id=([\w-]+)[^"]*(")'
+    )
+    href_re = re.compile(
+        r'(<a class="cs-tile[^"]*"[^>]*?href=")https://drive\.google\.com/thumbnail\?id=([\w-]+)[^"]*(")'
     )
     changed = 0
     for page in site_pages():
@@ -98,7 +102,7 @@ def main() -> int:
                 return m.group(0)
             return f"{m.group(1)}{prefix}assets/images/drive/{fid}.jpg{m.group(3)}"
 
-        new = img_re.sub(rewrite, html)
+        new = href_re.sub(rewrite, img_re.sub(rewrite, html))
         if new != html:
             page.write_text(new)
             changed += 1

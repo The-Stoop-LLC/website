@@ -1025,6 +1025,7 @@ a.case-card {
     text-align: center;
     padding: 160px 40px;
     position: relative;
+    overflow: hidden; /* keeps the oversized .cta-bg text from widening the page on phones */
   }
 
 .cta-section .section-title {
@@ -1178,15 +1179,6 @@ html.js .reveal.visible { opacity: 1; transform: translateY(0); }
 /* RESPONSIVE */
 
 
-:root {
-    --black: #000000;
-    --white: #ffffff;
-    --yellow: #FFCC00;
-    --yellow-bright: #FFD700;
-    --grey: #1a1a1a;
-    --mid: #a0a0a0;
-    --dark-grey: #111111;
-  }
 
 body::after {
     content: '';
@@ -1394,6 +1386,18 @@ body::after {
     color: var(--yellow);
     margin-bottom: 12px;
   }
+
+/* Direct contact line above each embedded form, so a blocked or slow
+   form embed never leaves a visitor without a way to reach us. */
+.form-alt {
+    font-size: 0.8125rem;
+    line-height: 1.7;
+    color: var(--mid);
+    margin: -16px 0 24px;
+  }
+
+.form-alt a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.form-alt a:hover { color: var(--yellow); }
 
 .gallery h2 {
     font-family: 'Outfit', sans-serif;
@@ -2326,7 +2330,7 @@ footer {
 
 .svc-band .cs-meta { margin-bottom: 32px; }
 
-.svc-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; max-width: 1100px; margin: 0 auto; text-align: left; }
+.svc-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px; max-width: 1100px; margin: 0 auto; text-align: left; }
 
 .cs-videos--pair { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
 

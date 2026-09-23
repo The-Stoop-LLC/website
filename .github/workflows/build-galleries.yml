@@ -37,6 +37,15 @@ jobs:
           DEBUG_GALLERY: "1"
         run: python3 scripts/build_galleries.py
 
+      # Drive thumbnails are rate-limited and not a CDN, so every image and
+      # video poster the galleries reference is copied into the repo, then
+      # given a small WebP thumbnail for the tile.
+      - name: Localize Drive images and posters
+        run: python3 scripts/localize_drive_images.py
+
+      - name: Build WebP thumbnails
+        run: python3 scripts/make_thumbs.py
+
       - name: Commit and push if changed
         run: |
           if git diff --quiet; then

@@ -224,13 +224,16 @@ def _orientation(file_id: str) -> str:
 
 def render_image(file: dict, label: str, index: int) -> str:
     """One <a class="cs-tile"> photo tile. Uses the localized JPEG in assets/images/drive/
-    when present (run scripts/localize_drive_images.py), otherwise hotlinks the Drive thumbnail."""
+    when present (run scripts/localize_drive_images.py), otherwise hotlinks the Drive thumbnail.
+    The tile shows the WebP thumbnail from scripts/make_thumbs.py when one exists; the href
+    (opened by the lightbox) always points at the full JPEG."""
     file_id = file["id"]
     alt = html.escape(f"{label} - {index}" if label else file.get("name", file_id))
     local = LOCAL_IMAGE_DIR / f"{file_id}.jpg"
     if local.exists():
-        src = f"../assets/images/drive/{file_id}.jpg"
-        href = src
+        href = f"../assets/images/drive/{file_id}.jpg"
+        thumb = LOCAL_IMAGE_DIR / "thumbs" / f"{file_id}.webp"
+        src = f"../assets/images/drive/thumbs/{file_id}.webp" if thumb.exists() else href
     else:
         src = f"https://drive.google.com/thumbnail?id={file_id}&sz=w800"
         href = f"https://drive.google.com/thumbnail?id={file_id}&sz=w1600"
@@ -240,16 +243,27 @@ def render_image(file: dict, label: str, index: int) -> str:
     )
 
 
+def _poster_src(file_id: str) -> str:
+    """Local poster for a video: the WebP thumbnail, else the localized JPEG, else Drive's
+    own thumbnail (scripts/localize_drive_images.py downloads those on the next run)."""
+    if (LOCAL_IMAGE_DIR / "thumbs" / f"{file_id}.webp").exists():
+        return f"../assets/images/drive/thumbs/{file_id}.webp"
+    if (LOCAL_IMAGE_DIR / f"{file_id}.jpg").exists():
+        return f"../assets/images/drive/{file_id}.jpg"
+    return f"https://drive.google.com/thumbnail?id={file_id}&sz=w800"
+
+
 def render_video(file: dict, label: str, index: int) -> str:
-    """One click-to-play <figure class="cs-video">. The poster is Drive's own thumbnail of the
-    video; assets/js/site.js swaps in the preview iframe when the play button is pressed."""
+    """One click-to-play <figure class="cs-video">. The poster is a local copy of Drive's
+    thumbnail of the video when one exists; assets/js/site.js swaps in the preview iframe
+    when the play button is pressed."""
     file_id = file["id"]
     title = html.escape(f"{label} - {index}" if label else file.get("name", file_id))
     return (
         f'    <figure class="cs-video reveal cs-video--portrait" '
         f'data-src="https://drive.google.com/file/d/{file_id}/preview">\n'
         f'      <div class="cs-video-frame">'
-        f'<img src="https://drive.google.com/thumbnail?id={file_id}&sz=w800" alt="" loading="lazy" decoding="async">'
+        f'<img src="{_poster_src(file_id)}" alt="" loading="lazy" decoding="async">'
         f'<button class="cs-video-play" type="button" aria-label="Play: {title}"></button></div>\n'
         f"    </figure>"
     )

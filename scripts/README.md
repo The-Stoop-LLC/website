@@ -115,6 +115,21 @@ git add -p         # commit the parts you want
 The script prints one line per file it touched and a final summary. Exit
 code is non-zero only if auth fails or a Drive API call fails.
 
+## Localized images and thumbnails
+
+Drive thumbnail URLs are rate-limited and can break, so the site serves
+copies from the repo. After `build_galleries.py`, two more scripts run:
+
+1. `localize_drive_images.py` downloads every Drive thumbnail the pages
+   reference (photos, tile links and video posters) into
+   `assets/images/drive/<id>.jpg` and rewrites the pages to use them.
+2. `make_thumbs.py` builds an 800px WebP in `assets/images/drive/thumbs/`
+   for each of those and points gallery tiles and posters at it. Tile
+   links (what the lightbox opens) keep the full JPEG.
+
+Both are idempotent. `build_galleries.py` emits the local copies directly
+once they exist, so later rebuilds don't revert to Drive URLs.
+
 ## Running in CI
 
 `.github/workflows/build-galleries.yml` runs the same script:
@@ -123,6 +138,8 @@ code is non-zero only if auth fails or a Drive API call fails.
   workflow), and
 - **daily on a schedule** so newly added Drive files show up without a
   manual trigger.
+
+It runs the gallery build, then the localize and thumbnail steps above.
 
 The workflow commits the regenerated HTML back to `main` only if there's
 a real diff, so it stays quiet when nothing changed.
