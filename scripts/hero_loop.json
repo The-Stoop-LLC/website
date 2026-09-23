@@ -1,154 +1,153 @@
 {
   "_readme": "Cut list for the homepage hero loop. Edit on a branch; the Build hero loop workflow rebuilds assets/video/ there. See scripts/build_hero_loop.py for the fields.",
-  "scout": [
+  "scout": [],
+  "segments": [
     {
-      "id": "1ZZMyqO1OY8OooLgCHofXG4J3FdscVtXk",
-      "label": "Iron 24 Corporate 1"
-    },
-    {
-      "id": "1tKugk68mh8h1-Ie2Oj1ob5ZNFNGXo2zN",
-      "label": "Iron 24 Corporate 2"
-    },
-    {
-      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
-      "label": "Iron 24 Corporate 3"
-    },
-    {
-      "id": "1WMOIgYKQIj6XfCPKKkgPj1ek41lQdNDb",
-      "label": "Iron 24 Corporate 5"
-    },
-    {
-      "id": "1ES7F6bl4UuxhhCdjfe-BpbNGei-doEYF",
-      "label": "Iron 24 Corporate 6"
-    },
-    {
+      "note": "Iron 24: trainer and client laughing (also the poster)",
       "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
-      "label": "Iron 24 Corporate 7"
+      "start": 0.3,
+      "dur": 1.5,
+      "mx": 0.7
     },
     {
-      "id": "1ipWhOJGhohFF8wOSmP_sWPOVWMqeotAr",
-      "label": "Iron 24 Corporate 8"
-    },
-    {
-      "id": "196mp1xQymE2Gtj1elhCVRaTH1zm2IuuF",
-      "label": "Iron 24 Corporate 9"
-    },
-    {
-      "id": "1Mrn1CnIh8_My1I-Gne0oT9EnKHCutw0u",
-      "label": "Iron 24 Corporate 10"
-    },
-    {
-      "id": "1nNqIu2kblBMVLza3VtytHPhn_5J25tJ7",
-      "label": "Iron 24 Corporate 11"
-    },
-    {
-      "id": "19hO1Po72WPq_AYob8kwvjXceEXNMgNQV",
-      "label": "Iron 24 Corporate 12"
-    },
-    {
-      "id": "1YcLlvFUwxETE7RndNoHPZn-N9E2F6_5q",
-      "label": "Iron 24 Corporate 13"
-    },
-    {
-      "id": "17oeeIh3rAsDOk54otJAWAB1XcgtiiRNt",
-      "label": "Iron 24 Corporate 14"
-    },
-    {
-      "id": "1T9C0tRiLc1tLyjvIcX-3lSPnAOdpaZo-",
-      "label": "Iron 24 Corporate 15"
-    },
-    {
-      "id": "1Q5wkS_hfftYMRVZ9ZTqIYnjFa7CPOSw-",
-      "label": "Iron 24 Corporate 16"
-    },
-    {
-      "id": "19o_zayCS5A9vtwysrbu_6p1osB8WCeze",
-      "label": "Iron 24 Local Franchise 5"
-    },
-    {
-      "id": "1iswAPA87w2pJD0DsTEVIR4BAcGJyHiJD",
-      "label": "Iron 24 influencer reel"
-    },
-    {
-      "id": "1SIpv0NNu9uyzS43UcO0GftPV9JhVKwcT",
-      "label": "SXP Brand Video - Talking Head"
-    },
-    {
-      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
-      "label": "SXP Brand Video - Website Intro"
-    },
-    {
+      "note": "MFPAA: medics working in the ambulance",
       "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
-      "label": "MFPAA Capital Campaign - 60 Second"
+      "start": 17.2,
+      "dur": 1.3
     },
     {
-      "id": "1bZbL_TtFYxXzCV6qX7k1MHF-ZgeRl_mP",
-      "label": "MFPAA Capital Campaign - 30 Second"
+      "note": "Stack: X Shadyside crew, Dr. Tea pour, Sylvan Gardens team",
+      "dur": 1.6,
+      "stack": [
+        {
+          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+          "start": 5.3
+        },
+        {
+          "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
+          "start": 7.3
+        },
+        {
+          "id": "1XL3EppdUFL4fONWQhQsCfue-mnsLntkG",
+          "start": 1.0
+        }
+      ]
     },
     {
-      "id": "1ke8iiKC92dUQLttVvT2sr7bi_iQhkF6r",
-      "label": "MFPAA Impact - Christine"
-    },
-    {
-      "id": "15PK_4A_FvpMupFqGUcNDcYcuSWmxxW-3",
-      "label": "MFPAA Impact - Chief Dell (16x9)"
-    },
-    {
-      "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
-      "label": "MFPAA Subscription - 911"
-    },
-    {
-      "id": "1VARuUyREXpbVLWV9-xLbwTB7LbP4LjuM",
-      "label": "MFPAA Subscription - 7|60"
-    },
-    {
-      "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
-      "label": "MFPAA Subscription - 7|90"
-    },
-    {
-      "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
-      "label": "MFPAA Subscription - Streaming"
-    },
-    {
-      "id": "1WM-vk7qO0R-e36UwCx9GxSsfIlDLWx5f",
-      "label": "MFPAA Subscription - It's Your Job"
-    },
-    {
-      "id": "1XL3EppdUFL4fONWQhQsCfue-mnsLntkG",
-      "label": "Sylvan Gardens - Team B-Roll (portrait)"
-    },
-    {
-      "id": "1NfxA9Oy6Jmmwb9lBH0MgELHJOnOCnrSv",
-      "label": "Sylvan Gardens - Spring Cleanup (portrait)"
-    },
-    {
-      "id": "1ENqPGZPvOfwLO3n5sSIwWJ1xwL0WkuLB",
-      "label": "Sylvan Gardens - Logo on Truck (portrait)"
-    },
-    {
-      "id": "1sZuf7XY9b-rBFT2aqVwnsEjpvNXrmnSh",
-      "label": "CSMP Spotlight 1 (portrait)"
-    },
-    {
-      "id": "13AuqBsIxrGGCkHUX3VPZAbEcvFG6tmJp",
-      "label": "CSMP Spotlight 2 (portrait)"
-    },
-    {
-      "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
-      "label": "Dr. Tea - LoveIsBrewing ad (portrait)"
-    },
-    {
-      "id": "16WNhsLUswbmsWj0H31djgYLrtBIMNyR4",
-      "label": "X Shadyside - Lucid Juice reel (portrait)"
-    },
-    {
-      "id": "1E3whyozNvoigOpgf2tgKnZu1klGlr9nM",
-      "label": "X Shadyside - Fall into Fitness ad (portrait)"
-    },
-    {
+      "note": "X Shadyside crew under red light",
       "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
-      "label": "X Shadyside - Group edit (portrait)"
+      "start": 5.3,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "Iron 24: drone through the red-light room",
+      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
+      "start": 38.0,
+      "dur": 1.3
+    },
+    {
+      "note": "SXP: sled push",
+      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
+      "start": 24.9,
+      "dur": 1.3,
+      "mx": 0.45
+    },
+    {
+      "note": "Iron 24: cable work against the orange wall",
+      "id": "1ES7F6bl4UuxhhCdjfe-BpbNGei-doEYF",
+      "start": 4.3,
+      "dur": 1.3
+    },
+    {
+      "note": "Stack: Dr. Tea drink, X Shadyside deadlift, Lucid Juice",
+      "dur": 1.6,
+      "stack": [
+        {
+          "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
+          "start": 1.2
+        },
+        {
+          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+          "start": 26.2
+        },
+        {
+          "id": "16WNhsLUswbmsWj0H31djgYLrtBIMNyR4",
+          "start": 3.2
+        }
+      ]
+    },
+    {
+      "note": "Dr. Tea: milk pour",
+      "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
+      "start": 7.3,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "Iron 24: cold plunge",
+      "id": "1tKugk68mh8h1-Ie2Oj1ob5ZNFNGXo2zN",
+      "start": 10.2,
+      "dur": 1.3,
+      "mx": 0.75
+    },
+    {
+      "note": "MFPAA: crew group shot",
+      "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
+      "start": 52.4,
+      "dur": 1.3
+    },
+    {
+      "note": "Iron 24: trainer spotting a dumbbell press",
+      "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
+      "start": 4.3,
+      "dur": 1.4,
+      "mx": 0.45
+    },
+    {
+      "note": "Stack: Sylvan Gardens truck, X Shadyside treadmills, CSMP",
+      "dur": 1.6,
+      "stack": [
+        {
+          "id": "1NfxA9Oy6Jmmwb9lBH0MgELHJOnOCnrSv",
+          "start": 25.4
+        },
+        {
+          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+          "start": 11.0
+        },
+        {
+          "id": "1sZuf7XY9b-rBFT2aqVwnsEjpvNXrmnSh",
+          "start": 14.2
+        }
+      ]
+    },
+    {
+      "note": "Sylvan Gardens: crew in green",
+      "id": "1XL3EppdUFL4fONWQhQsCfue-mnsLntkG",
+      "start": 1.0,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "Iron 24: drone across the gym floor",
+      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
+      "start": 18.6,
+      "dur": 1.4
+    },
+    {
+      "note": "X Shadyside: deadlift",
+      "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+      "start": 26.2,
+      "dur": 1.3,
+      "only": "portrait"
+    },
+    {
+      "note": "SXP: coached squat",
+      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
+      "start": 26.3,
+      "dur": 1.3,
+      "only": "landscape"
     }
-  ],
-  "segments": []
+  ]
 }

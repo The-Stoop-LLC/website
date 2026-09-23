@@ -9,6 +9,14 @@ scripts/hero_loop.json drives it:
       of the frame survives the crop:
         "x" / "y"   for the 16:9 desktop cut
         "mx" / "my" for the 9:16 phone cut
+      "only": "landscape" or "portrait" keeps a shot out of the other cut
+      (vertical phone footage is too soft once cropped to 16:9 for desktop).
+      A shot can instead be a "stack": two to four vertical clips, each with
+      its own "id", "start" and optional "x"/"y", played side by side for
+      "dur" seconds with thin black gutters. Stacks go in the desktop cut
+      only; give phones those clips as single "only": "portrait" shots.
+      A shot that starts or ends within a third of a second of a cut in the
+      source edit is trimmed to that cut, so no two-frame flashes slip in.
   "scout": clips to preview. For each one a contact sheet (a frame every
       second or two, stamped with its time) is written to _scout/ so shots
       can be picked without downloading the footage. _scout/ is a working
@@ -34,6 +42,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import shutil
 import subprocess
 import sys
@@ -48,10 +57,10 @@ VIDEO_DIR = REPO_ROOT / "assets" / "video"
 SCOUT_DIR = REPO_ROOT / "_scout"
 API_BASE = "https://www.googleapis.com/drive/v3/files"
 
-FPS = 30
+FPS = 24  # most of the footage is shot at 24/23.976
 # (name, width, height, crf, max bitrate in kbps) for each output cut
-LANDSCAPE = [("hero-1080", 1920, 1080, 27, 3000), ("hero-720", 1280, 720, 27, 1600)]
-PORTRAIT = [("hero-portrait", 720, 1280, 27, 1600)]
+LANDSCAPE = [("hero-1080", 1920, 1080, 28, 2500), ("hero-720", 1280, 720, 28, 1400)]
+PORTRAIT = [("hero-portrait", 720, 1280, 29, 1000)]
 HDR_TRANSFERS = {"arib-std-b67", "smpte2084"}
 TONEMAP = ("zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,"
            "tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv")
@@ -213,20 +222,85 @@ def scout(entries: list[dict], sources: Sources) -> None:
 
 # ---------- build: the loop ----------
 
+SLIVER = 0.35  # seconds; a source cut this close to a shot's edge gets trimmed off
+
+
+def snap_to_cuts(src: Path, start: float, dur: float) -> tuple[float, float]:
+    """Trim a shot so it doesn't open or close on a sliver of a neighbouring shot."""
+    out = subprocess.run(
+        ["ffmpeg", "-v", "info", "-ss", str(start), "-i", str(src), "-t", str(dur), "-an",
+         "-vf", "scale=320:-2,select='gt(scene,0.35)',metadata=print", "-f", "null", "-"],
+        capture_output=True, text=True).stderr
+    cuts = [float(t) for t in re.findall(r"pts_time:([\d.]+)", out)]
+    head = [t for t in cuts if t < SLIVER]
+    tail = [t for t in cuts if t > dur - SLIVER]
+    new_start = start + (max(head) + 1 / FPS if head else 0)
+    new_end = start + (min(tail) if tail else dur)
+    return round(new_start, 3), round(new_end - new_start, 3)
+
+
+def clip_ids(seg: dict) -> list[str]:
+    return [p["id"] for p in seg["stack"]] if "stack" in seg else [seg["id"]]
+
+
+def cut_stack(seg: dict, sources: Sources, out: Path) -> float:
+    """Vertical clips side by side in one 1920x1080 frame. Returns the shot length."""
+    panels = seg["stack"]
+    n = len(panels)
+    gap = next(g for g in range(6, 40, 2) if (1920 - (n - 1) * g) % (2 * n) == 0)
+    width = (1920 - (n - 1) * gap) // n
+    placed = []
+    for p in panels:
+        src = sources.get(p["id"])
+        info = probe(src)
+        start, dur = snap_to_cuts(src, float(p["start"]), float(seg["dur"]))
+        placed.append((p, src, info, start, dur))
+    dur = min(d for *_, d in placed)
+    inputs, chains = [], []
+    for k, (p, src, info, start, _) in enumerate(placed):
+        inputs += ["-ss", str(start), "-t", str(dur), "-i", str(src)]
+        chain = base_filters(info) + [
+            crop_filter(info, width / 1080, p.get("x", 0.5), p.get("y", 0.5)),
+            f"scale={width}:1080:flags=lanczos", f"fps={FPS}", "setsar=1", "format=yuv420p",
+        ]
+        if k < n - 1:
+            chain.append(f"pad={width + gap}:1080:0:0:black")
+        chains.append(f"[{k}:v]{','.join(chain)}[p{k}]")
+    graph = ";".join(chains) + ";" + "".join(f"[p{k}]" for k in range(n)) + f"hstack=inputs={n}[v]"
+    run(["ffmpeg", "-v", "error", *inputs, "-filter_complex", graph, "-map", "[v]", "-an",
+         "-c:v", "libx264", "-preset", "veryfast", "-crf", "12", "-y", str(out)])
+    return dur
+
+
 def cut_segments(segments: list[dict], sources: Sources, tmp: Path) -> dict[str, list[Path]]:
-    """Cut every segment to an intermediate per orientation, all at 30 fps, no audio."""
+    """Cut every segment to an intermediate per orientation, all at 24 fps, no audio."""
     parts: dict[str, list[Path]] = {"landscape": [], "portrait": []}
-    last_use = {seg["id"]: i for i, seg in enumerate(segments)}
+    last_use = {fid: i for i, seg in enumerate(segments) for fid in clip_ids(seg)}
     for i, seg in enumerate(segments):
+        if "stack" in seg:
+            out = tmp / f"landscape-{i:02d}.mp4"
+            dur = cut_stack(seg, sources, out)
+            parts["landscape"].append(out)
+            print(f"  cut {i + 1}/{len(segments)}: stack of {len(seg['stack'])} for {dur}s")
+            for fid in clip_ids(seg):
+                if last_use[fid] == i:
+                    sources.drop(fid)
+            continue
         src = sources.get(seg["id"])
         info = probe(src)
         start, dur = float(seg["start"]), float(seg["dur"])
         if start + dur > info["duration"] + 0.05:
             raise ValueError(f"segment {i} ({seg['id']}) runs past the clip's end ({info['duration']:.1f}s)")
+        snapped = snap_to_cuts(src, start, dur)
+        if snapped != (start, dur):
+            print(f"  segment {i}: trimmed to a source cut, {start}s+{dur}s -> {snapped[0]}s+{snapped[1]}s")
+            start, dur = snapped
         for orient, ratio, ax, ay, size in (
             ("landscape", 16 / 9, seg.get("x", 0.5), seg.get("y", 0.5), (1920, 1080)),
             ("portrait", 9 / 16, seg.get("mx", 0.5), seg.get("my", 0.5), (720, 1280)),
         ):
+            if seg.get("only", orient) != orient:
+                continue
             vf = ",".join(base_filters(info) + [
                 crop_filter(info, ratio, ax, ay),
                 f"scale={size[0]}:{size[1]}:flags=lanczos",
@@ -274,8 +348,10 @@ def build(segments: list[dict], sources: Sources) -> None:
             print(f"  {out.name}: {out.stat().st_size / 1e6:.2f} MB")
     poster(VIDEO_DIR / "hero-1080.mp4", "hero-poster")
     poster(VIDEO_DIR / "hero-portrait.mp4", "hero-poster-portrait")
-    total = sum(float(s["dur"]) for s in segments)
-    print(f"built {len(segments)} shots, {total:.1f}s loop")
+    for orient in ("landscape", "portrait"):
+        shots = [s for s in segments
+                 if s.get("only", "landscape" if "stack" in s else orient) == orient]
+        print(f"{orient}: {len(shots)} shots, about {sum(float(s['dur']) for s in shots):.1f}s")
 
 
 def main() -> int:
