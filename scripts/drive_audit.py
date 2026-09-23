@@ -371,7 +371,8 @@ def video_sheet(drive: Drive, row: dict, dest: Path) -> dict:
 def thumb(drive: Drive, link: str | None) -> Image.Image | None:
     if not link:
         return None
-    link = re.sub(r"=s\d+$", "=s400", link)
+    if not re.search(r"=s640$", link):
+        link = re.sub(r"=s\d+$", "=s400", link)
     for attempt in range(3):
         try:
             headers = {"Authorization": f"Bearer {drive.token()}"} if attempt else {}
@@ -459,6 +460,47 @@ def make_sheets(drive: Drive, rows: list[dict], config: dict) -> None:
     print(f"sheets done; {len(errors)} video errors", flush=True)
 
 
+def make_picks(drive: Drive, rows: list[dict], picks: list[dict]) -> None:
+    """Clean 640px WebP stills for the report: a frame at `t` seconds for a
+    video, Drive's own thumbnail for an image."""
+    by_id = {r["id"]: r for r in rows}
+    out = OUT / "picks"
+    out.mkdir(parents=True, exist_ok=True)
+    todo = [p for p in picks if p["id"] in by_id and not (out / f"{p['id']}.webp").exists()]
+    print(f"picks: {len(todo)} to make", flush=True)
+
+    def one(pick: dict) -> None:
+        row, dest = by_id[pick["id"]], out / f"{pick['id']}.webp"
+        im = None
+        try:
+            if row["kind"] == "video":
+                url = f"{API_BASE}/{row['id']}?alt=media&supportsAllDrives=true"
+                headers = f"Authorization: Bearer {drive.token()}\r\n"
+                hdr = ffprobe_url(url, headers)["hdr"]
+                with tempfile.TemporaryDirectory() as tmp:
+                    frame = Path(tmp) / "f.jpg"
+                    vf = (TONEMAP + "," if hdr else "") + "scale=640:640:force_original_aspect_ratio=decrease"
+                    proc = subprocess.run(
+                        ["ffmpeg", "-v", "error", "-y", "-headers", headers, "-ss", f"{pick.get('t') or 0:.2f}",
+                         "-i", url, "-frames:v", "1", "-vf", vf, "-q:v", "3", str(frame)],
+                        capture_output=True, text=True, timeout=300)
+                    if proc.returncode == 0 and frame.exists():
+                        im = Image.open(frame).convert("RGB")
+            else:
+                link = drive.meta(row["id"]).get("thumbnailLink")
+                im = thumb(drive, link and re.sub(r"=s\d+$", "=s640", link))
+                if im:
+                    im.thumbnail((640, 640))
+        except Exception as exc:  # noqa: BLE001 - a missing still is not fatal
+            print(f"  pick {row['name']}: {exc}", flush=True)
+        if im:
+            im.save(dest, "WEBP", quality=72)
+
+    with ThreadPoolExecutor(8) as pool:
+        list(pool.map(one, todo))
+    print(f"picks done: {len(list(out.glob('*.webp')))} stills", flush=True)
+
+
 def main() -> None:
     drive = Drive()
     sa_email = json.loads(os.environ["DRIVE_SA_KEY"]).get("client_email", "?")
@@ -469,6 +511,8 @@ def main() -> None:
         if not shutil.which("ffmpeg"):
             raise SystemExit("ffmpeg is required for sheets")
         make_sheets(drive, rows, config)
+    if config.get("picks"):
+        make_picks(drive, rows, config["picks"])
 
 
 if __name__ == "__main__":
