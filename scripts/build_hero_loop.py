@@ -228,10 +228,12 @@ SLIVER = 0.35  # seconds; a source cut this close to a shot's edge gets trimmed 
 def snap_to_cuts(src: Path, start: float, dur: float) -> tuple[float, float]:
     """Trim a shot so it doesn't open or close on a sliver of a neighbouring shot."""
     out = subprocess.run(
-        ["ffmpeg", "-v", "info", "-ss", str(start), "-i", str(src), "-t", str(dur), "-an",
+        # -t before -i stops reading at the shot's end; as an output option it
+        # would let the scan run on until the next selected frame.
+        ["ffmpeg", "-v", "info", "-ss", str(start), "-t", str(dur), "-i", str(src), "-an",
          "-vf", "scale=320:-2,select='gt(scene,0.35)',metadata=print", "-f", "null", "-"],
         capture_output=True, text=True).stderr
-    cuts = [float(t) for t in re.findall(r"pts_time:([\d.]+)", out)]
+    cuts = [t for t in (float(x) for x in re.findall(r"pts_time:([\d.]+)", out)) if 0 < t < dur]
     head = [t for t in cuts if t < SLIVER]
     tail = [t for t in cuts if t > dur - SLIVER]
     new_start = start + (max(head) + 1 / FPS if head else 0)
@@ -342,10 +344,10 @@ def build(segments: list[dict], sources: Sources) -> None:
         parts = cut_segments(segments, sources, tmp)
         for name, w, h, crf, rate in LANDSCAPE:
             out = encode(parts["landscape"], tmp, name, w, h, crf, rate)
-            print(f"  {out.name}: {out.stat().st_size / 1e6:.2f} MB")
+            print(f"  {out.name}: {out.stat().st_size / 1e6:.2f} MB, {probe(out)['duration']:.1f}s")
         for name, w, h, crf, rate in PORTRAIT:
             out = encode(parts["portrait"], tmp, name, w, h, crf, rate)
-            print(f"  {out.name}: {out.stat().st_size / 1e6:.2f} MB")
+            print(f"  {out.name}: {out.stat().st_size / 1e6:.2f} MB, {probe(out)['duration']:.1f}s")
     poster(VIDEO_DIR / "hero-1080.mp4", "hero-poster")
     poster(VIDEO_DIR / "hero-portrait.mp4", "hero-poster-portrait")
     for orient in ("landscape", "portrait"):
