@@ -222,13 +222,19 @@ def _orientation(file_id: str) -> str:
     return "square"
 
 
+GALLERY_ALT_FILE = Path(__file__).resolve().parent / "gallery_alt.json"
+GALLERY_ALT = {k: v for k, v in json.loads(GALLERY_ALT_FILE.read_text()).items() if not k.startswith("_")} \
+    if GALLERY_ALT_FILE.exists() else {}
+
+
 def render_image(file: dict, label: str, index: int) -> str:
     """One <a class="cs-tile"> photo tile. Uses the localized JPEG in assets/images/drive/
     when present (run scripts/localize_drive_images.py), otherwise hotlinks the Drive thumbnail.
     The tile shows the WebP thumbnail from scripts/make_thumbs.py when one exists; the href
     (opened by the lightbox) always points at the full JPEG."""
     file_id = file["id"]
-    alt = html.escape(f"{label} - {index}" if label else file.get("name", file_id))
+    # Hand-written alt text from scripts/gallery_alt.json wins over "<label> - <n>".
+    alt = html.escape(GALLERY_ALT.get(file_id) or (f"{label} - {index}" if label else file.get("name", file_id)))
     local = LOCAL_IMAGE_DIR / f"{file_id}.jpg"
     if local.exists():
         href = f"../assets/images/drive/{file_id}.jpg"
