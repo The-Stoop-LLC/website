@@ -1,0 +1,57 @@
+name: Build hero loop
+
+# Rebuilds the homepage background video from scripts/hero_loop.json.
+# Edit the cut list on a branch and push: this downloads the source clips
+# from Drive, cuts and encodes assets/video/, and commits the result back to
+# that branch for review. main is excluded so a merge never re-encodes.
+on:
+  push:
+    branches-ignore: [main]
+    paths:
+      - scripts/hero_loop.json
+      - scripts/build_hero_loop.py
+      - .github/workflows/build-hero-loop.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hero-loop-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg and script dependencies
+        run: |
+          command -v ffprobe || { sudo apt-get update -q && sudo apt-get install -y -q ffmpeg; }
+          pip install -r scripts/requirements.txt
+
+      - name: Build
+        env:
+          DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
+        run: python3 scripts/build_hero_loop.py
+
+      - name: Commit and push if changed
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Rebuild hero loop from scripts/hero_loop.json"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
