@@ -145,7 +145,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 40px;
+    padding: 72px 40px 24px; /* top clears the fixed nav */
     position: relative;
     overflow: hidden;
   }
@@ -244,7 +244,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     border-right: 0;
   }
 
-.hero > *:not(.hero-media):not(.hero-video-toggle) {
+/* :where() keeps this rule's specificity at .hero alone, so the more
+   specific rules for the watermark and the pause button still apply. */
+.hero > :where(:not(.hero-media):not(.hero-video-toggle)) {
     position: relative;
     z-index: 1;
   }
@@ -270,7 +272,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--yellow);
-    margin-bottom: 24px;
+    margin-bottom: clamp(12px, 2.6vh, 24px);
     opacity: 0;
     animation: slideUp 0.6s ease forwards 0.1s;
   }
@@ -278,6 +280,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .hero h1 {
     font-family: 'Anton', sans-serif; text-transform: uppercase;
     font-size: clamp(2.75rem, 10vw, 10rem);
+    font-size: clamp(2.75rem, min(10vw, 14vh), 10rem);
+    font-size: clamp(2.75rem, min(10vw, 14svh), 10rem);
     line-height: 0.9;
     letter-spacing: -2px;
     max-width: 1000px;
@@ -295,7 +299,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   }
 
 .hero-sub {
-    margin-top: 32px;
+    margin-top: clamp(16px, 3.6vh, 32px);
     font-size: 0.9375rem;
     line-height: 1.8;
     max-width: 560px;
@@ -305,7 +309,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   }
 
 .hero-cta {
-    margin-top: 40px;
+    margin-top: clamp(20px, 4.4vh, 40px);
     display: flex;
     gap: 16px;
     justify-content: center;
@@ -1889,7 +1893,7 @@ footer {
 
   /* HOMEPAGE */
   section { padding: 80px 20px; }
-  .hero { padding: 0 20px; }
+  .hero { padding: 76px 20px 24px; }
   .hero-media::after {
     background:
       radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.68) 55%, rgba(0,0,0,0.55) 100%),
