@@ -824,7 +824,7 @@ Source: https://thestooppgh.com/work/union-trust-building.html
 ## UNION TRUST BUILDING
 Social Media Management, Event Content & Tenant Communications
 Author: Mike Pernice, Founder · Last updated: September 2026
-The Union Trust Building is a Flemish Gothic landmark at 501 Grant Street in downtown Pittsburgh, redeveloped by The Davis Companies into Class-A offices with restaurants, a tenant gym, and a 10th-floor theatre. From October 2023 into 2025, The Stoop ran its Instagram and Facebook: tenant event coverage, a social media audit, monthly reels and stories, and a quarterly tenant newsletter.
+The Union Trust Building is a Flemish Gothic landmark at 501 Grant Street in downtown Pittsburgh, redeveloped by The Davis Companies into Class-A offices with restaurants, a tenant gym, and a 10th-floor theatre. From October 2023 into 2025, The Stoop ran its Instagram and Facebook: tenant event coverage, a social media audit, and monthly reels and stories. We also produced the quarterly tenant newsletter and branded the building’s tenant app.
 ### The Challenge
 The Union Trust Building has more to show than almost any office address in Pittsburgh: a 40-foot stained-glass dome, a 55-ton bank vault door installed in 1918, a Gothic roofline with chapels on top, and a lobby full of restaurants and tenants. Its social accounts mostly covered events. When we audited them in November 2023, they were reaching just 1.8% of the potential audience in the building’s top five cities, and had captured only 0.2% of it. The audience wanted more than events: the building itself, the people who run it, and the companies that work there.
 Property management needed a partner who could do three things at once: cover tenant events the day they happen, keep a steady monthly calendar of reels and stories, and give tenants a reason to follow the building they work in.
@@ -848,8 +848,12 @@ Monthly management began in December 2023 with a package of eight feed posts and
 Want a monthly calendar built around your own story?
 ### Quarterly Tenant Newsletter
 Fall 2024 · Winter 2025 · Spring 2025 · Event Recaps · Building News
-From fall 2024 the building’s social calendar and its tenant newsletter worked as one loop: each quarterly issue announced the coming season’s events, recapped the last season’s, and ran building features such as the restored chapel roof, the Pittsburgh History & Landmarks Foundation’s new vault panels, and the valet team. The recaps carried the outcomes tenants cared about: Quantum Theatre sold 2,101 tickets for its month-long run in the building’s theatre, and the March 2025 blood drive collected 19 donations, enough to help 57 local lives. Every issue sent readers back to the building’s Instagram and Facebook.
+From fall 2024 we also produced the building’s quarterly tenant newsletter, and it ran with the social calendar as one loop: each issue announced the coming season’s events, recapped the last season’s, and ran building features such as the restored chapel roof, the Pittsburgh History & Landmarks Foundation’s new vault panels, and the valet team. The recaps carried the outcomes tenants cared about: Quantum Theatre sold 2,101 tickets for its month-long run in the building’s theatre, and the March 2025 blood drive collected 19 donations, enough to help 57 local lives. Every issue sent readers back to the building’s Instagram and Facebook.
 Need tenant or member communications that people read?
+### The Building in Every Tenant’s Pocket
+March 2025 · Login Screen · Splash Screen · App Icons · Notification Icon
+In March 2025 we branded the building’s tenant app on the VTS platform: a login-screen background built from a photo of the stained-glass dome, login and splash-screen versions of the Union Trust Building logo, iOS and Android app icons, and an Android notification icon, each sized to the platform’s specs. Tenants who open the app see the same building they follow on Instagram.
+Need a brand that holds up down to a phone icon?
 ### Our Process
 #### Audit & Strategy
 A full Facebook and Instagram audit comparing 2022 and 2023, an audience breakdown by age, interest, and city, and a 2024 plan with named goals and KPIs.
@@ -873,7 +877,7 @@ The series did the heavy lifting. Day in the Life Part 1 drew 2,155 Instagram vi
 **Q: What results did the Union Trust Building see?**
 Instagram followers grew from 821 to 1,004 (+22%) between the end of 2023 and the end of Q2 2024, and quarterly Instagram reach grew from 3,052 to 8,000 accounts over the same span. Instagram content interactions rose from 311 to 1,100 quarter over quarter after monthly management began.
 **Q: What did the engagement include?**
-Tenant event coverage with a set package of reels and stories per event, a social media audit and strategy, monthly Instagram and Facebook management with recurring video series, community management, quarterly analytics reporting, and a quarterly tenant newsletter.
+Tenant event coverage with a set package of reels and stories per event, a social media audit and strategy, monthly Instagram and Facebook management with recurring video series, community management, quarterly analytics reporting, a quarterly tenant newsletter, and brand assets for the building’s tenant app.
 **Q: What is the Union Trust Building?**
 The Union Trust Building is a Flemish Gothic landmark at 501 Grant Street in downtown Pittsburgh, designed by Frederick Osterling for Henry Clay Frick and listed in the National Register of Historic Places in 1974. The Davis Companies redeveloped it as a Class-A historic office building in 2017.
 ### Related Services
