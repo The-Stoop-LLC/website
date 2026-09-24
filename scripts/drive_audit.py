@@ -368,11 +368,10 @@ def video_sheet(drive: Drive, row: dict, dest: Path) -> dict:
             "missing": sum(f is None for f in frames)}
 
 
-def thumb(drive: Drive, link: str | None) -> Image.Image | None:
+def thumb(drive: Drive, link: str | None, size: int = 400) -> Image.Image | None:
     if not link:
         return None
-    if not re.search(r"=s640$", link):
-        link = re.sub(r"=s\d+$", "=s400", link)
+    link = re.sub(r"=s\d+$", f"=s{size}", link)
     for attempt in range(3):
         try:
             headers = {"Authorization": f"Bearer {drive.token()}"} if attempt else {}
@@ -460,9 +459,32 @@ def make_sheets(drive: Drive, rows: list[dict], config: dict) -> None:
     print(f"sheets done; {len(errors)} video errors", flush=True)
 
 
+def fetch_still(drive: Drive, row: dict, t: float | None, size: int) -> Image.Image | None:
+    """A frame at `t` seconds for a video, Drive's own thumbnail for an image,
+    fitted inside size x size."""
+    if row["kind"] == "video":
+        url = f"{API_BASE}/{row['id']}?alt=media&supportsAllDrives=true"
+        headers = f"Authorization: Bearer {drive.token()}\r\n"
+        hdr = ffprobe_url(url, headers)["hdr"]
+        with tempfile.TemporaryDirectory() as tmp:
+            frame = Path(tmp) / "f.jpg"
+            vf = (TONEMAP + "," if hdr else "") + (f"scale='min({size},iw)':'min({size},ih)'"
+                                                  ":force_original_aspect_ratio=decrease")
+            proc = subprocess.run(
+                ["ffmpeg", "-v", "error", "-y", "-headers", headers, "-ss", f"{t or 0:.2f}",
+                 "-i", url, "-frames:v", "1", "-vf", vf, "-q:v", "2", str(frame)],
+                capture_output=True, text=True, timeout=300)
+            if proc.returncode == 0 and frame.exists():
+                return Image.open(frame).convert("RGB")
+        return None
+    im = thumb(drive, drive.meta(row["id"]).get("thumbnailLink"), size)
+    if im:
+        im.thumbnail((size, size))
+    return im
+
+
 def make_picks(drive: Drive, rows: list[dict], picks: list[dict]) -> None:
-    """Clean 640px WebP stills for the report: a frame at `t` seconds for a
-    video, Drive's own thumbnail for an image."""
+    """Clean 640px WebP stills for the report."""
     by_id = {r["id"]: r for r in rows}
     out = OUT / "picks"
     out.mkdir(parents=True, exist_ok=True)
@@ -470,35 +492,66 @@ def make_picks(drive: Drive, rows: list[dict], picks: list[dict]) -> None:
     print(f"picks: {len(todo)} to make", flush=True)
 
     def one(pick: dict) -> None:
-        row, dest = by_id[pick["id"]], out / f"{pick['id']}.webp"
-        im = None
+        row = by_id[pick["id"]]
         try:
-            if row["kind"] == "video":
-                url = f"{API_BASE}/{row['id']}?alt=media&supportsAllDrives=true"
-                headers = f"Authorization: Bearer {drive.token()}\r\n"
-                hdr = ffprobe_url(url, headers)["hdr"]
-                with tempfile.TemporaryDirectory() as tmp:
-                    frame = Path(tmp) / "f.jpg"
-                    vf = (TONEMAP + "," if hdr else "") + "scale=640:640:force_original_aspect_ratio=decrease"
-                    proc = subprocess.run(
-                        ["ffmpeg", "-v", "error", "-y", "-headers", headers, "-ss", f"{pick.get('t') or 0:.2f}",
-                         "-i", url, "-frames:v", "1", "-vf", vf, "-q:v", "3", str(frame)],
-                        capture_output=True, text=True, timeout=300)
-                    if proc.returncode == 0 and frame.exists():
-                        im = Image.open(frame).convert("RGB")
-            else:
-                link = drive.meta(row["id"]).get("thumbnailLink")
-                im = thumb(drive, link and re.sub(r"=s\d+$", "=s640", link))
-                if im:
-                    im.thumbnail((640, 640))
+            im = fetch_still(drive, row, pick.get("t"), 640)
         except Exception as exc:  # noqa: BLE001 - a missing still is not fatal
             print(f"  pick {row['name']}: {exc}", flush=True)
+            return
         if im:
-            im.save(dest, "WEBP", quality=72)
+            im.save(out / f"{pick['id']}.webp", "WEBP", quality=72)
 
     with ThreadPoolExecutor(8) as pool:
         list(pool.map(one, todo))
     print(f"picks done: {len(list(out.glob('*.webp')))} stills", flush=True)
+
+
+def make_exports(drive: Drive, rows: list[dict], exports: list[dict]) -> None:
+    """Stills for the website itself. Each entry is {"id", "t", "max", "maxw",
+    "dest", "png"}; by default a JPEG at assets/images/drive/<id>.jpg (the
+    site's localized-Drive convention, which scripts/make_thumbs.py turns
+    into gallery thumbnails), at most 1600px long and 1200px wide. "png"
+    downloads an image's original file and keeps its transparency."""
+    by_id = {r["id"]: r for r in rows}
+    todo = []
+    for e in exports:
+        ext = "png" if e.get("png") else "jpg"
+        dest = REPO_ROOT / (e.get("dest") or f"assets/images/drive/{e['id']}.{ext}")
+        if e["id"] in by_id and not dest.exists():
+            todo.append((e, dest))
+    print(f"exports: {len(todo)} to make", flush=True)
+
+    def one(item: tuple[dict, Path]) -> None:
+        e, dest = item
+        row, size = by_id[e["id"]], int(e.get("max", 1600))
+        try:
+            if e.get("png"):
+                resp = drive.session.get(f"{API_BASE}/{row['id']}", params={"alt": "media", "supportsAllDrives": "true"},
+                                         timeout=120)
+                resp.raise_for_status()
+                im = Image.open(io.BytesIO(resp.content))
+                im = im.convert("RGBA")
+                im.thumbnail((size, size))
+            else:
+                im = fetch_still(drive, row, e.get("t"), size)
+                maxw = int(e.get("maxw", 1200))
+                if im and im.width > maxw:
+                    im = im.resize((maxw, round(im.height * maxw / im.width)), Image.LANCZOS)
+        except Exception as exc:  # noqa: BLE001 - report and keep going
+            print(f"  export {row['name']}: {exc}", flush=True)
+            return
+        if not im:
+            print(f"  export {row['name']}: no image", flush=True)
+            return
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if e.get("png"):
+            im.save(dest, "PNG", optimize=True)
+        else:
+            im.save(dest, "JPEG", quality=85, optimize=True, progressive=True)
+
+    with ThreadPoolExecutor(6) as pool:
+        list(pool.map(one, todo))
+    print(f"exports done: {sum(d.exists() for _, d in todo)}/{len(todo)} written", flush=True)
 
 
 def main() -> None:
@@ -513,6 +566,8 @@ def main() -> None:
         make_sheets(drive, rows, config)
     if config.get("picks"):
         make_picks(drive, rows, config["picks"])
+    if config.get("exports"):
+        make_exports(drive, rows, config["exports"])
 
 
 if __name__ == "__main__":
