@@ -2257,6 +2257,9 @@ footer {
 
 .cs-media--tall { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
 
+/* 9:16 story graphics (X Shadyside organic social) */
+.cs-media--story { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+
 /* Logo-variant and color-swatch rows (Take a Nurse case study) */
 .cs-media--logos { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 
@@ -2274,6 +2277,8 @@ footer {
 .cs-media--wide .cs-tile { aspect-ratio: 16 / 10; }
 
 .cs-media--tall .cs-tile { aspect-ratio: 4 / 5; }
+
+.cs-media--story .cs-tile { aspect-ratio: 9 / 16; }
 
 .cs-tile img {
   width: 100%; height: 100%;
@@ -2487,6 +2492,7 @@ footer {
 @media (max-width: 768px) {
   .cs-media { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .cs-media--tall { grid-template-columns: repeat(2, 1fr); }
+  .cs-media--story { grid-template-columns: repeat(2, 1fr); }
   .cs-media--wide { grid-template-columns: 1fr; }
   .cs-media--logos { grid-template-columns: repeat(2, 1fr); }
   .cs-media--palette { grid-template-columns: repeat(3, 1fr); }
