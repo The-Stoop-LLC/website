@@ -1,140 +1,16 @@
 {
  "exports": [
   {
-   "id": "1mPI1TNMSjbGm44QxGh_ZrFCt1j4hpjq6",
-   "max": 1600,
-   "note": "Iron 24 DSC05762 logo wall"
-  },
-  {
-   "id": "1DQTVOhpor-Cgt6pufoxg18g5Js1r-qB7",
-   "max": 1600,
-   "note": "Iron 24 DSC05802 sauna cabin"
-  },
-  {
-   "id": "1OTN1xWoIja6xlDEwOBrWxxF8XSN7aict",
-   "max": 1600,
-   "note": "Iron 24 Still 7_2.3.1 stair climbers"
-  },
-  {
-   "id": "19g_ykrAFh0CIRTCrDhZvu2QYL2pcOEQ2",
-   "max": 1600,
-   "note": "Iron 24 Block2-1-17 deadlift (portrait)"
-  },
-  {
-   "id": "1wulUR45PXoCatE_ghRsASufa7sXZxIYH",
-   "max": 1600,
-   "note": "Iron 24 Squat Spotting-4"
-  },
-  {
-   "id": "1qLpizmzzAw5ZauxbbU2apxRDXK2fzZ-f",
-   "max": 1600,
-   "note": "Iron 24 Sauna-11 (portrait)"
-  },
-  {
-   "id": "1AJsyKdsXGIgtjL8b-VzuRq18SQ_bZiZe",
-   "max": 1600,
-   "note": "Iron 24 Group Photo-4"
-  },
-  {
-   "id": "1bQVoIu73DsGvfyIhRCXGIKPDXq33-yZQ",
-   "sheet": 12,
-   "cell": 360,
-   "dest": "_scout/iron24-train-recovery.jpg",
-   "note": "Train and Recovery Vertical"
-  },
-  {
-   "id": "1FS7g88iDbFFM9Er4PvvaT7K3K7_BP42K",
-   "sheet": 12,
-   "cell": 360,
-   "dest": "_scout/iron24-team-work-1.jpg",
-   "note": "Team Work 1 Vertical"
-  },
-  {
-   "id": "1Zmf714vqCLKYGs4MRBuqvMR3NSXVEobU",
-   "sheet": 16,
-   "cell": 480,
-   "dest": "_scout/mfpaa-7-60-reexport.jpg",
-   "note": "MFPAA 7|60 30 Sep 2025 re-export: check DONT overlay"
-  },
-  {
-   "id": "1Wom_Gwq9_TQOyEREdQreyK_aP01Nu-79",
-   "sheet": 16,
-   "cell": 480,
-   "dest": "_scout/mfpaa-its-your-job-reexport.jpg",
-   "note": "MFPAA It's Your Job re-export: check THATS overlay"
-  },
-  {
-   "id": "1mg7BAdE7oxJsmXTunLH_Ir-AXtxKp36m",
-   "max": 2600,
-   "dest": "_scout/covers/take-a-nurse-src.jpg",
-   "note": "Touched up-253"
-  },
-  {
-   "id": "1XhzdMTY3dlYxH5dQvvcAubeGMrcMBdD8",
-   "max": 2600,
-   "dest": "_scout/covers/sylvan-gardens-src.jpg",
-   "note": "DSC05025-Enhanced-NR"
-  },
-  {
-   "id": "1ROrLzou0JKXiVF5An4mp7DZ_lezgjX9K",
-   "max": 2800,
-   "dest": "_scout/covers/iron-24-src.jpg",
-   "note": "Iron 24 Pictures-1-62 (portrait 1560x2768)"
-  },
-  {
-   "id": "1vtSXBvF2AtaVB9qh2bZIoHQHgylCthyh",
-   "max": 2600,
-   "dest": "_scout/covers/mfpaa-src.jpg",
-   "note": "MFPAA 2.4.26-12"
-  },
-  {
    "id": "155-SI3bxUIta99VeOhx9B5HVpBC_txQA",
-   "sheet": 16,
-   "cell": 480,
-   "dest": "_scout/tan-hero-v2.jpg",
-   "note": "Take a Nurse Hero Video v2 Final: poster pick"
+   "t": 21.2,
+   "max": 1600,
+   "note": "Take a Nurse Hero Video v2 Final poster"
   },
   {
    "id": "1dKsjUGkvmRQSIZ1hyIvm7-Vl4lQc90uT",
-   "sheet": 16,
-   "cell": 480,
-   "dest": "_scout/tan-loop-v2.jpg",
-   "note": "Take a Nurse Loop v2 Final: poster pick"
-  },
-  {
-   "id": "1_F_1ZMnHC4pTZhNmrfvx0KA4Tn-JRIWQ",
+   "t": 21.7,
    "max": 1600,
-   "note": "Take a Nurse Touched up-765"
-  },
-  {
-   "id": "1jMPshhYQ9g9VrQYr7MVgpVKmG8yl1sRz",
-   "max": 1600,
-   "note": "Take a Nurse Touched up-286"
-  },
-  {
-   "id": "1AMM2dVNETngKg3ZlHepGyZPLrcyDewzq",
-   "max": 1600,
-   "note": "Take a Nurse Touched up-341"
-  },
-  {
-   "id": "1Xs9PLwxlUZ7DGRQPHXv91oLJ8k_9c2_C",
-   "max": 1600,
-   "note": "Take a Nurse Touched up-774"
-  },
-  {
-   "id": "16shYIDot3q7r_pq9l5EYl8l7Hwk6dyc9",
-   "max": 1600,
-   "note": "Take a Nurse Touched up-644"
-  },
-  {
-   "id": "1WchHeo6tLYOSR9cZ-0iv09rME-VBX1d4",
-   "max": 1600,
-   "note": "Take a Nurse Touched up-427"
-  },
-  {
-   "id": "1C8RcV9NOrT-x9fV6iW_e5Anls_fnFHcK",
-   "max": 1600,
-   "note": "Take a Nurse Touched up-11"
+   "note": "Take a Nurse Loop v2 Final poster"
   }
  ]
 }
