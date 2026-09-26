@@ -2533,6 +2533,7 @@ footer {
   .cs-media--palette { grid-template-columns: repeat(3, 1fr); }
   .cs-videos { grid-template-columns: 1fr; }
   .cs-videos--portrait { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cs-videos--portrait.cs-videos--single { grid-template-columns: 1fr; }
   .cs-list { columns: 1; }
   .cs-stats { gap: 20px 12px; }
   .cs-videos--pair { grid-template-columns: 1fr; }
