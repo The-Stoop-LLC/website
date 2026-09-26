@@ -1,0 +1,7 @@
+{
+ "_": "Case-study share images (1200x630) rendered by scripts/make_og.py from assets/images/covers/<slug>-1600.jpg. eyebrow, title and subtitle are drawn over the darkened cover; focus is the vertical centre (0-1) of the crop.",
+ "take-a-nurse": {"eyebrow": "CASE STUDY", "title": "TAKE A NURSE", "subtitle": "Brand Identity, Founder Film & Photography · 60 s film, 1,008 photos", "focus": 0.5},
+ "sylvan-gardens": {"eyebrow": "CASE STUDY", "title": "SYLVAN GARDENS", "subtitle": "Organic Social Management · 38K+ total impact, 11.6x IG reach", "focus": 0.55},
+ "iron-24": {"eyebrow": "CASE STUDY", "title": "IRON 24", "subtitle": "Content Production & Influencer Activation · 35+ videos, 90+ photos, 2 markets", "focus": 0.45},
+ "mfpaa": {"eyebrow": "CASE STUDY", "title": "MFPAA", "subtitle": "Capital & Subscription Campaigns · $47,139 raised from 446 donors", "focus": 0.5}
+}
