@@ -148,7 +148,7 @@ Want a social presence that actually gets managed every day?
 ### Who It's For
 Brands that want a consistent, professional social media presence without hiring an in-house team. Whether you're starting from zero or need to level up an existing account, we become your dedicated social media department.
 ### Organic Social in Action
-Photo and video produced for client feeds · Sylvan Gardens · CSMP
+Photo and video produced for client feeds · Sylvan Gardens · Union Trust Building · CSMP · Iron 24
 Sylvan Team B-Roll
 Spring Cleanup Operations
 Brand — Logo on Truck
@@ -1057,6 +1057,28 @@ Step 1 is free. Fill out a proposal request and we'll set up a discovery call wi
 No commitment. No pressure. Just a conversation about what you need.
 
 ---
+
+# Brand & Press | THE STOOP
+Source: https://thestooppgh.com/brand.html
+
+## BRAND & PRESS
+The files and the words to use when you show The Stoop.
+Logo files, colors and type, a boilerplate you can paste, the share image and the founder's headshot.
+This page is for partners, press and event organizers who need to show The Stoop, whether that's a sponsor board, an article or a speaker slide. Download the files, paste the boilerplate and use the mark as it is. If you need something that isn't here, ask.
+### The Mark
+The bars lockup is the only current mark: three yellow bars rising next to THE STOOP in Anton. Use the white version on dark backgrounds and the black version on light ones. Don't recolor it, stretch it or add effects, and leave clear space around it.
+White on black: a flat file with the black background in it, for places that can't handle transparency (PNG). Black: transparent background, for white and light backgrounds (PNG, SVG). White: transparent background, for dark backgrounds and photos (PNG, SVG).
+### Colors and Type
+Yellow on black, with white text. The grey is for panels and borders. Yellow #FFCC00, Black #0B0B0A, White #FFFFFF, Grey #1A1A1A.
+Two typefaces: Anton for headlines, set in capitals, and Outfit for everything else. Both are open source and free from Google Fonts.
+### Boilerplate
+Use this as written. The name is The Stoop, two words; the mark sets it in capitals.
+The Stoop is a digital agency built at the intersection of culture, content, and commerce. We help brands scale through influencer partnerships and coach influencers to build real businesses.
+### Share Image
+This is what shows when a link to the site is pasted into a post, a chat or a message. Use it when you need a wide image of the brand. PNG, 1200 by 630.
+### Founder Headshot
+Mike Pernice, founder of The Stoop. Square, in color. Caption it with the name and title.
+Need a different format, or a photo from a shoot? Ask.
 
 # FAQ — Influencer Marketing, Pricing & Process | THE STOOP
 Source: https://thestooppgh.com/faq.html
