@@ -1,6 +1,39 @@
 {
   "_readme": "Cut list for the homepage hero loop. Edit on a branch; the Build hero loop workflow rebuilds assets/video/ there. See scripts/build_hero_loop.py for the fields.",
-  "scout": [],
+  "scout": [
+    {
+      "note": "Iron 24: Cold Plunge Vertical (stack panel + phone single; avoid the 0:13 logo overlay)",
+      "id": "1s0VcKSosWoIhd3q-CjXCz8hMONI4UOo3"
+    },
+    {
+      "note": "Iron 24: Group Training Vertical (a beat away from the poster; skip the end card)",
+      "id": "1s5B744mr7IWTO4hwZboAXjb1IQWNNBdr"
+    },
+    {
+      "note": "Iron 24: Team Work 1 Vertical (skip the end card)",
+      "id": "1FS7g88iDbFFM9Er4PvvaT7K3K7_BP42K"
+    },
+    {
+      "note": "Take a Nurse: Loop v2 Final (porch walk-up ~0:05, hand-on-hand ~0:20)",
+      "id": "1dKsjUGkvmRQSIZ1hyIvm7-Vl4lQc90uT"
+    },
+    {
+      "note": "UTB: rotunda spiral IMG_4472 (portrait)",
+      "id": "1lygxYjkAVZ9_G37o9ABAKg14UGUOOW93"
+    },
+    {
+      "note": "UTB: DITL Part 1 Morning, caption-free atrium glide ~0:17",
+      "id": "1oCbAE3buo1hGyUv0eaMEuHNVaWE-2FPY"
+    },
+    {
+      "note": "MFPAA: rig driving at camera, DSC_5583 (raw; trim and crop only)",
+      "id": "1gy_-iUO3UKo6reIXQdl8OtRK8zg5jlGo"
+    },
+    {
+      "note": "MFPAA: top-down drone of the crew, DJI_0094 (raw; trim and crop only)",
+      "id": "10PfKW_n9Khi6x2GA30FdjULpMN-g5Gb8"
+    }
+  ],
   "segments": [
     {
       "note": "Iron 24: trainer and client laughing (also the poster)",
