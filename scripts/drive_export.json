@@ -1,11 +1,115 @@
 {
  "exports": [
   {
-   "id": "1dKsjUGkvmRQSIZ1hyIvm7-Vl4lQc90uT",
-   "t": 4.7,
+   "id": "18KDZ2VFm9kmaq54Sfg0sSkGPs5hwmTQh",
    "max": 1600,
-   "force": true,
-   "note": "Take a Nurse Loop v2 Final poster: the walk up to the front door, so the two video tiles do not repeat the kitchen scene"
+   "note": "Dr. Tea DSC09581"
+  },
+  {
+   "id": "1wuKOmYvvjTZTFywl-KsAiQfws4eGjmjK",
+   "max": 1600,
+   "note": "Dr. Tea DSC09570"
+  },
+  {
+   "id": "1R43aJZJvj8Er5XndBklhZhSOPLJUTnCU",
+   "max": 1600,
+   "note": "Dr. Tea DSC00107"
+  },
+  {
+   "id": "1e4hTdT_WLcI6HG0MLX9ztxgWy-iwcOPC",
+   "max": 1600,
+   "note": "Dr. Tea DSC00039"
+  },
+  {
+   "id": "1F6vK_EuhWpjNC-k0QEH-quudmMjU_GtH",
+   "max": 1600,
+   "note": "Dr. Tea DSC00051"
+  },
+  {
+   "id": "1QCYWb7HfGNCIKQPaddydl908c6ia68b5",
+   "max": 1600,
+   "note": "Dr. Tea DSC09660"
+  },
+  {
+   "id": "1AR5wCWH19f_wXu7QJVcA5ygfD92zBbR4",
+   "max": 1600,
+   "note": "Dr. Tea DSC00209 (also cover source)"
+  },
+  {
+   "id": "1n-trCnRMS-MPvJH1lNdPecPh7XhJKU9L",
+   "max": 1600,
+   "note": "Dr. Tea DSC09973"
+  },
+  {
+   "id": "1TnEM0AGq7tpTASfsxoYxs-GydHfQsr08",
+   "max": 1600,
+   "note": "Iron 24 Red Light -7"
+  },
+  {
+   "id": "1veUECY9SVD8XjrFGIbIj3nPSIMVf-8Gn",
+   "max": 1600,
+   "note": "Iron 24 Cable Fly-19"
+  },
+  {
+   "id": "1pmN98o9xIkRwr_W3CzXtmCnzMgVgSDpO",
+   "max": 1600,
+   "note": "Iron 24 Dumbbel Curl-5"
+  },
+  {
+   "id": "19KuEy2dI3-lUA9Hr2mw7TrLAhANQGnVC",
+   "max": 1600,
+   "note": "CSMP Masalla-44-2"
+  },
+  {
+   "id": "1o3N3uXTblGYvZu6pDdMQNpmMJlrWNinj",
+   "max": 1600,
+   "note": "CSMP Stoop-3-19"
+  },
+  {
+   "id": "1VSt8iUd9vmXITGqZE9xT4QTlWhnf2MQa",
+   "max": 1600,
+   "note": "X Shadyside DSC07032"
+  },
+  {
+   "id": "1NMuP8s_u0i-1QNxpcoROb5xra5RSRoBd",
+   "max": 1600,
+   "note": "X Shadyside Reel Cover #2 (square ad)"
+  },
+  {
+   "id": "1BTiS7MSyfjZt9vuXIGfqwMuu7o9gJOLA",
+   "max": 1600,
+   "note": "X Shadyside Jason Edits-44"
+  },
+  {
+   "id": "1Xfrd_NaU1ZyaTqH4LXpzP3C9A8QcvQy9",
+   "max": 1600,
+   "note": "X Shadyside Jason Edits-2-25"
+  },
+  {
+   "id": "1vmra_9v-UKQlZOgoUrJrUA6b-3x43hw0",
+   "max": 1600,
+   "note": "UTB IMG_1485"
+  },
+  {
+   "id": "1OVBCUA5yGESZnKzG6wCfdFTrcK3t7Dyn",
+   "max": 1600,
+   "note": "UTB IMG_1507 (HEIC)"
+  },
+  {
+   "id": "1E0cnpDd4lsxZPgaSGLiKPzBnQjR0q6WC",
+   "max": 1600,
+   "note": "UTB IMG_5054 Polar Bear Day (HEIC)"
+  },
+  {
+   "id": "1TFdbd-fGO-cm1-kuabo3fBlbtMrC-GqF",
+   "max": 1600,
+   "note": "MFPAA Captain-7 (Chief Headshots copy)"
+  },
+  {
+   "id": "1AR5wCWH19f_wXu7QJVcA5ygfD92zBbR4",
+   "max": 2800,
+   "dest": "_scout/covers/dr-tea-src.jpg",
+   "note": "Dr. Tea DSC00209 cover source"
   }
  ]
 }

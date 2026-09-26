@@ -26,6 +26,7 @@ from __future__ import annotations
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -94,8 +95,15 @@ def contact_sheet(session, file_id: str, n: int, cell_w: int) -> Image.Image:
     return sheet
 
 
-def image_rendition(session, file_id: str, max_edge: int) -> Image.Image:
-    r = session.get(f"{API_BASE}/{file_id}?alt=media&supportsAllDrives=true", timeout=120)
+def image_rendition(session, file_id: str, max_edge: int, info: dict | None = None) -> Image.Image:
+    """The original bytes, or, for formats Pillow cannot open (HEIC), Drive's own JPEG rendition
+    at the requested size via the file's thumbnailLink."""
+    info = info or {}
+    if info.get("mimeType") in ("image/heic", "image/heif") and info.get("thumbnailLink"):
+        link = re.sub(r"=s\d+(-c)?$", f"=s{max_edge}", info["thumbnailLink"])
+        r = session.get(link, timeout=120)
+    else:
+        r = session.get(f"{API_BASE}/{file_id}?alt=media&supportsAllDrives=true", timeout=120)
     r.raise_for_status()
     im = Image.open(io.BytesIO(r.content))
     try:
@@ -125,7 +133,7 @@ def main() -> int:
         elif info.get("mimeType", "").startswith("video/") or "t" in item:
             im = video_frame(session, fid, float(item.get("t", 1.0)), max_edge)
         else:
-            im = image_rendition(session, fid, max_edge)
+            im = image_rendition(session, fid, max_edge, info)
         dest.parent.mkdir(parents=True, exist_ok=True)
         im.save(dest, "JPEG", quality=int(item.get("quality", 86)), optimize=True, progressive=True)
         print(f"wrote {dest.relative_to(REPO)} {im.size[0]}x{im.size[1]} from {info.get('name')!r}")
