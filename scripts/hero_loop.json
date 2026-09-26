@@ -1,155 +1,201 @@
 {
-  "_readme": "Cut list for the homepage hero loop. Edit on a branch; the Build hero loop workflow rebuilds assets/video/ there. See scripts/build_hero_loop.py for the fields.",
-  "scout": [],
-  "segments": [
+ "_readme": "Cut list for the homepage hero loop. Edit on a branch; the Build hero loop workflow rebuilds assets/video/ there. See scripts/build_hero_loop.py for the fields.",
+ "scout": [],
+ "segments": [
+  {
+   "note": "Iron 24: trainer and client laughing (also the poster)",
+   "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
+   "start": 0.3,
+   "dur": 1.5,
+   "mx": 0.7
+  },
+  {
+   "note": "MFPAA: medics working in the ambulance",
+   "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
+   "start": 17.2,
+   "dur": 1.3,
+   "mx": 0.8
+  },
+  {
+   "note": "Stack: X Shadyside crew, Dr. Tea drinks, Union Trust atrium glide",
+   "dur": 1.6,
+   "stack": [
     {
-      "note": "Iron 24: trainer and client laughing (also the poster)",
-      "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
-      "start": 0.3,
-      "dur": 1.5,
-      "mx": 0.7
+     "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+     "start": 5.3
     },
     {
-      "note": "MFPAA: medics working in the ambulance",
-      "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
-      "start": 17.2,
-      "dur": 1.3,
-      "mx": 0.8
+     "id": "1qAac42eeX7QrLXupI26TZPPkpe-sNmIA",
+     "start": 10.3
     },
     {
-      "note": "Stack: X Shadyside crew, Dr. Tea drinks, Sylvan Gardens drone",
-      "dur": 1.6,
-      "stack": [
-        {
-          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
-          "start": 5.3
-        },
-        {
-          "id": "1qAac42eeX7QrLXupI26TZPPkpe-sNmIA",
-          "start": 10.3
-        },
-        {
-          "id": "1lcvHws1NOnFeoTxPH0a080z_mCUbXWvt",
-          "start": 0.5
-        }
-      ]
-    },
-    {
-      "note": "X Shadyside crew under red light",
-      "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
-      "start": 5.3,
-      "dur": 1.3,
-      "only": "portrait"
-    },
-    {
-      "note": "Iron 24: drone through the red-light room",
-      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
-      "start": 38.0,
-      "dur": 1.3
-    },
-    {
-      "note": "SXP: sled push",
-      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
-      "start": 24.9,
-      "dur": 1.3,
-      "mx": 0.45
-    },
-    {
-      "note": "Iron 24: cable work against the orange wall",
-      "id": "1ES7F6bl4UuxhhCdjfe-BpbNGei-doEYF",
-      "start": 4.3,
-      "dur": 1.3
-    },
-    {
-      "note": "Stack: Dr. Tea drink, X Shadyside deadlift, Lucid Juice",
-      "dur": 1.6,
-      "stack": [
-        {
-          "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
-          "start": 1.2
-        },
-        {
-          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
-          "start": 26.2
-        },
-        {
-          "id": "16WNhsLUswbmsWj0H31djgYLrtBIMNyR4",
-          "start": 3.2
-        }
-      ]
-    },
-    {
-      "note": "Dr. Tea: two drinks, cheers",
-      "id": "1qAac42eeX7QrLXupI26TZPPkpe-sNmIA",
-      "start": 10.3,
-      "dur": 1.3,
-      "only": "portrait"
-    },
-    {
-      "note": "Sylvan Gardens: drone along a finished backyard path",
-      "id": "17L_bgUS6QSWv6KprHBYLB3ppv_9QzKnM",
-      "start": 4.3,
-      "dur": 1.3,
-      "mx": 0.55
-    },
-    {
-      "note": "MFPAA: crew group shot",
-      "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
-      "start": 52.4,
-      "dur": 1.3,
-      "mx": 0.62
-    },
-    {
-      "note": "Iron 24: trainer spotting a dumbbell press",
-      "id": "1N3DEOPUqUlmzgOKzcgRhaa90TclHOsmU",
-      "start": 4.3,
-      "dur": 1.4,
-      "mx": 0.45
-    },
-    {
-      "note": "Stack: Sylvan Gardens walkway, X Shadyside treadmills, CSMP tomato soup",
-      "dur": 1.6,
-      "stack": [
-        {
-          "id": "1kGlDgZlsrjqYST7hgmQJ0iCf4mQ7gP2W",
-          "start": 6.0
-        },
-        {
-          "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
-          "start": 11.0
-        },
-        {
-          "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
-          "start": 19.6
-        }
-      ]
-    },
-    {
-      "note": "Sylvan Gardens: drone over a finished front yard",
-      "id": "1lcvHws1NOnFeoTxPH0a080z_mCUbXWvt",
-      "start": 0.5,
-      "dur": 1.3,
-      "only": "portrait"
-    },
-    {
-      "note": "Iron 24: drone across the gym floor",
-      "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
-      "start": 18.6,
-      "dur": 1.4
-    },
-    {
-      "note": "CSMP: cream drizzled into tomato soup",
-      "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
-      "start": 19.6,
-      "dur": 1.3,
-      "only": "portrait"
-    },
-    {
-      "note": "SXP: coached squat",
-      "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
-      "start": 26.3,
-      "dur": 1.3,
-      "only": "landscape"
+     "id": "1oCbAE3buo1hGyUv0eaMEuHNVaWE-2FPY",
+     "start": 16.8
     }
-  ]
+   ]
+  },
+  {
+   "note": "X Shadyside crew under red light",
+   "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+   "start": 5.3,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "Take a Nurse: nurse walking up to the front door",
+   "id": "1dKsjUGkvmRQSIZ1hyIvm7-Vl4lQc90uT",
+   "start": 3.3,
+   "dur": 1.2
+  },
+  {
+   "note": "Iron 24: drone through the red-light room",
+   "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
+   "start": 38.0,
+   "dur": 1.3
+  },
+  {
+   "note": "SXP: sled push",
+   "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
+   "start": 24.9,
+   "dur": 1.3,
+   "mx": 0.45
+  },
+  {
+   "note": "Stack: Dr. Tea drink, Iron 24 cold plunge, Lucid Juice",
+   "dur": 1.6,
+   "stack": [
+    {
+     "id": "1Uv7wi4V0wWllAFUhGZ0dq-sNTqzuxxXj",
+     "start": 1.2
+    },
+    {
+     "id": "1s0VcKSosWoIhd3q-CjXCz8hMONI4UOo3",
+     "start": 10.4
+    },
+    {
+     "id": "16WNhsLUswbmsWj0H31djgYLrtBIMNyR4",
+     "start": 3.2
+    }
+   ]
+  },
+  {
+   "note": "Dr. Tea: two drinks, cheers",
+   "id": "1qAac42eeX7QrLXupI26TZPPkpe-sNmIA",
+   "start": 10.3,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "Iron 24: cold plunge",
+   "id": "1s0VcKSosWoIhd3q-CjXCz8hMONI4UOo3",
+   "start": 10.4,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "MFPAA: the rig at the roadside, traffic passing",
+   "id": "1gy_-iUO3UKo6reIXQdl8OtRK8zg5jlGo",
+   "start": 45.2,
+   "dur": 1.4,
+   "mx": 0.3
+  },
+  {
+   "note": "Sylvan Gardens: drone along a finished backyard path",
+   "id": "17L_bgUS6QSWv6KprHBYLB3ppv_9QzKnM",
+   "start": 4.3,
+   "dur": 1.3,
+   "mx": 0.55
+  },
+  {
+   "note": "Stack: Sylvan Gardens walkway, Iron 24 cable row, CSMP tomato soup",
+   "dur": 1.6,
+   "stack": [
+    {
+     "id": "1kGlDgZlsrjqYST7hgmQJ0iCf4mQ7gP2W",
+     "start": 6.0
+    },
+    {
+     "id": "1FS7g88iDbFFM9Er4PvvaT7K3K7_BP42K",
+     "start": 10.8
+    },
+    {
+     "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
+     "start": 19.6
+    }
+   ]
+  },
+  {
+   "note": "Iron 24: trainer coaching a cable row",
+   "id": "1FS7g88iDbFFM9Er4PvvaT7K3K7_BP42K",
+   "start": 10.8,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "CSMP: cream drizzled into tomato soup",
+   "id": "1SeQU0ySKk4BZSwyXzOSCtUc8j4dTnbHd",
+   "start": 19.6,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "MFPAA: drone straight down on the crew loading a stretcher",
+   "id": "10PfKW_n9Khi6x2GA30FdjULpMN-g5Gb8",
+   "start": 46.0,
+   "dur": 1.4,
+   "mx": 0.42
+  },
+  {
+   "note": "Stack: Union Trust rotunda floor, Iron 24 group training, X Shadyside deadlift",
+   "dur": 1.6,
+   "stack": [
+    {
+     "id": "1lygxYjkAVZ9_G37o9ABAKg14UGUOOW93",
+     "start": 1.2
+    },
+    {
+     "id": "1s5B744mr7IWTO4hwZboAXjb1IQWNNBdr",
+     "start": 5.2
+    },
+    {
+     "id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT",
+     "start": 26.2
+    }
+   ]
+  },
+  {
+   "note": "Union Trust Building: rotunda floor from above",
+   "id": "1lygxYjkAVZ9_G37o9ABAKg14UGUOOW93",
+   "start": 1.2,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "Sylvan Gardens: drone over a finished front yard",
+   "id": "1lcvHws1NOnFeoTxPH0a080z_mCUbXWvt",
+   "start": 0.5,
+   "dur": 1.3,
+   "only": "portrait"
+  },
+  {
+   "note": "Take a Nurse: a hand on a hand",
+   "id": "1dKsjUGkvmRQSIZ1hyIvm7-Vl4lQc90uT",
+   "start": 19.5,
+   "dur": 1.2,
+   "mx": 0.55
+  },
+  {
+   "note": "Iron 24: drone across the gym floor",
+   "id": "1LczVU8Dnds9yY0_Do8f3Qq6mlioIJg-r",
+   "start": 18.6,
+   "dur": 1.4
+  },
+  {
+   "note": "SXP: coached squat",
+   "id": "1l5nkIyjYgjXuLOsFeRZdyIU33dU2REPU",
+   "start": 26.3,
+   "dur": 1.3,
+   "only": "landscape"
+  }
+ ]
 }
