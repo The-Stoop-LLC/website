@@ -1,16 +1,11 @@
 {
  "exports": [
   {
-   "id": "155-SI3bxUIta99VeOhx9B5HVpBC_txQA",
-   "t": 21.2,
-   "max": 1600,
-   "note": "Take a Nurse Hero Video v2 Final poster"
-  },
-  {
    "id": "1dKsjUGkvmRQSIZ1hyIvm7-Vl4lQc90uT",
-   "t": 21.7,
+   "t": 4.7,
    "max": 1600,
-   "note": "Take a Nurse Loop v2 Final poster"
+   "force": true,
+   "note": "Take a Nurse Loop v2 Final poster: the walk up to the front door, so the two video tiles do not repeat the kitchen scene"
   }
  ]
 }
