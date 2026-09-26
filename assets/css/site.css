@@ -1734,6 +1734,8 @@ footer {
 /* A two-tile 4:5 row would leave the column's third track empty: auto-fit collapses it
    so the tiles stretch to the column instead (the phone rule below keeps two columns). */
 .article-body .cs-media--tall{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+/* A single 16:10 figure stretches to the column the same way. */
+.article-body .cs-media--wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0}
 
