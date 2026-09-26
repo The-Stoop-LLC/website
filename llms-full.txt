@@ -568,10 +568,8 @@ Tested 5 creative executions — 7|60, 7|90, 911, Streaming, and It's Your Job �
 - Direct traffic up 31% and organic search up 13% during campaign (halo effect)
 - Top creative: "911" — 2.44% CTR, lowest cost per result of all five executions
 911 — Top Creative
-7|60
 7|90
 Streaming
-It's Your Job
 911 — 9x16 Cut
 Need to grow memberships or subscriptions inside a defined service area?
 ### Capital Campaign
@@ -803,7 +801,7 @@ Source: https://thestooppgh.com/work/take-a-nurse.html
 
 ## TAKE A NURSE
 Author: Mike Pernice , Founder · Last updated: September 2026
-Take a Nurse is a nurse-driven, patient-focused small business in Pittsburgh, PA that advocates for independent individuals who need help understanding and navigating their medical care. The Stoop designed its visual identity from the mark up — a logo system built around a stethoscope that forms the N and resolves into a heart, five approved color variants, a seven-color palette, a two-typeface type system, business cards, letterhead, and a brand identity guide — and is now building the website on the same system.
+Take a Nurse is a nurse-driven, patient-focused small business in Pittsburgh, PA that advocates for independent individuals who need help understanding and navigating their medical care. The Stoop designed its visual identity from the mark up — a logo system built around a stethoscope that forms the N and resolves into a heart, five approved color variants, a seven-color palette, a two-typeface type system, business cards, letterhead, and a brand identity guide — then, once the identity was final, shot the brand film and photography for the new takeanurse.org, which The Stoop is now building on the same system.
 ### The Challenge
 Take a Nurse grew out of founder Kathy Fadgen's own experience. Her out-of-town parents were going to medical appointments without her, and unknown treatment plans and medication changes led to stress, delayed care, and unnecessary emergency room visits. The brand had to feel like the service itself — a calm, trusted advocate — and it had to hold up everywhere a healthcare brand shows up: a website header, a business card, an embroidered uniform, a form, a phone screen. It also needed rules so it stays consistent no matter who produces the next piece. The Stoop delivered the full system: the mark, the lockups, the colors, the type, the stationery, and the guide that governs them.
 ### The Logo System
@@ -818,6 +816,11 @@ Want a palette and type system your whole team can actually follow?
 Two-Sided Business Card · Letterhead · Print-Ready
 The first pieces built on the system: a two-sided business card that puts the horizontal lockup and magenta accent on the front and the logomark, contact details, and Norteans name treatment on the back, plus a letterhead that carries the header and footer bar onto every printed page.
 Need stationery that matches the brand you just built?
+### Brand Film & Photography
+One Four-Hour Window · Crew of Two · Six Scenes · Green-Screen Clinical Plates
+With the identity final, the next workstream was content development: the artifacts for the new takeanurse.org, which The Stoop is building for a mid-October launch. On Wednesday, September 16, 2026, a crew of two — Mike producing, Jason on photo and video — shot the brand film and the photography in one four-hour window at the founder’s home, running six scenes in show order: the kitchen-table conversation, the front-door arrival, the drive in the client’s SUV, founder portraits, the phone call and detail inserts, and green-screen clinical plates so clinical settings could be composited without renting a facility. Out of it came a 60-second founder film in Kathy’s own narration, captioned and closing on a “Patient First” end card; a 30-second text-free loop for the website hero; and 1,008 retouched photos, every shot mapped to a page of the new site.
+“When someone calls me for the first time, I pause and I hear them out.”
+Building a website that needs its own film and photo library?
 ### Our Process
 #### The Mark
 Designed the stethoscope-and-heart N as the single idea the whole identity hangs on, then set the wordmark around it.
@@ -829,14 +832,14 @@ Defined a seven-color palette with print and digital values, paired Norteans wit
 Produced print-ready business cards and letterhead, then documented everything in a nine-page brand identity guide.
 ### A System, Not Just a Logo
 Pittsburgh, PA · August — September 2026 · Identity in Use · Website in Development
-Take a Nurse now has one mark that scales from a favicon to signage, a palette and type pairing that match across print and screen, stationery ready for the printer, and a guide that lets anyone — a printer, an embroiderer, a web developer — produce on-brand work without rebuilding or guessing. The identity is in use, and The Stoop is now building the Take a Nurse website on the same system.
+Take a Nurse now has one mark that scales from a favicon to signage, a palette and type pairing that match across print and screen, stationery ready for the printer, and a guide that lets anyone — a printer, an embroiderer, a web developer — produce on-brand work without rebuilding or guessing. With the identity final, The Stoop shot the brand film and photography in September 2026 — a 60-second founder film, a 30-second website hero loop, and 1,008 retouched photos, every shot mapped to a page of the new takeanurse.org, now in build for a mid-October launch.
 ### Questions About This Project
 **Q: What did The Stoop design for Take a Nurse?**
-A logo system with horizontal, stacked, and logomark lockups in five color variants, a seven-color palette, a Norteans and Roboto type system, business cards, letterhead, and a nine-page brand identity guide.
+A logo system with horizontal, stacked, and logomark lockups in five color variants, a seven-color palette, a Norteans and Roboto type system, business cards, letterhead, and a nine-page brand identity guide, then the content for the new takeanurse.org: a 60-second founder film, a 30-second website hero loop, and 1,008 retouched photos.
 **Q: Who is Take a Nurse?**
 Take a Nurse is a nurse-driven, patient-focused small business in Pittsburgh, PA that advocates for independent individuals who need help understanding and navigating their medical care.
 **Q: When was the work done?**
-August to September 2026. The identity is in use, and The Stoop is now building the Take a Nurse website on the same system.
+The identity was built in August 2026. The brand film and photography were shot in September 2026, once the identity was final, and The Stoop is now building the Take a Nurse website on the same system.
 ### Related Services
 ### Need a brand that holds up everywhere?
 Let's build the whole system, mark to guidelines.

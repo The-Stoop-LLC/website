@@ -1726,6 +1726,15 @@ footer {
 
 .article-body ul li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:6px;background:var(--yellow)}
 
+/* Blog posts reuse the case-study media rows (.cs-media / .cs-videos). Inside the 800px
+   article column they span the column instead of centring at 1100px; the phone column
+   counts and gaps come from the shared .cs-media rules further down. */
+.article-body .cs-media,.article-body .cs-videos{max-width:none;margin:4px 0 36px}
+
+/* A two-tile 4:5 row would leave the column's third track empty: auto-fit collapses it
+   so the tiles stretch to the column instead (the phone rule below keeps two columns). */
+.article-body .cs-media--tall{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0}
 
 .stat-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:28px 24px;text-align:center}
@@ -1954,6 +1963,7 @@ footer {
   /* BLOG */
   .blog-grid { grid-template-columns: 1fr; padding: 0 20px; }
   .article-body { padding: 40px 20px; }
+  .article-body .cs-media--tall { grid-template-columns: repeat(2, 1fr); }
   .stat-grid { grid-template-columns: 1fr; }
   .related { padding: 0 20px 60px; }
 
