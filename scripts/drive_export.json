@@ -1,5 +1,16 @@
 {
  "exports": [
-  {"id": "1NdpW4yA3w2ondgZrQ5zdnMpw4HOjEAqT", "t": 6.0, "max": 1600, "force": true}
+  {
+   "id": "1CfaOPfzntbsMjGFZZPX84gPn4Ctb2Ia1",
+   "t": 19.7,
+   "max": 1600,
+   "note": "CSMP HIbachi.mov poster"
+  },
+  {
+   "id": "1f428PnbQiqm9KR5N2rDoiRBLyvXYvrRL",
+   "t": 39.8,
+   "max": 1600,
+   "note": "CSMP Mediterranean Chicken wrap.mov poster"
+  }
  ]
 }
