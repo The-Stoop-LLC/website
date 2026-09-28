@@ -1,0 +1,59 @@
+name: Export Drive stills
+
+# Grabs specific frames (or images) from Drive files listed in
+# scripts/drive_export.json and commits them to the branch the run was
+# started from, then rebuilds the WebP thumbnails. Use it for video posters
+# and covers that need a chosen frame rather than Drive's own thumbnail.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drive-export-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the dispatching branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg and script dependencies
+        run: |
+          command -v ffmpeg || { sudo apt-get update -q && sudo apt-get install -y -q ffmpeg; }
+          pip install -r scripts/requirements.txt
+
+      - name: Export the listed files
+        env:
+          DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
+        run: python3 scripts/drive_export.py
+
+      - name: Build WebP thumbnails
+        run: python3 scripts/make_thumbs.py
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Nothing exported."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Export Drive stills
+
+          Automated run of scripts/drive_export.py for the files listed in
+          scripts/drive_export.json."
+          git push origin HEAD:${{ github.ref_name }}
