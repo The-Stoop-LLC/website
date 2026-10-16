@@ -7,6 +7,14 @@ name: Export Drive stills
 
 on:
   workflow_dispatch:
+    inputs:
+      urls:
+        description: >-
+          Optional JSON list of {"url", "dest", "max"} items to download in the same
+          run (Canva export links, for example). They are masked in the log and never
+          written to the repository; only the files they produce are committed.
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -35,9 +43,21 @@ jobs:
           command -v ffmpeg || { sudo apt-get update -q && sudo apt-get install -y -q ffmpeg; }
           pip install -r scripts/requirements.txt
 
+      - name: Mask any download links passed as inputs
+        if: ${{ inputs.urls != '' }}
+        env:
+          EXPORT_URLS: ${{ inputs.urls }}
+        run: |
+          python3 - <<'EOF'
+          import json, os
+          for item in json.loads(os.environ["EXPORT_URLS"]):
+              print(f"::add-mask::{item['url']}")
+          EOF
+
       - name: Export the listed files
         env:
           DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
+          EXPORT_URLS: ${{ inputs.urls }}
         run: python3 scripts/drive_export.py
 
       - name: Build WebP thumbnails
