@@ -38,8 +38,8 @@
   {"id": "1DpjcuOPo1ZsqF4yqwvqstSZIN5Qrp3GR", "max": 1600, "note": "CSMP AllisonWade Cover"},
   {"id": "1x1mLPuTczLrwkLrNuT42tcxLIM3oZL7N", "max": 1600, "note": "CSMP Eggplant Chermoula cover"},
   {"id": "1nrG-m4Q8-diJ83GNBbow6L1BM8XYHDL-", "max": 1600, "note": "CSMP Influencer In The Kitchen Madison cover"},
-  {"id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc", "sheet": 12, "dest": "_scout/syl/dji-0050.jpg", "note": "Sylvan DJI_0050 drone overhead contact sheet"},
-  {"id": "1vBNl3ct3Y5h6s5WgqTKRnWqxjB3oyFV2", "sheet": 12, "dest": "_scout/syl/slit-seeder.jpg", "note": "Sylvan Flow_VID_20240703_132732 slit-seeder contact sheet"},
-  {"id": "1N3BJf_AARD8w2ZCtl4dtxQ7wPjyXvXUJ", "sheet": 8, "dest": "_scout/syl/img-8003.jpg", "note": "Sylvan IMG_8003 blue-hour path light contact sheet"}
+  {"id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc", "t": 24.5, "max": 1600, "note": "Sylvan DJI_0050 drone poster"},
+  {"id": "1vBNl3ct3Y5h6s5WgqTKRnWqxjB3oyFV2", "t": 1.8, "max": 1600, "note": "Sylvan Flow_VID_20240703_132732 slit-seeder poster"},
+  {"id": "1N3BJf_AARD8w2ZCtl4dtxQ7wPjyXvXUJ", "t": 1.1, "max": 1600, "note": "Sylvan IMG_8003 path light poster"}
  ]
 }
