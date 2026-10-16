@@ -138,8 +138,45 @@ def main() -> int:
         im.save(dest, "JPEG", quality=int(item.get("quality", 86)), optimize=True, progressive=True)
         print(f"wrote {dest.relative_to(REPO)} {im.size[0]}x{im.size[1]} from {info.get('name')!r}")
         done += 1
+    done += export_urls()
     print(f"{done} exported")
     return 0
+
+
+def export_urls() -> int:
+    """Plain-URL exports (Canva download links, for example), passed through the
+    EXPORT_URLS environment variable as a JSON list of {"url", "dest", "max"?} so
+    the signed links never land in the repository. Each is saved to `dest`
+    (JPEG, or PNG when dest ends in .png) with an 800 px WebP beside it under
+    thumbs/, the same shape make_thumbs.py gives the Drive images."""
+    raw = os.environ.get("EXPORT_URLS", "").strip()
+    if not raw:
+        return 0
+    import requests
+    done = 0
+    for item in json.loads(raw):
+        dest = REPO / item["dest"]
+        if dest.exists() and not item.get("force"):
+            print(f"skip {dest.relative_to(REPO)} (exists)")
+            continue
+        r = requests.get(item["url"], timeout=180)
+        r.raise_for_status()
+        im = Image.open(io.BytesIO(r.content))
+        max_edge = int(item.get("max", 1600))
+        im.thumbnail((max_edge, max_edge))
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if dest.suffix.lower() == ".png":
+            im.save(dest, "PNG", optimize=True)
+        else:
+            im.convert("RGB").save(dest, "JPEG", quality=int(item.get("quality", 86)), optimize=True, progressive=True)
+        thumb = dest.parent / "thumbs" / (dest.stem + ".webp")
+        thumb.parent.mkdir(parents=True, exist_ok=True)
+        t = im.convert("RGB")
+        t.thumbnail((800, 800))
+        t.save(thumb, "WEBP", quality=82, method=6)
+        print(f"wrote {dest.relative_to(REPO)} {im.size[0]}x{im.size[1]} from a url")
+        done += 1
+    return done
 
 
 if __name__ == "__main__":
