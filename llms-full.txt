@@ -892,7 +892,7 @@ Source: https://thestooppgh.com/work/union-trust-building.html
 
 ## UNION TRUST BUILDING
 Social Media Management, Event Content & Tenant Communications
-Author: Mike Pernice, Founder · Last updated: September 2026
+Author: Mike Pernice, Founder · Last updated: October 2026
 The Union Trust Building is a Flemish Gothic landmark at 501 Grant Street in downtown Pittsburgh, redeveloped by The Davis Companies into Class-A offices with restaurants, a tenant gym, and a 10th-floor theatre. From October 2023 into 2025, The Stoop ran its Instagram and Facebook: tenant event coverage, a social media audit, and monthly reels and stories. We also produced the quarterly tenant newsletter and branded the building’s tenant app.
 ### The Challenge
 The Union Trust Building has more to show than almost any office address in Pittsburgh: a 40-foot stained-glass dome, a 55-ton bank vault door installed in 1918, a Gothic roofline with chapels on top, and a lobby full of restaurants and tenants. Its social accounts mostly covered events. When we audited them in November 2023, they were reaching just 1.8% of the potential audience in the building’s top five cities, and had captured only 0.2% of it. The audience wanted more than events: the building itself, the people who run it, and the companies that work there.
@@ -905,6 +905,11 @@ Our Social Media Analysis & Strategy compared almost two years of Facebook and I
 - Post stories consistently, with polls and Q&As to start conversations
 - Use both accounts as an information hub for tenants: events, amenities, and building news
 - Report quarterly on reach, interactions, and follower growth
+#### The 2024 Plan
+Three pages from the Social Media Analysis & Strategy deck that set the year: the cover, the analysis overview and the 2024 goals.
+- Cover
+- Analysis Overview
+- 2024 Goals & Objectives
 ### Events, Posted the Same Week
 Happy Hours · Makers Markets · Taste of UTB · Trivia · Blood Drives · Quantum Theatre
 The work started with tenant events. Each one came as a set package: one to two hours of on-site coverage, two reels, and five stories, with the first story posted live while the event was still going and the rest over the following days. From late 2024 every event ran on the same monthly cycle: an announcement, a content shoot, and a recap reel and story. Coverage ran from a Harvest Party in October 2023 through holiday happy hours, makers markets, a Taste of UTB tasting with five restaurants, and a Make-A-Wish fundraiser with BNY Mellon that passed its $5,000 goal halfway through and closed at more than $8,000.
@@ -918,6 +923,11 @@ Want a monthly calendar built around your own story?
 ### Quarterly Tenant Newsletter
 Fall 2024 · Winter 2025 · Spring 2025 · Event Recaps · Building News
 From fall 2024 we also produced the building’s quarterly tenant newsletter, and it ran with the social calendar as one loop: each issue announced the coming season’s events, recapped the last season’s, and ran building features such as the restored chapel roof, the Pittsburgh History & Landmarks Foundation’s new vault panels, and the valet team. The recaps carried the outcomes tenants cared about: Quantum Theatre sold 2,101 tickets for its month-long run in the building’s theatre, and the March 2025 blood drive collected 19 donations, enough to help 57 local lives. Every issue sent readers back to the building’s Instagram and Facebook.
+- Fall 2024 Cover
+- Fall 2024 Events Page
+- Spring 2025 Events Recap
+Each issue was announced on the building’s stories as well.
+- Fall 2024 Issue Story
 Need tenant or member communications that people read?
 ### The Building in Every Tenant’s Pocket
 March 2025 · Login Screen · Splash Screen · App Icons · Notification Icon
@@ -942,6 +952,11 @@ The series did the heavy lifting. Day in the Life Part 1 drew 2,155 Instagram vi
 - Q2 2024 — 8,000 IG accounts reached, 1,004 IG followers
 - Q2 2024 — 12,700 Facebook impressions, up from 12,100 in Q1
 - Dec 2023 – Mar 2025 — 49,738 Instagram and 14,111 Facebook views logged across 219 posts and stories
+The reporting behind the numbers: the 2024 Annual Analytical Review and its Facebook reach page, the October 2024 report that covered Taste of UTB and the Caligari opening, and the story that marked 1,000 Instagram followers.
+- 2024 Annual Review
+- Facebook Accounts Reached, 2024
+- October 2024 Report
+- 1K Followers Giveaway
 The full year held up. In 2024, the first full year of monthly management, Instagram reached 16,600 accounts, up from 4,200 in 2023, and drew 24,100 views, up from 6,100. Content interactions rose from 255 to 1,000 on Instagram and from 218 to 1,500 on Facebook, where reach grew from 8,000 to 11,600 accounts. Instagram followers grew from 821 at the end of 2023 to 1,057 at the end of 2024, up 29%. The Stoop took over in October 2023, so the 2023 figures already include its first three months.
 #### 2024 vs. 2023
 - Instagram accounts reached — 4,200 → 16,600
