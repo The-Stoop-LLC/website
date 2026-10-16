@@ -54,7 +54,8 @@
   {"id": "1rx3TDF-3cvj9bU3FkOPYO_dMtNBW-_DQ", "max": 1600, "note": "UTB IMG_4373 lobby eye level (HEIC)"},
   {"id": "1q2B8BiItdKbm3vVIxz4IrKKM2Aq0ysa4", "max": 1600, "note": "UTB IMG_7632 rotunda (HEIC)"},
   {"id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY", "t": 12.5, "max": 1600, "note": "MFPAA capital 911 16x9 poster"},
-  {"id": "1HsgEoz6f-4X2-1f2vL04-26R_dhaf22o", "t": 0.9, "max": 1600, "note": "MFPAA Wolfe donor 16x9 poster"},
-  {"id": "1HjER4IkpT5_4PMGRG3_lKChWRprwsNjT", "t": 0.9, "max": 1600, "note": "MFPAA Wolfe donor 9x16 poster"}
+  {"id": "1HsgEoz6f-4X2-1f2vL04-26R_dhaf22o", "t": 4.7, "max": 1600, "note": "MFPAA Wolfe donor 16x9 poster", "force": true},
+  {"id": "1HjER4IkpT5_4PMGRG3_lKChWRprwsNjT", "t": 4.7, "max": 1600, "note": "MFPAA Wolfe donor 9x16 poster", "force": true},
+  {"id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY", "t": 16.6, "max": 1920, "dest": "_scout/mf/911-endcard.jpg", "note": "MFPAA capital 911 end card at full resolution (typo check)"}
  ]
 }
