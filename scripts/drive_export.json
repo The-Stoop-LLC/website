@@ -288,15 +288,9 @@
     },
     {
       "id": "1FS7g88iDbFFM9Er4PvvaT7K3K7_BP42K",
-      "sheet": 12,
-      "dest": "_scout/iron24-team-work-1-vertical.jpg",
-      "note": "scout: Iron 24 Team Work 1 Vertical"
-    },
-    {
-      "id": "1bQVoIu73DsGvfyIhRCXGIKPDXq33-yZQ",
-      "sheet": 12,
-      "dest": "_scout/iron24-train-and-recovery-vertical.jpg",
-      "note": "scout: Iron 24 Train and Recovery Vertical"
+      "t": 1.0,
+      "max": 1600,
+      "note": "Iron 24 Team Work 1 Vertical poster"
     }
   ]
 }
