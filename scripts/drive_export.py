@@ -8,14 +8,18 @@ Export specific Drive files as site images, driven by scripts/drive_export.json:
      {"id": "<drive id>", "t": 2, "dest": "assets/images/covers/x-1600.jpg"},
      {"id": "<drive id>", "sheet": 12, "dest": "_scout/x.jpg"},  # 12-frame contact sheet with timestamps
      {"id": "<drive id>", "sheet": 8, "from": -8, "dest": "_scout/end.jpg"},  # ...over the last 8 s only
-     {"id": "<drive id>", "clip": {"from": 9, "to": -4.5}, "dest": "assets/video/x.mp4"}
+     {"id": "<drive id>", "clip": {"from": 9, "to": -4.5}, "dest": "assets/video/x.mp4"},
+     {"id": "<drive id>", "scenes": {"from": -6, "threshold": 0.3}}  # log cut times, write nothing
   ]}
 
 `from` and `to` are seconds into the video; a negative value counts back from the
 end. A `clip` item cuts that span out of a Drive video and encodes it as an H.264
 MP4 for self-hosting: short side `height` (default 720), `crf` (default 24),
-audio kept as AAC when the source has it. Use it only for trims and resizes; it
-does not alter the picture.
+audio kept as AAC when the source has it, and an optional `fade` (seconds) that
+fades picture and sound out at the new end so a trimmed cut does not stop dead.
+Use it only for trims and resizes; it does not alter the picture otherwise.
+A negative `t` on a frame export counts back from the end. A `scenes` item prints
+the timestamps of hard cuts in a span to the log, for placing a trim exactly.
 
 Each export is written to assets/images/drive/<id>.jpg unless `dest` is given
 (the site's localized-Drive convention; scripts/make_thumbs.py then builds the
@@ -124,11 +128,17 @@ def video_clip(session, file_id: str, dest: Path, spec: dict) -> str:
     dur = video_duration(session, file_id)
     a, b = _span(dur, spec.get("from"), spec.get("to"))
     h = int(spec.get("height", 720))
-    scale = f"scale='if(gt(iw,ih),-2,{h})':'if(gt(iw,ih),{h},-2)'"
+    vf = f"scale='if(gt(iw,ih),-2,{h})':'if(gt(iw,ih),{h},-2)'"
+    af = []
+    fade = float(spec.get("fade", 0) or 0)
+    if fade > 0:
+        st = max(0.0, (b - a) - fade)
+        vf += f",fade=t=out:st={st:.3f}:d={fade:.3f}"
+        af = ["-af", f"afade=t=out:st={st:.3f}:d={fade:.3f}"]
     with tempfile.TemporaryDirectory() as tmp:
         out = Path(tmp) / "clip.mp4"
         cmd = ["ffmpeg", "-loglevel", "error", "-y", "-headers", auth, "-ss", f"{a:.3f}", "-i", url,
-               "-t", f"{b - a:.3f}", "-map", "0:v:0", "-map", "0:a:0?", "-vf", scale,
+               "-t", f"{b - a:.3f}", "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf, *af,
                "-c:v", "libx264", "-preset", "slow", "-crf", str(int(spec.get("crf", 24))),
                "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "128k",
                "-movflags", "+faststart", str(out)]
@@ -136,6 +146,22 @@ def video_clip(session, file_id: str, dest: Path, spec: dict) -> str:
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_bytes(out.read_bytes())
     return f"{a:.2f}s..{b:.2f}s of {dur:.2f}s"
+
+
+def scene_cuts(session, file_id: str, spec: dict) -> list[float]:
+    """Timestamps (seconds from the start of the file) of hard cuts inside spec['from']..spec['to'],
+    from ffmpeg's scene score, for placing a trim on the exact frame."""
+    url = f"{API_BASE}/{file_id}?alt=media&supportsAllDrives=true"
+    dur = video_duration(session, file_id)
+    a, b = _span(dur, spec.get("from"), spec.get("to"))
+    thr = float(spec.get("threshold", 0.3))
+    cmd = ["ffmpeg", "-hide_banner", "-nostats", "-headers", f"Authorization: Bearer {_token(session)}\r\n",
+           "-ss", f"{a:.3f}", "-i", url, "-t", f"{b - a:.3f}", "-an",
+           "-vf", f"select='gt(scene,{thr})',showinfo", "-f", "null", "-"]
+    err = subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=900).stderr
+    cuts = [a + float(m) for m in re.findall(r"pts_time:([0-9.]+)", err)]
+    print(f"scenes {file_id}: duration {dur:.3f}s, cuts in {a:.2f}..{b:.2f}: " + ", ".join(f"{c:.3f}" for c in cuts))
+    return cuts
 
 
 def image_rendition(session, file_id: str, max_edge: int, info: dict | None = None) -> Image.Image:
@@ -166,6 +192,9 @@ def main() -> int:
     for item in cfg.get("exports", []):
         fid = item["id"]
         dest = REPO / item["dest"] if item.get("dest") else OUT / f"{fid}.jpg"
+        if item.get("scenes"):
+            scene_cuts(session, fid, item["scenes"])
+            continue
         if dest.exists() and not item.get("force"):
             print(f"skip {dest.relative_to(REPO)} (exists)")
             continue
@@ -179,7 +208,10 @@ def main() -> int:
         if item.get("sheet"):
             im = contact_sheet(session, fid, int(item["sheet"]), int(item.get("cell", 480)), item.get("from"), item.get("to"))
         elif info.get("mimeType", "").startswith("video/") or "t" in item:
-            im = video_frame(session, fid, float(item.get("t", 1.0)), max_edge)
+            t = float(item.get("t", 1.0))
+            if t < 0:
+                t = max(0.0, video_duration(session, fid) + t)
+            im = video_frame(session, fid, t, max_edge)
         else:
             im = image_rendition(session, fid, max_edge, info)
         dest.parent.mkdir(parents=True, exist_ok=True)

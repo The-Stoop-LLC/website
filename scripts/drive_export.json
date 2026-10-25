@@ -294,108 +294,78 @@
     },
     {
       "id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY",
-      "sheet": 12,
-      "from": -9,
-      "dest": "_scout/mfpaa-end-capital-911-16x9.jpg",
-      "note": "scout: last 9s of capital-911-16x9"
+      "scenes": {
+        "from": -7,
+        "threshold": 0.3
+      },
+      "note": "probe: cuts in the last 7 s of capital-911-16x9"
+    },
+    {
+      "id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY",
+      "t": -0.6,
+      "max": 1920,
+      "dest": "_scout/mfpaa-endframe-capital-911-16x9.jpg",
+      "note": "scout: full-res end card of capital-911-16x9"
     },
     {
       "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-sub-911-16x9.jpg",
-      "note": "scout: last 8s of sub-911-16x9"
+      "scenes": {
+        "from": -7,
+        "threshold": 0.3
+      },
+      "note": "probe: cuts in the last 7 s of sub-911-16x9"
+    },
+    {
+      "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
+      "t": -0.6,
+      "max": 1920,
+      "dest": "_scout/mfpaa-endframe-sub-911-16x9.jpg",
+      "note": "scout: full-res end card of sub-911-16x9"
     },
     {
       "id": "1awH6aAxk3Jxy96c3r4mSnsQ56Kt0sSnZ",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-sub-911-9x16.jpg",
-      "note": "scout: last 8s of sub-911-9x16"
+      "scenes": {
+        "from": -7,
+        "threshold": 0.3
+      },
+      "note": "probe: cuts in the last 7 s of sub-911-9x16"
+    },
+    {
+      "id": "1awH6aAxk3Jxy96c3r4mSnsQ56Kt0sSnZ",
+      "t": -0.6,
+      "max": 1920,
+      "dest": "_scout/mfpaa-endframe-sub-911-9x16.jpg",
+      "note": "scout: full-res end card of sub-911-9x16"
     },
     {
       "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-sub-streaming.jpg",
-      "note": "scout: last 8s of sub-streaming"
+      "scenes": {
+        "from": -7,
+        "threshold": 0.3
+      },
+      "note": "probe: cuts in the last 7 s of sub-streaming"
+    },
+    {
+      "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
+      "t": -0.6,
+      "max": 1920,
+      "dest": "_scout/mfpaa-endframe-sub-streaming.jpg",
+      "note": "scout: full-res end card of sub-streaming"
     },
     {
       "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-sub-7-90.jpg",
-      "note": "scout: last 8s of sub-7-90"
+      "scenes": {
+        "from": -7,
+        "threshold": 0.3
+      },
+      "note": "probe: cuts in the last 7 s of sub-7-90"
     },
     {
-      "id": "15PK_4A_FvpMupFqGUcNDcYcuSWmxxW-3",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-chief-16x9.jpg",
-      "note": "scout: last 8s of cap-chief-16x9"
-    },
-    {
-      "id": "16WE0t5I1M7PkZywXemSufmFUfTCNyR0s",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-chief-9x16.jpg",
-      "note": "scout: last 8s of cap-chief-9x16"
-    },
-    {
-      "id": "1ke8iiKC92dUQLttVvT2sr7bi_iQhkF6r",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-christine-16x9.jpg",
-      "note": "scout: last 8s of cap-christine-16x9"
-    },
-    {
-      "id": "1QG7lCfueKHy2ZLSLMqG2j8eOlIhJJFNE",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-christine-9x16.jpg",
-      "note": "scout: last 8s of cap-christine-9x16"
-    },
-    {
-      "id": "1HsgEoz6f-4X2-1f2vL04-26R_dhaf22o",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-donor-16x9.jpg",
-      "note": "scout: last 8s of cap-donor-16x9"
-    },
-    {
-      "id": "1HjER4IkpT5_4PMGRG3_lKChWRprwsNjT",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-donor-9x16.jpg",
-      "note": "scout: last 8s of cap-donor-9x16"
-    },
-    {
-      "id": "1bZbL_TtFYxXzCV6qX7k1MHF-ZgeRl_mP",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-30s.jpg",
-      "note": "scout: last 8s of cap-30s"
-    },
-    {
-      "id": "1dyaxnE4oMxDxOIJFbSkyFD9U4fUGC4lp",
-      "sheet": 8,
-      "from": -8,
-      "dest": "_scout/mfpaa-end-cap-60s.jpg",
-      "note": "scout: last 8s of cap-60s"
-    },
-    {
-      "id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc",
-      "sheet": 12,
-      "from": 0,
-      "to": 12,
-      "dest": "_scout/sylvan-dji0050-first12.jpg",
-      "note": "scout: DJI_0050 first 12 s"
-    },
-    {
-      "id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc",
-      "sheet": 12,
-      "dest": "_scout/sylvan-dji0050-full.jpg",
-      "note": "scout: DJI_0050 whole clip"
+      "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
+      "t": -0.6,
+      "max": 1920,
+      "dest": "_scout/mfpaa-endframe-sub-7-90.jpg",
+      "note": "scout: full-res end card of sub-7-90"
     }
   ]
 }
