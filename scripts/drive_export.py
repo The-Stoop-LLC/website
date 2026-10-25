@@ -6,8 +6,16 @@ Export specific Drive files as site images, driven by scripts/drive_export.json:
      {"id": "<drive id>", "t": 6.0, "max": 1600},          # video: the frame at t seconds
      {"id": "<drive id>", "max": 1600},                    # image: Drive's own rendition
      {"id": "<drive id>", "t": 2, "dest": "assets/images/covers/x-1600.jpg"},
-     {"id": "<drive id>", "sheet": 12, "dest": "_scout/x.jpg"}   # 12-frame contact sheet with timestamps
+     {"id": "<drive id>", "sheet": 12, "dest": "_scout/x.jpg"},  # 12-frame contact sheet with timestamps
+     {"id": "<drive id>", "sheet": 8, "from": -8, "dest": "_scout/end.jpg"},  # ...over the last 8 s only
+     {"id": "<drive id>", "clip": {"from": 9, "to": -4.5}, "dest": "assets/video/x.mp4"}
   ]}
+
+`from` and `to` are seconds into the video; a negative value counts back from the
+end. A `clip` item cuts that span out of a Drive video and encodes it as an H.264
+MP4 for self-hosting: short side `height` (default 720), `crf` (default 24),
+audio kept as AAC when the source has it. Use it only for trims and resizes; it
+does not alter the picture.
 
 Each export is written to assets/images/drive/<id>.jpg unless `dest` is given
 (the site's localized-Drive convention; scripts/make_thumbs.py then builds the
@@ -76,12 +84,25 @@ def video_duration(session, file_id: str) -> float:
     return float(out)
 
 
-def contact_sheet(session, file_id: str, n: int, cell_w: int) -> Image.Image:
-    """n frames spread over the video, tiled 4 across with their timestamps, for choosing a poster
-    or checking an overlay without downloading the file."""
+def _span(dur: float, start, end) -> tuple[float, float]:
+    """Resolve a from/to pair (seconds; negative counts back from the end) against a duration."""
+    a = 0.0 if start is None else float(start)
+    b = dur if end is None else float(end)
+    a = dur + a if a < 0 else a
+    b = dur + b if b < 0 else b
+    a, b = max(0.0, min(a, dur)), max(0.0, min(b, dur))
+    if b <= a:
+        raise ValueError(f"empty span {start!r}..{end!r} for a {dur:.2f}s video")
+    return a, b
+
+
+def contact_sheet(session, file_id: str, n: int, cell_w: int, start=None, end=None) -> Image.Image:
+    """n frames spread over the video (or over from..to), tiled 4 across with their timestamps,
+    for choosing a poster or checking an overlay without downloading the file."""
     from PIL import ImageDraw
     dur = video_duration(session, file_id)
-    times = [dur * (i + 0.5) / n for i in range(n)]
+    a, b = _span(dur, start, end)
+    times = [a + (b - a) * (i + 0.5) / n for i in range(n)]
     frames = [video_frame(session, file_id, t, cell_w) for t in times]
     cols = min(4, n)
     rows = (n + cols - 1) // cols
@@ -93,6 +114,28 @@ def contact_sheet(session, file_id: str, n: int, cell_w: int) -> Image.Image:
         sheet.paste(f, (x + (cell_w - f.width) // 2, y))
         draw.text((x + 6, y + ch - 18), f"{i + 1}  {t:6.1f}s", fill=(255, 204, 0))
     return sheet
+
+
+def video_clip(session, file_id: str, dest: Path, spec: dict) -> str:
+    """Cut spec['from']..spec['to'] out of a Drive video and encode it for the site: H.264 (yuv420p,
+    faststart) with the short side scaled to spec['height'], AAC audio when the source has any."""
+    url = f"{API_BASE}/{file_id}?alt=media&supportsAllDrives=true"
+    auth = f"Authorization: Bearer {_token(session)}\r\n"
+    dur = video_duration(session, file_id)
+    a, b = _span(dur, spec.get("from"), spec.get("to"))
+    h = int(spec.get("height", 720))
+    scale = f"scale='if(gt(iw,ih),-2,{h})':'if(gt(iw,ih),{h},-2)'"
+    with tempfile.TemporaryDirectory() as tmp:
+        out = Path(tmp) / "clip.mp4"
+        cmd = ["ffmpeg", "-loglevel", "error", "-y", "-headers", auth, "-ss", f"{a:.3f}", "-i", url,
+               "-t", f"{b - a:.3f}", "-map", "0:v:0", "-map", "0:a:0?", "-vf", scale,
+               "-c:v", "libx264", "-preset", "slow", "-crf", str(int(spec.get("crf", 24))),
+               "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "128k",
+               "-movflags", "+faststart", str(out)]
+        subprocess.run(cmd, check=True, timeout=1800)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(out.read_bytes())
+    return f"{a:.2f}s..{b:.2f}s of {dur:.2f}s"
 
 
 def image_rendition(session, file_id: str, max_edge: int, info: dict | None = None) -> Image.Image:
@@ -128,8 +171,13 @@ def main() -> int:
             continue
         info = meta(session, fid)
         max_edge = int(item.get("max", 1600))
+        if item.get("clip"):
+            span = video_clip(session, fid, dest, item["clip"])
+            print(f"wrote {dest.relative_to(REPO)} ({dest.stat().st_size / 1e6:.1f} MB, {span}) from {info.get('name')!r}")
+            done += 1
+            continue
         if item.get("sheet"):
-            im = contact_sheet(session, fid, int(item["sheet"]), int(item.get("cell", 480)))
+            im = contact_sheet(session, fid, int(item["sheet"]), int(item.get("cell", 480)), item.get("from"), item.get("to"))
         elif info.get("mimeType", "").startswith("video/") or "t" in item:
             im = video_frame(session, fid, float(item.get("t", 1.0)), max_edge)
         else:
