@@ -93,20 +93,42 @@
   }
 
   /* ---------- Video tiles ----------
-     Case study videos show a poster frame with a play button; the Drive
-     player is only loaded when someone asks for it. */
+     Case study videos show a poster frame with a play button; the player is
+     only loaded when someone asks for it. A data-src ending in .mp4 is a
+     self-hosted file and plays in a native <video>; anything else is a Drive
+     preview and loads in an iframe. */
   document.querySelectorAll('.cs-video[data-src]').forEach(function (fig) {
     var btn = fig.querySelector('.cs-video-play');
     var frame = fig.querySelector('.cs-video-frame');
     if (!btn || !frame) return;
     btn.addEventListener('click', function () {
-      var iframe = document.createElement('iframe');
-      iframe.src = fig.getAttribute('data-src');
-      iframe.setAttribute('allow', 'autoplay; fullscreen');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.title = btn.getAttribute('aria-label') || 'Video';
+      var src = fig.getAttribute('data-src');
+      var label = btn.getAttribute('aria-label') || 'Video';
+      var player;
+      if (/\.mp4(\?|#|$)/i.test(src)) {
+        var poster = frame.querySelector('img');
+        player = document.createElement('video');
+        player.src = src;
+        player.controls = true;
+        player.playsInline = true;
+        player.setAttribute('playsinline', '');
+        player.setAttribute('preload', 'auto');
+        player.setAttribute('aria-label', label);
+        if (poster) player.poster = poster.currentSrc || poster.src;
+      } else {
+        player = document.createElement('iframe');
+        player.src = src;
+        player.setAttribute('allow', 'autoplay; fullscreen');
+        player.setAttribute('allowfullscreen', '');
+        player.title = label;
+      }
       frame.innerHTML = '';
-      frame.appendChild(iframe);
+      frame.appendChild(player);
+      if (player.tagName === 'VIDEO') {
+        var started = player.play();
+        if (started && started.catch) started.catch(function () {});
+        player.focus();
+      }
     });
   });
 

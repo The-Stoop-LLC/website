@@ -1,60 +1,361 @@
 {
- "exports": [
-  {"id": "1gWdyIElfNBtldKfy7Cfi3ljYqrNgAkwJ", "max": 1600, "note": "Sylvan DSC05002 fire-pit patio"},
-  {"id": "1ID9TPLb3fBzEMe2WI6fabI_4RmBWbg4v", "max": 1600, "note": "Sylvan After (18) Oakview"},
-  {"id": "1OxrcpqA8Y1u_0LrQCcYUI3GQA2Rm7YxC", "max": 1600, "note": "Sylvan IMG_2082"},
-  {"id": "1ma7fAQPDM5q4KeEJPPIVWT9KnqdT6nZH", "max": 1600, "note": "Sylvan DSC04986"},
-  {"id": "1fICpa89slAG1S9B-HKVQA5dnfngtA0Zo", "max": 1600, "note": "Sylvan DSC05611"},
-  {"id": "1mGMUoADUwr5pXgUPO2q7hpXRy4tra36r", "max": 1600, "note": "Sylvan DSC04864"},
-  {"id": "1lSnBVwL4mWPLSQiaw_at8cGSZd1KQVtg", "max": 1600, "note": "Sylvan nova courtyard"},
-  {"id": "1CvzoVuDlI3pnIiWy241dnpRMr07BC8sq", "max": 1600, "note": "Sylvan DSC05021-Enhanced-NR"},
-  {"id": "1qcoM5pfGdwjVOVETvFYYkUIBIvJfKDju", "max": 1600, "note": "Sylvan DSC05024-Enhanced-NR"},
-  {"id": "1ta8BwUlFlxWyrH7GkHaAksqIPMu_XK_0", "max": 1600, "note": "Sylvan DSC05026-Enhanced-NR"},
-  {"id": "1fwLdTkzNWpSedDJQNILLAc4D_-Umrk-c", "max": 1600, "note": "Sylvan DSC05031"},
-  {"id": "1cP8LIs0DxoGdTgvImW87zYBGHoEUrFs7", "max": 1600, "note": "Sylvan DSC05007"},
-  {"id": "1wGytRkAOGH3ryTWuMtozaNp5HvuaPE8y", "max": 1600, "note": "Sylvan IMG_7992"},
-  {"id": "13Sl_i87B9yH-D6cD_L2M5Otq7bXIo6LX", "max": 1600, "note": "Sylvan Night (3)"},
-  {"id": "1ncVBnz6RLyku6qp1jHbRFTMm-8UfCmXT", "max": 1600, "note": "Sylvan Before (1) Oakview"},
-  {"id": "1Bnh3V8yu_-1efFqZMz9Jo-nEcR0LhLhn", "max": 1600, "note": "Sylvan 20210821_083034 before"},
-  {"id": "1RGv_czWYZ_r0P-BntdBW0SeZ2EBaPsI1", "max": 1600, "note": "Sylvan Copy of DSC04862 after"},
-  {"id": "1Vo0MCiNXXGMbQh3KvD7tRlKEYSIe9GtL", "max": 1600, "note": "Sylvan 20240824_204843 night"},
-  {"id": "1qjIxthoWVjKotw4euySb8bXiigDudl_H", "max": 1600, "note": "Sylvan DSC05371 crew portrait"},
-  {"id": "1KpEljf0pnJlXTilSu1zvg0m8Hvp2te-S", "max": 1600, "note": "Sylvan DSC05372 crew portrait"},
-  {"id": "1EwvOs5KFlutWQ4wAdObQcIwzLIYNtKnw", "max": 1600, "note": "Sylvan DSC07272 crew portrait"},
-  {"id": "1w2hUOmiX8uXvtofyG4v_fWiFx4gF5jEt", "max": 1600, "note": "Sylvan IMG_2764 team at the food truck (png)"},
-  {"id": "1zHVt37HV9R9spuW0pUWuqZIhcN-R3e3P", "max": 1600, "note": "Sylvan DSC05409 crew portrait"},
-  {"id": "15jcQvLBk3oHVkEEE0m3Uf2TUl4tghRBP", "max": 1600, "note": "Sylvan After_Year 1 (12) blog"},
-  {"id": "1sNvvpBm6Or06BbNxsqFpVwvCi-BvFoMx", "max": 1600, "note": "Sylvan DSC05288 blog spotlight"},
-  {"id": "1p74Jgb--CIU0iERXoqxHq6PfEICDUf6P", "max": 1600, "note": "Sylvan Flow_IMG_20240703_141802 erosion blanket (png)"},
-  {"id": "1PGc2YQvm-5cy2wA5hS4kJSER5kDzPkCk", "max": 1600, "note": "Sylvan Tulips"},
-  {"id": "1IlNlZwZtiIRxkaHokYiz4sRpDZyyTXxO", "max": 1600, "note": "Sylvan IMG_2718 nursery crew (png)"},
-  {"id": "1bm4ZN0_wKONEyk-pejAuv4Xi0UrAM65F", "max": 1600, "note": "Sylvan DSC04797 sectional on pavers"},
-  {"id": "10hvvbmnpPgJnRVthLlVBFDuK9lfL3eA8", "max": 1600, "note": "UTB 4.png Hope Diamond cocktail slide"},
-  {"id": "1hlonugWw0H63X3L9sD8xgeYwpeAPAUdi", "max": 1600, "note": "UTB Flow_IMG_20250305_122303 flower-wall cocktail"},
-  {"id": "1DpjcuOPo1ZsqF4yqwvqstSZIN5Qrp3GR", "max": 1600, "note": "CSMP AllisonWade Cover"},
-  {"id": "1x1mLPuTczLrwkLrNuT42tcxLIM3oZL7N", "max": 1600, "note": "CSMP Eggplant Chermoula cover"},
-  {"id": "1nrG-m4Q8-diJ83GNBbow6L1BM8XYHDL-", "max": 1600, "note": "CSMP Influencer In The Kitchen Madison cover"},
-  {"id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc", "t": 24.5, "max": 1600, "note": "Sylvan DJI_0050 drone poster"},
-  {"id": "1vBNl3ct3Y5h6s5WgqTKRnWqxjB3oyFV2", "t": 1.8, "max": 1600, "note": "Sylvan Flow_VID_20240703_132732 slit-seeder poster"},
-  {"id": "1N3BJf_AARD8w2ZCtl4dtxQ7wPjyXvXUJ", "t": 1.1, "max": 1600, "note": "Sylvan IMG_8003 path light poster"},
-  {"id": "1QILqNso1-7CdN0w5v7SsTyoV8YWbvBYw", "max": 1600, "note": "CSMP MARCH -154 chef portrait with a packed meal"},
-  {"id": "1j2xG62TmF1nr5UUzMebWQPlk4OLXogGk", "max": 1600, "note": "CSMP DSC09729 udon with lantern bokeh"},
-  {"id": "1UVVCOYlahYzyLbRnTQ-rIcbxeyOxMLRN", "max": 1600, "note": "CSMP Stoop-3-22 cream-swirl soup"},
-  {"id": "1yaViSLy3VRBXzfsrQk_Q303A-kPA0s48", "max": 1600, "note": "CSMP DSC09696 creator at the tasting table"},
-  {"id": "1zw5UAlYZKkU8oPDpNajw28TK-i3mTYH5", "max": 1600, "note": "CSMP influencer-44 three people plating"},
-  {"id": "1erOQWP3PkG3RFH89f5An0NPag0zEVTl9", "max": 1600, "note": "CSMP MARCH -61 guest with meal-prep containers"},
-  {"id": "1GNZHJjw6KFgtTt7SQ8QejEKNkRWmLv79", "max": 1600, "note": "CSMP MARCH -80 overhead pasta flatlay (blog cover source)"},
-  {"id": "1cSTju3IlEFJjRg22pMxPVZJmNN-g4Pot", "max": 1600, "note": "CSMP Madison reel cover"},
-  {"id": "1ic02rYUPZaGRDd9pAM76vfEhWASjoqAj", "max": 1600, "note": "CSMP DSC09675 tomato soup portrait"},
-  {"id": "1rLOu5G7aXLtATt2UctTWXG8ZqZGQxfrV", "max": 1600, "note": "CSMP DSC07026 udon board landscape"},
-  {"id": "1TFdbd-fGO-cm1-kuabo3fBlbtMrC-GqF", "max": 1600, "note": "MFPAA Captain-7 portrait"},
-  {"id": "1s7CcJpmYVA47NroQs9QAs95lhSdDlgPn", "max": 1600, "note": "MFPAA IMG_6035 interview setup (HEIC via thumbnail)"},
-  {"id": "13LX0T1s2vjQske7a3Tjvv60-Mv2GTZMk", "max": 1600, "note": "UTB IMG_4385 lobby from above (HEIC)"},
-  {"id": "10mJ8lZ18lHQQh3mJCfroZ_vJvuV3Jt2G", "max": 1600, "note": "UTB Flow_IMG_20240724_153329 cup under orchids"},
-  {"id": "1rx3TDF-3cvj9bU3FkOPYO_dMtNBW-_DQ", "max": 1600, "note": "UTB IMG_4373 lobby eye level (HEIC)"},
-  {"id": "1q2B8BiItdKbm3vVIxz4IrKKM2Aq0ysa4", "max": 1600, "note": "UTB IMG_7632 rotunda (HEIC)"},
-  {"id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY", "t": 12.5, "max": 1600, "note": "MFPAA capital 911 16x9 poster"},
-  {"id": "1HsgEoz6f-4X2-1f2vL04-26R_dhaf22o", "t": 4.7, "max": 1600, "note": "MFPAA Wolfe donor 16x9 poster"},
-  {"id": "1HjER4IkpT5_4PMGRG3_lKChWRprwsNjT", "t": 4.7, "max": 1600, "note": "MFPAA Wolfe donor 9x16 poster"}
- ]
+  "exports": [
+    {
+      "id": "1gWdyIElfNBtldKfy7Cfi3ljYqrNgAkwJ",
+      "max": 1600,
+      "note": "Sylvan DSC05002 fire-pit patio"
+    },
+    {
+      "id": "1ID9TPLb3fBzEMe2WI6fabI_4RmBWbg4v",
+      "max": 1600,
+      "note": "Sylvan After (18) (before/after pair)"
+    },
+    {
+      "id": "1OxrcpqA8Y1u_0LrQCcYUI3GQA2Rm7YxC",
+      "max": 1600,
+      "note": "Sylvan IMG_2082"
+    },
+    {
+      "id": "1ma7fAQPDM5q4KeEJPPIVWT9KnqdT6nZH",
+      "max": 1600,
+      "note": "Sylvan DSC04986"
+    },
+    {
+      "id": "1fICpa89slAG1S9B-HKVQA5dnfngtA0Zo",
+      "max": 1600,
+      "note": "Sylvan DSC05611"
+    },
+    {
+      "id": "1mGMUoADUwr5pXgUPO2q7hpXRy4tra36r",
+      "max": 1600,
+      "note": "Sylvan DSC04864"
+    },
+    {
+      "id": "1lSnBVwL4mWPLSQiaw_at8cGSZd1KQVtg",
+      "max": 1600,
+      "note": "Sylvan nova courtyard"
+    },
+    {
+      "id": "1CvzoVuDlI3pnIiWy241dnpRMr07BC8sq",
+      "max": 1600,
+      "note": "Sylvan DSC05021-Enhanced-NR"
+    },
+    {
+      "id": "1qcoM5pfGdwjVOVETvFYYkUIBIvJfKDju",
+      "max": 1600,
+      "note": "Sylvan DSC05024-Enhanced-NR"
+    },
+    {
+      "id": "1ta8BwUlFlxWyrH7GkHaAksqIPMu_XK_0",
+      "max": 1600,
+      "note": "Sylvan DSC05026-Enhanced-NR"
+    },
+    {
+      "id": "1fwLdTkzNWpSedDJQNILLAc4D_-Umrk-c",
+      "max": 1600,
+      "note": "Sylvan DSC05031"
+    },
+    {
+      "id": "1cP8LIs0DxoGdTgvImW87zYBGHoEUrFs7",
+      "max": 1600,
+      "note": "Sylvan DSC05007"
+    },
+    {
+      "id": "1wGytRkAOGH3ryTWuMtozaNp5HvuaPE8y",
+      "max": 1600,
+      "note": "Sylvan IMG_7992"
+    },
+    {
+      "id": "13Sl_i87B9yH-D6cD_L2M5Otq7bXIo6LX",
+      "max": 1600,
+      "note": "Sylvan Night (3)"
+    },
+    {
+      "id": "1ncVBnz6RLyku6qp1jHbRFTMm-8UfCmXT",
+      "max": 1600,
+      "note": "Sylvan Before (1) (before/after pair)"
+    },
+    {
+      "id": "1Bnh3V8yu_-1efFqZMz9Jo-nEcR0LhLhn",
+      "max": 1600,
+      "note": "Sylvan 20210821_083034 before"
+    },
+    {
+      "id": "1RGv_czWYZ_r0P-BntdBW0SeZ2EBaPsI1",
+      "max": 1600,
+      "note": "Sylvan Copy of DSC04862 after"
+    },
+    {
+      "id": "1Vo0MCiNXXGMbQh3KvD7tRlKEYSIe9GtL",
+      "max": 1600,
+      "note": "Sylvan 20240824_204843 night"
+    },
+    {
+      "id": "1qjIxthoWVjKotw4euySb8bXiigDudl_H",
+      "max": 1600,
+      "note": "Sylvan DSC05371 crew portrait"
+    },
+    {
+      "id": "1KpEljf0pnJlXTilSu1zvg0m8Hvp2te-S",
+      "max": 1600,
+      "note": "Sylvan DSC05372 crew portrait"
+    },
+    {
+      "id": "1EwvOs5KFlutWQ4wAdObQcIwzLIYNtKnw",
+      "max": 1600,
+      "note": "Sylvan DSC07272 crew portrait"
+    },
+    {
+      "id": "1w2hUOmiX8uXvtofyG4v_fWiFx4gF5jEt",
+      "max": 1600,
+      "note": "Sylvan IMG_2764 team at the food truck (png)"
+    },
+    {
+      "id": "15jcQvLBk3oHVkEEE0m3Uf2TUl4tghRBP",
+      "max": 1600,
+      "note": "Sylvan After_Year 1 (12) blog"
+    },
+    {
+      "id": "1sNvvpBm6Or06BbNxsqFpVwvCi-BvFoMx",
+      "max": 1600,
+      "note": "Sylvan DSC05288 blog spotlight"
+    },
+    {
+      "id": "1p74Jgb--CIU0iERXoqxHq6PfEICDUf6P",
+      "max": 1600,
+      "note": "Sylvan Flow_IMG_20240703_141802 erosion blanket (png)"
+    },
+    {
+      "id": "1PGc2YQvm-5cy2wA5hS4kJSER5kDzPkCk",
+      "max": 1600,
+      "note": "Sylvan Tulips"
+    },
+    {
+      "id": "1IlNlZwZtiIRxkaHokYiz4sRpDZyyTXxO",
+      "max": 1600,
+      "note": "Sylvan IMG_2718 nursery crew (png)"
+    },
+    {
+      "id": "1bm4ZN0_wKONEyk-pejAuv4Xi0UrAM65F",
+      "max": 1600,
+      "note": "Sylvan DSC04797 sectional on pavers"
+    },
+    {
+      "id": "10hvvbmnpPgJnRVthLlVBFDuK9lfL3eA8",
+      "max": 1600,
+      "note": "UTB 4.png Hope Diamond cocktail slide"
+    },
+    {
+      "id": "1hlonugWw0H63X3L9sD8xgeYwpeAPAUdi",
+      "max": 1600,
+      "note": "UTB Flow_IMG_20250305_122303 flower-wall cocktail"
+    },
+    {
+      "id": "1DpjcuOPo1ZsqF4yqwvqstSZIN5Qrp3GR",
+      "max": 1600,
+      "note": "CSMP AllisonWade Cover"
+    },
+    {
+      "id": "1x1mLPuTczLrwkLrNuT42tcxLIM3oZL7N",
+      "max": 1600,
+      "note": "CSMP Eggplant Chermoula cover"
+    },
+    {
+      "id": "1nrG-m4Q8-diJ83GNBbow6L1BM8XYHDL-",
+      "max": 1600,
+      "note": "CSMP Influencer In The Kitchen Madison cover"
+    },
+    {
+      "id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc",
+      "t": 24.5,
+      "max": 1600,
+      "note": "Sylvan DJI_0050 drone poster"
+    },
+    {
+      "id": "1vBNl3ct3Y5h6s5WgqTKRnWqxjB3oyFV2",
+      "t": 1.8,
+      "max": 1600,
+      "note": "Sylvan Flow_VID_20240703_132732 slit-seeder poster"
+    },
+    {
+      "id": "1N3BJf_AARD8w2ZCtl4dtxQ7wPjyXvXUJ",
+      "t": 1.1,
+      "max": 1600,
+      "note": "Sylvan IMG_8003 path light poster"
+    },
+    {
+      "id": "1QILqNso1-7CdN0w5v7SsTyoV8YWbvBYw",
+      "max": 1600,
+      "note": "CSMP MARCH -154 chef portrait with a packed meal"
+    },
+    {
+      "id": "1j2xG62TmF1nr5UUzMebWQPlk4OLXogGk",
+      "max": 1600,
+      "note": "CSMP DSC09729 udon with lantern bokeh"
+    },
+    {
+      "id": "1UVVCOYlahYzyLbRnTQ-rIcbxeyOxMLRN",
+      "max": 1600,
+      "note": "CSMP Stoop-3-22 cream-swirl soup"
+    },
+    {
+      "id": "1yaViSLy3VRBXzfsrQk_Q303A-kPA0s48",
+      "max": 1600,
+      "note": "CSMP DSC09696 creator at the tasting table"
+    },
+    {
+      "id": "1zw5UAlYZKkU8oPDpNajw28TK-i3mTYH5",
+      "max": 1600,
+      "note": "CSMP influencer-44 three people plating"
+    },
+    {
+      "id": "1erOQWP3PkG3RFH89f5An0NPag0zEVTl9",
+      "max": 1600,
+      "note": "CSMP MARCH -61 guest with meal-prep containers"
+    },
+    {
+      "id": "1GNZHJjw6KFgtTt7SQ8QejEKNkRWmLv79",
+      "max": 1600,
+      "note": "CSMP MARCH -80 overhead pasta flatlay (blog cover source)"
+    },
+    {
+      "id": "1cSTju3IlEFJjRg22pMxPVZJmNN-g4Pot",
+      "max": 1600,
+      "note": "CSMP Madison reel cover"
+    },
+    {
+      "id": "1ic02rYUPZaGRDd9pAM76vfEhWASjoqAj",
+      "max": 1600,
+      "note": "CSMP DSC09675 tomato soup portrait"
+    },
+    {
+      "id": "1rLOu5G7aXLtATt2UctTWXG8ZqZGQxfrV",
+      "max": 1600,
+      "note": "CSMP DSC07026 udon board landscape"
+    },
+    {
+      "id": "1TFdbd-fGO-cm1-kuabo3fBlbtMrC-GqF",
+      "max": 1600,
+      "note": "MFPAA Captain-7 portrait"
+    },
+    {
+      "id": "1s7CcJpmYVA47NroQs9QAs95lhSdDlgPn",
+      "max": 1600,
+      "note": "MFPAA IMG_6035 interview setup (HEIC via thumbnail)"
+    },
+    {
+      "id": "13LX0T1s2vjQske7a3Tjvv60-Mv2GTZMk",
+      "max": 1600,
+      "note": "UTB IMG_4385 lobby from above (HEIC)"
+    },
+    {
+      "id": "10mJ8lZ18lHQQh3mJCfroZ_vJvuV3Jt2G",
+      "max": 1600,
+      "note": "UTB Flow_IMG_20240724_153329 cup under orchids"
+    },
+    {
+      "id": "1rx3TDF-3cvj9bU3FkOPYO_dMtNBW-_DQ",
+      "max": 1600,
+      "note": "UTB IMG_4373 lobby eye level (HEIC)"
+    },
+    {
+      "id": "1q2B8BiItdKbm3vVIxz4IrKKM2Aq0ysa4",
+      "max": 1600,
+      "note": "UTB IMG_7632 rotunda (HEIC)"
+    },
+    {
+      "id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY",
+      "t": 12.5,
+      "max": 1600,
+      "note": "MFPAA capital 911 16x9 poster"
+    },
+    {
+      "id": "1HsgEoz6f-4X2-1f2vL04-26R_dhaf22o",
+      "t": 4.7,
+      "max": 1600,
+      "note": "MFPAA Wolfe donor 16x9 poster"
+    },
+    {
+      "id": "1HjER4IkpT5_4PMGRG3_lKChWRprwsNjT",
+      "t": 4.7,
+      "max": 1600,
+      "note": "MFPAA Wolfe donor 9x16 poster"
+    },
+    {
+      "id": "1FS7g88iDbFFM9Er4PvvaT7K3K7_BP42K",
+      "t": 1.0,
+      "max": 1600,
+      "note": "Iron 24 Team Work 1 Vertical poster"
+    },
+    {
+      "id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY",
+      "clip": {
+        "from": 0,
+        "to": 14.54,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
+      },
+      "dest": "assets/video/mfpaa-capital-911.mp4",
+      "note": "MFPAA Capital 911 16x9, self-hosted cut ending before the end card (cut at 14.584 s)"
+    },
+    {
+      "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
+      "clip": {
+        "from": 0,
+        "to": 14.417,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
+      },
+      "dest": "assets/video/mfpaa-subscription-911.mp4",
+      "note": "MFPAA Subscription 911 16x9, self-hosted cut ending before the end card (cut at 14.459 s)"
+    },
+    {
+      "id": "1awH6aAxk3Jxy96c3r4mSnsQ56Kt0sSnZ",
+      "clip": {
+        "from": 0,
+        "to": 14.417,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
+      },
+      "dest": "assets/video/mfpaa-subscription-911-vertical.mp4",
+      "note": "MFPAA Subscription 911 9x16, self-hosted cut ending before the end card (cut at 14.459 s)"
+    },
+    {
+      "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
+      "clip": {
+        "from": 0,
+        "to": 10.083,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
+      },
+      "dest": "assets/video/mfpaa-subscription-streaming.mp4",
+      "note": "MFPAA Subscription Streaming 16x9, self-hosted cut ending before the end card (cut at 10.125 s)"
+    },
+    {
+      "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
+      "clip": {
+        "from": 0,
+        "to": 7.833,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
+      },
+      "dest": "assets/video/mfpaa-subscription-7-90.mp4",
+      "note": "MFPAA Subscription 7|90 16x9, self-hosted cut ending before the end card (cut at 7.875 s)"
+    },
+    {
+      "id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc",
+      "clip": {
+        "from": 9.5,
+        "height": 720,
+        "crf": 26
+      },
+      "dest": "assets/video/sylvan-drone-front-yard.mp4",
+      "note": "Sylvan DJI_0050, self-hosted cut from 9.5 s to the end"
+    }
+  ]
 }
