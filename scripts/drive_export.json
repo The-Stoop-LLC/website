@@ -8,7 +8,7 @@
     {
       "id": "1ID9TPLb3fBzEMe2WI6fabI_4RmBWbg4v",
       "max": 1600,
-      "note": "Sylvan After (18) Oakview"
+      "note": "Sylvan After (18) (before/after pair)"
     },
     {
       "id": "1OxrcpqA8Y1u_0LrQCcYUI3GQA2Rm7YxC",
@@ -73,7 +73,7 @@
     {
       "id": "1ncVBnz6RLyku6qp1jHbRFTMm-8UfCmXT",
       "max": 1600,
-      "note": "Sylvan Before (1) Oakview"
+      "note": "Sylvan Before (1) (before/after pair)"
     },
     {
       "id": "1Bnh3V8yu_-1efFqZMz9Jo-nEcR0LhLhn",
@@ -109,11 +109,6 @@
       "id": "1w2hUOmiX8uXvtofyG4v_fWiFx4gF5jEt",
       "max": 1600,
       "note": "Sylvan IMG_2764 team at the food truck (png)"
-    },
-    {
-      "id": "1zHVt37HV9R9spuW0pUWuqZIhcN-R3e3P",
-      "max": 1600,
-      "note": "Sylvan DSC05409 crew portrait"
     },
     {
       "id": "15jcQvLBk3oHVkEEE0m3Uf2TUl4tghRBP",
@@ -302,7 +297,7 @@
         "crf": 24
       },
       "dest": "assets/video/mfpaa-capital-911.mp4",
-      "note": "MFPAA Capital 911 16x9, ends before the misspelled end card (cut at 14.584 s)"
+      "note": "MFPAA Capital 911 16x9, self-hosted cut ending before the end card (cut at 14.584 s)"
     },
     {
       "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
@@ -314,7 +309,7 @@
         "crf": 24
       },
       "dest": "assets/video/mfpaa-subscription-911.mp4",
-      "note": "MFPAA Subscription 911 16x9, ends before the misspelled end card (cut at 14.459 s)"
+      "note": "MFPAA Subscription 911 16x9, self-hosted cut ending before the end card (cut at 14.459 s)"
     },
     {
       "id": "1awH6aAxk3Jxy96c3r4mSnsQ56Kt0sSnZ",
@@ -326,7 +321,7 @@
         "crf": 24
       },
       "dest": "assets/video/mfpaa-subscription-911-vertical.mp4",
-      "note": "MFPAA Subscription 911 9x16, ends before the misspelled end card (cut at 14.459 s)"
+      "note": "MFPAA Subscription 911 9x16, self-hosted cut ending before the end card (cut at 14.459 s)"
     },
     {
       "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
@@ -338,7 +333,7 @@
         "crf": 24
       },
       "dest": "assets/video/mfpaa-subscription-streaming.mp4",
-      "note": "MFPAA Subscription Streaming 16x9, ends before the misspelled end card (cut at 10.125 s)"
+      "note": "MFPAA Subscription Streaming 16x9, self-hosted cut ending before the end card (cut at 10.125 s)"
     },
     {
       "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
@@ -350,7 +345,7 @@
         "crf": 24
       },
       "dest": "assets/video/mfpaa-subscription-7-90.mp4",
-      "note": "MFPAA Subscription 7|90 16x9, ends before the misspelled end card (cut at 7.875 s)"
+      "note": "MFPAA Subscription 7|90 16x9, self-hosted cut ending before the end card (cut at 7.875 s)"
     },
     {
       "id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc",
@@ -360,7 +355,7 @@
         "crf": 26
       },
       "dest": "assets/video/sylvan-drone-front-yard.mp4",
-      "note": "Sylvan DJI_0050 from 9.5 s: drops the opening pass over a patio with children's chalk drawings"
+      "note": "Sylvan DJI_0050, self-hosted cut from 9.5 s to the end"
     }
   ]
 }

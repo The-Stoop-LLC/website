@@ -15,7 +15,8 @@ Export specific Drive files as site images, driven by scripts/drive_export.json:
 `from` and `to` are seconds into the video; a negative value counts back from the
 end. A `clip` item cuts that span out of a Drive video and encodes it as an H.264
 MP4 for self-hosting: short side `height` (default 720), `crf` (default 24),
-audio kept as AAC when the source has it, and an optional `fade` (seconds) that
+audio kept as AAC when the source has it, all source metadata dropped (drone and
+phone files carry GPS coordinates and serial numbers), and an optional `fade` (seconds) that
 fades picture and sound out at the new end so a trimmed cut does not stop dead.
 Use it only for trims and resizes; it does not alter the picture otherwise.
 A negative `t` on a frame export counts back from the end. A `scenes` item prints
@@ -138,7 +139,8 @@ def video_clip(session, file_id: str, dest: Path, spec: dict) -> str:
     with tempfile.TemporaryDirectory() as tmp:
         out = Path(tmp) / "clip.mp4"
         cmd = ["ffmpeg", "-loglevel", "error", "-y", "-headers", auth, "-ss", f"{a:.3f}", "-i", url,
-               "-t", f"{b - a:.3f}", "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf, *af,
+               "-t", f"{b - a:.3f}", "-map", "0:v:0", "-map", "0:a:0?", "-map_metadata", "-1", "-map_chapters", "-1",
+               "-vf", vf, *af,
                "-c:v", "libx264", "-preset", "slow", "-crf", str(int(spec.get("crf", 24))),
                "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "128k",
                "-movflags", "+faststart", str(out)]
@@ -192,16 +194,16 @@ def main() -> int:
     for item in cfg.get("exports", []):
         fid = item["id"]
         dest = REPO / item["dest"] if item.get("dest") else OUT / f"{fid}.jpg"
-        if item.get("scenes"):
-            scene_cuts(session, fid, item["scenes"])
+        if "scenes" in item:
+            scene_cuts(session, fid, item["scenes"] or {})
             continue
         if dest.exists() and not item.get("force"):
             print(f"skip {dest.relative_to(REPO)} (exists)")
             continue
         info = meta(session, fid)
         max_edge = int(item.get("max", 1600))
-        if item.get("clip"):
-            span = video_clip(session, fid, dest, item["clip"])
+        if "clip" in item:
+            span = video_clip(session, fid, dest, item["clip"] or {})
             print(f"wrote {dest.relative_to(REPO)} ({dest.stat().st_size / 1e6:.1f} MB, {span}) from {info.get('name')!r}")
             done += 1
             continue
