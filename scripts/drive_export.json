@@ -294,78 +294,73 @@
     },
     {
       "id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY",
-      "scenes": {
-        "from": -7,
-        "threshold": 0.3
+      "clip": {
+        "from": 0,
+        "to": 14.54,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
       },
-      "note": "probe: cuts in the last 7 s of capital-911-16x9"
-    },
-    {
-      "id": "1Fcs3ehX9wG-e4wbaaGYxjHMHOBaXc_BY",
-      "t": -0.6,
-      "max": 1920,
-      "dest": "_scout/mfpaa-endframe-capital-911-16x9.jpg",
-      "note": "scout: full-res end card of capital-911-16x9"
+      "dest": "assets/video/mfpaa-capital-911.mp4",
+      "note": "MFPAA Capital 911 16x9, ends before the misspelled end card (cut at 14.584 s)"
     },
     {
       "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
-      "scenes": {
-        "from": -7,
-        "threshold": 0.3
+      "clip": {
+        "from": 0,
+        "to": 14.417,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
       },
-      "note": "probe: cuts in the last 7 s of sub-911-16x9"
-    },
-    {
-      "id": "1SZJ8Mum2Di_clqnVQviZBfT0p2tFPDxt",
-      "t": -0.6,
-      "max": 1920,
-      "dest": "_scout/mfpaa-endframe-sub-911-16x9.jpg",
-      "note": "scout: full-res end card of sub-911-16x9"
+      "dest": "assets/video/mfpaa-subscription-911.mp4",
+      "note": "MFPAA Subscription 911 16x9, ends before the misspelled end card (cut at 14.459 s)"
     },
     {
       "id": "1awH6aAxk3Jxy96c3r4mSnsQ56Kt0sSnZ",
-      "scenes": {
-        "from": -7,
-        "threshold": 0.3
+      "clip": {
+        "from": 0,
+        "to": 14.417,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
       },
-      "note": "probe: cuts in the last 7 s of sub-911-9x16"
-    },
-    {
-      "id": "1awH6aAxk3Jxy96c3r4mSnsQ56Kt0sSnZ",
-      "t": -0.6,
-      "max": 1920,
-      "dest": "_scout/mfpaa-endframe-sub-911-9x16.jpg",
-      "note": "scout: full-res end card of sub-911-9x16"
+      "dest": "assets/video/mfpaa-subscription-911-vertical.mp4",
+      "note": "MFPAA Subscription 911 9x16, ends before the misspelled end card (cut at 14.459 s)"
     },
     {
       "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
-      "scenes": {
-        "from": -7,
-        "threshold": 0.3
+      "clip": {
+        "from": 0,
+        "to": 10.083,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
       },
-      "note": "probe: cuts in the last 7 s of sub-streaming"
-    },
-    {
-      "id": "1030cLzwzWk_bYEvq0gQE1V3p4_p4jJuy",
-      "t": -0.6,
-      "max": 1920,
-      "dest": "_scout/mfpaa-endframe-sub-streaming.jpg",
-      "note": "scout: full-res end card of sub-streaming"
+      "dest": "assets/video/mfpaa-subscription-streaming.mp4",
+      "note": "MFPAA Subscription Streaming 16x9, ends before the misspelled end card (cut at 10.125 s)"
     },
     {
       "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
-      "scenes": {
-        "from": -7,
-        "threshold": 0.3
+      "clip": {
+        "from": 0,
+        "to": 7.833,
+        "fade": 0.4,
+        "height": 720,
+        "crf": 24
       },
-      "note": "probe: cuts in the last 7 s of sub-7-90"
+      "dest": "assets/video/mfpaa-subscription-7-90.mp4",
+      "note": "MFPAA Subscription 7|90 16x9, ends before the misspelled end card (cut at 7.875 s)"
     },
     {
-      "id": "1Pd7QjlaGUfVEQqQ9p_CmkvZge3Qa8Gg3",
-      "t": -0.6,
-      "max": 1920,
-      "dest": "_scout/mfpaa-endframe-sub-7-90.jpg",
-      "note": "scout: full-res end card of sub-7-90"
+      "id": "17isKIlDjhD7wkaJ9wppBCVZY7YfJRTyc",
+      "clip": {
+        "from": 9.5,
+        "height": 720,
+        "crf": 26
+      },
+      "dest": "assets/video/sylvan-drone-front-yard.mp4",
+      "note": "Sylvan DJI_0050 from 9.5 s: drops the opening pass over a patio with children's chalk drawings"
     }
   ]
 }
