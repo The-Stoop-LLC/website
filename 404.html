@@ -2,6 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- A missing root-level page that exists under /blog/, /work/ or /services/ forwards there,
+     keeping the query string and hash: crawlers have requested every post at the root
+     (/cross-brand-partnerships-guide.html instead of /blog/...). It runs before the analytics
+     tags so the forward usually happens before a 404 pageview is sent. Other misses stay here. -->
+<script>
+  (function () {
+    var m = location.pathname.match(/^\/([a-z0-9-]+)(?:\.html)?\/?$/i);
+    if (!m || !window.fetch) return;
+    var name = m[1].toLowerCase(), dirs = ['blog', 'work', 'services'];
+    (function next(i) {
+      if (i === dirs.length) return;
+      var url = '/' + dirs[i] + '/' + name + '.html';
+      fetch(url, { method: 'HEAD' }).then(function (r) {
+        if (r.ok) location.replace(url + location.search + location.hash); else next(i + 1);
+      }, function () {});
+    })(0);
+  })();
+</script>
 <!-- Google tag (gtag.js) with Consent Mode v2: storage defaults to denied
      for visitors in the EEA, UK and Switzerland (Google models their
      traffic) and granted everywhere else. Must run before GA4 and GTM. -->
