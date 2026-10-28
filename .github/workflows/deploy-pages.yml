@@ -35,10 +35,20 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      # Only the files the site serves are published: every tracked file except
+      # the build tooling (scripts/, .github/, README.md, .gitignore), whose
+      # export manifests and notes are for the repo, not the web. The check
+      # fails the deploy if a page links to a file that didn't make the cut.
+      - name: Stage the public site
+        run: |
+          mkdir -p "$RUNNER_TEMP/site"
+          git ls-files -z | grep -z -v -E '^(\.github/|scripts/|README\.md$|\.gitignore$|_scout/)' | xargs -0 cp --parents -t "$RUNNER_TEMP/site"
+          python3 scripts/check_site.py "$RUNNER_TEMP/site"
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ${{ runner.temp }}/site
 
       - name: Deploy
         id: deployment
