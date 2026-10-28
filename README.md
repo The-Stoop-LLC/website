@@ -25,6 +25,7 @@ on every page's `<link>`/`<script>` so browsers fetch the new file.
 | `services/*.html` | One page per service; buttons link to `/contact?service=<slug>` |
 | `services/thank-you/*.html` | Post-submit pages, one per service (noindex) |
 | `services/contact.html` | Forwards old links to `/contact` |
+| `blog/15-fitness-creators-267k-views.html`, `services/creator-coaching.html`, `services/thank-you/creator-coaching.html` | Forward URLs renamed in April 2026 to their new pages. Like `services/contact.html` they carry no analytics and are noindex, so leave them out of site-wide tracking or lead-event edits |
 | `work/` | Case study index and case studies |
 | `blog/` | Blog index, posts, `feed.xml` |
 | `founder`, `faq`, `pricing`, `process`, `reviews`, `policy`, `404` | Other pages |
