@@ -13,6 +13,13 @@ Every push to `main` deploys to GitHub Pages through
 "Build Drive galleries" run also triggers a deploy, since the commits it
 pushes don't count as pushes.
 
+The deploy publishes a staged copy of the site, not the repo: every tracked
+file except `scripts/`, `.github/`, `README.md` and `.gitignore`. Before it
+uploads, `scripts/check_site.py` checks the staged copy and fails the deploy
+if a page, the stylesheet, the sitemap or the web manifest points at a local
+file that isn't in it. Run the same check locally with
+`python3 scripts/check_site.py <dir>` on a staged copy.
+
 After changing `assets/css/site.css` or `assets/js/site.js`, bump the `?v=`
 on every page's `<link>`/`<script>` so browsers fetch the new file.
 
@@ -33,7 +40,7 @@ on every page's `<link>`/`<script>` so browsers fetch the new file.
 | `assets/images/covers/` | Case study covers, JPEG + WebP, 800px and 1600px |
 | `assets/images/drive/` | Photos copied from Google Drive, with WebP thumbnails in `thumbs/` |
 | `sitemap.xml`, `robots.txt`, `llms.txt`, `llms-full.txt` | Search and AI crawlers |
-| `scripts/` | Maintenance scripts (below) |
+| `scripts/` | Maintenance scripts (below); in the repo, not on the site |
 
 ## Contact form and leads
 
@@ -68,6 +75,8 @@ pageviews would count twice.
 | `scripts/gallery_alt.json` | Hand-written alt text for gallery photos, keyed by Drive file id. |
 | `scripts/hero_loop.json` | The homepage background video's cut list (Drive file, start, length, crop anchors). Edit it on a branch and push: the "Build hero loop" Action downloads the clips, rebuilds `assets/video/` and commits it to that branch. Its `scout` list writes contact sheets to `_scout/` for picking shots; empty it before merging. |
 | `scripts/sitemap_lastmod.py --write` | After content changes: sets each sitemap `<lastmod>` from the page's schema dates and lists its images. |
+| `scripts/drive_export.py` | Exports chosen Drive frames, images and trimmed clips (the "Export Drive stills" Action; manual trigger, runs on the dispatching branch). Its list is `scripts/drive_export.json`. |
+| `scripts/check_site.py <dir>` | Run by the deploy on the staged site: fails if a development path was staged or a local link would 404. |
 
 ## Brand
 
