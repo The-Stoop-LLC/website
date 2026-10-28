@@ -1737,6 +1737,12 @@ footer {
 /* A single 16:10 figure stretches to the column the same way. */
 .article-body .cs-media--wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 
+/* Plain in-text links in a post (case studies, services, other posts) look like the case-study
+   read-more links instead of the browser's default blue. Any link with a class (buttons, media
+   tiles, brand.html's .bp-link) keeps its own styling. */
+.article-body p a:not([class]),.article-body li a:not([class]){color:var(--yellow);text-decoration:underline;text-underline-offset:3px}
+.article-body p a:not([class]):hover,.article-body li a:not([class]):hover{color:var(--yellow-bright)}
+
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0}
 
 .stat-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:28px 24px;text-align:center}
